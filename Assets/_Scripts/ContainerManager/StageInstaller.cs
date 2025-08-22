@@ -9,6 +9,9 @@ public class StageInstaller : MonoInstaller
 {
     private FactoryManager _factoryManager;
     private CoconutCanvas _coconutCanvas;
+    private InputManager _inputManager;
+    private CameraController _cameraController;
+    private StageUI _stageUI;
 
     public override void InstallBindings()
     {
@@ -19,19 +22,22 @@ public class StageInstaller : MonoInstaller
         // 필요한 컴포넌트들을 가져옵니다.
         _coconutCanvas = GetComponentInChildren<CoconutCanvas>();
         _factoryManager = GetComponentInChildren<FactoryManager>();
+        _inputManager = GetComponentInChildren<InputManager>();
+        _cameraController = GetComponentInChildren<CameraController>();
+        _stageUI = GetComponentInChildren<StageUI>();
 
 
         Container.Bind<CoconutCanvas>().FromInstance(_coconutCanvas).AsSingle().NonLazy();
         Container.Bind<FactoryManager>().FromInstance(_factoryManager).AsSingle().NonLazy();
+        Container.Bind<InputManager>().FromInstance(_inputManager).AsSingle().NonLazy();
+        Container.Bind<CameraController>().FromInstance(_cameraController).AsSingle().NonLazy();
+        Container.Bind<StageUI>().FromInstance(_stageUI).AsSingle().NonLazy();
 
+
+        Container.Bind<CardSelectionManager>().AsSingle().NonLazy();
+        Container.Bind<UnitManager>().AsSingle().NonLazy();
+        Container.Bind<SpellController>().AsSingle().NonLazy();
         Container.Bind<StageManager>().AsSingle().NonLazy();
-        // Container.Bind<MapManager>().FromInstance(mapManager).AsSingle().NonLazy();
-        // Container.Bind<DropHealManager>().AsSingle().NonLazy();
-        //
-        //
-        // Container.Bind<WaveManager>().FromInstance(waveManager).AsSingle().NonLazy();
-        // Container.Bind<StageUI>().FromInstance(stageUI).AsSingle().NonLazy();
-        // Container.Bind<StageCameraManager>().FromInstance(stageCameraManager).AsSingle().NonLazy();
 
         Init();
     }
@@ -40,7 +46,9 @@ public class StageInstaller : MonoInstaller
     {
         try
         {
+            _cameraController.Init();
             await _factoryManager.Init(Container);
+            _inputManager.Init();
         }
         catch (Exception e)
         {

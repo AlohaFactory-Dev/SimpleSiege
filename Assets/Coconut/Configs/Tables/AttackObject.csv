@@ -1,0 +1,2 @@
+id,spawnPointId,destinationPointId,fireType,speedType,speedRandomMin,speedRandomMax,onLookat,delayRandomMin,delayRandomMax,scale
+Arrow,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
