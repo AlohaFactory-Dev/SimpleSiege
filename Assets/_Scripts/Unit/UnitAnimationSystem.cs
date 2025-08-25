@@ -20,7 +20,7 @@ public class UnitAnimationSystem : MonoBehaviour
 
     public void PlayAttack()
     {
-        _animator.SetTrigger("Attack");
+        _animator.SetTrigger("Action");
     }
 
     public void PlayIdle()

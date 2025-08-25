@@ -10,6 +10,7 @@ public class UnitDieEventHandler : MonoBehaviour
         _onDieAction = onDieAction;
     }
 
+    // Animation Event
     public void OnDie()
     {
         _onDieAction?.Invoke();

@@ -8,6 +8,7 @@ namespace FactorySystem
     {
         public readonly AttackObjectFactory AttackObjectFactory = new();
         public readonly FloatingTextFactory FloatingTextFactory = new();
+        public readonly ParticleFactory ParticleFactory = new();
         public readonly UnitFactroy UnitFactroy = new();
 
         public async Task Init(DiContainer container)
@@ -15,7 +16,8 @@ namespace FactorySystem
             await Task.WhenAll(
                 AttackObjectFactory.Initialize(container, transform),
                 FloatingTextFactory.Initialize(container, transform),
-                UnitFactroy.Initialize(container, transform)
+                UnitFactroy.Initialize(container, transform),
+                ParticleFactory.Initialize(container, transform)
             );
         }
     }

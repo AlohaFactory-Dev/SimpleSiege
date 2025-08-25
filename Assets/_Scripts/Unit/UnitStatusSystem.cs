@@ -9,6 +9,7 @@ public class UnitStatusSystem : MonoBehaviour
     public UnitActionSystem ActionSystem { get; private set; }
     public UnitAnimationSystem AnimationSystem { get; private set; }
     public UnitHpSystem HpSystem { get; private set; }
+    private Collider2D _collider2D;
     private bool _isInitialized;
 
     public void Init(UnitController unitController)
@@ -18,6 +19,7 @@ public class UnitStatusSystem : MonoBehaviour
         MoveSystem.Init(unitController);
         ActionSystem.Init(unitController);
         AnimationSystem.Init(_recycleObject.Release);
+        _collider2D.enabled = true;
     }
 
     private void GetComponents()
@@ -29,6 +31,7 @@ public class UnitStatusSystem : MonoBehaviour
         AnimationSystem = GetComponentInChildren<UnitAnimationSystem>();
         HpSystem = GetComponentInChildren<UnitHpSystem>();
         _recycleObject = GetComponent<RecycleObject>();
+        _collider2D = GetComponent<Collider2D>();
     }
 
     public void ApplyState(Transform target, UnitState state)
@@ -47,6 +50,7 @@ public class UnitStatusSystem : MonoBehaviour
         }
         else if (state == UnitState.Dead)
         {
+            _collider2D.enabled = false;
             ActionSystem.StopAction();
             MoveSystem.StopMove();
             AnimationSystem.PlayDead();

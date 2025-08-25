@@ -1,5 +1,7 @@
+using FactorySystem;
 using UnityEngine;
 using UniRx;
+using Zenject;
 
 public enum UnitState
 {
@@ -11,6 +13,9 @@ public enum UnitState
 
 public class UnitController : MonoBehaviour
 {
+    [Inject] FactoryManager _factoryManager;
+    [SerializeField] private Transform damageEffectPoint;
+    [SerializeField] private Transform floatingEffectPoint;
     private UnitTable _unitTable;
     private UnitStatusSystem _statusSystem;
     private UnitTargetSystem _targetSystem;
@@ -20,10 +25,11 @@ public class UnitController : MonoBehaviour
     private bool _isInitialized;
     private UnitStateMachine _stateMachine;
 
-    public ReactiveProperty<UnitState> State = new(UnitState.Idle);
+    private string _floatingTextId = "FloatingText";
+
+    public ReactiveProperty<UnitState> state = new(UnitState.Idle);
 
     public UnitTable UnitTable => _unitTable;
-    [SerializeField] private Collider2D collider2d;
 
 
     public void Spawn(Vector3 position, UnitTable unitTable)
@@ -35,7 +41,7 @@ public class UnitController : MonoBehaviour
         _statusSystem.Init(this);
         _targetSystem.Init(this);
         _stateMachine = new UnitStateMachine(_statusSystem);
-        State.Value = UnitState.Move;
+        state.Value = UnitState.Move;
     }
 
     private void Init()
@@ -45,7 +51,7 @@ public class UnitController : MonoBehaviour
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         _targetSystem = GetComponentInChildren<UnitTargetSystem>();
 
-        State
+        state
             .DistinctUntilChanged()
             .Subscribe(newState => _stateMachine.OnStateChanged(_target, newState))
             .AddTo(this);
@@ -53,37 +59,39 @@ public class UnitController : MonoBehaviour
 
     private void Update()
     {
-        if (State.Value == UnitState.Move)
+        if (state.Value == UnitState.Move)
         {
             _target = _targetSystem.FindTarget();
             if (!_target)
-                State.Value = UnitState.Move;
+                state.Value = UnitState.Move;
             else
             {
                 float distance = Vector3.Distance(transform.position, _target.position);
                 if (distance > _unitTable.attackAbleRange)
-                    State.Value = UnitState.Move;
+                    state.Value = UnitState.Move;
                 else
-                    State.Value = UnitState.Action;
+                    state.Value = UnitState.Action;
             }
         }
     }
 
     public void OnActionEnd()
     {
-        State.Value = UnitState.Move;
+        state.Value = UnitState.Move;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string fxId)
     {
+        var floatingText = _factoryManager.FloatingTextFactory.GetText(_floatingTextId);
+        floatingText.SetText(damage.ToString());
+        floatingText.Play(floatingEffectPoint.position);
+
+        var particle = _factoryManager.ParticleFactory.GetParticle(fxId);
+        particle.Init(damageEffectPoint.position);
+        particle.Play();
         if (_statusSystem.HpSystem.TakeDamage(damage))
         {
-            Die();
+            state.Value = UnitState.Dead;
         }
-    }
-
-    private void Die()
-    {
-        State.Value = UnitState.Dead;
     }
 }
