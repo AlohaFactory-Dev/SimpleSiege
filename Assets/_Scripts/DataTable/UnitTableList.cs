@@ -7,9 +7,11 @@ using UnityEngine;
 public class UnitTable
 {
     public string id;
-    public int attackPower;
+    public int effectValue;
+    public float effectGrowth;
     public float attackInterval;
-    public int hp;
+    public int maxHp;
+    public float maxHpGrowth;
     public float moveSpeed;
     public float sightRange;
     public float attackAbleRange;

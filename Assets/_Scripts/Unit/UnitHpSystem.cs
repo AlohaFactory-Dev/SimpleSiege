@@ -9,8 +9,8 @@ public class UnitHpSystem : MonoBehaviour
     public void Init(UnitTable unitTable)
     {
         _hpBarGauge = GetComponentInChildren<BarGauge>(true);
-        _hpBarGauge.Initialize(unitTable.hp, null, unitTable.hp);
-        _currentHp = unitTable.hp;
+        _hpBarGauge.Initialize(unitTable.maxHp, null, unitTable.maxHp);
+        _currentHp = unitTable.maxHp;
     }
 
     public bool TakeDamage(int damage)

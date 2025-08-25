@@ -8,34 +8,36 @@ using UnityEngine;
 [Serializable]
 public class CardTable
 {
-    [CSVColumn] public string Id;
+    [CSVColumn] public string id;
     [CSVColumn] public CardType cardType;
-    [CSVColumn] public int requiredAmount;
+    [CSVColumn] public float holdTime;
+    [CSVColumn] public float spawnInterval;
+    [CSVColumn] public int cardAmount;
     [CSVColumn] public int unitAmount;
-    [CSVColumn] public string iconkey;
-    [CSVColumn] public string namekey;
-    [CSVColumn] public string descriptionkey;
+    [CSVColumn] public string iconKey;
+    [CSVColumn] public string nameKey;
+    [CSVColumn] public string descriptionKey;
     [CSVColumn] public List<float> values;
 }
 
 public class CardTableList : ITableList
 {
-    private List<EtcTable> _etcTableList = new List<EtcTable>();
-    private readonly Dictionary<string, EtcTable> _cachedTables = new Dictionary<string, EtcTable>();
+    private List<CardTable> _etcTableList = new List<CardTable>();
+    private readonly Dictionary<string, CardTable> _cachedTables = new Dictionary<string, CardTable>();
 
     public async UniTask Init()
     {
-        _etcTableList = await TableManager.GetAsync<EtcTable>("Etc");
+        _etcTableList = await TableManager.GetAsync<CardTable>("Card");
     }
 
-    public EtcTable GetCardTable(string id)
+    public CardTable GetCardTable(string id)
     {
         if (_cachedTables.TryGetValue(id, out var objectInfo))
         {
             return objectInfo;
         }
 
-        var info = _etcTableList.Find(a => a.Id == id);
+        var info = _etcTableList.Find(a => a.id == id);
         if (info == null)
         {
             Debug.LogError($"EtcInfo not found. id: {id}");
@@ -44,5 +46,10 @@ public class CardTableList : ITableList
 
         _cachedTables.Add(id, info);
         return info;
+    }
+
+    public List<CardTable> GetAllCardTable()
+    {
+        return _etcTableList;
     }
 }

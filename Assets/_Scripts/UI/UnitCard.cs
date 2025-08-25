@@ -10,6 +10,7 @@ public class UnitCard : MonoBehaviour
     private Button _button;
 
     [Inject] private CardSelectionManager _cardSelectionManager;
+    [Inject] private CardPoolManager _cardPoolManager;
 
     public void Init()
     {
@@ -25,7 +26,7 @@ public class UnitCard : MonoBehaviour
     public void SetCardData(CardTable table)
     {
         cardTable = table;
-        iconImage.sprite = ImageContainer.GetImage(table.iconkey);
+        iconImage.sprite = ImageContainer.GetImage(table.iconKey);
     }
 
 

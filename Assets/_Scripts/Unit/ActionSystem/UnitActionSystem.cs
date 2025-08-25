@@ -1,18 +1,31 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 
-public class UnitActionSystem : MonoBehaviour
+public abstract class UnitActionSystem : MonoBehaviour
 {
     private UnitTable _unitTable;
     private Coroutine _actionCoroutine;
     private UnitController _unitController;
+    private UnitAnimationSystem _unitAnimationSystem;
+    protected float EffectValue;
 
-    public void Init(UnitController unitController)
+    public void Init(UnitController unitController, UnitAnimationSystem unitAnimationSystem)
     {
         // UnitController에서 UnitTable을 가져와서 초기화
         _unitController = unitController;
+        _unitAnimationSystem = unitAnimationSystem;
         _unitTable = unitController.UnitTable;
+        if (_unitTable.teamType == TeamType.Enemy)
+        {
+            var attackPowerLevel = StageConainer.Get<StageManager>().CurrentStageTable.enemyAttackPowerLevel;
+            EffectValue = Mathf.CeilToInt(_unitTable.effectValue * Mathf.Pow(1 + _unitTable.effectGrowth, Math.Max(attackPowerLevel - 1, 0)));
+        }
+        else
+        {
+            EffectValue = _unitTable.effectValue;
+        }
     }
 
     public void StartAction(Transform target)
@@ -34,11 +47,10 @@ public class UnitActionSystem : MonoBehaviour
     {
         while (true)
         {
-            if (target != null)
+            if (target)
             {
-                // 공격 타이밍 체크 및 실제 공격 로직 구현
-                // 예시: target.GetComponent<Health>()?.TakeDamage(unit.UnitTable.attackPower);
-                // 액션이 끝났다고 가정할 때(예시로 1회 공격 후 종료)
+                _unitAnimationSystem.SetOnAction(() => OnAction(target));
+                yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                 _unitController.OnActionEnd();
                 yield break;
             }
@@ -52,4 +64,6 @@ public class UnitActionSystem : MonoBehaviour
             yield return null;
         }
     }
+
+    public abstract void OnAction(Transform target);
 }

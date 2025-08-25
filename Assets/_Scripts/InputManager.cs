@@ -11,14 +11,6 @@ namespace _Scripts
     {
         [Inject] private CardSelectionManager _cardSelectionManager;
 
-        [InfoBox("연속 생성이 시작 되기 전에 누르고 있어야 하는 시간입니다.")]
-        [SerializeField]
-        private float holdTime = 0.5f; // 버튼을 누르고 있어야 하는 시간
-
-        [InfoBox("연속 생성 간격입니다. 이 시간마다 유닛이 생성됩니다.")]
-        [SerializeField]
-        private float spawnInterval = 0.5f; // 버튼을 누르고 있어야 하는 시간
-
         private bool _isPointerDown;
         private Coroutine _spawnCoroutine;
         private Camera _camera;
@@ -67,6 +59,8 @@ namespace _Scripts
             var selectedCard = _cardSelectionManager.SelectedCard;
             if (!selectedCard) yield break;
 
+            var holdTime = selectedCard.cardTable.holdTime;
+            var spawnInterval = selectedCard.cardTable.spawnInterval;
 
             if (selectedCard.cardTable.cardType == CardType.Unit)
             {

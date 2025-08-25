@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/DataTable/StageTableList.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/DataTable/StageTableList.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/FloatingTextParticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/FloatingTextParticle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitActionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitActionSystem.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +34,9 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Runtime/Core/TableManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Map/StageMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.4/Runtime/Components/CinemachineTrackedDolly.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -126,6 +135,8 @@
       <workItem from="1755838874385" duration="3462000" />
       <workItem from="1755842486427" duration="9212000" />
       <workItem from="1755852835037" duration="27000" />
+      <workItem from="1756083953188" duration="14731000" />
+      <workItem from="1756101102026" duration="584000" />
     </task>
     <servers />
   </component>

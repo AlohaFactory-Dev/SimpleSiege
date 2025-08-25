@@ -8,7 +8,7 @@ public class CardSelectionManager
     public bool IsCardSelected => SelectedCard != null;
     [Inject] private UnitManager _unitManager;
     [Inject] private SpellController _spellController;
-    [Inject] private MpManager _mpManager;
+    [Inject] private CardPoolManager _cardPoolManager;
 
     public void SelectCard(UnitCard card)
     {
@@ -32,7 +32,7 @@ public class CardSelectionManager
         // 카드 사용 로직 구현
         if (!IsCardSelected) return;
         // 예: 유닛 생성, 마나 소모 등
-        if (!_mpManager.ConsumeMp(SelectedCard.cardTable.requiredAmount))
+        if (!_cardPoolManager.ConsumeCard(SelectedCard.cardTable.id))
         {
             SystemUI.ShowNotEnoughToastMessage("MP");
             return;
@@ -40,11 +40,11 @@ public class CardSelectionManager
 
         if (SelectedCard.cardTable.cardType == CardType.Unit)
         {
-            _unitManager.SpawnUnit(position, SelectedCard.cardTable.Id, SelectedCard.cardTable.unitAmount, TeamType.Player);
+            _unitManager.SpawnUnit(position, SelectedCard.cardTable.id, SelectedCard.cardTable.unitAmount, TeamType.Player);
         }
         else if (SelectedCard.cardTable.cardType == CardType.Spell)
         {
-            _spellController.CastSpell(position, SelectedCard.cardTable.Id);
+            _spellController.CastSpell(position, SelectedCard.cardTable.id);
         }
     }
 
