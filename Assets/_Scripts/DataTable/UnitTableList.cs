@@ -9,19 +9,21 @@ public class UnitTable
     public string id;
     public int effectValue;
     public float effectGrowth;
-    public float attackInterval;
+    public float actionInterval;
     public int maxHp;
     public float maxHpGrowth;
     public float moveSpeed;
     public float sightRange;
-    public float attackAbleRange;
+    public float effectAbleRange;
     public TargetType targetType;
     public AreaType areaType;
-    public float attackRange;
-    public AttackType attackType;
-    public string attackObjectId;
+    public float effectRange;
+    public EffectType effectType;
+    public string projectTileId;
     public TargetSelectionType targetSelectionType;
     public TeamType teamType;
+    public string effectVfxId;
+    public TargetGroup targetGroup;
 }
 
 

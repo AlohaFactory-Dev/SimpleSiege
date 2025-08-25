@@ -50,12 +50,9 @@ public class CardSelectionManager
 
     private void DisableSelectedCard()
     {
-        if (SelectedCard)
-        {
-            SelectedCard.SetSelected(false);
-            SelectedCard.DisableCard();
-            SelectedCard = null;
-            SystemUI.ShowToastMessage("UnitCard/DisableCard");
-        }
+        SelectedCard.SetSelected(false);
+        SelectedCard.DisableCard();
+        SelectedCard = null;
+        SystemUI.ShowToastMessage("UnitCard/DisableCard");
     }
 }

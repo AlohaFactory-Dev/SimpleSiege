@@ -4,7 +4,7 @@ using UnityEngine;
 public class UnitTargetSystem : MonoBehaviour
 {
     private UnitController _unitController;
-    private readonly List<Transform> _targetsInSight = new List<Transform>();
+    private readonly List<ITarget> _targetsInSight = new();
 
     public void Init(UnitController unitController)
     {
@@ -16,31 +16,31 @@ public class UnitTargetSystem : MonoBehaviour
         var enemy = other.GetComponent<UnitController>();
         if (enemy != null && enemy != _unitController && enemy.UnitTable.teamType != _unitController.UnitTable.teamType)
         {
-            if (!_targetsInSight.Contains(enemy.transform))
-                _targetsInSight.Add(enemy.transform);
+            if (!_targetsInSight.Contains(enemy))
+                _targetsInSight.Add(enemy);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         var enemy = other.GetComponent<UnitController>();
-        if (enemy != null && _targetsInSight.Contains(enemy.transform))
+        if (enemy != null && _targetsInSight.Contains(enemy))
         {
-            _targetsInSight.Remove(enemy.transform);
+            _targetsInSight.Remove(enemy);
         }
     }
 
-    public Transform FindTarget()
+    public ITarget FindTarget()
     {
         // null 또는 비활성화된 오브젝트 정리
-        _targetsInSight.RemoveAll(t => !t.gameObject.activeSelf);
+        _targetsInSight.RemoveAll(t => !t.Transform.gameObject.activeSelf);
 
         // 시야 내에서 가장 가까운 적을 선택
-        Transform closest = null;
+        ITarget closest = null;
         float minDist = float.MaxValue;
         foreach (var t in _targetsInSight)
         {
-            float dist = Vector3.Distance(_unitController.transform.position, t.position);
+            float dist = Vector3.Distance(_unitController.transform.position, t.Transform.position);
             if (dist < minDist)
             {
                 minDist = dist;

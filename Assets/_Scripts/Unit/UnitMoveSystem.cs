@@ -14,10 +14,10 @@ public class UnitMoveSystem : MonoBehaviour
         _unitTable = unit.UnitTable;
     }
 
-    public void StartMove(Transform target)
+    public void StartMove(ITarget target)
     {
         StopMove();
-        _moveCoroutine = StartCoroutine(MoveRoutine(target));
+        _moveCoroutine = StartCoroutine(MoveRoutine(target.Transform));
     }
 
     public void StopMove()
@@ -36,7 +36,7 @@ public class UnitMoveSystem : MonoBehaviour
             if (target != null)
             {
                 float distance = Vector3.Distance(_unitController.transform.position, target.position);
-                if (distance > _unitController.UnitTable.attackAbleRange)
+                if (distance > _unitController.UnitTable.effectAbleRange)
                 {
                     Vector3 dir = (target.position - _unitController.transform.position).normalized;
                     _unitController.transform.position += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);

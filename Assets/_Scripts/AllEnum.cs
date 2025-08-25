@@ -6,6 +6,8 @@ public enum CardType { Unit, Spell }
 
 public enum AreaType { Single, Circle }
 
-public enum AttackType { Melee, Ranged }
+public enum EffectType { Melee, Ranged }
 
-public enum TargetSelectionType { Nearest, Farthest, Random }
+public enum TargetSelectionType { Nearest, HighestHp }
+
+public enum TargetGroup { All, Building, Unit }

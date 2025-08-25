@@ -3,13 +3,13 @@ using System.Collections;
 using UnityEngine;
 
 
-public abstract class UnitActionSystem : MonoBehaviour
+public class UnitActionSystem : MonoBehaviour
 {
-    private UnitTable _unitTable;
     private Coroutine _actionCoroutine;
     private UnitController _unitController;
     private UnitAnimationSystem _unitAnimationSystem;
-    protected float EffectValue;
+    private UnitTable _unitTable;
+    private IUnitAction _unitAction;
 
     public void Init(UnitController unitController, UnitAnimationSystem unitAnimationSystem)
     {
@@ -17,18 +17,24 @@ public abstract class UnitActionSystem : MonoBehaviour
         _unitController = unitController;
         _unitAnimationSystem = unitAnimationSystem;
         _unitTable = unitController.UnitTable;
-        if (_unitTable.teamType == TeamType.Enemy)
+
+
+        InitAction();
+    }
+
+    private void InitAction()
+    {
+        if (_unitTable.effectType == EffectType.Melee)
         {
-            var attackPowerLevel = StageConainer.Get<StageManager>().CurrentStageTable.enemyAttackPowerLevel;
-            EffectValue = Mathf.CeilToInt(_unitTable.effectValue * Mathf.Pow(1 + _unitTable.effectGrowth, Math.Max(attackPowerLevel - 1, 0)));
+            _unitAction = new MeleeAttackAction(_unitController);
         }
-        else
+        else if (_unitTable.effectType == EffectType.Ranged)
         {
-            EffectValue = _unitTable.effectValue;
+            _unitAction = new RangedAttackAction(_unitController);
         }
     }
 
-    public void StartAction(Transform target)
+    public void StartAction(ITarget target)
     {
         StopAction();
         _actionCoroutine = StartCoroutine(ActionRoutine(target));
@@ -43,27 +49,26 @@ public abstract class UnitActionSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator ActionRoutine(Transform target)
+    private IEnumerator ActionRoutine(ITarget target)
     {
         while (true)
         {
-            if (target)
+            if (target != null)
             {
-                _unitAnimationSystem.SetOnAction(() => OnAction(target));
+                _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
                 yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                 _unitController.OnActionEnd();
                 yield break;
             }
-            else
-            {
-                // 타겟이 없으면 즉시 액션 종료
-                _unitController.OnActionEnd();
-                yield break;
-            }
 
-            yield return null;
+            // 타겟이 없으면 즉시 액션 종료
+            _unitController.OnActionEnd();
+            yield break;
         }
     }
 
-    public abstract void OnAction(Transform target);
+    protected virtual void OnAction(ITarget target, ICaster caster)
+    {
+        _unitAction.Execute(target, caster);
+    }
 }

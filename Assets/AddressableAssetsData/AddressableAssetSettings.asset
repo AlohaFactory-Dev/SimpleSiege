@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: a117f9b745b4544438a62ac26cafc10d
   m_currentHash:
     serializedVersion: 2
-    Hash: 4f301ed0b69a1dec57e31fbb74bd27c9
+    Hash: eb0af6459df7f365b938c125e722e26f
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d052a09d7fe1dba4ea2437703f3339ef, type: 2}
   - {fileID: 11400000, guid: d64ee89f20ef07745acb8a93529edf9c, type: 2}
   - {fileID: 11400000, guid: ba1073844fcce374bafee4cd884f585e, type: 2}
+  - {fileID: 11400000, guid: 31b3ad119c8f20e46a78e2d499e9965c, type: 2}
   - {fileID: 11400000, guid: 8b32874850902414da2d65db7ecefaad, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
@@ -94,6 +95,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - coconut.configs
+    - Unit
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: aed33003afaf85f4786a21a418edd9ee, type: 2}

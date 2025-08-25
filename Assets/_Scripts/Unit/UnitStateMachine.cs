@@ -9,7 +9,7 @@ public class UnitStateMachine
         _statusSystem = statusSystem;
     }
 
-    public void OnStateChanged(Transform target, UnitState newState)
+    public void OnStateChanged(ITarget target, UnitState newState)
     {
         _statusSystem.ApplyState(target, newState);
     }

@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 4217342401861854023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.57, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6743545943705685865}
   - component: {fileID: 5935058334268290252}
   - component: {fileID: 7328881582613577952}
-  - component: {fileID: 1942855870288003224}
+  - component: {fileID: 8871557777459079765}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -261,8 +261,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &1942855870288003224
-CapsuleCollider2D:
+--- !u!58 &8871557777459079765
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -293,9 +293,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0.5}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &5683752476773576221
 GameObject:
   m_ObjectHideFlags: 0

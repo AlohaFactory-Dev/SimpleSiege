@@ -34,7 +34,7 @@ public class UnitStatusSystem : MonoBehaviour
         _collider2D = GetComponent<Collider2D>();
     }
 
-    public void ApplyState(Transform target, UnitState state)
+    public void ApplyState(ITarget target, UnitState state)
     {
         if (state == UnitState.Move)
         {
