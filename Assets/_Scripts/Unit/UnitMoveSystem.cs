@@ -1,56 +1,54 @@
 using System.Collections;
 using UnityEngine;
 
-namespace _Scripts.Unit
+
+public class UnitMoveSystem : MonoBehaviour
 {
-    public class UnitMoveSystem : MonoBehaviour
+    private UnitTable _unitTable;
+    private Coroutine _moveCoroutine;
+    private UnitController _unitController;
+
+    public void Init(UnitController unit)
     {
-        private UnitTable _unitTable;
-        private Coroutine _moveCoroutine;
-        private UnitController _unitController;
+        _unitController = unit;
+        _unitTable = unit.UnitTable;
+    }
 
-        public void Init(UnitController unit)
+    public void StartMove(Transform target)
+    {
+        StopMove();
+        _moveCoroutine = StartCoroutine(MoveRoutine(target));
+    }
+
+    public void StopMove()
+    {
+        if (_moveCoroutine != null)
         {
-            _unitController = unit;
-            _unitTable = unit.UnitTable;
+            StopCoroutine(_moveCoroutine);
+            _moveCoroutine = null;
         }
+    }
 
-        public void StartMove(Transform target)
+    private IEnumerator MoveRoutine(Transform target)
+    {
+        while (true)
         {
-            StopMove();
-            _moveCoroutine = StartCoroutine(MoveRoutine(target));
-        }
-
-        public void StopMove()
-        {
-            if (_moveCoroutine != null)
+            if (target != null)
             {
-                StopCoroutine(_moveCoroutine);
-                _moveCoroutine = null;
-            }
-        }
-
-        private IEnumerator MoveRoutine(Transform target)
-        {
-            while (true)
-            {
-                if (target != null)
+                float distance = Vector3.Distance(_unitController.transform.position, target.position);
+                if (distance > _unitController.UnitTable.attackAbleRange)
                 {
-                    float distance = Vector3.Distance(_unitController.transform.position, target.position);
-                    if (distance > _unitController.UnitTable.attackAbleRange)
-                    {
-                        Vector3 dir = (target.position - _unitController.transform.position).normalized;
-                        _unitController.transform.position += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
-                    }
-                }
-                else
-                {
-                    Vector3 dir = _unitController.UnitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
+                    Vector3 dir = (target.position - _unitController.transform.position).normalized;
                     _unitController.transform.position += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
                 }
-
-                yield return null;
             }
+            else
+            {
+                Vector3 dir = _unitController.UnitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
+                _unitController.transform.position += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
+            }
+
+            yield return null;
         }
     }
 }

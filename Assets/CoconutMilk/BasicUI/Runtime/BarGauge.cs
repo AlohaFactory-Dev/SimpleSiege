@@ -9,14 +9,17 @@ namespace Aloha.CoconutMilk
     {
         public float MaxValue => maxValue;
         public float Value => value;
-        
+
         [SerializeField] private SlicedFilledImage fillImage;
         [SerializeField] private TMP_Text fillText;
 
         [InfoBox("디버그용으로만 에디터에서 조정, 실제로 두 값은 Initialize와 SetValue로 설정되어야 함")]
-        [SerializeField, OnValueChanged(nameof(EditorOnValueChanged))] private float value;
-        [SerializeField, OnValueChanged(nameof(EditorOnValueChanged))] private float maxValue;
-        
+        [SerializeField, OnValueChanged(nameof(EditorOnValueChanged))]
+        private float value;
+
+        [SerializeField, OnValueChanged(nameof(EditorOnValueChanged))]
+        private float maxValue;
+
         private Func<float, float, string> _stringFormatter;
 
         public void Initialize(float maxValue, Func<float, float, string> stringFormatter, float initialValue = 0)
@@ -30,13 +33,23 @@ namespace Aloha.CoconutMilk
         {
             this.value = value;
             fillImage.fillAmount = this.value / maxValue;
-            if(_stringFormatter != null) fillText.text = _stringFormatter(this.value, maxValue);
+            if (_stringFormatter != null) fillText.text = _stringFormatter(this.value, maxValue);
         }
-        
+
+        public void Off()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void On()
+        {
+            gameObject.SetActive(true);
+        }
+
         private void EditorOnValueChanged()
         {
             fillImage.fillAmount = value / maxValue;
-            if(_stringFormatter != null) fillText.text = _stringFormatter(this.value, maxValue);
+            if (_stringFormatter != null) fillText.text = _stringFormatter(this.value, maxValue);
         }
     }
 }

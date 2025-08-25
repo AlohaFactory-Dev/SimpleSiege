@@ -4,7 +4,7 @@ using Zenject;
 
 public class UnitCard : MonoBehaviour
 {
-    public CardData cardData;
+    public CardTable cardTable;
     public Image iconImage;
     private bool _isSelected;
     private Button _button;
@@ -17,16 +17,17 @@ public class UnitCard : MonoBehaviour
         _button.onClick.AddListener(OnClick);
     }
 
-    public void SetCardData(CardData data)
-    {
-        cardData = data;
-        iconImage.sprite = cardData.icon;
-    }
-
-    public void OnClick()
+    private void OnClick()
     {
         _cardSelectionManager.SelectCard(this);
     }
+
+    public void SetCardData(CardTable table)
+    {
+        cardTable = table;
+        iconImage.sprite = ImageContainer.GetImage(table.iconkey);
+    }
+
 
     public void SetSelected(bool selected)
     {

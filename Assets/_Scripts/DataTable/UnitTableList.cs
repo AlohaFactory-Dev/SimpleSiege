@@ -34,7 +34,7 @@ public class UnitTableList : ITableList
         _cachedInfo.Clear();
     }
 
-    public UnitTable GetAttackObjectTable(string id)
+    public UnitTable GetUnitTable(string id)
     {
         if (_cachedInfo.TryGetValue(id, out var objectInfo))
         {

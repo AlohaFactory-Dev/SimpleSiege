@@ -1,13 +1,12 @@
-using _Scripts.Unit;
 using UnityEngine;
 using UniRx;
-using Zenject;
 
 public enum UnitState
 {
     Idle,
     Move,
-    Action
+    Action,
+    Dead
 }
 
 public class UnitController : MonoBehaviour
@@ -18,23 +17,37 @@ public class UnitController : MonoBehaviour
 
     private float _attackTimer;
     private Transform _target;
+    private bool _isInitialized;
+    private UnitStateMachine _stateMachine;
+
     public ReactiveProperty<UnitState> State = new(UnitState.Idle);
 
     public UnitTable UnitTable => _unitTable;
+    [SerializeField] private Collider2D collider2d;
 
-    public void Init(UnitTable unitTable)
+
+    public void Spawn(Vector3 position, UnitTable unitTable)
     {
+        Init();
         _unitTable = unitTable;
+
+        transform.position = position;
+        _statusSystem.Init(this);
+        _targetSystem.Init(this);
+        _stateMachine = new UnitStateMachine(_statusSystem);
+        State.Value = UnitState.Move;
+    }
+
+    private void Init()
+    {
+        if (_isInitialized) return;
+        _isInitialized = true;
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         _targetSystem = GetComponentInChildren<UnitTargetSystem>();
 
-        _statusSystem.Init(this);
-        _targetSystem.Init(this);
-
-        State.Value = UnitState.Move;
         State
             .DistinctUntilChanged()
-            .Subscribe(OnStateChanged)
+            .Subscribe(newState => _stateMachine.OnStateChanged(_target, newState))
             .AddTo(this);
     }
 
@@ -61,8 +74,16 @@ public class UnitController : MonoBehaviour
         State.Value = UnitState.Move;
     }
 
-    private void OnStateChanged(UnitState newState)
+    public void TakeDamage(int damage)
     {
-        _statusSystem.ApplyState(_target, newState);
+        if (_statusSystem.HpSystem.TakeDamage(damage))
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        State.Value = UnitState.Dead;
     }
 }

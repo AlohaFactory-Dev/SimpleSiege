@@ -10,8 +10,6 @@ namespace _Scripts
     public class InputManager : MonoBehaviour
     {
         [Inject] private CardSelectionManager _cardSelectionManager;
-        [Inject] private UnitManager _unitManager;
-        [Inject] private SpellController _spellController;
 
         [InfoBox("연속 생성이 시작 되기 전에 누르고 있어야 하는 시간입니다.")]
         [SerializeField]
@@ -60,6 +58,8 @@ namespace _Scripts
                 StopCoroutine(_spawnCoroutine);
                 _spawnCoroutine = null;
             }
+
+            _cardSelectionManager.OffSelectedCard();
         }
 
         private IEnumerator HandleHold()
@@ -68,7 +68,7 @@ namespace _Scripts
             if (!selectedCard) yield break;
 
 
-            if (selectedCard.cardData.cardType == CardType.Unit)
+            if (selectedCard.cardTable.cardType == CardType.Unit)
             {
                 HandleInput();
                 // HoldTime 동안 기다린 후에 연속 생성 시작
@@ -79,7 +79,7 @@ namespace _Scripts
                     yield return new WaitForSeconds(spawnInterval);
                 }
             }
-            else if (selectedCard.cardData.cardType == CardType.Spell)
+            else if (selectedCard.cardTable.cardType == CardType.Spell)
             {
                 HandleInput();
             }
@@ -93,20 +93,19 @@ namespace _Scripts
             Vector3 worldPos = _camera.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0;
 
-            if (selectedCard.cardData.cardType == CardType.Unit)
+            if (selectedCard.cardTable.cardType == CardType.Unit)
             {
                 // 마우스 위치에 SpawnableArea Collider가 있으면 유닛 소환
                 Collider2D hit = Physics2D.OverlapPoint(worldPos, _spawnableLayerMask);
                 if (hit)
                 {
-                    _unitManager.SpawnUnit(worldPos, selectedCard.cardData.cardId);
+                    _cardSelectionManager.UseSelectedCard(worldPos);
                 }
+
+                return;
             }
-            else if (selectedCard.cardData.cardType == CardType.Spell)
-            {
-                // 마법 사용
-                _spellController.CastSpell(worldPos, selectedCard.cardData.spellEffect);
-            }
+
+            _cardSelectionManager.UseSelectedCard(worldPos);
         }
     }
 }
