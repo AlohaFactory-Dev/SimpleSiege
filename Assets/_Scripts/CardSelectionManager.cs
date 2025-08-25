@@ -32,27 +32,30 @@ public class CardSelectionManager
         // 카드 사용 로직 구현
         if (!IsCardSelected) return;
         // 예: 유닛 생성, 마나 소모 등
-        if (!_cardPoolManager.ConsumeCard(SelectedCard.cardTable.id))
+        if (!_cardPoolManager.ConsumeCard(SelectedCard.CardTable.id))
         {
-            SystemUI.ShowNotEnoughToastMessage("MP");
+            DisableSelectedCard();
             return;
         }
 
-        if (SelectedCard.cardTable.cardType == CardType.Unit)
+        if (SelectedCard.CardTable.cardType == CardType.Unit)
         {
-            _unitManager.SpawnUnit(position, SelectedCard.cardTable.id, SelectedCard.cardTable.unitAmount, TeamType.Player);
+            _unitManager.SpawnUnit(position, SelectedCard.CardTable.id, SelectedCard.CardTable.unitAmount, TeamType.Player);
         }
-        else if (SelectedCard.cardTable.cardType == CardType.Spell)
+        else if (SelectedCard.CardTable.cardType == CardType.Spell)
         {
-            _spellController.CastSpell(position, SelectedCard.cardTable.id);
+            _spellController.CastSpell(position, SelectedCard.CardTable.id);
         }
     }
 
-    public void OffSelectedCard()
+    private void DisableSelectedCard()
     {
-        // 카드 사용 로직 구현
-        if (!IsCardSelected) return;
-        SelectedCard.SetSelected(false);
-        SelectedCard = null;
+        if (SelectedCard)
+        {
+            SelectedCard.SetSelected(false);
+            SelectedCard.DisableCard();
+            SelectedCard = null;
+            SystemUI.ShowToastMessage("UnitCard/DisableCard");
+        }
     }
 }

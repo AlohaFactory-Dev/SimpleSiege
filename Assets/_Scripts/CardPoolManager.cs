@@ -26,7 +26,6 @@ public class CardPoolManager
             return true;
         }
 
-        Debug.LogWarning($"Not enough cards of id '{cardId}' to consume.");
         return false;
     }
 }

@@ -1,15 +1,22 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Zenject;
 
 public class CardContainer : MonoBehaviour
 {
-    private UnitCard[] _unitCards;
+    [Inject] private DeckSelectionManager _deckSelectionManager;
+    private List<UnitCard> _unitCards = new();
+    [SerializeField] UnitCard unitCardPrefab;
 
     public void Init()
     {
-        _unitCards = GetComponentsInChildren<UnitCard>();
-        foreach (var card in _unitCards)
+        var decks = _deckSelectionManager.SelectedCards;
+        foreach (var deck in decks)
         {
-            card.Init();
+            var card = Instantiate(unitCardPrefab, transform);
+            card.Init(deck);
+            _unitCards.Add(card);
         }
     }
 }

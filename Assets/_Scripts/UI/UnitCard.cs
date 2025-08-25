@@ -1,21 +1,33 @@
+using TMPro;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 public class UnitCard : MonoBehaviour
 {
-    public CardTable cardTable;
-    public Image iconImage;
+    public CardTable CardTable { get; private set; }
+    [SerializeField] private Image iconImage;
+    [SerializeField] private TextMeshProUGUI amountText;
     private bool _isSelected;
     private Button _button;
+    private Animator _animator;
 
     [Inject] private CardSelectionManager _cardSelectionManager;
     [Inject] private CardPoolManager _cardPoolManager;
 
-    public void Init()
+    public void Init(CardTable table)
     {
         _button = GetComponent<Button>();
+        _animator = GetComponent<Animator>();
         _button.onClick.AddListener(OnClick);
+        CardTable = table;
+        iconImage.sprite = ImageContainer.GetImage(table.iconKey);
+        _cardPoolManager.CardDict
+            .ObserveEveryValueChanged(dict => dict.ContainsKey(CardTable.id) ? dict[CardTable.id] : 0)
+            .Subscribe(UseCard)
+            .AddTo(this);
+        SetSelected(false);
     }
 
     private void OnClick()
@@ -23,16 +35,22 @@ public class UnitCard : MonoBehaviour
         _cardSelectionManager.SelectCard(this);
     }
 
-    public void SetCardData(CardTable table)
+    private void UseCard(int amount)
     {
-        cardTable = table;
-        iconImage.sprite = ImageContainer.GetImage(table.iconKey);
+        if (CardTable.cardAmount == amount) return;
+        amountText.text = $"x{amount}";
+        _animator.SetTrigger("Action");
+    }
+
+    public void DisableCard()
+    {
+        _button.interactable = false;
+        _animator.SetTrigger("Disable");
     }
 
 
     public void SetSelected(bool selected)
     {
-        _isSelected = selected;
-        // 선택 상태에 따라 UI 변경 (예: 테두리 색상)
+        _animator.SetBool("IsSelected", selected);
     }
 }

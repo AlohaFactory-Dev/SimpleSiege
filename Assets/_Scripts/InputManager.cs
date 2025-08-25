@@ -50,8 +50,6 @@ namespace _Scripts
                 StopCoroutine(_spawnCoroutine);
                 _spawnCoroutine = null;
             }
-
-            _cardSelectionManager.OffSelectedCard();
         }
 
         private IEnumerator HandleHold()
@@ -59,10 +57,10 @@ namespace _Scripts
             var selectedCard = _cardSelectionManager.SelectedCard;
             if (!selectedCard) yield break;
 
-            var holdTime = selectedCard.cardTable.holdTime;
-            var spawnInterval = selectedCard.cardTable.spawnInterval;
+            var holdTime = selectedCard.CardTable.holdTime;
+            var spawnInterval = selectedCard.CardTable.spawnInterval;
 
-            if (selectedCard.cardTable.cardType == CardType.Unit)
+            if (selectedCard.CardTable.cardType == CardType.Unit)
             {
                 HandleInput();
                 // HoldTime 동안 기다린 후에 연속 생성 시작
@@ -73,7 +71,7 @@ namespace _Scripts
                     yield return new WaitForSeconds(spawnInterval);
                 }
             }
-            else if (selectedCard.cardTable.cardType == CardType.Spell)
+            else if (selectedCard.CardTable.cardType == CardType.Spell)
             {
                 HandleInput();
             }
@@ -87,7 +85,7 @@ namespace _Scripts
             Vector3 worldPos = _camera.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0;
 
-            if (selectedCard.cardTable.cardType == CardType.Unit)
+            if (selectedCard.CardTable.cardType == CardType.Unit)
             {
                 // 마우스 위치에 SpawnableArea Collider가 있으면 유닛 소환
                 Collider2D hit = Physics2D.OverlapPoint(worldPos, _spawnableLayerMask);

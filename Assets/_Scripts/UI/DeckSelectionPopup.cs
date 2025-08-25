@@ -25,6 +25,11 @@ public class DeckSelectionPopup : UISlice
         base.Open(openArgs);
         _deckSelectionManager.SelectedCards.ObserveCountChanged().Subscribe(_ => UpdateDeckSizeText()).AddTo(this);
         UpdateDeckSizeText();
+        startGameButton.onClick.AddListener(() =>
+        {
+            StageConainer.Get<StageManager>().StartStage();
+            CloseView();
+        });
     }
 
     private void UpdateDeckSizeText()
