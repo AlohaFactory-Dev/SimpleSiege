@@ -19,6 +19,7 @@ public class UnitStatusSystem : MonoBehaviour
         MoveSystem.Init(unitController);
         AnimationSystem.Init(_recycleObject.Release);
         ActionSystem.Init(unitController, AnimationSystem);
+        _collider2D = GetComponent<Collider2D>();
     }
 
     private void GetComponents()
@@ -30,7 +31,6 @@ public class UnitStatusSystem : MonoBehaviour
         HpSystem = GetComponentInChildren<UnitHpSystem>();
         ActionSystem = GetComponent<UnitActionSystem>();
         _recycleObject = GetComponent<RecycleObject>();
-        _collider2D = GetComponent<Collider2D>();
     }
 
 

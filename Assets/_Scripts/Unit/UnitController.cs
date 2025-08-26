@@ -39,6 +39,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private int _effectValue;
     private int _maxHp;
     public Rigidbody2D Rigidbody2D { get; private set; }
+    public CircleCollider2D CircleCollider2D { get; private set; }
     public Transform Transform => transform;
 
     public void Spawn(Vector3 position, UnitTable unitTable)
@@ -78,6 +79,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _isInitialized = true;
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        CircleCollider2D = GetComponent<CircleCollider2D>();
     }
 
     public void ChangeState(UnitState newState, ITarget target = null)
