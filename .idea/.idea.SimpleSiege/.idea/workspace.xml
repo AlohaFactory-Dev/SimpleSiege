@@ -4,11 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/AttackObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/AttackObject.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/AttackObject.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/AttackObject.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Card.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Card.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Etc.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Etc.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Text.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Text.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Animation/UnitCard/UnitCard.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animation/UnitCard/UnitCard.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Installer/StageInstaller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Installer/StageInstaller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Popup/DeckSelectionPopup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Popup/DeckSelectionPopup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/UI/Card/DeckCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/UI/Card/DeckCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/AttackObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/AttackObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/StageInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/StageInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Factory/RecycleParticle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Factory/RecycleParticle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/CardContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/CardContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckSelectionPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckSelectionPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/ActionSystem/UnitActionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/ActionSystem/UnitActionSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/MeleeAttackAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/MeleeAttackAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/RangedAttackAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/RangedAttackAction.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,8 +56,11 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Plugins/Zenject/Source/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Runtime/Core/TableManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Map/StageMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.4/Runtime/Components/CinemachineTrackedDolly.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -46,21 +79,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;design&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;rider.code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;rider.code.cleanup.on.save.profile&quot;: &quot;Built-in: Reformat Code&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
+    "git-widget-placeholder": "design",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rider.code.cleanup.on.save": "true",
+    "rider.code.cleanup.on.save.profile": "Built-in: Reformat Code",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\Unity\2022.3.62f1\Editor\Unity.exe" />
@@ -84,13 +118,15 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26172">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26172" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -126,6 +162,9 @@
       <workItem from="1755838874385" duration="3462000" />
       <workItem from="1755842486427" duration="9212000" />
       <workItem from="1755852835037" duration="27000" />
+      <workItem from="1756083953188" duration="14731000" />
+      <workItem from="1756101102026" duration="584000" />
+      <workItem from="1756165368149" duration="4303000" />
     </task>
     <servers />
   </component>
@@ -157,6 +196,32 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/UI/DeckCard.cs</url>
+          <line>32</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\UI\DeckCard.cs" containingFunctionPresentation="메서드 'OnAddButtonClicked'">
+            <startOffsets>
+              <option value="1096" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1149" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs</url>
+          <line>36</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\DataTable\UnitTableList.cs" containingFunctionPresentation="메서드 'Init'">
+            <startOffsets>
+              <option value="945" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1014" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

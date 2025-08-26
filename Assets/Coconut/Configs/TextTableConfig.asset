@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TextTableConfig
   m_EditorClassIdentifier: 
   tableNames:
-  - text_table
+  - Text
   languageInfos:
   - language: 10
     fontInfos:

@@ -11,14 +11,6 @@ namespace _Scripts
     {
         [Inject] private CardSelectionManager _cardSelectionManager;
 
-        [InfoBox("연속 생성이 시작 되기 전에 누르고 있어야 하는 시간입니다.")]
-        [SerializeField]
-        private float holdTime = 0.5f; // 버튼을 누르고 있어야 하는 시간
-
-        [InfoBox("연속 생성 간격입니다. 이 시간마다 유닛이 생성됩니다.")]
-        [SerializeField]
-        private float spawnInterval = 0.5f; // 버튼을 누르고 있어야 하는 시간
-
         private bool _isPointerDown;
         private Coroutine _spawnCoroutine;
         private Camera _camera;
@@ -34,7 +26,7 @@ namespace _Scripts
         private void Update()
         {
             // 마우스 클릭 또는 터치 입력 처리
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 OnPointerDown();
             }
@@ -58,8 +50,6 @@ namespace _Scripts
                 StopCoroutine(_spawnCoroutine);
                 _spawnCoroutine = null;
             }
-
-            _cardSelectionManager.OffSelectedCard();
         }
 
         private IEnumerator HandleHold()
@@ -67,8 +57,10 @@ namespace _Scripts
             var selectedCard = _cardSelectionManager.SelectedCard;
             if (!selectedCard) yield break;
 
+            var holdTime = selectedCard.CardTable.holdTime;
+            var spawnInterval = selectedCard.CardTable.spawnInterval;
 
-            if (selectedCard.cardTable.cardType == CardType.Unit)
+            if (selectedCard.CardTable.cardType == CardType.Unit)
             {
                 HandleInput();
                 // HoldTime 동안 기다린 후에 연속 생성 시작
@@ -79,7 +71,7 @@ namespace _Scripts
                     yield return new WaitForSeconds(spawnInterval);
                 }
             }
-            else if (selectedCard.cardTable.cardType == CardType.Spell)
+            else if (selectedCard.CardTable.cardType == CardType.Spell)
             {
                 HandleInput();
             }
@@ -93,7 +85,7 @@ namespace _Scripts
             Vector3 worldPos = _camera.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0;
 
-            if (selectedCard.cardTable.cardType == CardType.Unit)
+            if (selectedCard.CardTable.cardType == CardType.Unit)
             {
                 // 마우스 위치에 SpawnableArea Collider가 있으면 유닛 소환
                 Collider2D hit = Physics2D.OverlapPoint(worldPos, _spawnableLayerMask);

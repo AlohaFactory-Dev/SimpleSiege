@@ -1,0 +1,9 @@
+id,cardType,cardAmount,holdTime,spawnInterval,unitAmount,iconKey,nameKey,descriptionKey,values
+P_Swordsman,Unit,100,0.5,0.25,2,Swordsman,Card/Unit/P_Swordsman/Name,Card/Unit/P_Swordsman/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_Archer,Unit,50,0.5,0.25,1,Archer,Card/Unit/P_Archer/Name,Card/Unit/P_Archer/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_Catapult,Unit,15,0.7,0.35,1,Catapult,Card/Unit/P_Catapult/Name,Card/Unit/P_Catapult/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_SkeletonSoldier,Unit,200,0.2,0.1,3,SkeletonSoldier,Card/Unit/P_SkeletonSoldier/Name,Card/Unit/P_SkeletonSoldier/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_Giant,Unit,15,0.7,0.35,1,Giant,Card/Unit/P_Giant/Name,Card/Unit/P_Giant/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_FlameWizard,Unit,30,0.7,0.35,1,FlameWizard,Card/Unit/P_FlameWizard/Name,Card/Unit/P_FlameWizard/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_Sniper,Unit,30,0.7,0.35,1,Sniper,Card/Unit/P_Sniper/Name,Card/Unit/P_Sniper/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_Cavalry,Unit,50,0.5,0.25,1,Cavalry,Card/Unit/P_Cavalry/Name,Card/Unit/P_Cavalry/Desc,[-99999;-99999;-99999;-99999;-99999]

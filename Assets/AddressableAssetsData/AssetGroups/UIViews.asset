@@ -32,6 +32,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a004e70f2ef635848a3b0b75152d0691
+    m_Address: DeckSelectionViewConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a5a09133eb17d0244a9af85d4bc686b3
     m_Address: SceneTransitionViewConfig
     m_ReadOnly: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TableConfig
   m_EditorClassIdentifier: 
   rootFolderAddress: Tables
-  startRow: 1
+  startRow: 2
   rootFolderPath: Assets/Coconut/Configs/Tables
   googleClientId: 1079441451838-9iqvcd87nasv0nqrnbbam09a5thb82t6.apps.googleusercontent.com
   googleClientSecret: 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
