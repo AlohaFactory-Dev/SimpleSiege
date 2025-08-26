@@ -7,10 +7,11 @@ public class UnitTargetSystem : MonoBehaviour
 {
     private UnitController _unitController;
     private CircleCollider2D _collider;
-    private readonly List<ITarget> _targetsInSight = new();
+    [SerializeField] private List<UnitController> _targetsInSight = new();
 
     public void Init(UnitController unitController)
     {
+        _targetsInSight.Clear();
         _unitController = unitController;
         _collider = GetComponent<CircleCollider2D>();
         _collider.isTrigger = true;
@@ -19,18 +20,34 @@ public class UnitTargetSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var enemy = other.GetComponent<UnitController>();
-        if (enemy != null && enemy != _unitController && enemy.UnitTable.teamType != _unitController.UnitTable.teamType)
+        var target = other.GetComponent<UnitController>();
+        if (CheckTargetType(target))
         {
-            if (!_targetsInSight.Contains(enemy))
-                _targetsInSight.Add(enemy);
+            if (!_targetsInSight.Contains(target))
+                _targetsInSight.Add(target);
+        }
+    }
+
+    private bool CheckTargetType(UnitController target)
+    {
+        if (_unitController.UnitTable.targetType == TargetType.Ally)
+        {
+            return target.UnitTable.teamType == _unitController.UnitTable.teamType;
+        }
+        else if (_unitController.UnitTable.targetType == TargetType.Enemy)
+        {
+            return target.UnitTable.teamType != _unitController.UnitTable.teamType;
+        }
+        else // TargetType.All
+        {
+            return target != _unitController; // 자기 자신은 제외
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         var enemy = other.GetComponent<UnitController>();
-        if (enemy != null && _targetsInSight.Contains(enemy))
+        if (_targetsInSight.Contains(enemy))
         {
             _targetsInSight.Remove(enemy);
         }
@@ -39,14 +56,11 @@ public class UnitTargetSystem : MonoBehaviour
 
     public ITarget FindTarget()
     {
-        // null 또는 비활성화된 오브젝트 정리
-        _targetsInSight.RemoveAll(t => !t.Transform.gameObject.activeSelf);
-
-        // 시야 내에서 가장 가까운 적을 선택
         ITarget closest = null;
         float minDist = float.MaxValue;
         foreach (var t in _targetsInSight)
         {
+            if (t.IsDead || t.IsUntargetable) continue;
             float dist = Vector3.Distance(_unitController.transform.position, t.Transform.position);
             if (dist < minDist)
             {

@@ -5,12 +5,13 @@ public class UnitHpSystem : MonoBehaviour
 {
     private BarGauge _hpBarGauge;
     private int _currentHp;
+    public bool IsDead => _currentHp <= 0;
 
-    public void Init(UnitTable unitTable)
+    public void Init(int maxHp)
     {
         _hpBarGauge = GetComponentInChildren<BarGauge>(true);
-        _hpBarGauge.Initialize(unitTable.maxHp, null, unitTable.maxHp);
-        _currentHp = unitTable.maxHp;
+        _hpBarGauge.Initialize(maxHp, null, maxHp);
+        _currentHp = maxHp;
     }
 
     public bool TakeDamage(int damage)

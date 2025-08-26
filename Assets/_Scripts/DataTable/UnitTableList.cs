@@ -24,6 +24,7 @@ public class UnitTable
     [CSVColumn] public TeamType teamType;
     [CSVColumn] public string effectVfxId;
     [CSVColumn] public TargetGroup targetGroup;
+    [CSVColumn] public float idleTimeAfterSpawn;
 }
 
 
@@ -54,5 +55,10 @@ public class UnitTableList : ITableList
 
         _cachedInfo.Add(id, info);
         return info;
+    }
+
+    public List<UnitTable> GetTeamUnitTable(TeamType teamType)
+    {
+        return _attackObjectTables.FindAll(a => a.teamType == teamType);
     }
 }

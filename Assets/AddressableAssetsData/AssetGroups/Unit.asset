@@ -23,8 +23,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 084f788502c922441bd98eb967730dc9
+    m_Address: E_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08f4f3fe6cf8d3d409af25912b0f0c19
+    m_Address: E_Cavalry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0afb585cf24482140976d61a71bfe217
+    m_Address: E_Catapult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c04461464fcfe64eb99b465d04cb71e
     m_Address: P_Giant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 107399708ce7dcf4b92ca7f1b85b6497
+    m_Address: E_FlameWizard
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -35,8 +59,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38b500f44071e7e4192e84e215afff64
+    m_Address: E_Giant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4898c8746f32b414ba563497b3eeba57
     m_Address: P_Catapult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59a113c11a3fad240b28e43bb23daf43
+    m_Address: E_Sniper
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
@@ -53,6 +89,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c70573df97a5e494aa470a8395b98c70
+    m_Address: E_SkeletonSoldier
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: de285f59d909b0f43b17792df01a8046
     m_Address: P_FlameWizard
     m_ReadOnly: 0
@@ -61,6 +103,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e53a7e6b83e81a041a496ebc4ad881a4
     m_Address: P_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efd0565ed06d95c41b75b0be4c70ec44
+    m_Address: E_Swordsman
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

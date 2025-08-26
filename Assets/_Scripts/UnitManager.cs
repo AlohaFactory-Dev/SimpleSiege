@@ -14,7 +14,7 @@ public class UnitManager
         _factoryManager = factoryManager;
     }
 
-    public void SpawnUnit(Vector2 spawnPosition, string id, int amount, TeamType teamType)
+    public void SpawnUnit(Vector2 spawnPosition, string id, int amount)
     {
         var table = TableListContainer.Get<UnitTableList>().GetUnitTable(id);
         for (int i = 0; i < amount; i++)
@@ -23,7 +23,7 @@ public class UnitManager
             var unit = _factoryManager.UnitFactroy.GetUnit(table.id);
             unit.Spawn(spawnPosition + offset, table);
             // 유닛의 팀 설정
-            if (teamType == TeamType.Player)
+            if (table.teamType == TeamType.Player)
             {
                 PlayerUnits.Add(unit);
             }

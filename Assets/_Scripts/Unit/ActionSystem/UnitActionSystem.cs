@@ -17,8 +17,6 @@ public class UnitActionSystem : MonoBehaviour
         _unitController = unitController;
         _unitAnimationSystem = unitAnimationSystem;
         _unitTable = unitController.UnitTable;
-
-
         InitAction();
     }
 
@@ -36,12 +34,19 @@ public class UnitActionSystem : MonoBehaviour
 
     public void StartAction(ITarget target)
     {
-        StopAction();
+        _unitController.Rigidbody2D.bodyType = RigidbodyType2D.Static;
+        if (_actionCoroutine != null)
+        {
+            StopCoroutine(_actionCoroutine);
+            _actionCoroutine = null;
+        }
+
         _actionCoroutine = StartCoroutine(ActionRoutine(target));
     }
 
     public void StopAction()
     {
+        _unitController.Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
         if (_actionCoroutine != null)
         {
             StopCoroutine(_actionCoroutine);
@@ -57,12 +62,19 @@ public class UnitActionSystem : MonoBehaviour
             {
                 _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
                 yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
-                _unitController.OnActionEnd();
-                yield break;
+                if (target.IsDead)
+                {
+                    _unitController.ChangeState(UnitState.Move);
+                    yield break;
+                }
+
+                // 액션 간격 대기
+                _unitAnimationSystem.PlayIdle();
+                yield return new WaitForSeconds(_unitTable.actionInterval);
             }
 
             // 타겟이 없으면 즉시 액션 종료
-            _unitController.OnActionEnd();
+            _unitController.ChangeState(UnitState.Move);
             yield break;
         }
     }

@@ -15,11 +15,10 @@ public class UnitStatusSystem : MonoBehaviour
     public void Init(UnitController unitController)
     {
         GetComponents();
-        HpSystem.Init(unitController.UnitTable);
+        HpSystem.Init(unitController.MaxHp);
         MoveSystem.Init(unitController);
         AnimationSystem.Init(_recycleObject.Release);
         ActionSystem.Init(unitController, AnimationSystem);
-        _collider2D.enabled = true;
     }
 
     private void GetComponents()
@@ -34,32 +33,40 @@ public class UnitStatusSystem : MonoBehaviour
         _collider2D = GetComponent<Collider2D>();
     }
 
+
     public void ApplyState(ITarget target, UnitState state)
     {
-        if (state == UnitState.Move)
+        switch (state)
         {
-            AnimationSystem.PlayMove();
-            MoveSystem.StartMove(target);
-            ActionSystem.StopAction();
-        }
-        else if (state == UnitState.Action)
-        {
-            AnimationSystem.PlayAction();
-            MoveSystem.StopMove();
-            ActionSystem.StartAction(target);
-        }
-        else if (state == UnitState.Dead)
-        {
-            AnimationSystem.PlayDead();
-            _collider2D.enabled = false;
-            ActionSystem.StopAction();
-            MoveSystem.StopMove();
-        }
-        else
-        {
-            MoveSystem.StopMove();
-            ActionSystem.StopAction();
-            AnimationSystem.PlayIdle();
+            case UnitState.Idle:
+                AnimationSystem.PlayIdle();
+                MoveSystem.StopMove();
+                break;
+            case UnitState.Spawn:
+                AnimationSystem.PlaySpawn();
+                ActionSystem.StopAction();
+                MoveSystem.StopMove();
+                _collider2D.enabled = true;
+                break;
+            case UnitState.Move:
+                AnimationSystem.PlayMove();
+                ActionSystem.StopAction();
+                MoveSystem.StartMove();
+                break;
+            case UnitState.Action:
+                AnimationSystem.PlayAction();
+                ActionSystem.StartAction(target);
+                MoveSystem.StopMove();
+                break;
+            case UnitState.Dead:
+                AnimationSystem.PlayDead();
+                ActionSystem.StopAction();
+                MoveSystem.StopMove();
+                _collider2D.enabled = false;
+                break;
+            default:
+                Debug.LogError("Unknown state: " + state);
+                break;
         }
     }
 }

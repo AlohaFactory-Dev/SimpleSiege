@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1647241889845475633, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_Name
-      value: Swordsman
+      value: P_Swordsman
       objectReference: {fileID: 0}
     - target: {fileID: 9061571285628317336, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,25 +59,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670021939107615352}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
---- !u!1 &2206096723998707495 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
-  m_PrefabInstance: {fileID: 6001875395353248781}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1670021939107615352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2206096723998707495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd65e960be7404099e12ac6aee54588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

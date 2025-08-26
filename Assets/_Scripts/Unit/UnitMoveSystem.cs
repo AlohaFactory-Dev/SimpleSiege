@@ -7,18 +7,21 @@ public class UnitMoveSystem : MonoBehaviour
     private UnitTable _unitTable;
     private Coroutine _moveCoroutine;
     private UnitController _unitController;
-    [SerializeField] private new Rigidbody2D rigidbody;
+    [SerializeField] private Transform obj;
+    [SerializeField] private UnitTargetSystem _targetSystem;
+    private ITarget _target;
 
     public void Init(UnitController unit)
     {
         _unitController = unit;
         _unitTable = unit.UnitTable;
+        _targetSystem.Init(unit);
     }
 
-    public void StartMove(ITarget target)
+    public void StartMove()
     {
         StopMove();
-        _moveCoroutine = StartCoroutine(MoveRoutine(target));
+        _moveCoroutine = StartCoroutine(MoveRoutine());
     }
 
     public void StopMove()
@@ -30,18 +33,51 @@ public class UnitMoveSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveRoutine(ITarget target)
+    private IEnumerator MoveRoutine()
     {
+        float lastYRotation = 0f;
         while (true)
         {
             Vector3 nextPosition = _unitController.transform.position;
-            if (target != null)
+
+            _target = _targetSystem.FindTarget();
+
+            if (_target != null)
             {
-                float distance = Vector3.Distance(_unitController.transform.position, target.Transform.position);
+                Vector3 targetPos = _target.Transform.position;
+                Vector3 currentPos = _unitController.transform.position;
+                float distance = Vector3.Distance(currentPos, targetPos);
+
                 if (distance > _unitController.UnitTable.effectAbleRange)
                 {
-                    Vector3 dir = (target.Transform.position - _unitController.transform.position).normalized;
+                    Vector3 dir = (targetPos - currentPos).normalized;
                     nextPosition += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
+
+                    // 좌우 회전 처리 (Y축 0 또는 180도)
+                    if (dir.x != 0)
+                    {
+                        float yRotation = dir.x > 0 ? 0f : 180f;
+                        if (!Mathf.Approximately(lastYRotation, yRotation))
+                        {
+                            obj.rotation = Quaternion.Euler(0f, yRotation, 0f);
+                            lastYRotation = yRotation;
+                        }
+                    }
+                }
+                else
+                {
+                    float moveDirX = (targetPos - currentPos).x;
+                    if (moveDirX != 0)
+                    {
+                        float yRotation = moveDirX > 0 ? 0f : 180f;
+                        if (!Mathf.Approximately(lastYRotation, yRotation))
+                        {
+                            obj.rotation = Quaternion.Euler(0f, yRotation, 0f);
+                        }
+                    }
+
+                    _unitController.ChangeState(UnitState.Action, _target);
+                    yield break;
                 }
             }
             else
@@ -50,7 +86,7 @@ public class UnitMoveSystem : MonoBehaviour
                 nextPosition += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
             }
 
-            rigidbody.MovePosition(nextPosition);
+            _unitController.Rigidbody2D.MovePosition(nextPosition);
 
             yield return new WaitForFixedUpdate();
         }

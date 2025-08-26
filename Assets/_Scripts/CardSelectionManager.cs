@@ -40,7 +40,7 @@ public class CardSelectionManager
 
         if (SelectedCard.CardTable.cardType == CardType.Unit)
         {
-            _unitManager.SpawnUnit(position, SelectedCard.CardTable.id, SelectedCard.CardTable.unitAmount, TeamType.Player);
+            _unitManager.SpawnUnit(position, SelectedCard.CardTable.id, SelectedCard.CardTable.unitAmount);
         }
         else if (SelectedCard.CardTable.cardType == CardType.Spell)
         {

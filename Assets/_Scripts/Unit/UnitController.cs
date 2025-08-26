@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using FactorySystem;
 using UnityEngine;
 using UniRx;
@@ -6,6 +8,7 @@ using Zenject;
 
 public enum UnitState
 {
+    Spawn,
     Idle,
     Move,
     Action,
@@ -19,21 +22,24 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     [SerializeField] private Transform floatingEffectPoint;
     private UnitTable _unitTable;
     private UnitStatusSystem _statusSystem;
-    private UnitTargetSystem _targetSystem;
 
     private float _attackTimer;
     private ITarget _target;
     private bool _isInitialized;
-    private UnitStateMachine _stateMachine;
 
     private string _floatingTextId = "FloatingText";
 
-    public ReactiveProperty<UnitState> state = new(UnitState.Idle);
+    [SerializeField] private UnitState state;
 
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _effectValue;
+    public int MaxHp => _maxHp;
+    public bool IsDead => _statusSystem.HpSystem.IsDead;
+    public bool IsUntargetable => state == UnitState.Dead || state == UnitState.Spawn;
     private int _effectValue;
-    private IDisposable _stateSubscription;
+    private int _maxHp;
+    public Rigidbody2D Rigidbody2D { get; private set; }
+    public Transform Transform => transform;
 
     public void Spawn(Vector3 position, UnitTable unitTable)
     {
@@ -41,25 +47,29 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _unitTable = unitTable;
         if (_unitTable.teamType == TeamType.Enemy)
         {
-            var attackPowerLevel = StageConainer.Get<StageManager>().CurrentStageTable.enemyAttackPowerLevel;
-            _effectValue = Mathf.CeilToInt(_unitTable.effectValue * Mathf.Pow(1 + _unitTable.effectGrowth, Math.Max(attackPowerLevel - 1, 0)));
+            var stageTable = StageConainer.Get<StageManager>().CurrentStageTable;
+            _effectValue = Mathf.CeilToInt(_unitTable.effectValue * Mathf.Pow(1 + _unitTable.effectGrowth, Math.Max(stageTable.enemyAttackPowerLevel - 1, 0)));
+            _maxHp = Mathf.CeilToInt(_unitTable.maxHp * Mathf.Pow(1 + _unitTable.maxHpGrowth, Math.Max(stageTable.enemyHpLevel - 1, 0)));
         }
         else
         {
             _effectValue = _unitTable.effectValue;
+            _maxHp = _unitTable.maxHp;
         }
 
         transform.position = position;
         _statusSystem.Init(this);
-        _targetSystem.Init(this);
-        _stateMachine = new UnitStateMachine(_statusSystem);
-        state.Value = UnitState.Move;
+        state = UnitState.Spawn;
+        ChangeState(UnitState.Spawn);
 
-        _stateSubscription?.Dispose();
-        _stateSubscription = state
-            .DistinctUntilChanged()
-            .Subscribe(newState => _stateMachine.OnStateChanged(_target, newState))
-            .AddTo(this);
+
+        StartCoroutine(WaitAndMove(_unitTable.idleTimeAfterSpawn));
+    }
+
+    private IEnumerator WaitAndMove(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        ChangeState(UnitState.Move);
     }
 
     private void Init()
@@ -67,36 +77,23 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         if (_isInitialized) return;
         _isInitialized = true;
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
-        _targetSystem = GetComponentInChildren<UnitTargetSystem>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    public void ChangeState(UnitState newState, ITarget target = null)
     {
-        if (state.Value == UnitState.Move)
-        {
-            _target = _targetSystem.FindTarget();
-            if (_target == null)
-                state.Value = UnitState.Move;
-            else
-            {
-                float distance = Vector3.Distance(transform.position, _target.Transform.position);
-                if (distance > _unitTable.effectAbleRange)
-                    state.Value = UnitState.Move;
-                else
-                    state.Value = UnitState.Action;
-            }
-        }
+        if (state == UnitState.Dead) return;
+        state = newState;
+        _statusSystem.ApplyState(target, newState);
     }
 
-    public void OnActionEnd()
-    {
-        state.Value = UnitState.Move;
-    }
-
-    public Transform Transform => transform;
 
     public void TakeDamage(ICaster caster)
     {
+        if (IsDead) return;
+        if (state == UnitState.Spawn)
+            return;
+
         var floatingText = _factoryManager.FloatingTextFactory.GetText(_floatingTextId);
         floatingText.SetText(caster.EffectValue.ToString());
         floatingText.Play(floatingEffectPoint.position);
@@ -106,7 +103,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         particle.Play();
         if (_statusSystem.HpSystem.TakeDamage(caster.EffectValue))
         {
-            state.Value = UnitState.Dead;
+            ChangeState(UnitState.Dead);
         }
     }
 }

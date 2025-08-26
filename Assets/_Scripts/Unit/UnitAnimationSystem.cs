@@ -32,6 +32,11 @@ public class UnitAnimationSystem : MonoBehaviour
         _animationEventHandler.SetOnAction(onAction);
     }
 
+    public void PlaySpawn()
+    {
+        _animator.SetTrigger("Spawn");
+    }
+
     public void PlayMove()
     {
         _animator.SetTrigger("Move");
