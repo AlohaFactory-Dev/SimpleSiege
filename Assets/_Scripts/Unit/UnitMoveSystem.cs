@@ -38,14 +38,13 @@ public class UnitMoveSystem : MonoBehaviour
         float lastYRotation = 0f;
         while (true)
         {
-            Vector3 nextPosition = _unitController.transform.position;
-
+            Vector3 nextPosition = _unitController.Rigidbody2D.position;
             _target = _targetSystem.FindTarget();
 
             if (_target != null)
             {
                 Vector3 targetPos = _target.Transform.position;
-                Vector3 currentPos = _unitController.transform.position;
+                Vector3 currentPos = _unitController.Rigidbody2D.position;
                 float distance = Vector3.Distance(currentPos, targetPos);
 
                 if (distance > _unitController.UnitTable.effectAbleRange)

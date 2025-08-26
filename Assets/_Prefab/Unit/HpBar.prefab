@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FillText
       objectReference: {fileID: 0}
+    - target: {fileID: 8928421195861793787, guid: e970ba9c785aae248b1c3a0ab1b5d340, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5944152345753794022, guid: e970ba9c785aae248b1c3a0ab1b5d340, type: 3}
     m_RemovedGameObjects: []

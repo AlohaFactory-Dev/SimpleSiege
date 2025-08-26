@@ -7,7 +7,7 @@ public class UnitTargetSystem : MonoBehaviour
 {
     private UnitController _unitController;
     private CircleCollider2D _collider;
-    [SerializeField] private List<UnitController> _targetsInSight = new();
+    private readonly List<ITarget> _targetsInSight = new();
 
     public void Init(UnitController unitController)
     {
@@ -20,28 +20,37 @@ public class UnitTargetSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var target = other.GetComponent<UnitController>();
-        if (CheckTargetType(target))
+        var target = other.GetComponent<ITarget>();
+        if (CheckAddAble(target))
         {
             if (!_targetsInSight.Contains(target))
                 _targetsInSight.Add(target);
         }
     }
 
-    private bool CheckTargetType(UnitController target)
+    private bool CheckAddAble(ITarget target)
     {
+        if (target.Group != _unitController.UnitTable.targetGroup && _unitController.UnitTable.targetGroup != TargetGroup.All)
+        {
+            return false;
+        }
+
         if (_unitController.UnitTable.targetType == TargetType.Ally)
         {
-            return target.UnitTable.teamType == _unitController.UnitTable.teamType;
+            return target.TeamType == _unitController.UnitTable.teamType;
         }
-        else if (_unitController.UnitTable.targetType == TargetType.Enemy)
+
+        if (_unitController.UnitTable.targetType == TargetType.Enemy)
         {
-            return target.UnitTable.teamType != _unitController.UnitTable.teamType;
+            return target.TeamType != _unitController.UnitTable.teamType;
         }
-        else // TargetType.All
+
+        if (_unitController.UnitTable.targetType == TargetType.All)
         {
             return target != _unitController; // 자기 자신은 제외
         }
+
+        return false;
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -57,15 +66,31 @@ public class UnitTargetSystem : MonoBehaviour
     public ITarget FindTarget()
     {
         ITarget closest = null;
-        float minDist = float.MaxValue;
-        foreach (var t in _targetsInSight)
+        if (_unitController.UnitTable.targetSelectionType == TargetSelectionType.Nearest)
         {
-            if (t.IsDead || t.IsUntargetable) continue;
-            float dist = Vector3.Distance(_unitController.transform.position, t.Transform.position);
-            if (dist < minDist)
+            float minDist = float.MaxValue;
+            foreach (var t in _targetsInSight)
             {
-                minDist = dist;
-                closest = t;
+                if (t.IsDead || t.IsUntargetable) continue;
+                float dist = Vector3.Distance(_unitController.transform.position, t.Transform.position);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    closest = t;
+                }
+            }
+        }
+        else if (_unitController.UnitTable.targetSelectionType == TargetSelectionType.HighestHp)
+        {
+            int maxHp = int.MinValue;
+            foreach (var t in _targetsInSight)
+            {
+                if (t.IsDead || t.IsUntargetable) continue;
+                if (t.MaxHp > maxHp)
+                {
+                    maxHp = t.MaxHp;
+                    closest = t;
+                }
             }
         }
 

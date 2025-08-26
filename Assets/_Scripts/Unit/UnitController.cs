@@ -34,6 +34,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _effectValue;
     public int MaxHp => _maxHp;
+    public TargetGroup Group => TargetGroup.Unit;
     public bool IsDead => _statusSystem.HpSystem.IsDead;
     public bool IsUntargetable => state == UnitState.Dead || state == UnitState.Spawn;
     private int _effectValue;
@@ -41,11 +42,12 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public Rigidbody2D Rigidbody2D { get; private set; }
     public CircleCollider2D CircleCollider2D { get; private set; }
     public Transform Transform => transform;
+    public TeamType TeamType => _unitTable.teamType;
 
     public void Spawn(Vector3 position, UnitTable unitTable)
     {
-        Init();
         _unitTable = unitTable;
+        Init();
         if (_unitTable.teamType == TeamType.Enemy)
         {
             var stageTable = StageConainer.Get<StageManager>().CurrentStageTable;
@@ -73,6 +75,15 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         ChangeState(UnitState.Move);
     }
 
+    //충돌처리는 적용하지만 움직이지 않도록 고정
+    private void FixedUpdate()
+    {
+        Rigidbody2D.rotation = 0f;
+        Rigidbody2D.angularVelocity = 0f;
+        Rigidbody2D.velocity = Vector2.zero;
+    }
+
+
     private void Init()
     {
         if (_isInitialized) return;
@@ -80,6 +91,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         CircleCollider2D = GetComponent<CircleCollider2D>();
+        Rigidbody2D.mass = _unitTable.mass;
     }
 
     public void ChangeState(UnitState newState, ITarget target = null)

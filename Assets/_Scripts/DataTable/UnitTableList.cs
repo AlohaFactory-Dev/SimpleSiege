@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using _DataTable.Script;
 using Aloha.Coconut;
 using Cysharp.Threading.Tasks;
@@ -7,6 +8,7 @@ using UnityEngine;
 public class UnitTable
 {
     [CSVColumn] public string id;
+    [CSVColumn] public float mass;
     [CSVColumn] public int effectValue;
     [CSVColumn] public float effectGrowth;
     [CSVColumn] public float actionInterval;

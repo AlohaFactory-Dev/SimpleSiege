@@ -1,6 +1,6 @@
 public enum TeamType { Player, Enemy }
 
-public enum TargetType { Ally, Enemy }
+public enum TargetType { Ally, Enemy, All }
 
 public enum CardType { Unit, Spell }
 

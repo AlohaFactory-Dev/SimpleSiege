@@ -241,7 +241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531ed89ef2344e3c9d343fae0699b7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetsInSight: []
 --- !u!58 &4630896364693173912
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -444,7 +443,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8b3a70adeff9b9446ba953b8821fea39, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -454,7 +453,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!58 &8871557777459079765
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -572,7 +571,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1256385861
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &6440640173813540377

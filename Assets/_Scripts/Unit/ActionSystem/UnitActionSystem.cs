@@ -34,7 +34,6 @@ public class UnitActionSystem : MonoBehaviour
 
     public void StartAction(ITarget target)
     {
-        _unitController.Rigidbody2D.bodyType = RigidbodyType2D.Static;
         if (_actionCoroutine != null)
         {
             StopCoroutine(_actionCoroutine);
@@ -46,7 +45,6 @@ public class UnitActionSystem : MonoBehaviour
 
     public void StopAction()
     {
-        _unitController.Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
         if (_actionCoroutine != null)
         {
             StopCoroutine(_actionCoroutine);
