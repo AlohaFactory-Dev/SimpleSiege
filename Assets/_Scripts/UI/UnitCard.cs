@@ -25,9 +25,10 @@ public class UnitCard : MonoBehaviour
         iconImage.sprite = ImageContainer.GetImage(table.iconKey);
         _cardPoolManager.CardDict
             .ObserveEveryValueChanged(dict => dict.ContainsKey(CardTable.id) ? dict[CardTable.id] : 0)
-            .Subscribe(UseCard)
+            .Subscribe(Refresh)
             .AddTo(this);
         SetSelected(false);
+        Refresh(_cardPoolManager.GetCardAmount(CardTable.id));
     }
 
     private void OnClick()
@@ -35,10 +36,10 @@ public class UnitCard : MonoBehaviour
         _cardSelectionManager.SelectCard(this);
     }
 
-    private void UseCard(int amount)
+    private void Refresh(int amount)
     {
-        if (CardTable.cardAmount == amount) return;
         amountText.text = $"x{amount}";
+        if (CardTable.cardAmount == amount) return;
         _animator.SetTrigger("Action");
     }
 

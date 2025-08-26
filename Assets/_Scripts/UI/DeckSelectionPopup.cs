@@ -40,7 +40,7 @@ public class DeckSelectionPopup : UISlice
 
     private void CreateDeckCard(CardTable cardTable)
     {
-        var deckCard = Instantiate(deckCardPrefab, content);
+        var deckCard = StageConainer.Container.InstantiatePrefab(deckCardPrefab, content).GetComponent<DeckCard>();
         deckCard.Init(cardTable);
     }
 }

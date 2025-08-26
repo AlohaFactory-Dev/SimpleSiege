@@ -47,3 +47,20 @@ ResultPopup,Fail,Fail,실패
 FloatingText,Damage,<color=#D65E5E>{[value]}</color>,<color=#D65E5E>{[value]}</color>
 DeckSelectionPopup,Max,최대 선택 카드량을 초과 하였습니다.,최대 선택 카드량을 초과 하였습니다.
 DeckSelectionPopup,StartGame,Start,시작
+UnitCard,DisableCard,카드 수량을 다 사용하였습니다.,카드 수량을 다 사용하였습니다.
+Card,Unit/P_Swordsman/Name,Swordsman,검사
+Card,Unit/P_Archer/Name,Archer,궁수
+Card,Unit/P_Catapult/Name,Catapult,투석기
+Card,Unit/P_SkeletonSoldier/Name,SkeletonSoldier,해골 병사
+Card,Unit/P_Giant/Name,Giant,거인
+Card,Unit/P_FlameWizard/Name,FlameWizard,화염 마법사
+Card,Unit/P_Sniper/Name,Sniper,저격수
+Card,Unit/P_Cavalry/Name,Cavalry,기병
+Card,Unit/P_Swordsman/Desc,Swordsman,검사
+Card,Unit/P_Archer/Desc,Archer,궁수
+Card,Unit/P_Catapult/Desc,Catapult,투석기
+Card,Unit/P_SkeletonSoldier/Desc,SkeletonSoldier,해골 병사
+Card,Unit/P_Giant/Desc,Giant,거인
+Card,Unit/P_FlameWizard/Desc,FlameWizard,화염 마법사
+Card,Unit/P_Sniper/Desc,Sniper,저격수
+Card,Unit/P_Cavalry/Desc,Cavalry,기병

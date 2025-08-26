@@ -33,7 +33,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _effectValue;
     private int _effectValue;
-
+    private IDisposable _stateSubscription;
 
     public void Spawn(Vector3 position, UnitTable unitTable)
     {
@@ -54,6 +54,12 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _targetSystem.Init(this);
         _stateMachine = new UnitStateMachine(_statusSystem);
         state.Value = UnitState.Move;
+
+        _stateSubscription?.Dispose();
+        _stateSubscription = state
+            .DistinctUntilChanged()
+            .Subscribe(newState => _stateMachine.OnStateChanged(_target, newState))
+            .AddTo(this);
     }
 
     private void Init()
@@ -62,11 +68,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _isInitialized = true;
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         _targetSystem = GetComponentInChildren<UnitTargetSystem>();
-
-        state
-            .DistinctUntilChanged()
-            .Subscribe(newState => _stateMachine.OnStateChanged(_target, newState))
-            .AddTo(this);
     }
 
     private void Update()

@@ -26,10 +26,10 @@ public class UnitStatusSystem : MonoBehaviour
     {
         if (_isInitialized) return;
         _isInitialized = true;
-        MoveSystem = GetComponentInChildren<UnitMoveSystem>();
+        MoveSystem = GetComponent<UnitMoveSystem>();
         AnimationSystem = GetComponentInChildren<UnitAnimationSystem>();
         HpSystem = GetComponentInChildren<UnitHpSystem>();
-        ActionSystem = GetComponentInChildren<UnitActionSystem>();
+        ActionSystem = GetComponent<UnitActionSystem>();
         _recycleObject = GetComponent<RecycleObject>();
         _collider2D = GetComponent<Collider2D>();
     }

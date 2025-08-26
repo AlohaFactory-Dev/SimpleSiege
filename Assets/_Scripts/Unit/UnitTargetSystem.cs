@@ -1,17 +1,23 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CircleCollider2D))]
 public class UnitTargetSystem : MonoBehaviour
 {
     private UnitController _unitController;
+    private CircleCollider2D _collider;
     private readonly List<ITarget> _targetsInSight = new();
 
     public void Init(UnitController unitController)
     {
         _unitController = unitController;
+        _collider = GetComponent<CircleCollider2D>();
+        _collider.isTrigger = true;
+        _collider.radius = unitController.UnitTable.sightRange;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         var enemy = other.GetComponent<UnitController>();
         if (enemy != null && enemy != _unitController && enemy.UnitTable.teamType != _unitController.UnitTable.teamType)
@@ -21,7 +27,7 @@ public class UnitTargetSystem : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         var enemy = other.GetComponent<UnitController>();
         if (enemy != null && _targetsInSight.Contains(enemy))
@@ -29,6 +35,7 @@ public class UnitTargetSystem : MonoBehaviour
             _targetsInSight.Remove(enemy);
         }
     }
+
 
     public ITarget FindTarget()
     {

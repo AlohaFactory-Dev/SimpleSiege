@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3215734366898394210, guid: e7959f05d5de539408f0b4ee474a1d9d, type: 3}
+      propertyPath: cardContainer
+      value: 
+      objectReference: {fileID: 7883656650072700761}
     - target: {fileID: 9063158370762112159, guid: e7959f05d5de539408f0b4ee474a1d9d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -662,3 +666,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9063158370762112159, guid: e7959f05d5de539408f0b4ee474a1d9d, type: 3}
   m_PrefabInstance: {fileID: 5162906818746143276}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7883656650072700761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3084415514700998005, guid: e7959f05d5de539408f0b4ee474a1d9d, type: 3}
+  m_PrefabInstance: {fileID: 5162906818746143276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7224db28348f4035a193b29cd45030de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

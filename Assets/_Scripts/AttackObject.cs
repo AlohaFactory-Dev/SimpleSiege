@@ -30,17 +30,18 @@ public class AttackObject : MonoBehaviour
     private float howitzerHeight;
 
     [SerializeField] private Transform mainObject;
-    [SerializeField] private RecycleObject recycleObject;
+    private RecycleObject _recycleObject;
     private AttackObjectTable _table;
     private Action _onHit;
     private Sequence _sequence;
     private FireType FireType => _table.fireType;
 
     private Vector3 _previousPosition;
-
+    bool _isInitialized;
 
     public void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition)
     {
+        GetComponents();
         mainObject.gameObject.SetActive(true);
         mainObject.transform.localPosition = Vector3.zero;
         _table = table;
@@ -56,6 +57,13 @@ public class AttackObject : MonoBehaviour
             mainObject.gameObject.SetActive(false);
             StartCoroutine(FireDelay(Random.Range(table.delayRandomMin, table.delayRandomMax), targetPosition));
         }
+    }
+
+    private void GetComponents()
+    {
+        if (_isInitialized) return;
+        _recycleObject = GetComponent<RecycleObject>();
+        _isInitialized = true;
     }
 
 
@@ -113,7 +121,7 @@ public class AttackObject : MonoBehaviour
         _sequence.OnComplete(() =>
         {
             _onHit?.Invoke();
-            recycleObject.Release();
+            _recycleObject.Release();
         });
         _sequence.Play();
     }

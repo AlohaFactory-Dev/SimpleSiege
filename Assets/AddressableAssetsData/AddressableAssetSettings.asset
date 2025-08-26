@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: a117f9b745b4544438a62ac26cafc10d
   m_currentHash:
     serializedVersion: 2
-    Hash: eb0af6459df7f365b938c125e722e26f
+    Hash: ae484bb0175725ab53d7145ccd4e83e5
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -46,13 +46,16 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 802ae0071b58b934383e41b7e5cfb038, type: 2}
   - {fileID: 11400000, guid: 492a1206a145b854c84afb524839f18e, type: 2}
+  - {fileID: 11400000, guid: 07baa8150dfb1b64e95f2d588d2cf75e, type: 2}
   - {fileID: 11400000, guid: 69a90c65ce3c01c4c97418df897e69f1, type: 2}
+  - {fileID: 11400000, guid: 083114081d524b3499832fa8f64e0f77, type: 2}
   - {fileID: 11400000, guid: 4a52f69138249ca49b636677d8e73429, type: 2}
   - {fileID: 11400000, guid: d052a09d7fe1dba4ea2437703f3339ef, type: 2}
   - {fileID: 11400000, guid: d64ee89f20ef07745acb8a93529edf9c, type: 2}
   - {fileID: 11400000, guid: ba1073844fcce374bafee4cd884f585e, type: 2}
   - {fileID: 11400000, guid: 31b3ad119c8f20e46a78e2d499e9965c, type: 2}
   - {fileID: 11400000, guid: 8b32874850902414da2d65db7ecefaad, type: 2}
+  - {fileID: 11400000, guid: 9007091e21e2af94e86c17eeebcb28c7, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -96,6 +99,10 @@ MonoBehaviour:
     - default
     - coconut.configs
     - Unit
+    - FloatingText
+    - Particle
+    - AttackObject
+    - Image
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: aed33003afaf85f4786a21a418edd9ee, type: 2}

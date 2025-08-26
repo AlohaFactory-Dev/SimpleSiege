@@ -26,7 +26,7 @@ namespace _Scripts
         private void Update()
         {
             // 마우스 클릭 또는 터치 입력 처리
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 OnPointerDown();
             }

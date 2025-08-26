@@ -20,12 +20,17 @@ public class CardPoolManager
 
     public bool ConsumeCard(string cardId)
     {
-        if (_cardDict.TryGetValue(cardId, out var currentAmount) && currentAmount >= 0)
+        if (_cardDict.TryGetValue(cardId, out var currentAmount) && currentAmount > 0)
         {
             _cardDict[cardId]--;
             return true;
         }
 
         return false;
+    }
+
+    public int GetCardAmount(string cardId)
+    {
+        return _cardDict.TryGetValue(cardId, out var amount) ? amount : 0;
     }
 }

@@ -14,7 +14,7 @@ public class CardContainer : MonoBehaviour
         var decks = _deckSelectionManager.SelectedCards;
         foreach (var deck in decks)
         {
-            var card = Instantiate(unitCardPrefab, transform);
+            var card = StageConainer.Container.InstantiatePrefab(unitCardPrefab, transform).GetComponent<UnitCard>();
             card.Init(deck);
             _unitCards.Add(card);
         }

@@ -6,24 +6,24 @@ using UnityEngine;
 
 public class UnitTable
 {
-    public string id;
-    public int effectValue;
-    public float effectGrowth;
-    public float actionInterval;
-    public int maxHp;
-    public float maxHpGrowth;
-    public float moveSpeed;
-    public float sightRange;
-    public float effectAbleRange;
-    public TargetType targetType;
-    public AreaType areaType;
-    public float effectRange;
-    public EffectType effectType;
-    public string projectTileId;
-    public TargetSelectionType targetSelectionType;
-    public TeamType teamType;
-    public string effectVfxId;
-    public TargetGroup targetGroup;
+    [CSVColumn] public string id;
+    [CSVColumn] public int effectValue;
+    [CSVColumn] public float effectGrowth;
+    [CSVColumn] public float actionInterval;
+    [CSVColumn] public int maxHp;
+    [CSVColumn] public float maxHpGrowth;
+    [CSVColumn] public float moveSpeed;
+    [CSVColumn] public float sightRange;
+    [CSVColumn] public float effectAbleRange;
+    [CSVColumn] public TargetType targetType;
+    [CSVColumn] public AreaType areaType;
+    [CSVColumn] public float effectRange;
+    [CSVColumn] public EffectType effectType;
+    [CSVColumn] public string projectTileId;
+    [CSVColumn] public TargetSelectionType targetSelectionType;
+    [CSVColumn] public TeamType teamType;
+    [CSVColumn] public string effectVfxId;
+    [CSVColumn] public TargetGroup targetGroup;
 }
 
 
@@ -48,7 +48,7 @@ public class UnitTableList : ITableList
         var info = _attackObjectTables.Find(a => a.id == id);
         if (info == null)
         {
-            Debug.LogError($"AttackObjectInfo not found. id: {id}");
+            Debug.LogError($"UnitTable not found. id: {id}");
             return null;
         }
 

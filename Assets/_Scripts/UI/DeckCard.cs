@@ -7,7 +7,9 @@ using Zenject;
 public class DeckCard : MonoBehaviour
 {
     [Inject] private DeckSelectionManager _deckSelectionManager;
+
     private CardTable _cardTable;
+    private Animator _animator;
     [SerializeField] private Image iconImage;
     [SerializeField] private TextMeshProUGUI cardNameText;
     [SerializeField] private TextMeshProUGUI cardAmountText;
@@ -23,6 +25,7 @@ public class DeckCard : MonoBehaviour
         descriptionText.text = TextTableV2.Get(cardTable.descriptionKey);
         cardAmountText.text = $"x{cardTable.cardAmount}";
         addButton.onClick.AddListener(OnAddButtonClicked);
+        _animator = GetComponent<Animator>();
     }
 
     private void OnAddButtonClicked()
@@ -30,12 +33,17 @@ public class DeckCard : MonoBehaviour
         if (_deckSelectionManager.IsCardSelected(_cardTable))
         {
             _deckSelectionManager.UnselectCard(_cardTable);
+            _animator.SetBool("IsSelected", false);
         }
         else
         {
             if (!_deckSelectionManager.SelectCard(_cardTable))
             {
                 SystemUI.ShowToastMessage("DeckSelectionPopup/Max");
+            }
+            else
+            {
+                _animator.SetBool("IsSelected", true);
             }
         }
     }

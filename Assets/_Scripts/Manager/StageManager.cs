@@ -16,11 +16,16 @@ public class StageManager
     [Inject] private CoconutCanvas _coconutCanvas;
     [Inject] private DeckSelectionManager _deckSelectionManager;
     [Inject] private CardPoolManager _cardPoolManager;
+    [Inject] private StageUI _stageUI;
     public StageTable CurrentStageTable { get; private set; }
 
     public StageManager()
     {
         CurrentStageTable = TableListContainer.Get<StageTableList>().GetStageTable(1);
+    }
+
+    public void Init()
+    {
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
     }
 
@@ -39,5 +44,7 @@ public class StageManager
         {
             _cardPoolManager.SetCardPool(card);
         }
+
+        _stageUI.Init();
     }
 }

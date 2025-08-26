@@ -51,9 +51,12 @@ public class StageInstaller : MonoInstaller
             _cameraController.Init();
             await _factoryManager.Init(Container);
             _inputManager.Init();
+            var stageManager = Container.Resolve<StageManager>();
+            stageManager.Init();
         }
         catch (Exception e)
         {
+            Debug.LogError(e);
         }
     }
 }

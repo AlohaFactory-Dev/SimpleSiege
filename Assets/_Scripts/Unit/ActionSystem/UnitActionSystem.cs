@@ -26,11 +26,11 @@ public class UnitActionSystem : MonoBehaviour
     {
         if (_unitTable.effectType == EffectType.Melee)
         {
-            _unitAction = new MeleeAttackAction(_unitController);
+            _unitAction = new MeleeAttackAction();
         }
         else if (_unitTable.effectType == EffectType.Ranged)
         {
-            _unitAction = new RangedAttackAction(_unitController);
+            _unitAction = new RangedAttackAction();
         }
     }
 
