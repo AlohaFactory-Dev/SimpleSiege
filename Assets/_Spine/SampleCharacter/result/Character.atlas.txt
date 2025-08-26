@@ -1,0 +1,14 @@
+Character.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+Character_Archer
+bounds:2,567,332,385
+offsets:1,2,334,388
+Character_Lord
+bounds:336,602,350,339
+offsets:1,2,352,342
+rotate:90
+Character_Resident
+bounds:677,658,275,294
+offsets:1,1,277,296
