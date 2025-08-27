@@ -38,7 +38,7 @@ public class BarrackBuilding : Building
 
     public override void TakeDamage(ICaster caster)
     {
-        if (_isDestroyed) return;
+        if (IsDestroyed) return;
         EmissionUnits();
         base.TakeDamage(caster);
     }
