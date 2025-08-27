@@ -32,7 +32,7 @@ public class UnitActionSystem : MonoBehaviour
         }
     }
 
-    public void StartAction(ITarget target)
+    public void StartAction(ITarget target, bool isSiege)
     {
         if (_actionCoroutine != null)
         {
@@ -40,7 +40,7 @@ public class UnitActionSystem : MonoBehaviour
             _actionCoroutine = null;
         }
 
-        _actionCoroutine = StartCoroutine(ActionRoutine(target));
+        _actionCoroutine = StartCoroutine(ActionRoutine(target, isSiege));
     }
 
     public void StopAction()
@@ -52,7 +52,7 @@ public class UnitActionSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator ActionRoutine(ITarget target)
+    private IEnumerator ActionRoutine(ITarget target, bool isSiege)
     {
         while (true)
         {
@@ -60,9 +60,17 @@ public class UnitActionSystem : MonoBehaviour
             {
                 _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
                 yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
-                if (target.IsDead)
+                if (target.IsUntargetable)
                 {
-                    _unitController.ChangeState(UnitState.Move);
+                    if (isSiege)
+                    {
+                        _unitController.ChangeState(UnitState.Siege);
+                    }
+                    else
+                    {
+                        _unitController.ChangeState(UnitState.Move);
+                    }
+
                     yield break;
                 }
 
@@ -72,7 +80,15 @@ public class UnitActionSystem : MonoBehaviour
             }
 
             // 타겟이 없으면 즉시 액션 종료
-            _unitController.ChangeState(UnitState.Move);
+            if (isSiege)
+            {
+                _unitController.ChangeState(UnitState.Siege);
+            }
+            else
+            {
+                _unitController.ChangeState(UnitState.Move);
+            }
+
             yield break;
         }
     }

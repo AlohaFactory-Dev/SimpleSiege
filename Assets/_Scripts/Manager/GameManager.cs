@@ -74,12 +74,12 @@ public class GameManager
         }
     }
 
-    public void Pause()
+    public static void Pause()
     {
         Time.timeScale = 0;
     }
 
-    public void Resume()
+    public static void Resume()
     {
         Time.timeScale = 1;
     }

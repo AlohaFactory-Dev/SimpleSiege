@@ -1,7 +1,7 @@
 using Aloha.CoconutMilk;
 using UnityEngine;
 
-public class UnitHpSystem : MonoBehaviour
+public class HpSystem : MonoBehaviour
 {
     private BarGauge _hpBarGauge;
     private int _currentHp;
@@ -11,6 +11,7 @@ public class UnitHpSystem : MonoBehaviour
     {
         _hpBarGauge = GetComponentInChildren<BarGauge>(true);
         _hpBarGauge.Initialize(maxHp, null, maxHp);
+        _hpBarGauge.Off();
         _currentHp = maxHp;
     }
 
@@ -23,6 +24,9 @@ public class UnitHpSystem : MonoBehaviour
             _hpBarGauge.Off();
             return true; // 사망
         }
+
+        _hpBarGauge.On();
+
 
         _hpBarGauge.SetValue(_currentHp);
         return false; // 생존

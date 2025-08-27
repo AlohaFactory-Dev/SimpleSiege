@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
@@ -5,16 +6,25 @@ public class CardPoolManager
 {
     public IReadOnlyReactiveDictionary<string, int> CardDict => _cardDict;
     private readonly ReactiveDictionary<string, int> _cardDict = new();
+    private DeckSelectionManager _selectionManager;
 
-    public void SetCardPool(CardTable table)
+    public CardPoolManager(DeckSelectionManager deckSelectionManager)
     {
-        if (_cardDict.ContainsKey(table.id))
+        _selectionManager = deckSelectionManager;
+    }
+
+    public void SetCardPool()
+    {
+        foreach (var cardData in _selectionManager.SelectedCardDatas)
         {
-            Debug.LogError($"Card pool with id '{table.id}' already exists!");
-        }
-        else
-        {
-            _cardDict.Add(table.id, table.cardAmount);
+            if (_cardDict.ContainsKey(cardData.id))
+            {
+                Debug.LogError($"Card pool with id '{cardData.id}' already exists!");
+            }
+            else
+            {
+                _cardDict.Add(cardData.id, cardData.amount);
+            }
         }
     }
 
@@ -27,6 +37,14 @@ public class CardPoolManager
         }
 
         return false;
+    }
+
+    public void AddCard(string cardId, int amount)
+    {
+        if (!_cardDict.TryAdd(cardId, amount))
+        {
+            _cardDict[cardId] += amount;
+        }
     }
 
     public int GetCardAmount(string cardId)

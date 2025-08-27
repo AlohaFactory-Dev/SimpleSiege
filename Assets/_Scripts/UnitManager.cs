@@ -14,14 +14,15 @@ public class UnitManager
         _factoryManager = factoryManager;
     }
 
-    public void SpawnUnit(Vector2 spawnPosition, string id, int amount)
+    public List<UnitController> SpawnUnit(Vector2 spawnPosition, string id, int amount, bool onAutoMove = true)
     {
         var table = TableListContainer.Get<UnitTableList>().GetUnitTable(id);
+        var spawnedUnits = new List<UnitController>();
         for (int i = 0; i < amount; i++)
         {
             var offset = Random.insideUnitCircle * 0.5f; // 약간의 랜덤 오프셋 추가
             var unit = _factoryManager.UnitFactroy.GetUnit(table.id);
-            unit.Spawn(spawnPosition + offset, table);
+            unit.Spawn(spawnPosition + offset, table, onAutoMove);
             // 유닛의 팀 설정
             if (table.teamType == TeamType.Player)
             {
@@ -31,6 +32,10 @@ public class UnitManager
             {
                 EnemyUnits.Add(unit);
             }
+
+            spawnedUnits.Add(unit);
         }
+
+        return spawnedUnits;
     }
 }
