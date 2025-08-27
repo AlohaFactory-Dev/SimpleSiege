@@ -17,7 +17,7 @@ public class Building : MonoBehaviour, ITarget
     {
         get
         {
-            if (!_hasHpSystem || _isDestroyed)
+            if (!_hasHpSystem || IsDestroyed)
             {
                 return true;
             }
@@ -32,7 +32,7 @@ public class Building : MonoBehaviour, ITarget
     private BuildingAnimationSystem _animationSystem;
     private BuildingAnimationEventHandler _animationEventHandler;
     private bool _hasHpSystem;
-    private bool _isDestroyed;
+    protected bool IsDestroyed;
 
     public void Init()
     {
@@ -56,11 +56,11 @@ public class Building : MonoBehaviour, ITarget
 
     public virtual void TakeDamage(ICaster caster)
     {
-        if (_isDestroyed) return;
+        if (IsDestroyed) return;
         if (_hpSystem.TakeDamage(caster.EffectValue))
         {
             _collider2D.enabled = false;
-            _isDestroyed = true;
+            IsDestroyed = true;
             DestroyBuilding();
         }
         else

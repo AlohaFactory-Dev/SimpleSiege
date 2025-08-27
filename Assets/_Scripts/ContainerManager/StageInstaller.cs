@@ -12,6 +12,7 @@ public class StageInstaller : MonoInstaller
     private InputManager _inputManager;
     private CameraController _cameraController;
     private StageUI _stageUI;
+    private BuildingSpawnController _buildingSpawnController;
 
     public override void InstallBindings()
     {
@@ -25,6 +26,7 @@ public class StageInstaller : MonoInstaller
         _inputManager = GetComponentInChildren<InputManager>();
         _cameraController = GetComponentInChildren<CameraController>();
         _stageUI = GetComponentInChildren<StageUI>();
+        _buildingSpawnController = GetComponentInChildren<BuildingSpawnController>();
 
 
         Container.Bind<CoconutCanvas>().FromInstance(_coconutCanvas).AsSingle().NonLazy();
@@ -55,6 +57,7 @@ public class StageInstaller : MonoInstaller
             _inputManager.Init();
             var stageManager = Container.Resolve<StageManager>();
             stageManager.Init();
+            _buildingSpawnController.Init();
         }
         catch (Exception e)
         {
