@@ -6,30 +6,31 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 [Serializable]
-public class EtcTable
+public class PrisonUnitPoolTable
 {
-    [CSVColumn] public string Id;
-    [CSVColumn] public List<float> values;
+    [CSVColumn] public string id;
+    [CSVColumn] public int amount;
+    [CSVColumn] public int probability;
 }
 
-public class EtcTableList : ITableList
+public class PrisonUnitPoolTableList : ITableList
 {
-    private List<EtcTable> _etcTableList = new List<EtcTable>();
-    private readonly Dictionary<string, EtcTable> _cachedTables = new Dictionary<string, EtcTable>();
+    private List<PrisonUnitPoolTable> _etcTableList = new List<PrisonUnitPoolTable>();
+    private readonly Dictionary<string, PrisonUnitPoolTable> _cachedTables = new Dictionary<string, PrisonUnitPoolTable>();
 
     public async UniTask Init()
     {
-        _etcTableList = await TableManager.GetAsync<EtcTable>("Etc");
+        _etcTableList = await TableManager.GetAsync<PrisonUnitPoolTable>("PrisonUnitPool");
     }
 
-    public EtcTable GetEtcTable(string id)
+    public PrisonUnitPoolTable GetTable(string id)
     {
         if (_cachedTables.TryGetValue(id, out var objectInfo))
         {
             return objectInfo;
         }
 
-        var info = _etcTableList.Find(a => a.Id == id);
+        var info = _etcTableList.Find(a => a.id == id);
         if (info == null)
         {
             Debug.LogError($"EtcInfo not found. id: {id}");
@@ -38,5 +39,10 @@ public class EtcTableList : ITableList
 
         _cachedTables.Add(id, info);
         return info;
+    }
+
+    public List<PrisonUnitPoolTable> GetAllTables()
+    {
+        return _etcTableList;
     }
 }

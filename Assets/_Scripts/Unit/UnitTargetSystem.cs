@@ -71,7 +71,7 @@ public class UnitTargetSystem : MonoBehaviour
             float minDist = float.MaxValue;
             foreach (var t in _targetsInSight)
             {
-                if (t.IsDead || t.IsUntargetable) continue;
+                if (t.IsUntargetable) continue;
                 float dist = Vector3.Distance(_unitController.transform.position, t.Transform.position);
                 if (dist < minDist)
                 {
@@ -85,7 +85,7 @@ public class UnitTargetSystem : MonoBehaviour
             int maxHp = int.MinValue;
             foreach (var t in _targetsInSight)
             {
-                if (t.IsDead || t.IsUntargetable) continue;
+                if (t.IsUntargetable) continue;
                 if (t.MaxHp > maxHp)
                 {
                     maxHp = t.MaxHp;

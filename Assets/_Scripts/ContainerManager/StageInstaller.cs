@@ -37,8 +37,9 @@ public class StageInstaller : MonoInstaller
         Container.Bind<CardSelectionManager>().AsSingle().NonLazy();
         Container.Bind<UnitManager>().AsSingle().NonLazy();
         Container.Bind<SpellController>().AsSingle().NonLazy();
-        Container.Bind<CardPoolManager>().AsSingle().NonLazy();
         Container.Bind<DeckSelectionManager>().AsSingle().NonLazy();
+        Container.Bind<CardPoolManager>().AsSingle().NonLazy();
+        Container.Bind<PrisonUnitSelectionManager>().AsSingle().NonLazy();
         Container.Bind<StageManager>().AsSingle().NonLazy();
 
         Init();

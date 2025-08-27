@@ -43,7 +43,8 @@ namespace Aloha.CoconutMilk
 
         public void On()
         {
-            gameObject.SetActive(true);
+            if (!gameObject.activeSelf)
+                gameObject.SetActive(true);
         }
 
         private void EditorOnValueChanged()

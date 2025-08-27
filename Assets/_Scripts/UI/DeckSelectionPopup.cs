@@ -19,11 +19,20 @@ public class DeckSelectionPopup : UISlice
         var allCards = StageConainer.Get<DeckSelectionManager>().AllCards;
         foreach (var card in allCards)
         {
-            CreateDeckCard(card);
+            var cardData = new CardData()
+            {
+                id = card.id,
+                nameKey = card.nameKey,
+                descriptionKey = card.descriptionKey,
+                iconKey = card.iconKey,
+                amount = card.cardAmount // 기본적으로 각 카드의 수량을 1로 설정
+            };
+
+            CreateDeckCard(cardData);
         }
 
         base.Open(openArgs);
-        _deckSelectionManager.SelectedCards.ObserveCountChanged().Subscribe(_ => UpdateDeckSizeText()).AddTo(this);
+        _deckSelectionManager.SelectedCardDatas.ObserveCountChanged().Subscribe(_ => UpdateDeckSizeText()).AddTo(this);
         UpdateDeckSizeText();
         startGameButton.onClick.AddListener(() =>
         {
@@ -34,13 +43,13 @@ public class DeckSelectionPopup : UISlice
 
     private void UpdateDeckSizeText()
     {
-        deckSizeText.text = $"{_deckSelectionManager.SelectedCards.Count} / {_deckSelectionManager.MaxDeckSize}";
-        startGameButton.interactable = _deckSelectionManager.SelectedCards.Count == _deckSelectionManager.MaxDeckSize;
+        deckSizeText.text = $"{_deckSelectionManager.SelectedCardDatas.Count} / {_deckSelectionManager.MaxDeckSize}";
+        startGameButton.interactable = _deckSelectionManager.SelectedCardDatas.Count == _deckSelectionManager.MaxDeckSize;
     }
 
-    private void CreateDeckCard(CardTable cardTable)
+    private void CreateDeckCard(CardData cardData)
     {
         var deckCard = StageConainer.Container.InstantiatePrefab(deckCardPrefab, content).GetComponent<DeckCard>();
-        deckCard.Init(cardTable);
+        deckCard.Init(cardData);
     }
 }

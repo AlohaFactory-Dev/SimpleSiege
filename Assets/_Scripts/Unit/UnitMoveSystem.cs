@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-
 public class UnitMoveSystem : MonoBehaviour
 {
     private UnitTable _unitTable;
@@ -33,6 +32,66 @@ public class UnitMoveSystem : MonoBehaviour
         }
     }
 
+    public void StarSiege()
+    {
+        StopMove();
+        _moveCoroutine = StartCoroutine(SiegeRoutine());
+    }
+
+    // 경계선 거리 계산 메서드
+    private float GetEdgeDistance(Vector3 unitPos, ITarget target)
+    {
+        var targetCollider2D = target.Collider2D;
+        if (targetCollider2D is BoxCollider2D box)
+        {
+            return Vector3.Distance(unitPos, box.bounds.ClosestPoint(unitPos));
+        }
+        else
+        {
+            float targetRadius = targetCollider2D.bounds.extents.magnitude;
+            return Mathf.Max(0f, Vector3.Distance(unitPos, target.Transform.position) - targetRadius);
+        }
+    }
+
+    private void RotateObject(Vector3 dir, ref float lastYRotation)
+    {
+        if (dir.x != 0)
+        {
+            float yRotation = dir.x > 0 ? 0f : 180f;
+            if (!Mathf.Approximately(lastYRotation, yRotation))
+            {
+                obj.rotation = Quaternion.Euler(0f, yRotation, 0f);
+                lastYRotation = yRotation;
+            }
+        }
+    }
+
+    private IEnumerator SiegeRoutine()
+    {
+        float lastYRotation = 0f;
+        while (true)
+        {
+            _target = _targetSystem.FindTarget();
+            if (_target != null)
+            {
+                Vector3 targetPos = _target.Transform.position;
+                Vector3 currentPos = _unitController.Rigidbody2D.position;
+                Vector3 dir = (targetPos - currentPos).normalized;
+
+                float edgeDistance = GetEdgeDistance(currentPos, _target);
+
+                if (edgeDistance <= _unitController.UnitTable.effectAbleRange)
+                {
+                    RotateObject(dir, ref lastYRotation);
+                    _unitController.ChangeState(UnitState.Action, _target, true);
+                    yield break;
+                }
+            }
+
+            yield return null;
+        }
+    }
+
     private IEnumerator MoveRoutine()
     {
         float lastYRotation = 0f;
@@ -45,36 +104,18 @@ public class UnitMoveSystem : MonoBehaviour
             {
                 Vector3 targetPos = _target.Transform.position;
                 Vector3 currentPos = _unitController.Rigidbody2D.position;
-                float distance = Vector3.Distance(currentPos, targetPos);
+                Vector3 dir = (targetPos - currentPos).normalized;
 
-                if (distance > _unitController.UnitTable.effectAbleRange)
+                float edgeDistance = GetEdgeDistance(currentPos, _target);
+
+                if (edgeDistance > _unitController.UnitTable.effectAbleRange)
                 {
-                    Vector3 dir = (targetPos - currentPos).normalized;
                     nextPosition += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
-
-                    // 좌우 회전 처리 (Y축 0 또는 180도)
-                    if (dir.x != 0)
-                    {
-                        float yRotation = dir.x > 0 ? 0f : 180f;
-                        if (!Mathf.Approximately(lastYRotation, yRotation))
-                        {
-                            obj.rotation = Quaternion.Euler(0f, yRotation, 0f);
-                            lastYRotation = yRotation;
-                        }
-                    }
+                    RotateObject(dir, ref lastYRotation);
                 }
                 else
                 {
-                    float moveDirX = (targetPos - currentPos).x;
-                    if (moveDirX != 0)
-                    {
-                        float yRotation = moveDirX > 0 ? 0f : 180f;
-                        if (!Mathf.Approximately(lastYRotation, yRotation))
-                        {
-                            obj.rotation = Quaternion.Euler(0f, yRotation, 0f);
-                        }
-                    }
-
+                    RotateObject(targetPos - currentPos, ref lastYRotation);
                     _unitController.ChangeState(UnitState.Action, _target);
                     yield break;
                 }

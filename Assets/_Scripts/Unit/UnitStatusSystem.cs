@@ -8,7 +8,7 @@ public class UnitStatusSystem : MonoBehaviour
     public UnitMoveSystem MoveSystem { get; private set; }
     public UnitActionSystem ActionSystem { get; private set; }
     public UnitAnimationSystem AnimationSystem { get; private set; }
-    public UnitHpSystem HpSystem { get; private set; }
+    public HpSystem HpSystem { get; private set; }
     private Collider2D _collider2D;
     private bool _isInitialized;
 
@@ -28,13 +28,21 @@ public class UnitStatusSystem : MonoBehaviour
         _isInitialized = true;
         MoveSystem = GetComponent<UnitMoveSystem>();
         AnimationSystem = GetComponentInChildren<UnitAnimationSystem>();
-        HpSystem = GetComponentInChildren<UnitHpSystem>();
+        HpSystem = GetComponentInChildren<HpSystem>();
         ActionSystem = GetComponent<UnitActionSystem>();
         _recycleObject = GetComponent<RecycleObject>();
     }
 
+    public void ForceRelease()
+    {
+        _collider2D.enabled = false;
+        ActionSystem.StopAction();
+        MoveSystem.StopMove();
+        _recycleObject.Release();
+    }
 
-    public void ApplyState(ITarget target, UnitState state)
+
+    public void ApplyState(ITarget target, UnitState state, bool isSiege)
     {
         switch (state)
         {
@@ -55,7 +63,7 @@ public class UnitStatusSystem : MonoBehaviour
                 break;
             case UnitState.Action:
                 AnimationSystem.PlayAction();
-                ActionSystem.StartAction(target);
+                ActionSystem.StartAction(target, isSiege);
                 MoveSystem.StopMove();
                 break;
             case UnitState.Dead:
@@ -64,6 +72,12 @@ public class UnitStatusSystem : MonoBehaviour
                 MoveSystem.StopMove();
                 _collider2D.enabled = false;
                 break;
+            case UnitState.Siege:
+                AnimationSystem.PlayIdle();
+                ActionSystem.StopAction();
+                MoveSystem.StarSiege();
+                break;
+
             default:
                 Debug.LogError("Unknown state: " + state);
                 break;

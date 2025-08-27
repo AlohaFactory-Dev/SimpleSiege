@@ -9,43 +9,42 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
-public class StageTable
+public class BuildingTable
 {
-    [CSVColumn] public string stageId;
-    [CSVColumn] public int stageNumber;
-    [CSVColumn] public string mapId;
-    [CSVColumn] public string stageIconId;
-    [CSVColumn] public string stageNameKey;
-    [CSVColumn] public string stageDescriptionKey;
-    [CSVColumn] public int enemyAttackPowerLevel;
-    [CSVColumn] public int enemyHpLevel;
+    [CSVColumn] public string id;
+    [CSVColumn] public int maxHp;
+    [CSVColumn] public float maxHpGrowth;
+    [CSVColumn] public int effectValue;
+    [CSVColumn] public float effectGrowth;
+    [CSVColumn] public List<float> values;
+    [CSVColumn] public List<string> stringValues;
 }
 
-public class StageTableList : ITableList
+public class BuildingTableLis : ITableList
 {
-    private List<StageTable> _stageTableList = new();
-    private readonly Dictionary<int, StageTable> _cachedInfo = new();
+    private List<BuildingTable> _buildingTables = new();
+    private readonly Dictionary<string, BuildingTable> _cachedInfo = new();
 
     public async UniTask Init()
     {
-        _stageTableList = await TableManager.GetAsync<StageTable>("Stage");
+        _buildingTables = await TableManager.GetAsync<BuildingTable>("Building");
     }
 
-    public StageTable GetStageTable(int stageNumber)
+    public BuildingTable GetBuildingTable(string id)
     {
-        if (_cachedInfo.TryGetValue(stageNumber, out var stageInfo))
+        if (_cachedInfo.TryGetValue(id, out var stageInfo))
         {
             return stageInfo;
         }
 
-        var info = _stageTableList.Find(a => a.stageNumber == stageNumber);
+        var info = _buildingTables.Find(a => a.id == id);
         if (info == null)
         {
-            Debug.LogError($"StageInfo not found. stageNumber: {stageNumber}");
+            Debug.LogError($"BuildingTable not found. id: {id}");
             return null;
         }
 
-        _cachedInfo.Add(stageNumber, info);
+        _cachedInfo.Add(id, info);
         return info;
     }
 }

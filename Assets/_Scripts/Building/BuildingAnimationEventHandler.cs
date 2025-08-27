@@ -1,7 +1,18 @@
-namespace _Scripts.Building
+using System;
+using UnityEngine;
+
+public class BuildingAnimationEventHandler : MonoBehaviour
 {
-    public class BuildingAnimationEventHandler
+    private Action _onDestroyAction;
+
+    public void Init(Action onDestroyAction)
     {
-        
+        _onDestroyAction = onDestroyAction;
+    }
+
+    // Animation Event
+    public void OnDestroyBuilding()
+    {
+        _onDestroyAction?.Invoke();
     }
 }

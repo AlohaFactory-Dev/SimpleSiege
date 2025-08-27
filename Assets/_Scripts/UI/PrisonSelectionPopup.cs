@@ -6,41 +6,45 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class DeckSelectionPopup : UISlice
+public class PrisonSelectionPopup : UISlice
 {
-    [Inject] private DeckSelectionManager _deckSelectionManager;
-    [SerializeField] private DeckCard deckCardPrefab;
+    [Inject] private PrisonUnitSelectionManager _prisonUnitSelectionManager;
+    [SerializeField] private PrisonCard prisonCardPrefab;
     [SerializeField] private RectTransform content;
-    [SerializeField] private TextMeshProUGUI deckSizeText;
-    [SerializeField] private Button startGameButton;
+    private List<PrisonCard> _prisonCards = new();
 
     protected override void Open(UIOpenArgs openArgs)
     {
-        var allCards = StageConainer.Get<DeckSelectionManager>().AllCards;
-        foreach (var card in allCards)
+        GameManager.Pause();
+        if (_prisonCards.Count > 0)
+        {
+            foreach (var deckCard in _prisonCards)
+            {
+                Destroy(deckCard.gameObject);
+            }
+
+            _prisonCards.Clear();
+        }
+
+        var selectedCard = _prisonUnitSelectionManager.GetPrisonUnits();
+        foreach (var card in selectedCard)
         {
             CreateDeckCard(card);
         }
 
         base.Open(openArgs);
-        _deckSelectionManager.SelectedCards.ObserveCountChanged().Subscribe(_ => UpdateDeckSizeText()).AddTo(this);
-        UpdateDeckSizeText();
-        startGameButton.onClick.AddListener(() =>
-        {
-            StageConainer.Get<StageManager>().StartStage();
-            CloseView();
-        });
     }
 
-    private void UpdateDeckSizeText()
+    private void CreateDeckCard(CardData cardData)
     {
-        deckSizeText.text = $"{_deckSelectionManager.SelectedCards.Count} / {_deckSelectionManager.MaxDeckSize}";
-        startGameButton.interactable = _deckSelectionManager.SelectedCards.Count == _deckSelectionManager.MaxDeckSize;
+        var prisonCard = StageConainer.Container.InstantiatePrefab(prisonCardPrefab, content).GetComponent<PrisonCard>();
+        prisonCard.Init(cardData, CloseView);
+        _prisonCards.Add(prisonCard);
     }
 
-    private void CreateDeckCard(CardTable cardTable)
+    protected override void OnClose()
     {
-        var deckCard = StageConainer.Container.InstantiatePrefab(deckCardPrefab, content).GetComponent<DeckCard>();
-        deckCard.Init(cardTable);
+        GameManager.Resume();
+        base.OnClose();
     }
 }

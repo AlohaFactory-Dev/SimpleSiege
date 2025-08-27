@@ -9,6 +9,7 @@ using Zenject;
 public enum StagePopupConfig
 {
     DeckSelectionViewConfig,
+    PrisonSelectionPopup
 }
 
 public class StageManager
@@ -40,11 +41,7 @@ public class StageManager
         // 스테이지 시작 로직 구현
         Debug.Log($"Starting Stage: {CurrentStageTable.stageNameKey}");
         Time.timeScale = 1f;
-        foreach (var card in _deckSelectionManager.SelectedCards)
-        {
-            _cardPoolManager.SetCardPool(card);
-        }
-
+        _cardPoolManager.SetCardPool();
         _stageUI.Init();
     }
 }

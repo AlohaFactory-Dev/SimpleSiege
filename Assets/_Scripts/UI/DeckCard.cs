@@ -8,7 +8,7 @@ public class DeckCard : MonoBehaviour
 {
     [Inject] private DeckSelectionManager _deckSelectionManager;
 
-    private CardTable _cardTable;
+    private CardData _cardData;
     private Animator _animator;
     [SerializeField] private Image iconImage;
     [SerializeField] private TextMeshProUGUI cardNameText;
@@ -16,28 +16,28 @@ public class DeckCard : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Button addButton;
 
-    public void Init(CardTable cardTable)
+    public void Init(CardData cardData)
     {
-        _cardTable = cardTable;
+        _cardData = cardData;
         // 여기서 카드 데이터를 UI에 반영 (예: 이미지, 텍스트 등)
-        iconImage.sprite = ImageContainer.GetImage(cardTable.iconKey);
-        cardNameText.text = TextTableV2.Get(cardTable.nameKey);
-        descriptionText.text = TextTableV2.Get(cardTable.descriptionKey);
-        cardAmountText.text = $"x{cardTable.cardAmount}";
-        addButton.onClick.AddListener(OnAddButtonClicked);
+        iconImage.sprite = ImageContainer.GetImage(cardData.iconKey);
+        cardNameText.text = TextTableV2.Get(cardData.nameKey);
+        descriptionText.text = TextTableV2.Get(cardData.descriptionKey);
+        cardAmountText.text = $"x{cardData.amount}";
+        addButton.onClick.AddListener(OnDeckSelectClicked);
         _animator = GetComponent<Animator>();
     }
 
-    private void OnAddButtonClicked()
+    private void OnDeckSelectClicked()
     {
-        if (_deckSelectionManager.IsCardSelected(_cardTable))
+        if (_deckSelectionManager.IsCardSelected(_cardData))
         {
-            _deckSelectionManager.UnselectCard(_cardTable);
+            _deckSelectionManager.UnselectCard(_cardData);
             _animator.SetBool("IsSelected", false);
         }
         else
         {
-            if (!_deckSelectionManager.SelectCard(_cardTable))
+            if (!_deckSelectionManager.SelectCard(_cardData))
             {
                 SystemUI.ShowToastMessage("DeckSelectionPopup/Max");
             }
