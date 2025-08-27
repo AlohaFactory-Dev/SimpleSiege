@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1885930622772168717}
   - component: {fileID: 1268921791295274025}
   - component: {fileID: -3547254222116276887}
+  - component: {fileID: 6828086505419533289}
   m_Layer: 8
   m_Name: BarrackBuilding
   m_TagString: Untagged
@@ -184,6 +185,18 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &6828086505419533289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860815640377794882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b07cb6f84f432ca31a52e89f2c8afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5824926599096561215
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using Zenject;
 
 public class BuildingSpawnController : MonoBehaviour
 {
-    public void Init()
+    private void Awake()
     {
         var buildings = GetComponentsInChildren<Building>(true);
         foreach (var building in buildings)

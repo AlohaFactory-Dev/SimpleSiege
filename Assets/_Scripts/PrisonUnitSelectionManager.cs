@@ -1,58 +1,56 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class PrisonUnitSelectionManager
 {
-    private PrisonUnitPoolTable[] _poolTables;
+    private readonly PrisonUnitPoolTable[] _poolTables;
     private CardData[] _cardTables;
-    private int _maxSelectCount = 3;
-    private CardPoolManager _cardPoolManager;
+    private PrisonUnitPoolTable[] _filteredPools;
+    private readonly CardPoolManager _cardPoolManager;
+    private readonly int _maxSelectCount = 3;
+    private DeckSelectionManager _deckSelectionManager;
 
     public PrisonUnitSelectionManager(DeckSelectionManager deckSelectionManager, CardPoolManager cardPoolManager)
     {
         _poolTables = TableListContainer.Get<PrisonUnitPoolTableList>().GetAllTables().ToArray();
-        _cardTables = deckSelectionManager.SelectedCardDatas.ToArray();
         _cardPoolManager = cardPoolManager;
+        _deckSelectionManager = deckSelectionManager;
     }
 
     public List<CardData> GetPrisonUnits()
     {
-        List<CardData> selectedUnits = new List<CardData>();
-        int totalProbability = 0;
-        foreach (var pool in _poolTables)
-        {
-            totalProbability += pool.probability;
-        }
+        _cardTables = _deckSelectionManager.SelectedCardDatas.ToArray();
+        _filteredPools = _poolTables.Where(pool => _cardTables.Any(card => card.id == pool.id)).ToArray();
 
-        HashSet<string> selectedIds = new HashSet<string>();
-        System.Random random = new System.Random();
-
-        while (selectedUnits.Count < _maxSelectCount)
+        var selectedUnits = new List<CardData>();
+        var candidatePools = new List<PrisonUnitPoolTable>(_filteredPools);
+        while (selectedUnits.Count < _maxSelectCount && candidatePools.Count > 0)
         {
-            int randomValue = random.Next(0, totalProbability);
+            int totalProbability = candidatePools.Sum(pool => pool.probability);
+            int randomValue = Random.Range(0, totalProbability + 1);
             int cumulativeProbability = 0;
 
-            foreach (var pool in _poolTables)
+            for (int i = 0; i < candidatePools.Count; i++)
             {
+                var pool = candidatePools[i];
                 cumulativeProbability += pool.probability;
                 if (randomValue < cumulativeProbability)
                 {
-                    if (!selectedIds.Contains(pool.id))
+                    var cardTable = _cardTables.FirstOrDefault(c => c.id == pool.id);
+                    if (cardTable != null)
                     {
-                        var cardTable = System.Array.Find(_cardTables, c => c.id == pool.id);
-                        if (cardTable != null)
+                        selectedUnits.Add(new CardData
                         {
-                            selectedUnits.Add(new CardData
-                            {
-                                nameKey = cardTable.nameKey,
-                                descriptionKey = cardTable.descriptionKey,
-                                iconKey = cardTable.iconKey,
-                                amount = pool.amount
-                            });
-                            selectedIds.Add(pool.id);
-                        }
+                            id = cardTable.id,
+                            nameKey = cardTable.nameKey,
+                            descriptionKey = cardTable.descriptionKey,
+                            iconKey = cardTable.iconKey,
+                            amount = pool.amount
+                        });
                     }
 
+                    candidatePools.RemoveAt(i);
                     break;
                 }
             }

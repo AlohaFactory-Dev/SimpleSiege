@@ -9,7 +9,7 @@ using Zenject;
 public enum StagePopupConfig
 {
     DeckSelectionViewConfig,
-    PrisonSelectionPopup
+    PrisonSelectionViewConfig
 }
 
 public class StageManager

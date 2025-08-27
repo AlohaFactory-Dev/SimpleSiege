@@ -64,11 +64,11 @@ public class UnitActionSystem : MonoBehaviour
                 {
                     if (isSiege)
                     {
-                        _unitController.ChangeState(UnitState.Move);
+                        _unitController.ChangeState(UnitState.Siege);
                     }
                     else
                     {
-                        _unitController.ChangeState(UnitState.Siege);
+                        _unitController.ChangeState(UnitState.Move);
                     }
 
                     yield break;
@@ -82,11 +82,11 @@ public class UnitActionSystem : MonoBehaviour
             // 타겟이 없으면 즉시 액션 종료
             if (isSiege)
             {
-                _unitController.ChangeState(UnitState.Move);
+                _unitController.ChangeState(UnitState.Siege);
             }
             else
             {
-                _unitController.ChangeState(UnitState.Siege);
+                _unitController.ChangeState(UnitState.Move);
             }
 
             yield break;

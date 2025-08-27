@@ -7,6 +7,6 @@ public class PrisonBuilding : Building
     protected override void DestroyBuilding()
     {
         base.DestroyBuilding();
-        _stageManager.OpenPopup(StagePopupConfig.PrisonSelectionPopup);
+        _stageManager.OpenPopup(StagePopupConfig.PrisonSelectionViewConfig);
     }
 }

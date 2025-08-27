@@ -12,13 +12,27 @@ public class Building : MonoBehaviour, ITarget
     public TargetGroup Group => TargetGroup.Building;
     public Collider2D Collider2D => _collider2D;
     private Collider2D _collider2D;
-    public bool IsDead => _hpSystem.IsDead;
-    public bool IsUntargetable => TableManager.IsMagicNumber(MaxHp) || _hpSystem.IsDead;
+
+    public bool IsUntargetable
+    {
+        get
+        {
+            if (!_hasHpSystem || _isDestroyed)
+            {
+                return true;
+            }
+
+            return TableManager.IsMagicNumber(MaxHp) || _hpSystem.IsDead;
+        }
+    }
+
     public int MaxHp => BuildingTable.maxHp;
     protected BuildingTable BuildingTable { get; private set; }
     private HpSystem _hpSystem;
     private BuildingAnimationSystem _animationSystem;
     private BuildingAnimationEventHandler _animationEventHandler;
+    private bool _hasHpSystem;
+    private bool _isDestroyed;
 
     public void Init()
     {
@@ -28,7 +42,8 @@ public class Building : MonoBehaviour, ITarget
         _animationSystem = GetComponent<BuildingAnimationSystem>();
         _collider2D = GetComponent<Collider2D>();
         _animationEventHandler = _animationSystem.GetComponentInChildren<BuildingAnimationEventHandler>();
-        if (_hpSystem != null)
+        _hasHpSystem = _hpSystem != null;
+        if (_hasHpSystem)
             _hpSystem.Init(BuildingTable.maxHp);
         _animationSystem.Init();
         _animationEventHandler.Init(Remove);
@@ -41,8 +56,11 @@ public class Building : MonoBehaviour, ITarget
 
     public virtual void TakeDamage(ICaster caster)
     {
+        if (_isDestroyed) return;
         if (_hpSystem.TakeDamage(caster.EffectValue))
         {
+            _collider2D.enabled = false;
+            _isDestroyed = true;
             DestroyBuilding();
         }
         else
