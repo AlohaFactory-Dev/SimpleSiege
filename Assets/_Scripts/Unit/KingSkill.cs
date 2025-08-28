@@ -40,10 +40,7 @@ public class KingSkill : MonoBehaviour
             cumulativeProbability += skill.probability;
             if (randomValue <= cumulativeProbability)
             {
-                for (int i = 0; i < skill.amount; i++)
-                {
-                    _unitManager.SpawnUnit(transform.position, skill.spwanUnitId, skill.amount);
-                }
+                _unitManager.SpawnUnit(transform.position, skill.spwanUnitId, skill.amount);
 
                 break;
             }
