@@ -8,17 +8,20 @@ public class UnitStatusSystem : MonoBehaviour
     public UnitMoveSystem MoveSystem { get; private set; }
     public UnitActionSystem ActionSystem { get; private set; }
     public UnitAnimationSystem AnimationSystem { get; private set; }
+    public UnitRotationSystem RotationSystem { get; private set; }
     public HpSystem HpSystem { get; private set; }
+    private UnitTargetSystem _targetSystem;
     private Collider2D _collider2D;
     private bool _isInitialized;
 
     public void Init(UnitController unitController)
     {
         GetComponents();
+        _targetSystem.Init(unitController);
         HpSystem.Init(unitController.MaxHp, unitController.TeamType);
-        MoveSystem.Init(unitController);
+        MoveSystem.Init(unitController, _targetSystem, RotationSystem);
         AnimationSystem.Init(_recycleObject.Release);
-        ActionSystem.Init(unitController, AnimationSystem);
+        ActionSystem.Init(unitController, AnimationSystem, _targetSystem, RotationSystem);
         _collider2D = GetComponent<Collider2D>();
     }
 
@@ -31,6 +34,8 @@ public class UnitStatusSystem : MonoBehaviour
         HpSystem = GetComponentInChildren<HpSystem>();
         ActionSystem = GetComponent<UnitActionSystem>();
         _recycleObject = GetComponent<RecycleObject>();
+        _targetSystem = GetComponentInChildren<UnitTargetSystem>();
+        RotationSystem = GetComponent<UnitRotationSystem>();
     }
 
     public void ForceRelease()
@@ -42,7 +47,7 @@ public class UnitStatusSystem : MonoBehaviour
     }
 
 
-    public void ApplyState(ITarget target, UnitState state, bool isSiege)
+    public void ApplyState(ITarget target, UnitState state)
     {
         switch (state)
         {
@@ -63,7 +68,7 @@ public class UnitStatusSystem : MonoBehaviour
                 break;
             case UnitState.Action:
                 AnimationSystem.PlayAction();
-                ActionSystem.StartAction(target, isSiege);
+                ActionSystem.StartAction(target);
                 MoveSystem.StopMove();
                 break;
             case UnitState.Dead:
@@ -74,8 +79,8 @@ public class UnitStatusSystem : MonoBehaviour
                 break;
             case UnitState.Siege:
                 AnimationSystem.PlayIdle();
-                ActionSystem.StopAction();
-                MoveSystem.StarSiege();
+                ActionSystem.StartSiegeAction();
+                MoveSystem.StopMove();
                 break;
 
             default:
