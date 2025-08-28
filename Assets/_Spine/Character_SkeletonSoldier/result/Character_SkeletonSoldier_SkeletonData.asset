@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Character_SkeletonSoldier_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: b68192ef2686f004aa3efdf02a0670fa, type: 2}
+  - {fileID: 11400000, guid: 2e3e7245774b96f4c83d5cdbaddc49ce, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: de1d5a87e97d60d46a785e547678fe59, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 58ccde8369098b54fb72fb04c0f40cbf, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0
@@ -28,4 +28,4 @@ MonoBehaviour:
   toAnimation: []
   duration: []
   defaultMix: 0.2
-  controller: {fileID: 0}
+  controller: {fileID: 9100000, guid: dc15b61f710377f489a7adef72133351, type: 2}
