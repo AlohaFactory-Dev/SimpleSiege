@@ -83,8 +83,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 772d936cddce86748bdc4ca23eb60bef
+    m_Address: E_King
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 926c9e3455f1e5348a60d351f3a619b1
     m_Address: P_Swordsman
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a85850998da7bf04cb17d3e74977763e
+    m_Address: P_King
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit
