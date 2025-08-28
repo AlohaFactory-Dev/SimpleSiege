@@ -12,7 +12,7 @@ public class StageInstaller : MonoInstaller
     private InputManager _inputManager;
     private CameraController _cameraController;
     private StageUI _stageUI;
-    private BuildingSpawnController _buildingSpawnController;
+    private BuildingManager _buildingManager;
     private StageManager _stageManager;
 
     public override void InstallBindings()
@@ -27,7 +27,7 @@ public class StageInstaller : MonoInstaller
         _inputManager = GetComponentInChildren<InputManager>();
         _cameraController = GetComponentInChildren<CameraController>();
         _stageUI = GetComponentInChildren<StageUI>();
-        _buildingSpawnController = GetComponentInChildren<BuildingSpawnController>();
+        _buildingManager = GetComponentInChildren<BuildingManager>();
         _stageManager = GetComponentInChildren<StageManager>();
 
 
@@ -36,10 +36,9 @@ public class StageInstaller : MonoInstaller
         Container.Bind<InputManager>().FromInstance(_inputManager).AsSingle().NonLazy();
         Container.Bind<CameraController>().FromInstance(_cameraController).AsSingle().NonLazy();
         Container.Bind<StageUI>().FromInstance(_stageUI).AsSingle().NonLazy();
-        Container.Bind<BuildingSpawnController>().FromInstance(_buildingSpawnController).AsSingle().NonLazy();
+        Container.Bind<BuildingManager>().FromInstance(_buildingManager).AsSingle().NonLazy();
 
 
-        Container.Bind<BuildingManager>().AsSingle().NonLazy();
         Container.Bind<CardSelectionManager>().AsSingle().NonLazy();
         Container.Bind<SpellController>().AsSingle().NonLazy();
         Container.Bind<DeckSelectionManager>().AsSingle().NonLazy();

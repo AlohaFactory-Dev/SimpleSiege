@@ -11,7 +11,7 @@ public class StageResultPopup : UISlice
 
     public class Args : UIOpenArgs
     {
-        public bool IsWin;
+        public TeamType winner;
     }
 
     protected override void Open(UIOpenArgs args)
@@ -21,7 +21,7 @@ public class StageResultPopup : UISlice
         if (resultArgs == null) return;
 
         // 결과에 따라 UI 업데이트 로직 구현
-        if (resultArgs.IsWin)
+        if (resultArgs.winner == TeamType.Player)
         {
             // 승리 UI 설정
             winUI.SetActive(true);

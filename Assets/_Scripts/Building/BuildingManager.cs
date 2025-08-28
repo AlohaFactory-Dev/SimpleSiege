@@ -2,12 +2,22 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
-public class BuildingManager
+public class BuildingManager : MonoBehaviour
 {
     private List<Building> _allBuildings = new List<Building>();
     private List<Building> _playerBuildings = new List<Building>();
     private List<Building> _enemyBuildings = new List<Building>();
     public ISubject<Vector2> OnNearestEnemyBuildingDestroyed = new Subject<Vector2>();
+    public ISubject<TeamType> OnStageResult = new Subject<TeamType>();
+
+    public void Init()
+    {
+        var buildings = GetComponentsInChildren<Building>(true);
+        foreach (var building in buildings)
+        {
+            building.Init();
+        }
+    }
 
     public void AddBuilding(Building building)
     {
@@ -42,6 +52,20 @@ public class BuildingManager
                 _enemyBuildings.Remove(building);
                 GetNearestEnemyBuilding(building);
             }
+        }
+
+        CheckAllBuildingsDestroyed(building.TeamType);
+    }
+
+    private void CheckAllBuildingsDestroyed(TeamType teamType)
+    {
+        if (teamType == TeamType.Player && _playerBuildings.Count == 0)
+        {
+            OnStageResult.OnNext(TeamType.Enemy);
+        }
+        else if (teamType == TeamType.Enemy && _enemyBuildings.Count == 0)
+        {
+            OnStageResult.OnNext(TeamType.Player);
         }
     }
 
