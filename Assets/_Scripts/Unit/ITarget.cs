@@ -8,5 +8,5 @@ public interface ITarget
     public Collider2D Collider2D { get; }
     public bool IsUntargetable { get; }
     public int MaxHp { get; }
-    public void TakeDamage(ICaster caster);
+    public void TakeDamage(ICaster caster, int damage);
 }

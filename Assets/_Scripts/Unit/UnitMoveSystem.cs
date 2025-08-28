@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitMoveSystem : MonoBehaviour
@@ -9,12 +10,17 @@ public class UnitMoveSystem : MonoBehaviour
     [SerializeField] private Transform obj;
     [SerializeField] private UnitTargetSystem _targetSystem;
     private ITarget _target;
+    private float MoveSpeed => _unitTable.moveSpeed + _totalBoostSpeed;
+    private float _totalBoostSpeed;
+    private Dictionary<string, float> _speedModifiers = new Dictionary<string, float>();
 
     public void Init(UnitController unit)
     {
         _unitController = unit;
         _unitTable = unit.UnitTable;
         _targetSystem.Init(unit);
+        _totalBoostSpeed = 0;
+        _speedModifiers.Clear();
     }
 
     public void StartMove()
@@ -53,6 +59,20 @@ public class UnitMoveSystem : MonoBehaviour
         }
     }
 
+    public void SetBoostSpeed(string id, float speed)
+    {
+        if (!_speedModifiers.TryAdd(id, speed))
+        {
+            _speedModifiers[id] += speed;
+        }
+
+        _totalBoostSpeed = 0f;
+        foreach (var mod in _speedModifiers.Values)
+        {
+            _totalBoostSpeed += mod;
+        }
+    }
+
     private void RotateObject(Vector3 dir, ref float lastYRotation)
     {
         if (dir.x != 0)
@@ -80,7 +100,7 @@ public class UnitMoveSystem : MonoBehaviour
 
                 float edgeDistance = GetEdgeDistance(currentPos, _target);
 
-                if (edgeDistance <= _unitController.UnitTable.effectAbleRange)
+                if (edgeDistance <= _unitTable.effectAbleRange)
                 {
                     RotateObject(dir, ref lastYRotation);
                     _unitController.ChangeState(UnitState.Action, _target, true);
@@ -108,9 +128,9 @@ public class UnitMoveSystem : MonoBehaviour
 
                 float edgeDistance = GetEdgeDistance(currentPos, _target);
 
-                if (edgeDistance > _unitController.UnitTable.effectAbleRange)
+                if (edgeDistance > _unitTable.effectAbleRange)
                 {
-                    nextPosition += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
+                    nextPosition += dir * (MoveSpeed * Time.deltaTime);
                     RotateObject(dir, ref lastYRotation);
                 }
                 else
@@ -122,8 +142,8 @@ public class UnitMoveSystem : MonoBehaviour
             }
             else
             {
-                Vector3 dir = _unitController.UnitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
-                nextPosition += dir * (_unitController.UnitTable.moveSpeed * Time.deltaTime);
+                Vector3 dir = _unitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
+                nextPosition += dir * (MoveSpeed * Time.deltaTime);
             }
 
             _unitController.Rigidbody2D.MovePosition(nextPosition);

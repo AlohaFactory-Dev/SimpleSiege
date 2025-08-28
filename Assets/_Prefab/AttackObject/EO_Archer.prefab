@@ -204,7 +204,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  howitzerHeight: 1
+  howitzerHeight: 3
   mainObject: {fileID: 2039271460724598244}
 --- !u!1 &7059761176496997483
 GameObject:

@@ -54,10 +54,10 @@ public class Building : MonoBehaviour, ITarget
     {
     }
 
-    public virtual void TakeDamage(ICaster caster)
+    public virtual void TakeDamage(ICaster caster, int damage)
     {
         if (IsDestroyed) return;
-        if (_hpSystem.TakeDamage(caster.EffectValue))
+        if (_hpSystem.TakeDamage(damage))
         {
             _collider2D.enabled = false;
             IsDestroyed = true;

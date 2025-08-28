@@ -46,6 +46,9 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public TeamType TeamType => _unitTable.teamType;
     public string EffectVfxId => _unitTable.effectVfxId;
     public string ProjectTileId => _unitTable.projectTileId;
+    public UnitStatusSystem StatusSystem => _statusSystem;
+    public AreaType AreaType => _unitTable.areaType;
+    public float EffectRange => _unitTable.effectRange;
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
     {
@@ -114,15 +117,15 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _statusSystem.ApplyState(target, newState, isSiege);
     }
 
-    public void TakeDamage(ICaster caster)
+    public void TakeDamage(ICaster caster, int damage)
     {
         if (IsUntargetable) return;
 
         var floatingText = _factoryManager.FloatingTextFactory.GetText(_floatingTextId);
-        floatingText.SetText(caster.EffectValue.ToString());
+        floatingText.SetText(damage.ToString());
         floatingText.Play(floatingEffectPoint.position);
 
-        if (_statusSystem.HpSystem.TakeDamage(caster.EffectValue))
+        if (_statusSystem.HpSystem.TakeDamage(damage))
         {
             ChangeState(UnitState.Dead);
             _unitManager.RemoveUnit(this);
