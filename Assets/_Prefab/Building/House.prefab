@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2734914492456884180}
   - component: {fileID: 2828156166420644123}
   - component: {fileID: 1393828943788760771}
-  - component: {fileID: -4935445994218479616}
   m_Layer: 8
   m_Name: House
   m_TagString: Untagged
@@ -32,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 758414608041252735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.248237, y: -9.741263, z: 0.040757455}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14335e8e2c64bdab399acd246596a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: House
+  id: E_House
 --- !u!95 &7357629942071547213
 Animator:
   serializedVersion: 5
@@ -170,18 +169,6 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &-4935445994218479616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758414608041252735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b07cb6f84f432ca31a52e89f2c8afe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6707067405581169097
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +330,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 785750722405238329, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_Name
-      value: EnemyHpBar
+      value: HPBarContainer
       objectReference: {fileID: 0}
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_Pivot.x

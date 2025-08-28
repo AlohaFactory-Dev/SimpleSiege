@@ -3,15 +3,27 @@ using UnityEngine;
 
 public class HpSystem : MonoBehaviour
 {
-    private BarGauge _hpBarGauge;
+    [SerializeField] private BarGauge enemyHpBar;
+    [SerializeField] private BarGauge playerHpBar;
+    private BarGauge _selectedHpBar;
     private int _currentHp;
     public bool IsDead => _currentHp <= 0;
 
-    public void Init(int maxHp)
+    public void Init(int maxHp, TeamType team)
     {
-        _hpBarGauge = GetComponentInChildren<BarGauge>(true);
-        _hpBarGauge.Initialize(maxHp, null, maxHp);
-        _hpBarGauge.Off();
+        if (team == TeamType.Player)
+        {
+            enemyHpBar.Off();
+            _selectedHpBar = playerHpBar;
+        }
+        else
+        {
+            playerHpBar.Off();
+            _selectedHpBar = enemyHpBar;
+        }
+
+        _selectedHpBar.Initialize(maxHp, null, maxHp);
+        _selectedHpBar.Off();
         _currentHp = maxHp;
     }
 
@@ -21,14 +33,14 @@ public class HpSystem : MonoBehaviour
         if (_currentHp <= 0)
         {
             _currentHp = 0;
-            _hpBarGauge.Off();
+            _selectedHpBar.Off();
             return true; // 사망
         }
 
-        _hpBarGauge.On();
+        _selectedHpBar.On();
 
 
-        _hpBarGauge.SetValue(_currentHp);
+        _selectedHpBar.SetValue(_currentHp);
         return false; // 생존
     }
 }

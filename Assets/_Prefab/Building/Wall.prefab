@@ -197,7 +197,6 @@ GameObject:
   - component: {fileID: 8992061467861775191}
   - component: {fileID: 1894423543176943652}
   - component: {fileID: 4906651322423198975}
-  - component: {fileID: 4627024889058139817}
   m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
@@ -214,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 6979657028440165615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.248237, y: -9.741263, z: 0.040757455}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -354,18 +353,6 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &4627024889058139817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6979657028440165615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b07cb6f84f432ca31a52e89f2c8afe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4322478674375155570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,7 +363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 785750722405238329, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_Name
-      value: EnemyHpBar
+      value: HPBarContainer
       objectReference: {fileID: 0}
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_Pivot.x

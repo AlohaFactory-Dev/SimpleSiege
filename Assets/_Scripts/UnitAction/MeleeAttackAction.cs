@@ -12,6 +12,6 @@ public class MeleeAttackAction : IUnitAction
 
     public void Execute(ITarget target, ICaster caster, int effectValue)
     {
-        _targetFindSystem.FindEffectTargets(caster, target).ForEach(effectTarget => { effectTarget.TakeDamage(caster, effectValue); });
+        _targetFindSystem.FindEffectTargets(caster, target, target.Transform.position).ForEach(effectTarget => { effectTarget.TakeDamage(caster, effectValue); });
     }
 }

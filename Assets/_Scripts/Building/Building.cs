@@ -38,13 +38,13 @@ public class Building : MonoBehaviour, ITarget
     {
         BuildingTable = TableListContainer.Get<BuildingTableLis>().GetBuildingTable(id);
         _buildingManager.AddBuilding(this);
-        _hpSystem = GetComponent<HpSystem>();
+        _hpSystem = GetComponentInChildren<HpSystem>();
         _animationSystem = GetComponent<BuildingAnimationSystem>();
         _collider2D = GetComponent<Collider2D>();
         _animationEventHandler = _animationSystem.GetComponentInChildren<BuildingAnimationEventHandler>();
         _hasHpSystem = _hpSystem != null;
         if (_hasHpSystem)
-            _hpSystem.Init(BuildingTable.maxHp);
+            _hpSystem.Init(BuildingTable.maxHp, BuildingTable.teamType);
         _animationSystem.Init();
         _animationEventHandler.Init(Remove);
         CustomInit();
