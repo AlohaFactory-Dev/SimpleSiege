@@ -43,6 +43,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public Rigidbody2D Rigidbody2D { get; private set; }
     public Collider2D Collider2D => _collider2D;
     public Transform Transform => transform;
+    public TargetType TargetType => _unitTable.targetType;
     public TeamType TeamType => _unitTable.teamType;
     public string EffectVfxId => _unitTable.effectVfxId;
     public string ProjectTileId => _unitTable.projectTileId;

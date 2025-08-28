@@ -15,7 +15,7 @@ public class UnitStatusSystem : MonoBehaviour
     public void Init(UnitController unitController)
     {
         GetComponents();
-        HpSystem.Init(unitController.MaxHp);
+        HpSystem.Init(unitController.MaxHp, unitController.TeamType);
         MoveSystem.Init(unitController);
         AnimationSystem.Init(_recycleObject.Release);
         ActionSystem.Init(unitController, AnimationSystem);

@@ -6,6 +6,7 @@ public class TrapBuilding : Building, ICaster
     public int EffectValue => EffectCalculator.CalculateEffectValue(BuildingTable.effectValue, BuildingTable.effectGrowth, StageConainer.Get<StageManager>().CurrentStageTable.enemyAttackPowerLevel);
     public string ProjectTileId => BuildingTable.stringValues[1];
     public string EffectVfxId => BuildingTable.stringValues[0];
+    public TargetType TargetType => TargetType.Enemy;
     public AreaType AreaType => AreaType.Circle;
     public float EffectRange => BuildingTable.values[1];
     private UnitDetector _unitDetector;

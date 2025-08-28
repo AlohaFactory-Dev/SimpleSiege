@@ -35,19 +35,14 @@ public class UnitTargetSystem : MonoBehaviour
             return false;
         }
 
-        if (_unitController.UnitTable.targetType == TargetType.Ally)
+        if (_unitController.TargetType == TargetType.Ally)
         {
             return target.TeamType == _unitController.UnitTable.teamType;
         }
 
-        if (_unitController.UnitTable.targetType == TargetType.Enemy)
+        if (_unitController.TargetType == TargetType.Enemy)
         {
             return target.TeamType != _unitController.UnitTable.teamType;
-        }
-
-        if (_unitController.UnitTable.targetType == TargetType.All)
-        {
-            return target != _unitController; // 자기 자신은 제외
         }
 
         return false;
