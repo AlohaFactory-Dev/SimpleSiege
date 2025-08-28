@@ -39,7 +39,7 @@ public class DeckCard : MonoBehaviour
         {
             if (!_deckSelectionManager.SelectCard(_cardData))
             {
-                SystemUI.ShowToastMessage("DeckSelectionPopup/Max");
+                SystemUI.ShowToastMessage(TextTableV2.Get("DeckSelectionPopup/Max"));
             }
             else
             {
