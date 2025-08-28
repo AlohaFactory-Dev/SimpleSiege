@@ -60,23 +60,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 424969763631428082, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6402809045026129173, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
     - {fileID: 5855433963063609744, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 5608807527890356582}
+      insertIndex: 1
+      addedObject: {fileID: -3426020010188528444}
   m_SourcePrefab: {fileID: 100100000, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
 --- !u!1 &2206096723998707495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
   m_PrefabInstance: {fileID: 6001875395353248781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5608807527890356582
+--- !u!114 &-3426020010188528444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,20 +84,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2206096723998707495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db9118a3c6a04f8fbbbd0596544cc85d, type: 3}
+  m_Script: {fileID: 11500000, guid: cce32307465ac2e4a98aba93063102cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEffectPoint: {fileID: 8490185369806226337}
-  floatingEffectPoint: {fileID: 8196760862004834587}
-  state: 0
-  id: P_King
---- !u!4 &8196760862004834587 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2488888932158108950, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
-  m_PrefabInstance: {fileID: 6001875395353248781}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8490185369806226337 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2781468937587836844, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
-  m_PrefabInstance: {fileID: 6001875395353248781}
-  m_PrefabAsset: {fileID: 0}
+  skillInterval: 10
+  spawnUnits:
+  - spwanUnitId: P_Swordsman
+    amount: 5
+    probability: 10
+  - spwanUnitId: P_Archer
+    amount: 3
+    probability: 10
+  - spwanUnitId: P_Cavalry
+    amount: 2
+    probability: 10

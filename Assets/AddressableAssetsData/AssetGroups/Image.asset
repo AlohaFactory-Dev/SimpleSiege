@@ -53,6 +53,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Image
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4fccb540cab0a943ab3d411bbcc98cf
+    m_Address: King
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d74b2220ea5980c45ad5dd316d8db6b7
     m_Address: Swordsman
     m_ReadOnly: 0

@@ -1,4 +1,5 @@
 id,cardType,cardAmount,holdTime,spawnInterval,unitAmount,iconKey,nameKey,descriptionKey,values
+P_King,Unit,1,0,0,1,King,Card/Unit/P_King/Name,Card/Unit/P_King/Desc,
 P_Swordsman,Unit,100,0.5,0.25,2,Swordsman,Card/Unit/P_Swordsman/Name,Card/Unit/P_Swordsman/Desc,[-99999;-99999;-99999;-99999;-99999]
 P_Archer,Unit,50,0.5,0.25,1,Archer,Card/Unit/P_Archer/Name,Card/Unit/P_Archer/Desc,[-99999;-99999;-99999;-99999;-99999]
 P_Catapult,Unit,15,0.7,0.35,1,Catapult,Card/Unit/P_Catapult/Name,Card/Unit/P_Catapult/Desc,[-99999;-99999;-99999;-99999;-99999]
