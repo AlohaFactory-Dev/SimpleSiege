@@ -45,7 +45,7 @@ public class StageManager : MonoBehaviour
         _stageUI.Init();
     }
 
-    public void EndStage(TeamType team)
+    private void EndStage(TeamType team)
     {
         Time.timeScale = 0f;
         var args = new StageResultPopup.Args()
