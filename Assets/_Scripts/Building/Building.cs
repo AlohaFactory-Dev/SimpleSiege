@@ -8,7 +8,7 @@ public class Building : MonoBehaviour, ITarget
     [Inject] private BuildingManager _buildingManager;
     [SerializeField] private string id;
     public Transform Transform => transform;
-    public TeamType TeamType => TeamType.Enemy;
+    public TeamType TeamType => BuildingTable.teamType;
     public TargetGroup Group => TargetGroup.Building;
     public Collider2D Collider2D => _collider2D;
     private Collider2D _collider2D;

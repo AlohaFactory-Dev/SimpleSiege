@@ -13,7 +13,7 @@ public class StageInstaller : MonoInstaller
     private CameraController _cameraController;
     private StageUI _stageUI;
     private BuildingSpawnController _buildingSpawnController;
-    private UnitManager _unitManager;
+    private StageManager _stageManager;
 
     public override void InstallBindings()
     {
@@ -28,7 +28,7 @@ public class StageInstaller : MonoInstaller
         _cameraController = GetComponentInChildren<CameraController>();
         _stageUI = GetComponentInChildren<StageUI>();
         _buildingSpawnController = GetComponentInChildren<BuildingSpawnController>();
-        _unitManager = GetComponentInChildren<UnitManager>();
+        _stageManager = GetComponentInChildren<StageManager>();
 
 
         Container.Bind<CoconutCanvas>().FromInstance(_coconutCanvas).AsSingle().NonLazy();
@@ -37,7 +37,6 @@ public class StageInstaller : MonoInstaller
         Container.Bind<CameraController>().FromInstance(_cameraController).AsSingle().NonLazy();
         Container.Bind<StageUI>().FromInstance(_stageUI).AsSingle().NonLazy();
         Container.Bind<BuildingSpawnController>().FromInstance(_buildingSpawnController).AsSingle().NonLazy();
-        Container.Bind<UnitManager>().FromInstance(_unitManager).AsSingle().NonLazy();
 
 
         Container.Bind<BuildingManager>().AsSingle().NonLazy();
@@ -46,8 +45,10 @@ public class StageInstaller : MonoInstaller
         Container.Bind<DeckSelectionManager>().AsSingle().NonLazy();
         Container.Bind<CardPoolManager>().AsSingle().NonLazy();
         Container.Bind<PrisonUnitSelectionManager>().AsSingle().NonLazy();
-        Container.Bind<StageManager>().AsSingle().NonLazy();
+        Container.Bind<UnitManager>().AsSingle().NonLazy();
 
+
+        Container.Bind<StageManager>().FromInstance(_stageManager).AsSingle().NonLazy();
         Init();
     }
 
@@ -58,8 +59,7 @@ public class StageInstaller : MonoInstaller
             _cameraController.Init();
             await _factoryManager.Init(Container);
             _inputManager.Init();
-            var stageManager = Container.Resolve<StageManager>();
-            stageManager.Init();
+            _stageManager.Init();
         }
         catch (Exception e)
         {

@@ -14,6 +14,7 @@ public class BuildingTable
     [CSVColumn] public string id;
     [CSVColumn] public int maxHp;
     [CSVColumn] public float maxHpGrowth;
+    [CSVColumn] public TeamType teamType;
     [CSVColumn] public int effectValue;
     [CSVColumn] public float effectGrowth;
     [CSVColumn] public List<float> values;

@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6839332253826361748, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
+      propertyPath: m_Waypoints.Array.data[0].position.y
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 6929765062167540743, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -296,10 +300,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7965174418423872464, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    - {fileID: 8083789694515664734, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 3508538178132008159, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 424750797632376130, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1102318869}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
+--- !u!4 &427483620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424750797632376130, guid: 24aa85eb86a658d40943c29b3fd5fa8d, type: 3}
+  m_PrefabInstance: {fileID: 336686833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &795464762
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 795464762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,6 +486,51 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1102318868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102318869}
+  - component: {fileID: 1102318870}
+  m_Layer: 0
+  m_Name: TempSpawnEnemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1102318869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102318868}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427483620}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1102318870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102318868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9405d28f5547ea9c35cbf10427afb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1102318869}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
