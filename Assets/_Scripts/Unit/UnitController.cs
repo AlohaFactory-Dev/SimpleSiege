@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Aloha.Coconut;
 using UnityEngine;
 using UniRx;
@@ -31,13 +32,13 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private ITarget _target;
     private bool _isInitialized;
     private bool _isWallUnit;
-    private int _effectValue;
-    private int _maxHp;
     private readonly string _floatingTextId = "FloatingText";
 
     public UnitTable UnitTable => _unitTable;
-    public int EffectValue => _effectValue;
-    public int MaxHp => _maxHp;
+    public int EffectValue => _unitUpgradeController.EffectValue;
+    public int MaxHp => _unitUpgradeController.MaxHp;
+    public float EffectAbleRange => _unitUpgradeController.EffectAbleRange;
+    public float MoveSpeed => _unitUpgradeController.MoveSpeed;
     public TargetGroup Group => TargetGroup.Unit;
     public bool IsUntargetable => state == UnitState.Dead || state == UnitState.Spawn || _isWallUnit;
     public Rigidbody2D Rigidbody2D { get; private set; }
@@ -51,23 +52,17 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public AreaType AreaType => _unitTable.areaType;
     public float EffectRange => _unitTable.effectRange;
 
+    public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
+
+    private UnitUpgradeController _unitUpgradeController;
+
+
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
     {
         _isWallUnit = false;
         _unitTable = unitTable;
         Init();
-
-        if (_unitTable.teamType == TeamType.Enemy)
-        {
-            var stageTable = StageConainer.Get<StageManager>().CurrentStageTable;
-            _effectValue = EffectCalculator.CalculateEffectValue(_unitTable.effectValue, _unitTable.effectGrowth, stageTable.enemyAttackPowerLevel);
-            _maxHp = EffectCalculator.CalculateEffectValue(_unitTable.maxHp, _unitTable.maxHpGrowth, stageTable.enemyHpLevel);
-        }
-        else
-        {
-            _effectValue = _unitTable.effectValue;
-            _maxHp = _unitTable.maxHp;
-        }
+        _unitUpgradeController = new UnitUpgradeController(_unitTable);
 
         transform.position = position;
         _statusSystem.Init(this);
@@ -97,11 +92,13 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         ChangeState(UnitState.Move);
     }
 
-    public void SetWallUnit()
+    public void SetWallUnit(string id, float effectAbleRange)
     {
         _isWallUnit = true;
+        _unitUpgradeController.SetAddedEffectAbleRange(id, effectAbleRange);
         ChangeState(UnitState.Siege);
     }
+
 
     private void FixedUpdate()
     {
@@ -111,11 +108,11 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     }
 
 
-    public void ChangeState(UnitState newState, ITarget target = null, bool isSiege = false)
+    public void ChangeState(UnitState newState, ITarget target = null)
     {
         if (state == UnitState.Dead) return;
         state = newState;
-        _statusSystem.ApplyState(target, newState, isSiege);
+        _statusSystem.ApplyState(target, newState);
     }
 
     public void TakeDamage(ICaster caster, int damage)

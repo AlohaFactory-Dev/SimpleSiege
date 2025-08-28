@@ -57,6 +57,11 @@ public class UnitTargetSystem : MonoBehaviour
         }
     }
 
+    public void SetSiegeRange(float range)
+    {
+        _collider.radius = range;
+    }
+
 
     public ITarget FindTarget()
     {
@@ -67,7 +72,7 @@ public class UnitTargetSystem : MonoBehaviour
             foreach (var t in _targetsInSight)
             {
                 if (t.IsUntargetable) continue;
-                float dist = Vector3.Distance(_unitController.transform.position, t.Transform.position);
+                float dist = GetEdgeDistance(_unitController.transform.position, t);
                 if (dist < minDist)
                 {
                     minDist = dist;
@@ -90,5 +95,19 @@ public class UnitTargetSystem : MonoBehaviour
         }
 
         return closest;
+    }
+
+    public float GetEdgeDistance(Vector3 unitPos, ITarget target)
+    {
+        var targetCollider2D = target.Collider2D;
+        if (targetCollider2D is BoxCollider2D box)
+        {
+            return Vector3.Distance(unitPos, box.bounds.ClosestPoint(unitPos));
+        }
+        else
+        {
+            float targetRadius = targetCollider2D.bounds.extents.magnitude;
+            return Mathf.Max(0f, Vector3.Distance(unitPos, target.Transform.position) - targetRadius);
+        }
     }
 }

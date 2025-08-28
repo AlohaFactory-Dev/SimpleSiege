@@ -7,20 +7,16 @@ public class UnitMoveSystem : MonoBehaviour
     private UnitTable _unitTable;
     private Coroutine _moveCoroutine;
     private UnitController _unitController;
-    [SerializeField] private Transform obj;
-    [SerializeField] private UnitTargetSystem _targetSystem;
     private ITarget _target;
-    private float MoveSpeed => _unitTable.moveSpeed + _totalBoostSpeed;
-    private float _totalBoostSpeed;
-    private Dictionary<string, float> _speedModifiers = new Dictionary<string, float>();
+    private UnitTargetSystem _targetSystem;
+    private UnitRotationSystem _rotationSystem; // 추가
 
-    public void Init(UnitController unit)
+    public void Init(UnitController unit, UnitTargetSystem targetSystem, UnitRotationSystem rotationSystem) // 파라미터 추가
     {
         _unitController = unit;
         _unitTable = unit.UnitTable;
-        _targetSystem.Init(unit);
-        _totalBoostSpeed = 0;
-        _speedModifiers.Clear();
+        _targetSystem = targetSystem;
+        _rotationSystem = rotationSystem; // 초기화
     }
 
     public void StartMove()
@@ -38,79 +34,6 @@ public class UnitMoveSystem : MonoBehaviour
         }
     }
 
-    public void StarSiege()
-    {
-        StopMove();
-        _moveCoroutine = StartCoroutine(SiegeRoutine());
-    }
-
-    // 경계선 거리 계산 메서드
-    private float GetEdgeDistance(Vector3 unitPos, ITarget target)
-    {
-        var targetCollider2D = target.Collider2D;
-        if (targetCollider2D is BoxCollider2D box)
-        {
-            return Vector3.Distance(unitPos, box.bounds.ClosestPoint(unitPos));
-        }
-        else
-        {
-            float targetRadius = targetCollider2D.bounds.extents.magnitude;
-            return Mathf.Max(0f, Vector3.Distance(unitPos, target.Transform.position) - targetRadius);
-        }
-    }
-
-    public void SetBoostSpeed(string id, float speed)
-    {
-        if (!_speedModifiers.TryAdd(id, speed))
-        {
-            _speedModifiers[id] += speed;
-        }
-
-        _totalBoostSpeed = 0f;
-        foreach (var mod in _speedModifiers.Values)
-        {
-            _totalBoostSpeed += mod;
-        }
-    }
-
-    private void RotateObject(Vector3 dir, ref float lastYRotation)
-    {
-        if (dir.x != 0)
-        {
-            float yRotation = dir.x > 0 ? 0f : 180f;
-            if (!Mathf.Approximately(lastYRotation, yRotation))
-            {
-                obj.rotation = Quaternion.Euler(0f, yRotation, 0f);
-                lastYRotation = yRotation;
-            }
-        }
-    }
-
-    private IEnumerator SiegeRoutine()
-    {
-        float lastYRotation = 0f;
-        while (true)
-        {
-            _target = _targetSystem.FindTarget();
-            if (_target != null)
-            {
-                Vector3 targetPos = _target.Transform.position;
-                Vector3 currentPos = _unitController.Rigidbody2D.position;
-                Vector3 dir = (targetPos - currentPos).normalized;
-
-                float edgeDistance = GetEdgeDistance(currentPos, _target);
-
-                if (edgeDistance <= _unitTable.effectAbleRange)
-                {
-                    RotateObject(dir, ref lastYRotation);
-                    _unitController.ChangeState(UnitState.Action, _target, true);
-                    yield break;
-                }
-            }
-
-            yield return null;
-        }
-    }
 
     private IEnumerator MoveRoutine()
     {
@@ -126,16 +49,16 @@ public class UnitMoveSystem : MonoBehaviour
                 Vector3 currentPos = _unitController.Rigidbody2D.position;
                 Vector3 dir = (targetPos - currentPos).normalized;
 
-                float edgeDistance = GetEdgeDistance(currentPos, _target);
+                float edgeDistance = _targetSystem.GetEdgeDistance(currentPos, _target);
 
-                if (edgeDistance > _unitTable.effectAbleRange)
+                if (edgeDistance > _unitController.EffectAbleRange)
                 {
-                    nextPosition += dir * (MoveSpeed * Time.deltaTime);
-                    RotateObject(dir, ref lastYRotation);
+                    nextPosition += dir * (_unitController.MoveSpeed * Time.deltaTime);
+                    _rotationSystem.Rotate(dir, ref lastYRotation); // 변경
                 }
                 else
                 {
-                    RotateObject(targetPos - currentPos, ref lastYRotation);
+                    _rotationSystem.Rotate(targetPos - currentPos, ref lastYRotation); // 변경
                     _unitController.ChangeState(UnitState.Action, _target);
                     yield break;
                 }
@@ -143,7 +66,7 @@ public class UnitMoveSystem : MonoBehaviour
             else
             {
                 Vector3 dir = _unitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
-                nextPosition += dir * (MoveSpeed * Time.deltaTime);
+                nextPosition += dir * (_unitController.MoveSpeed * Time.deltaTime);
             }
 
             _unitController.Rigidbody2D.MovePosition(nextPosition);

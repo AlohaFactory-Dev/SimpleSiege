@@ -12,20 +12,18 @@ public class UnitActionSystem : MonoBehaviour
     private UnitAnimationSystem _unitAnimationSystem;
     private UnitTable _unitTable;
     private IUnitAction _unitAction;
-    private int EffectValue => _unitController.EffectValue + _totalAddedEffectValue;
-    private int _totalAddedEffectValue;
-    private Dictionary<string, int> _effectValueModifiers = new Dictionary<string, int>();
     public IObservable<Unit> OnActionNotice => _onActionNotice;
     private ISubject<Unit> _onActionNotice = new Subject<Unit>();
+    private UnitTargetSystem _targetSystem;
+    private UnitRotationSystem _rotationSystem;
 
-    public void Init(UnitController unitController, UnitAnimationSystem unitAnimationSystem)
+    public void Init(UnitController unitController, UnitAnimationSystem unitAnimationSystem, UnitTargetSystem targetSystem, UnitRotationSystem rotationSystem)
     {
-        // UnitController에서 UnitTable을 가져와서 초기화
+        _rotationSystem = rotationSystem;
+        _targetSystem = targetSystem;
         _unitController = unitController;
         _unitAnimationSystem = unitAnimationSystem;
         _unitTable = unitController.UnitTable;
-        _totalAddedEffectValue = 0;
-        _effectValueModifiers.Clear();
         InitAction();
     }
 
@@ -41,7 +39,7 @@ public class UnitActionSystem : MonoBehaviour
         }
     }
 
-    public void StartAction(ITarget target, bool isSiege)
+    public void StartAction(ITarget target)
     {
         if (_actionCoroutine != null)
         {
@@ -49,7 +47,44 @@ public class UnitActionSystem : MonoBehaviour
             _actionCoroutine = null;
         }
 
-        _actionCoroutine = StartCoroutine(ActionRoutine(target, isSiege));
+        _actionCoroutine = StartCoroutine(ActionRoutine(target));
+    }
+
+    public void StartSiegeAction()
+    {
+        if (_actionCoroutine != null)
+        {
+            StopCoroutine(_actionCoroutine);
+            _actionCoroutine = null;
+        }
+
+        _actionCoroutine = StartCoroutine(SiegeAction());
+    }
+
+    private IEnumerator SiegeAction()
+    {
+        float lastYRotation = 0f;
+        while (true)
+        {
+            ITarget target = _targetSystem.FindTarget();
+            if (target != null)
+            {
+                Vector3 currentPos = _unitController.Rigidbody2D.position;
+                float edgeDistance = _targetSystem.GetEdgeDistance(currentPos, target);
+
+                if (edgeDistance <= _unitController.EffectAbleRange)
+                {
+                    Vector3 targetPos = target.Transform.position;
+                    Vector3 dir = (targetPos - currentPos).normalized;
+                    _rotationSystem.Rotate(dir, ref lastYRotation); // 변경
+                    _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
+                    yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
+                    // 액션 간격 대기
+                    _unitAnimationSystem.PlayIdle();
+                    yield return new WaitForSeconds(_unitTable.actionInterval);
+                }
+            }
+        }
     }
 
     public void StopAction()
@@ -61,7 +96,7 @@ public class UnitActionSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator ActionRoutine(ITarget target, bool isSiege)
+    private IEnumerator ActionRoutine(ITarget target)
     {
         while (true)
         {
@@ -71,15 +106,7 @@ public class UnitActionSystem : MonoBehaviour
                 yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                 if (target.IsUntargetable)
                 {
-                    if (isSiege)
-                    {
-                        _unitController.ChangeState(UnitState.Siege);
-                    }
-                    else
-                    {
-                        _unitController.ChangeState(UnitState.Move);
-                    }
-
+                    _unitController.ChangeState(UnitState.Move);
                     yield break;
                 }
 
@@ -88,39 +115,19 @@ public class UnitActionSystem : MonoBehaviour
                 yield return new WaitForSeconds(_unitTable.actionInterval);
             }
 
-            // 타겟이 없으면 즉시 액션 종료
-            if (isSiege)
-            {
-                _unitController.ChangeState(UnitState.Siege);
-            }
-            else
-            {
-                _unitController.ChangeState(UnitState.Move);
-            }
 
+            _unitController.ChangeState(UnitState.Move);
             yield break;
         }
     }
 
     private void OnAction(ITarget target, ICaster caster)
     {
-        _unitAction.Execute(target, caster, EffectValue);
+        _unitAction.Execute(target, caster, _unitController.EffectValue);
         _onActionNotice.OnNext(Unit.Default);
     }
 
-    public void SetAddedEffectValue(string id, int value)
-    {
-        if (!_effectValueModifiers.TryAdd(id, value))
-        {
-            _effectValueModifiers[id] += value;
-        }
 
-        _totalAddedEffectValue = 0;
-        foreach (var mod in _effectValueModifiers.Values)
-        {
-            _totalAddedEffectValue += mod;
-        }
-    }
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
@@ -134,7 +141,7 @@ public class UnitActionSystem : MonoBehaviour
             Gizmos.color = Color.red;
         }
 
-        Gizmos.DrawWireSphere(transform.position, _unitTable.effectAbleRange);
+        Gizmos.DrawWireSphere(transform.position, _unitController.EffectAbleRange);
     }
 #endif
 }

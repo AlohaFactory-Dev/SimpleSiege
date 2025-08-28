@@ -8,6 +8,7 @@ public class WallBuilding : Building
     [Inject] private UnitManager _unitManager;
     private string SpawnUnitId => BuildingTable.stringValues[0];
     private int SpawnAmount => (int)BuildingTable.values[0];
+    private float EffectAbleRange => BuildingTable.values[1];
     private List<UnitController> _units = new();
 
     protected override void CustomInit()
@@ -18,7 +19,7 @@ public class WallBuilding : Building
         _units.AddRange(units);
         foreach (var unit in _units)
         {
-            unit.SetWallUnit();
+            unit.SetWallUnit("Wall", EffectAbleRange);
         }
     }
 

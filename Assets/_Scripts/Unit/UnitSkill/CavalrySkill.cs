@@ -44,15 +44,15 @@ public class CavalrySkill : MonoBehaviour
         if (_onSkill) return;
         _onSkill = true;
         _skillActiveTimer = 0f;
-        _unitController.StatusSystem.MoveSystem.SetBoostSpeed(_skillId, _boostSpeed);
-        _unitController.StatusSystem.ActionSystem.SetAddedEffectValue(_skillId, Mathf.CeilToInt(_unitController.EffectValue * _effectValueMultiplier));
+        _unitController.UnitUpgradeController.SetBoostSpeed(_skillId, _boostSpeed);
+        _unitController.UnitUpgradeController.SetAddedEffectValue(_skillId, Mathf.CeilToInt(_unitController.EffectValue * _effectValueMultiplier));
     }
 
     private void UnActivateSkill()
     {
         if (!_onSkill) return;
         _onSkill = false;
-        _unitController.StatusSystem.MoveSystem.SetBoostSpeed(_skillId, -_boostSpeed);
-        _unitController.StatusSystem.ActionSystem.SetAddedEffectValue(_skillId, -Mathf.CeilToInt(_unitController.EffectValue * _effectValueMultiplier));
+        _unitController.UnitUpgradeController.SetBoostSpeed(_skillId, -_boostSpeed);
+        _unitController.UnitUpgradeController.SetAddedEffectValue(_skillId, -Mathf.CeilToInt(_unitController.EffectValue * _effectValueMultiplier));
     }
 }
