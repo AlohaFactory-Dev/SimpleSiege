@@ -97,4 +97,20 @@ public class UnitActionSystem : MonoBehaviour
     {
         _unitAction.Execute(target, caster);
     }
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
+    {
+        if (_unitTable == null) return;
+        if (_unitTable.teamType == TeamType.Player)
+        {
+            Gizmos.color = Color.blue;
+        }
+        else
+        {
+            Gizmos.color = Color.red;
+        }
+
+        Gizmos.DrawWireSphere(transform.position, _unitTable.effectAbleRange);
+    }
+#endif
 }

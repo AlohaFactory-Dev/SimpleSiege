@@ -13,26 +13,20 @@ public enum StagePopupConfig
     StageResultViewConfig
 }
 
-public class StageManager
+public class StageManager : MonoBehaviour
 {
     [Inject] private CoconutCanvas _coconutCanvas;
     [Inject] private DeckSelectionManager _deckSelectionManager;
     [Inject] private CardPoolManager _cardPoolManager;
     [Inject] private StageUI _stageUI;
     [Inject] private BuildingSpawnController _buildingSpawnController;
-    [Inject] private UnitManager _unitManager;
     public StageTable CurrentStageTable { get; private set; }
-
-    public StageManager()
-    {
-        CurrentStageTable = TableListContainer.Get<StageTableList>().GetStageTable(1);
-    }
 
     public void Init()
     {
+        CurrentStageTable = TableListContainer.Get<StageTableList>().GetStageTable(1);
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
         _buildingSpawnController.Init();
-        _unitManager.Init();
     }
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)
