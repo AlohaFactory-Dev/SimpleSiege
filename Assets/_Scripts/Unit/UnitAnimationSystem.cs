@@ -19,7 +19,7 @@ public class UnitAnimationSystem : MonoBehaviour
         var clips = _animator.runtimeAnimatorController.animationClips;
         foreach (var clip in clips)
         {
-            if (clip.name == "Action")
+            if (clip.name == "action")
             {
                 AcionDuration = clip.length;
                 break;

@@ -27,6 +27,7 @@ public class UnitTable
     [CSVColumn] public string effectVfxId;
     [CSVColumn] public TargetGroup targetGroup;
     [CSVColumn] public float idleTimeAfterSpawn;
+    [CSVColumn] public List<float> values = new();
 }
 
 

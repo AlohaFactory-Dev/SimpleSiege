@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
 
 
@@ -10,6 +12,11 @@ public class UnitActionSystem : MonoBehaviour
     private UnitAnimationSystem _unitAnimationSystem;
     private UnitTable _unitTable;
     private IUnitAction _unitAction;
+    private int EffectValue => _unitController.EffectValue + _totalAddedEffectValue;
+    private int _totalAddedEffectValue;
+    private Dictionary<string, int> _effectValueModifiers = new Dictionary<string, int>();
+    public IObservable<Unit> OnActionNotice => _onActionNotice;
+    private ISubject<Unit> _onActionNotice = new Subject<Unit>();
 
     public void Init(UnitController unitController, UnitAnimationSystem unitAnimationSystem)
     {
@@ -17,6 +24,8 @@ public class UnitActionSystem : MonoBehaviour
         _unitController = unitController;
         _unitAnimationSystem = unitAnimationSystem;
         _unitTable = unitController.UnitTable;
+        _totalAddedEffectValue = 0;
+        _effectValueModifiers.Clear();
         InitAction();
     }
 
@@ -93,9 +102,24 @@ public class UnitActionSystem : MonoBehaviour
         }
     }
 
-    protected virtual void OnAction(ITarget target, ICaster caster)
+    private void OnAction(ITarget target, ICaster caster)
     {
-        _unitAction.Execute(target, caster);
+        _unitAction.Execute(target, caster, EffectValue);
+        _onActionNotice.OnNext(Unit.Default);
+    }
+
+    public void SetAddedEffectValue(string id, int value)
+    {
+        if (!_effectValueModifiers.TryAdd(id, value))
+        {
+            _effectValueModifiers[id] += value;
+        }
+
+        _totalAddedEffectValue = 0;
+        foreach (var mod in _effectValueModifiers.Values)
+        {
+            _totalAddedEffectValue += mod;
+        }
     }
 #if UNITY_EDITOR
     private void OnDrawGizmos()

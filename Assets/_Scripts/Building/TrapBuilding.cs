@@ -6,8 +6,10 @@ public class TrapBuilding : Building, ICaster
     public int EffectValue => EffectCalculator.CalculateEffectValue(BuildingTable.effectValue, BuildingTable.effectGrowth, StageConainer.Get<StageManager>().CurrentStageTable.enemyAttackPowerLevel);
     public string ProjectTileId => BuildingTable.stringValues[1];
     public string EffectVfxId => BuildingTable.stringValues[0];
-    private float ExplosionRadius => BuildingTable.values[1];
+    public AreaType AreaType => AreaType.Circle;
+    public float EffectRange => BuildingTable.values[1];
     private UnitDetector _unitDetector;
+
 
     protected override void CustomInit()
     {
@@ -26,12 +28,12 @@ public class TrapBuilding : Building, ICaster
 
     protected override void Remove()
     {
-        var units = Physics2D.OverlapCircleAll(transform.position, ExplosionRadius, LayerMask.GetMask("Unit"));
+        var units = Physics2D.OverlapCircleAll(transform.position, EffectRange, LayerMask.GetMask("Unit"));
         foreach (var unitCollider in units)
         {
             if (unitCollider.TryGetComponent<ITarget>(out var target) && !target.IsUntargetable && target.TeamType == TeamType.Player)
             {
-                target.TakeDamage(this);
+                target.TakeDamage(this, EffectValue);
             }
         }
 

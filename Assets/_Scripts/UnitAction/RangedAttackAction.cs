@@ -1,17 +1,27 @@
 using FactorySystem;
+using Sirenix.Utilities;
 using UnityEngine;
 
 public class RangedAttackAction : IUnitAction
 {
-    public void Execute(ITarget target, ICaster caster)
+    private int _effectValue;
+    private readonly EffectTargetFindSystem _targetFindSystem;
+
+    public RangedAttackAction()
     {
-        var projectTile = StageConainer.Get<FactoryManager>().AttackObjectFactory.GetAttackObject(caster.ProjectTileId);
-        var projectileTable = TableListContainer.Get<AttackObjectTableList>().GetAttackObjectTable(caster.ProjectTileId);
-        projectTile.Init(caster.Transform.position, Attack, projectileTable, target.Transform.position);
+        _targetFindSystem = new EffectTargetFindSystem();
     }
 
-    private void Attack()
+    public void Execute(ITarget target, ICaster caster, int effectValue)
     {
-        // 공격 이펙트 처리
+        _effectValue = effectValue;
+        var projectTile = StageConainer.Get<FactoryManager>().AttackObjectFactory.GetAttackObject(caster.ProjectTileId);
+        var projectileTable = TableListContainer.Get<AttackObjectTableList>().GetAttackObjectTable(caster.ProjectTileId);
+        projectTile.Init(caster.Transform.position, () => Attack(caster, target), projectileTable, target.Transform.position);
+    }
+
+    private void Attack(ICaster caster, ITarget target)
+    {
+        _targetFindSystem.FindEffectTargets(caster, target).ForEach(effectTarget => { effectTarget.TakeDamage(caster, _effectValue); });
     }
 }
