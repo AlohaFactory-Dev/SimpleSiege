@@ -12,13 +12,13 @@ public enum UnitState
     Move,
     Action,
     Dead,
-    Siege,
-    Release
+    Siege
 }
 
 public class UnitController : MonoBehaviour, ITarget, ICaster
 {
     [Inject] FactoryManager _factoryManager;
+    [Inject] UnitManager _unitManager;
 
     [SerializeField] private Transform damageEffectPoint;
     [SerializeField] private Transform floatingEffectPoint;
@@ -33,7 +33,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private bool _isWallUnit;
     private int _effectValue;
     private int _maxHp;
-    private string _floatingTextId = "FloatingText";
+    private readonly string _floatingTextId = "FloatingText";
 
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _effectValue;
@@ -67,11 +67,14 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
         transform.position = position;
         _statusSystem.Init(this);
-        state = UnitState.Spawn;
-        ChangeState(UnitState.Spawn);
+
 
         if (onAutoMove)
+        {
+            state = UnitState.Spawn;
+            ChangeState(UnitState.Spawn);
             StartCoroutine(WaitAndMove(_unitTable.idleTimeAfterSpawn));
+        }
     }
 
     private void Init()
@@ -120,7 +123,10 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         floatingText.Play(floatingEffectPoint.position);
 
         if (_statusSystem.HpSystem.TakeDamage(caster.EffectValue))
+        {
             ChangeState(UnitState.Dead);
+            _unitManager.RemoveUnit(this);
+        }
 
         if (!TableManager.IsMagicNumber(caster.EffectVfxId))
         {

@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/UIViews.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/UIViews.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/BarrackBuilding.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/BarrackBuilding.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/House.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/Prison.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/Prison.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/UnitDetector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/UnitDetector.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/Wall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Map/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Map/Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/BuildingSpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/BuildingSpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/PrisonBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/PrisonBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/StageInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/StageInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PrisonUnitSelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PrisonUnitSelectionManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +153,7 @@
       <workItem from="1756083953188" duration="14731000" />
       <workItem from="1756101102026" duration="584000" />
       <workItem from="1756165368149" duration="17186000" />
-      <workItem from="1756257250241" duration="26568000" />
+      <workItem from="1756257250241" duration="28315000" />
     </task>
     <servers />
   </component>
@@ -217,26 +200,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_Scripts/PrisonUnitSelectionManager.cs</url>
-          <line>57</line>
+          <line>58</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\PrisonUnitSelectionManager.cs" containingFunctionPresentation="메서드 'GetPrisonUnits'">
             <startOffsets>
-              <option value="2276" />
+              <option value="2323" />
             </startOffsets>
             <endOffsets>
-              <option value="2297" />
+              <option value="2344" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_Scripts/PrisonUnitSelectionManager.cs</url>
-          <line>62</line>
+          <line>63</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\PrisonUnitSelectionManager.cs" containingFunctionPresentation="메서드 'AddToCardPool'">
             <startOffsets>
-              <option value="2368" />
+              <option value="2415" />
             </startOffsets>
             <endOffsets>
-              <option value="2423" />
+              <option value="2470" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />

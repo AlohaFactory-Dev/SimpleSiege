@@ -9,7 +9,8 @@ using Zenject;
 public enum StagePopupConfig
 {
     DeckSelectionViewConfig,
-    PrisonSelectionViewConfig
+    PrisonSelectionViewConfig,
+    StageResultViewConfig
 }
 
 public class StageManager
@@ -18,6 +19,8 @@ public class StageManager
     [Inject] private DeckSelectionManager _deckSelectionManager;
     [Inject] private CardPoolManager _cardPoolManager;
     [Inject] private StageUI _stageUI;
+    [Inject] private BuildingSpawnController _buildingSpawnController;
+    [Inject] private UnitManager _unitManager;
     public StageTable CurrentStageTable { get; private set; }
 
     public StageManager()
@@ -28,6 +31,8 @@ public class StageManager
     public void Init()
     {
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
+        _buildingSpawnController.Init();
+        _unitManager.Init();
     }
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)
@@ -39,9 +44,18 @@ public class StageManager
     public void StartStage()
     {
         // 스테이지 시작 로직 구현
-        Debug.Log($"Starting Stage: {CurrentStageTable.stageNameKey}");
         Time.timeScale = 1f;
         _cardPoolManager.SetCardPool();
         _stageUI.Init();
+    }
+
+    public void EndStage(bool isWin)
+    {
+        Time.timeScale = 0f;
+        var args = new StageResultPopup.Args()
+        {
+            IsWin = isWin
+        };
+        _coconutCanvas.Open(nameof(StagePopupConfig.StageResultViewConfig), args);
     }
 }
