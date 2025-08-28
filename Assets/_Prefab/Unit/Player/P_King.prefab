@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5328445684526303841}
   - component: {fileID: 7704861394743549667}
   - component: {fileID: 1688776011694905371}
+  - component: {fileID: 3576567447630768300}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (Character_King)
   m_TagString: Untagged
@@ -150,6 +151,18 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
+--- !u!114 &3576567447630768300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494581591063731953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcf17261486412cab21edbe32c56d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6001875395353248781
 PrefabInstance:
   m_ObjectHideFlags: 0
