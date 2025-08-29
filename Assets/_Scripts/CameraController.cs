@@ -22,9 +22,11 @@ public class CameraController : MonoBehaviour
 
     private int _lastScreenWidth;
     private int _lastScreenHeight;
+    private bool _isInitialized = false;
 
     public void Init()
     {
+        _isInitialized = true;
         _trackedDolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
         _trackedDolly.m_PositionUnits = CinemachinePathBase.PositionUnits.Normalized; // 추가
         _currentPathPosition = _trackedDolly.m_PathPosition;
@@ -55,6 +57,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        if (!_isInitialized) return;
         // 해상도 변경 감지 및 카메라 사이즈 갱신
         if (Screen.width != _lastScreenWidth || Screen.height != _lastScreenHeight)
         {

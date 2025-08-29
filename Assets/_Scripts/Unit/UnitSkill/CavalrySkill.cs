@@ -42,6 +42,7 @@ public class CavalrySkill : MonoBehaviour
     private void ActivateSkill()
     {
         if (_onSkill) return;
+        _unitController.StatusSystem.AnimationSystem.PlaySkill();
         _onSkill = true;
         _skillActiveTimer = 0f;
         _unitController.UnitUpgradeController.SetBoostSpeed(_skillId, _boostSpeed);
