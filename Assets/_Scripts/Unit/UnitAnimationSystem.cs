@@ -56,4 +56,9 @@ public class UnitAnimationSystem : MonoBehaviour
     {
         _animator.SetTrigger("Dead");
     }
+
+    public void PlaySkill()
+    {
+        _animator.SetTrigger("Skill");
+    }
 }
