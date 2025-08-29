@@ -121,3 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b07cb6f84f432ca31a52e89f2c8afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHpBar: {fileID: 0}
+  playerHpBar: {fileID: 0}
