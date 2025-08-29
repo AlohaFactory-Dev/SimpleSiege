@@ -9,37 +9,47 @@ using Zenject;
 public class PrisonSelectionPopup : UISlice
 {
     [Inject] private PrisonUnitSelectionManager _prisonUnitSelectionManager;
-    [SerializeField] private PrisonCard prisonCardPrefab;
-    [SerializeField] private RectTransform content;
-    private List<PrisonCard> _prisonCards = new();
+    [SerializeField] private GameObject blockObject;
+    private PrisonCard[] _prisonCards;
+    private bool _isInitialized = false;
 
     protected override void Open(UIOpenArgs openArgs)
     {
         GameManager.Pause();
-        if (_prisonCards.Count > 0)
-        {
-            foreach (var deckCard in _prisonCards)
-            {
-                Destroy(deckCard.gameObject);
-            }
-
-            _prisonCards.Clear();
-        }
-
-        var selectedCard = _prisonUnitSelectionManager.GetPrisonUnits();
-        foreach (var card in selectedCard)
-        {
-            CreateDeckCard(card);
-        }
+        Init();
+        blockObject.SetActive(false);
+        Refresh();
 
         base.Open(openArgs);
     }
 
-    private void CreateDeckCard(CardData cardData)
+    private void Init()
     {
-        var prisonCard = StageConainer.Container.InstantiatePrefab(prisonCardPrefab, content).GetComponent<PrisonCard>();
-        prisonCard.Init(cardData, CloseView);
-        _prisonCards.Add(prisonCard);
+        if (_isInitialized) return;
+        _isInitialized = true;
+        _prisonCards = GetComponentsInChildren<PrisonCard>(true);
+        for (int i = 0; i < _prisonCards.Length; i++)
+        {
+            _prisonCards[i].Init(OnClose, OnBlockObject);
+        }
+    }
+
+    private void OnBlockObject()
+    {
+        blockObject.SetActive(true);
+    }
+
+    private void Refresh()
+    {
+        var selectedCard = _prisonUnitSelectionManager.GetPrisonUnits();
+        for (int i = 0; i < _prisonCards.Length; i++)
+        {
+            if (!_prisonCards[i].gameObject.activeSelf)
+            {
+                _prisonCards[i].Refresh(selectedCard[i]);
+                return;
+            }
+        }
     }
 
     protected override void OnClose()

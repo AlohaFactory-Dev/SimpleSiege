@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Card.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Card.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/FloatingText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/FloatingText.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/Enemy/E_Cavalry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/Enemy/E_Cavalry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/Player/P_Cavalry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/Player/P_Cavalry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/BarrackBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/BarrackBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/TrapBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/TrapBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/ActionSystem/UnitActionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/ActionSystem/UnitActionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/ICaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/ICaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/ITarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/ITarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/KingSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/KingSkill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/KingSkill.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/KingSkill.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/IUnitAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/IUnitAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/MeleeAttackAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/MeleeAttackAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/RangedAttackAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/RangedAttackAction.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +29,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1071a2cb0cb3433aae80a793c277a04846ac00/4e/bda3d85d/IObserver`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/9a/a0a972f9/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f402f2945a7e49e4ba3cbb6c00f6963520a00/9c/cfb82f43/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/18f5482d17338a7bbdeae155929167e4a8be10b5d2e9aed96c2562ed98f34f/System.Collections.ObjectModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,7 +149,7 @@
       <workItem from="1756101102026" duration="584000" />
       <workItem from="1756165368149" duration="17186000" />
       <workItem from="1756257250241" duration="28315000" />
-      <workItem from="1756338557444" duration="20665000" />
+      <workItem from="1756338557444" duration="32093000" />
     </task>
     <servers />
   </component>
@@ -244,16 +222,55 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/ActionSystem/UnitActionSystem.cs</url>
-          <line>106</line>
+          <line>125</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\ActionSystem\UnitActionSystem.cs" containingFunctionPresentation="메서드 'OnAction'">
             <startOffsets>
-              <option value="3137" />
+              <option value="3902" />
             </startOffsets>
             <endOffsets>
-              <option value="3186" />
+              <option value="3967" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
+          <line>43</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'ActivateSkill'">
+            <startOffsets>
+              <option value="1211" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1224" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
+          <line>52</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'UnActivateSkill'">
+            <startOffsets>
+              <option value="1578" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1592" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/ActionSystem/UnitActionSystem.cs</url>
+          <line>106</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\ActionSystem\UnitActionSystem.cs" containingFunctionPresentation="메서드 'ActionRoutine'">
+            <startOffsets>
+              <option value="3400" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3426" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

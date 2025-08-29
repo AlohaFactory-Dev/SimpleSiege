@@ -21,14 +21,20 @@ public class StageManager : MonoBehaviour
     [Inject] private CardPoolManager _cardPoolManager;
     [Inject] private StageUI _stageUI;
     [Inject] private BuildingManager _buildingManager;
+    [Inject] private PassiveManager _passiveManager;
+    [Inject] private InputManager _inputManager;
+    [Inject] private CameraController _cameraController;
     public StageTable CurrentStageTable { get; private set; }
 
     public void Init()
     {
         CurrentStageTable = TableListContainer.Get<StageTableList>().GetStageTable(1);
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
+        _cameraController.Init();
+        _inputManager.Init();
         _buildingManager.Init();
         _buildingManager.OnStageResult.Subscribe(EndStage).AddTo(this);
+        _passiveManager.Init();
     }
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)

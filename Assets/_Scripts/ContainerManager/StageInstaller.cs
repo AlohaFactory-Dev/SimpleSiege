@@ -45,6 +45,7 @@ public class StageInstaller : MonoInstaller
         Container.Bind<CardPoolManager>().AsSingle().NonLazy();
         Container.Bind<PrisonUnitSelectionManager>().AsSingle().NonLazy();
         Container.Bind<UnitManager>().AsSingle().NonLazy();
+        Container.Bind<PassiveManager>().AsSingle().NonLazy();
 
 
         Container.Bind<StageManager>().FromInstance(_stageManager).AsSingle().NonLazy();
@@ -55,9 +56,7 @@ public class StageInstaller : MonoInstaller
     {
         try
         {
-            _cameraController.Init();
             await _factoryManager.Init(Container);
-            _inputManager.Init();
             _stageManager.Init();
         }
         catch (Exception e)

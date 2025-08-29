@@ -39,6 +39,26 @@ public class UnitUpgradeController
 
         _baseEffectAbleRange = unitTable.effectAbleRange;
         _baseMoveSpeed = unitTable.moveSpeed;
+        var PassiveManager = StageConainer.Get<PassiveManager>();
+        foreach (var passive in PassiveManager.ActivePassives)
+        {
+        }
+    }
+
+    public void ApplyPassive(PassiveTable passiveTable)
+    {
+        switch (passiveTable.passiveType)
+        {
+            case PassiveType.EffectAbleRangeUp:
+                SetAddedEffectAbleRange(passiveTable.id, passiveTable.effectValue);
+                break;
+            case PassiveType.AttackPowerUp:
+                SetAddedEffectValue(passiveTable.id, (int)passiveTable.effectValue);
+                break;
+            case PassiveType.MoveSpeedUp:
+                SetBoostSpeed(passiveTable.id, passiveTable.effectValue);
+                break;
+        }
     }
 
     public void SetAddedEffectAbleRange(string id, float range)

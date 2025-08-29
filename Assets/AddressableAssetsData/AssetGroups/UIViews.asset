@@ -52,6 +52,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e251b2fefe49e4743873a5f8daff3bc9
+    m_Address: PassiveSelectionViewConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f970ffb28dbfefe48a03191bb656061d
     m_Address: EquipmentPopupConfig
     m_ReadOnly: 0
