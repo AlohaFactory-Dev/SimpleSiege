@@ -1,28 +1,44 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using UniRx;
 
 public class PassiveManager
 {
+    private List<PassiveTable> _allPassives = new List<PassiveTable>();
     private List<PassiveTable> _passives;
     private readonly int _count = 3;
     private DeckSelectionManager _deckSelectionManager;
-    private List<string> _deckUnitIds = new List<string>();
     private List<PassiveTable> _activePassives = new List<PassiveTable>();
     public IReadOnlyList<PassiveTable> ActivePassives => _activePassives.AsReadOnly();
 
     private UnitManager _unitManager;
+    private IDisposable _deckSubscription;
 
     public PassiveManager(DeckSelectionManager deckSelectionManager, UnitManager unitManager)
     {
-        _passives = new List<PassiveTable>(TableListContainer.Get<PassiveTableList>().GetAllPassiveTables());
+        _allPassives = new List<PassiveTable>(TableListContainer.Get<PassiveTableList>().GetAllPassiveTables());
         _deckSelectionManager = deckSelectionManager;
         _unitManager = unitManager;
     }
 
     public void Init()
     {
-        _deckUnitIds = _deckSelectionManager.SelectedCardDatas.Select(cd => cd.id).ToList();
-        _passives = _passives.Where(p => p.targetIds.Any(id => _deckUnitIds.Contains(id) || id == "All")).ToList();
+        if (_deckSubscription != null)
+        {
+            _deckSubscription.Dispose();
+        }
+
+        _deckSubscription = _deckSelectionManager.SelectedCardDatas.ObserveCountChanged()
+            .Subscribe(_ => FilterPassivesByDeck());
+    }
+
+    private void FilterPassivesByDeck()
+    {
+        var selectedIds = _deckSelectionManager.SelectedCardDatas.Select(card => card.id).ToList();
+        _passives = _allPassives
+            .Where(passive => passive.targetIds.Any(id => selectedIds.Contains(id) || id == "All"))
+            .ToList();
     }
 
 

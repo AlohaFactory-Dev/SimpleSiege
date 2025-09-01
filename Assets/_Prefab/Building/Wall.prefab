@@ -193,7 +193,6 @@ GameObject:
   - component: {fileID: 1070114905585789596}
   - component: {fileID: 5033827609269143722}
   - component: {fileID: 1147672307698109641}
-  - component: {fileID: 205415092056838361}
   - component: {fileID: 1894423543176943652}
   - component: {fileID: 4906651322423198975}
   - component: {fileID: -5126082624085208653}
@@ -248,27 +247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   spawnPoint: {fileID: 5176458198045068642}
---- !u!95 &205415092056838361
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6979657028440165615}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &1894423543176943652
 Rigidbody2D:
   serializedVersion: 4

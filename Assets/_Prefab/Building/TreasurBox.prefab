@@ -42,12 +42,12 @@ GameObject:
   m_Component:
   - component: {fileID: 729344593503526250}
   - component: {fileID: 1832950872243650635}
-  - component: {fileID: 3280612727896346994}
+  - component: {fileID: 3137539997139790295}
   - component: {fileID: 6697402057131411938}
   - component: {fileID: 2323846194658628157}
   - component: {fileID: 212412500381553897}
   m_Layer: 8
-  m_Name: Prison
+  m_Name: TreasurBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c6524a3cf84a33835cc7a1cf643177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3280612727896346994
+--- !u!114 &3137539997139790295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,10 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6389741173952674614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba6c31cfbdf4110964bf27c1fb4483a, type: 3}
+  m_Script: {fileID: 11500000, guid: 021d49716cad456ca09c9cffbe8eb95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: E_Prison
+  id: E_TreasureBox
 --- !u!50 &6697402057131411938
 Rigidbody2D:
   serializedVersion: 4
