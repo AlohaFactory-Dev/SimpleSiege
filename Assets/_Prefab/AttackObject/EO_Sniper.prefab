@@ -69,6 +69,10 @@ PrefabInstance:
       value: EO_Sniper
       objectReference: {fileID: 0}
     - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_Parameters.colorGradient.atime1
       value: 3662
       objectReference: {fileID: 0}
