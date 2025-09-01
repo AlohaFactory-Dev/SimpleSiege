@@ -133,6 +133,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_Time
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.35
       objectReference: {fileID: 0}
