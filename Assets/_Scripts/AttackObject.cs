@@ -37,17 +37,29 @@ public class AttackObject : MonoBehaviour
     private Action _onHit;
     private Sequence _sequence;
     private FireType FireType => _table.fireType;
-
+    private TrailRenderer _trailRenderer;
     private Vector3 _previousPosition;
     bool _isInitialized;
 
     public void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition)
     {
         GetComponents();
+
+        if (_trailRenderer)
+        {
+            _trailRenderer.Clear();
+            _trailRenderer.enabled = false;
+            transform.position = position; // 위치 먼저 할당
+            _trailRenderer.enabled = true;
+        }
+        else
+        {
+            transform.position = position;
+        }
+
         mainObject.gameObject.SetActive(true);
         mainObject.transform.localPosition = Vector3.zero;
         _table = table;
-        transform.position = position;
         mainObject.localScale = Vector3.one * _table.scale;
         _onHit = onHit;
         if (table.delayRandomMin == 0)
@@ -65,6 +77,7 @@ public class AttackObject : MonoBehaviour
     {
         if (_isInitialized) return;
         _recycleObject = GetComponent<RecycleObject>();
+        _trailRenderer = GetComponentInChildren<TrailRenderer>();
         _isInitialized = true;
     }
 
@@ -73,6 +86,7 @@ public class AttackObject : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         mainObject.gameObject.SetActive(true);
+
         Fire(targetPosition);
     }
 
