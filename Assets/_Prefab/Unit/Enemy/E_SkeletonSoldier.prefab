@@ -148,8 +148,8 @@ MonoBehaviour:
   translator:
     autoReset: 1
     useCustomMixMode: 1
-    layerMixModes: 01000000
-    layerBlendModes: 01000000
+    layerMixModes: 0100000001000000
+    layerBlendModes: 0100000000000000
   updateTiming: 1
 --- !u!114 &96213868879972591
 MonoBehaviour:
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcf17261486412cab21edbe32c56d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 1}
 --- !u!1001 &6001875395353248781
 PrefabInstance:
   m_ObjectHideFlags: 0

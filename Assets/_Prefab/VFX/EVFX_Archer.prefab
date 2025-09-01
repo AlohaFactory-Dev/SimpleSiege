@@ -9799,7 +9799,7 @@ GameObject:
   - component: {fileID: 6641826342550727459}
   - component: {fileID: -3506941867050647721}
   m_Layer: 0
-  m_Name: VFX_Hit_Air_Heavy_0
+  m_Name: EVFX_Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

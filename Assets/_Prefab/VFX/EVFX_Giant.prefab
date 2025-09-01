@@ -287,8 +287,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.7
-      minScalar: 0.5
+      scalar: 1.2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5184,8 +5184,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.8
+      scalar: 1.4
+      minScalar: 1.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9799,7 +9799,7 @@ GameObject:
   - component: {fileID: 6641826342550727459}
   - component: {fileID: -3506941867050647721}
   m_Layer: 0
-  m_Name: VFX_Hit_Air_Heavy_0
+  m_Name: EVFX_Giant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14946,8 +14946,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.8
+      scalar: 1.4
+      minScalar: 1.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -19564,7 +19564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5175757063401277109
 Transform:
   m_ObjectHideFlags: 0
@@ -19834,8 +19834,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 4
+      scalar: 1.2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -24461,7 +24461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7997207954646276416
 Transform:
   m_ObjectHideFlags: 0
@@ -24731,8 +24731,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 4
+      scalar: 1.4
+      minScalar: 1.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
