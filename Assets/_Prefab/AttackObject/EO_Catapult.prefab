@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EO_Catapult
       objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: howitzerHeight
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8369572787828610767, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}

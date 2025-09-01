@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5631333308938200897}
   - component: {fileID: 3481830821446101246}
   m_Layer: 0
-  m_Name: 9-Sliced
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  howitzerHeight: 3
+  howitzerHeight: 1.5
   mainObject: {fileID: 2039271460724598244}
 --- !u!1 &7059761176496997483
 GameObject:
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 6391135048375254901}
   - component: {fileID: 4360466002905083723}
   m_Layer: 0
-  m_Name: 9-Sliced (1)
+  m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5741920412342075147, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_Name
-      value: EO_Archer
+      value: EO_Sniper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
