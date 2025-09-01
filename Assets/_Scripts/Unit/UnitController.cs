@@ -125,18 +125,21 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         // floatingText.SetText(damage.ToString());
         // floatingText.Play(floatingEffectPoint.position);
 
-        if (_statusSystem.HpSystem.TakeDamage(damage))
-        {
-            ChangeState(UnitState.Dead);
-            _unitManager.RemoveUnit(this);
-        }
-
         if (!TableManager.IsMagicNumber(caster.EffectVfxId))
         {
             var particle = _factoryManager.ParticleFactory.GetParticle(caster.EffectVfxId);
             particle.Init(damageEffectPoint.position);
             particle.Play();
         }
+
+        if (_statusSystem.HpSystem.TakeDamage(damage))
+        {
+            ChangeState(UnitState.Dead);
+            _unitManager.RemoveUnit(this);
+            return;
+        }
+
+        _statusSystem.ApplyHitAnimation();
     }
 
     public void ForceRelease() => _statusSystem.ForceRelease();

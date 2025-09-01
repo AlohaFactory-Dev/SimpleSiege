@@ -88,4 +88,9 @@ public class UnitStatusSystem : MonoBehaviour
                 break;
         }
     }
+
+    public void ApplyHitAnimation()
+    {
+        AnimationSystem.PlayHit();
+    }
 }

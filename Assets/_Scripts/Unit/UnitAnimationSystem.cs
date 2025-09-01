@@ -76,4 +76,9 @@ public class UnitAnimationSystem : MonoBehaviour
     {
         _animator.SetTrigger("Skill");
     }
+
+    public void PlayHit()
+    {
+        _animator.SetTrigger("Hit");
+    }
 }
