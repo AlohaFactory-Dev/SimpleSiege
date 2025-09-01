@@ -17,8 +17,44 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: e624b8a5795f7f8449e52838dd11d3b8
   m_SerializeEntries:
+  - m_GUID: 11416bb1009fe8346ad4ec0244888631
+    m_Address: EVFX_MeleeHit
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 417a7862ab8dc6e4ab0913c24f302dd8
+    m_Address: EVFX_FlameWizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bafaa7888fd2da40a60d886a9b65a38
+    m_Address: EVFX_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d496b10fc0e4c54f9993c2db50db8b9
+    m_Address: EVFX_Catapult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aeb74a0e8e641ee48ae8f40ac98eedc0
     m_Address: VFX_Hit_Air_Heavy_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd0c37a8182a24c469ac659b2c885234
+    m_Address: EVFX_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df7bea65654b17443b52a803970dc62c
+    m_Address: EVFX_Giant
     m_ReadOnly: 0
     m_SerializedLabels:
     - Particle
