@@ -17,8 +17,26 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 4c6138da09a37b24e870f9a721503a1a
   m_SerializeEntries:
+  - m_GUID: 191deee3534b6f046a340a04597ce8d1
+    m_Address: EO_Catapult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AttackObject
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e5fea6f25ce13e45a3f235c81dd122d
+    m_Address: EO_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AttackObject
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1eef22fd0eff8e4c956272b95bb8490
     m_Address: EO_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AttackObject
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da8d315e43eff134c9680e76e5c66261
+    m_Address: EO_FlameWizard
     m_ReadOnly: 0
     m_SerializedLabels:
     - AttackObject
