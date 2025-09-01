@@ -9,7 +9,7 @@ public class BuildingAnimationSystem : MonoBehaviour
 
     public void Init()
     {
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     public void PlayDestroyAnimation()

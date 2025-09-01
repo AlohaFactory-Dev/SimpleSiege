@@ -11,7 +11,8 @@ public enum StagePopupConfig
 {
     DeckSelectionViewConfig,
     PrisonSelectionViewConfig,
-    StageResultViewConfig
+    StageResultViewConfig,
+    PassiveSelectionViewConfig
 }
 
 public class StageManager : MonoBehaviour
