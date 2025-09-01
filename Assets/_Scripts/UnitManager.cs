@@ -8,6 +8,7 @@ public class UnitManager
     [Inject] private readonly FactoryManager _factoryManager;
     public List<UnitController> PlayerUnits { get; private set; } = new();
     public List<UnitController> EnemyUnits { get; private set; } = new();
+    private List<UnitController> _allUnit = new();
 
 
     public List<UnitController> SpawnUnit(Vector2 spawnPosition, string id, int amount, bool onAutoMove = true)
@@ -32,7 +33,35 @@ public class UnitManager
             spawnedUnits.Add(unit);
         }
 
+        _allUnit.AddRange(spawnedUnits);
         return spawnedUnits;
+    }
+
+
+    private float _sortingOrderUpdateInterval = 0.1f;
+    private float _sortingOrderUpdateTimer = 0f;
+
+    // 이 메서드를 MonoBehaviour에서 매 프레임 호출하세요.
+    public void UpdateSortingOrderTimer(float deltaTime)
+    {
+        _sortingOrderUpdateTimer += deltaTime;
+        if (_sortingOrderUpdateTimer >= _sortingOrderUpdateInterval)
+        {
+            SetAllUnitSortingOrder();
+            _sortingOrderUpdateTimer = 0f;
+        }
+    }
+
+    private void SetAllUnitSortingOrder()
+    {
+        // y값 기준 오름차순 정렬 (y가 낮은게 먼저)
+        _allUnit.Sort((a, b) => a.transform.position.y.CompareTo(b.transform.position.y));
+        // y가 낮은 유닛부터 sortingOrder를 높게 설정
+        for (int i = 0; i < _allUnit.Count; i++)
+        {
+            // 예시: sortingOrder를 1000에서 시작해서 y가 낮을수록 높게
+            _allUnit[i].SetSortingOrder(-i);
+        }
     }
 
     public void RemoveUnit(UnitController unit)
@@ -45,5 +74,7 @@ public class UnitManager
         {
             EnemyUnits.Remove(unit);
         }
+
+        _allUnit.Remove(unit);
     }
 }

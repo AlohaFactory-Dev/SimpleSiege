@@ -25,6 +25,7 @@ public class StageManager : MonoBehaviour
     [Inject] private PassiveManager _passiveManager;
     [Inject] private InputManager _inputManager;
     [Inject] private CameraController _cameraController;
+    [Inject] private UnitManager _unitManager;
     public StageTable CurrentStageTable { get; private set; }
 
     public void Init()
@@ -36,6 +37,11 @@ public class StageManager : MonoBehaviour
         _buildingManager.Init();
         _buildingManager.OnStageResult.Subscribe(EndStage).AddTo(this);
         _passiveManager.Init();
+    }
+
+    private void Update()
+    {
+        _unitManager.UpdateSortingOrderTimer(Time.deltaTime);
     }
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)

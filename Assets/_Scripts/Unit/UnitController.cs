@@ -5,6 +5,7 @@ using UnityEngine;
 using UniRx;
 using Zenject;
 using FactorySystem;
+using UnityEngine.Rendering;
 
 public enum UnitState
 {
@@ -58,7 +59,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 
     private UnitUpgradeController _unitUpgradeController;
-
+    private SortingGroup _sortingGroup;
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
     {
@@ -85,7 +86,16 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
+        _sortingGroup = GetComponent<SortingGroup>();
         Rigidbody2D.mass = _unitTable.mass;
+    }
+
+    public void SetSortingOrder(int order)
+    {
+        if (_sortingGroup != null)
+        {
+            _sortingGroup.sortingOrder = order;
+        }
     }
 
     private IEnumerator WaitAndMove(float waitTime)
