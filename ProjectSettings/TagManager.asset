@@ -44,3 +44,6 @@ TagManager:
   - name: Unit
     uniqueID: 1256385861
     locked: 0
+  - name: Projectile
+    uniqueID: 234697985
+    locked: 0

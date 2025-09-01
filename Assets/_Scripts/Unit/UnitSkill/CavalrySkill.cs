@@ -28,7 +28,7 @@ public class CavalrySkill : MonoBehaviour
 
     private void Update()
     {
-        if (!_onSkill && !_unitController.IsUntargetable)
+        if (!_onSkill && !_unitController.IsUntargetable && _unitController.State != UnitState.Action)
         {
             _skillActiveTimer += Time.deltaTime;
             if (_skillActiveTimer >= _skillActiveTime)

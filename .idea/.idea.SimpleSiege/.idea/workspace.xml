@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Fonts/NotoSansCJKkr-Black SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Fonts/NotoSansCJKkr-Black SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Fonts/NotoSansCJKkr-Black-subset.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Fonts/NotoSansCJKkr-Black-subset.otf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Passive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Passive.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Animation/UnitAnimation/UnitAnimatorBase.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animation/UnitAnimation/UnitAnimatorBase.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/AttackObject/EO_Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/AttackObject/EO_Archer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/FloatingText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/FloatingText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/UI/Card/PassiveCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/UI/Card/PassiveCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/UI/Card/UnitCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/UI/Card/UnitCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/Enemy/E_Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/Enemy/E_Archer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Spine/SampleCharacter/result/Character_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Spine/SampleCharacter/result/Character_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,15 +127,13 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="48960">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="48960" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -159,7 +179,8 @@
       <workItem from="1756688653248" duration="59000" />
       <workItem from="1756688934907" duration="5525000" />
       <workItem from="1756694718711" duration="1080000" />
-      <workItem from="1756695914335" duration="10988000" />
+      <workItem from="1756695914335" duration="13369000" />
+      <workItem from="1756709991737" duration="1056000" />
     </task>
     <servers />
   </component>
@@ -235,10 +256,10 @@
           <line>43</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'ActivateSkill'">
             <startOffsets>
-              <option value="1211" />
+              <option value="1256" />
             </startOffsets>
             <endOffsets>
-              <option value="1224" />
+              <option value="1269" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="27" />
@@ -248,10 +269,10 @@
           <line>53</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'UnActivateSkill'">
             <startOffsets>
-              <option value="1737" />
+              <option value="1782" />
             </startOffsets>
             <endOffsets>
-              <option value="1751" />
+              <option value="1796" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />
