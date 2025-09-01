@@ -80,5 +80,29 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 8369572787828610767, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7059761176496997483, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3417397915169545357}
   m_SourcePrefab: {fileID: 100100000, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+--- !u!1 &190903068820257811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7059761176496997483, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+  m_PrefabInstance: {fileID: 7160571909655148664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3417397915169545357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190903068820257811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5507ee396406e9845ad86c3162a10bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1000
+  AxisX: 0
+  AxisY: 0
+  AxisZ: 1
