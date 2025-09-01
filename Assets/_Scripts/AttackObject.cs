@@ -38,6 +38,7 @@ public class AttackObject : MonoBehaviour
     private Sequence _sequence;
     private FireType FireType => _table.fireType;
     private TrailRenderer _trailRenderer;
+    private ParticleSystem _particleSystem;
     private Vector3 _previousPosition;
     bool _isInitialized;
 
@@ -51,6 +52,12 @@ public class AttackObject : MonoBehaviour
             _trailRenderer.enabled = false;
             transform.position = position; // 위치 먼저 할당
             _trailRenderer.enabled = true;
+        }
+        else if (_particleSystem)
+        {
+            _particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            transform.position = position; // 위치 먼저 할당
+            _particleSystem.Play();
         }
         else
         {
@@ -78,6 +85,7 @@ public class AttackObject : MonoBehaviour
         if (_isInitialized) return;
         _recycleObject = GetComponent<RecycleObject>();
         _trailRenderer = GetComponentInChildren<TrailRenderer>();
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
         _isInitialized = true;
     }
 
