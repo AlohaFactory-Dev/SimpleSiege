@@ -7,13 +7,14 @@ public class UnitAnimationEventHandler : MonoBehaviour
     private Action _onAction;
 
     [SerializeField] private Color hitColor = Color.white;
-    private MeshRenderer _renderer;
+    private MeshRenderer[] _renderers;
     private MaterialPropertyBlock _block;
     private readonly int _id = Shader.PropertyToID("_Black");
 
     public void Init(Action onDieAction)
     {
-        _renderer = GetComponent<MeshRenderer>();
+        _renderers = GetComponents<MeshRenderer>();
+        _block = new MaterialPropertyBlock();
         _onDieAction = onDieAction;
     }
 
@@ -31,13 +32,19 @@ public class UnitAnimationEventHandler : MonoBehaviour
     public void OnHitEffectEvent()
     {
         _block.SetColor(_id, hitColor);
-        _renderer.SetPropertyBlock(_block);
+        foreach (var renderer in _renderers)
+        {
+            renderer.SetPropertyBlock(_block);
+        }
     }
 
     public void OffHitEffectEvent()
     {
         _block.SetColor(_id, Color.black);
-        _renderer.SetPropertyBlock(_block);
+        foreach (var renderer in _renderers)
+        {
+            renderer.SetPropertyBlock(_block);
+        }
     }
 
     public void OnAction()
