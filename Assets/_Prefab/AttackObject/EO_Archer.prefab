@@ -206,6 +206,30 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   howitzerHeight: 3
+  normalCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   mainObject: {fileID: 2039271460724598244}
 --- !u!210 &7118680690117173089
 SortingGroup:

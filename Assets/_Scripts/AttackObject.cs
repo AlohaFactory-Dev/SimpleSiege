@@ -29,6 +29,8 @@ public class AttackObject : MonoBehaviour
     [SerializeField]
     private float howitzerHeight;
 
+    [BoxGroup("Normal")] [SerializeField] private AnimationCurve normalCurve;
+
     [SerializeField] private Transform mainObject;
     private RecycleObject _recycleObject;
     private AttackObjectTable _table;
@@ -90,7 +92,7 @@ public class AttackObject : MonoBehaviour
         if (_table.speedType == AttackObjectSpeedType.Speed)
         {
             var speedValue = Vector2.Distance(transform.position, targetPosition) / Random.Range(_table.speedRandomMin, _table.speedRandomMax);
-            _sequence.Append(transform.DOMove(targetPosition, speedValue));
+            _sequence.Append(transform.DOMove(targetPosition, speedValue).SetEase(normalCurve));
             if (FireType == FireType.Howitzer)
             {
                 var howitzerTween = mainObject.DOLocalMoveY(howitzerHeight, speedValue).SetEase(howitzerCurve);
@@ -105,7 +107,7 @@ public class AttackObject : MonoBehaviour
         else
         {
             var speedValue = Random.Range(_table.speedRandomMin, _table.speedRandomMax);
-            _sequence.Append(transform.DOMove(targetPosition, speedValue));
+            _sequence.Append(transform.DOMove(targetPosition, speedValue).SetEase(normalCurve));
             if (FireType == FireType.Howitzer)
             {
                 var howitzerTween = mainObject.DOLocalMoveY(howitzerHeight, speedValue).SetEase(howitzerCurve);
