@@ -1,4 +1,20 @@
 using System.Collections.Generic;
+using UniRx;
+using UnityEngine;
+
+public enum UpgradeValueType { Additive, Multiplicative }
+
+public class UpgradeValue
+{
+    public readonly UpgradeValueType Type;
+    public readonly float Value;
+
+    public UpgradeValue(UpgradeValueType type, float value)
+    {
+        Type = type;
+        Value = value;
+    }
+}
 
 public class UnitUpgradeController
 {
@@ -7,21 +23,27 @@ public class UnitUpgradeController
     private readonly int _baseMaxHp;
     private readonly float _baseMoveSpeed;
     private readonly float _baseEffectAbleRange;
+    private readonly float _baseSightRange;
+    private readonly float _baseEffectRange;
+    private readonly float _baseAttackSpeed;
 
-    // 누적값 및 수정자
-    private float _totalAddedEffectAbleRange;
-    private int _totalAddedEffectValue;
-    private float _totalBoostSpeed;
 
-    private readonly Dictionary<string, float> _effectAbleRangeModifiers = new();
-    private readonly Dictionary<string, int> _effectValueModifiers = new();
-    private readonly Dictionary<string, float> _speedModifiers = new();
+    // 업그레이드 관리
+    private readonly Dictionary<string, UpgradeValue> _effectAbleRangeUpgrades = new();
+    private readonly Dictionary<string, UpgradeValue> _effectValueUpgrades = new();
+    private readonly Dictionary<string, UpgradeValue> _speedUpgrades = new();
+    private readonly Dictionary<string, UpgradeValue> _maxHpUpgrades = new();
+    private readonly Dictionary<string, UpgradeValue> _effectRangeUpgrades = new();
+    private readonly Dictionary<string, UpgradeValue> _attackSpeedUpgrades = new();
 
     // 프로퍼티
-    public float EffectAbleRange => _baseEffectAbleRange + _totalAddedEffectAbleRange;
-    public int EffectValue => _baseEffectValue + _totalAddedEffectValue;
-    public int MaxHp => _baseMaxHp;
-    public float MoveSpeed => _baseMoveSpeed + _totalBoostSpeed;
+    public float EffectAbleRange { get; private set; }
+    public int EffectValue { get; private set; }
+    public ReactiveProperty<int> MaxHp { get; private set; }
+    public float MoveSpeed { get; private set; }
+    public ReactiveProperty<float> SightRange { get; private set; }
+    public float EffectRange { get; private set; }
+    public ReactiveProperty<float> EffectActionSpeed { get; private set; }
 
     public UnitUpgradeController(UnitTable unitTable)
     {
@@ -39,55 +61,80 @@ public class UnitUpgradeController
 
         _baseEffectAbleRange = unitTable.effectAbleRange;
         _baseMoveSpeed = unitTable.moveSpeed;
-        var PassiveManager = StageConainer.Get<PassiveManager>();
-        foreach (var passive in PassiveManager.ActivePassives)
+        _baseSightRange = unitTable.sightRange;
+        _baseEffectRange = unitTable.effectRange;
+        _baseAttackSpeed = 1f;
+
+        ResetUpgrades();
+
+        foreach (var passive in StageConainer.Get<PassiveManager>().ActivePassives)
+            ApplyUpgrade(passive.id, passive.passiveType, new UpgradeValue(passive.upgradeValueType, passive.effectValue));
+    }
+
+    private void ResetUpgrades()
+    {
+        _effectAbleRangeUpgrades.Clear();
+        _effectValueUpgrades.Clear();
+        _speedUpgrades.Clear();
+
+        RecalculateAll();
+    }
+
+
+    public void ApplyUpgrade(string id, UpgradeType upgradeType, UpgradeValue skillUpgrade)
+    {
+        switch (upgradeType)
         {
+            case UpgradeType.EffectAbleRange:
+                AddUpgrade(_effectAbleRangeUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
+                break;
+            case UpgradeType.EffectValue:
+                AddUpgrade(_effectValueUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
+                break;
+            case UpgradeType.MoveSpeed:
+                AddUpgrade(_speedUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
+                break;
+            case UpgradeType.MaxHp:
+                AddUpgrade(_maxHpUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
+                break;
+            case UpgradeType.EffectRange:
+                AddUpgrade(_effectRangeUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
+                break;
+            case UpgradeType.EffectActionSpeed:
+                AddUpgrade(_attackSpeedUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
+                break;
         }
     }
 
-    public void ApplyPassive(PassiveTable passiveTable)
+    private void AddUpgrade(Dictionary<string, UpgradeValue> dict, string id, float value, UpgradeValueType type)
     {
-        switch (passiveTable.passiveType)
+        if (value < 0f) dict.Remove(id);
+        else dict[id] = new UpgradeValue(type, value);
+
+        RecalculateAll();
+    }
+
+    private void RecalculateAll()
+    {
+        EffectAbleRange = CalculateUpgrade(_baseEffectAbleRange, _effectAbleRangeUpgrades);
+        EffectValue = Mathf.CeilToInt(CalculateUpgrade(_baseEffectValue, _effectValueUpgrades));
+        MoveSpeed = CalculateUpgrade(_baseMoveSpeed, _speedUpgrades);
+        SightRange.Value = CalculateUpgrade(_baseSightRange, _effectAbleRangeUpgrades);
+        MaxHp.Value = Mathf.CeilToInt(CalculateUpgrade(_baseMaxHp, _maxHpUpgrades));
+        EffectRange = CalculateUpgrade(_baseEffectRange, _effectRangeUpgrades);
+        EffectActionSpeed.Value = CalculateUpgrade(_baseAttackSpeed, _attackSpeedUpgrades);
+    }
+
+    private float CalculateUpgrade(float baseValue, Dictionary<string, UpgradeValue> dict)
+    {
+        float add = 0f;
+        float mul = 0f;
+        foreach (var upgrade in dict.Values)
         {
-            case PassiveType.EffectAbleRangeUp:
-                SetAddedEffectAbleRange(passiveTable.id, passiveTable.effectValue);
-                break;
-            case PassiveType.AttackPowerUp:
-                SetAddedEffectValue(passiveTable.id, (int)passiveTable.effectValue);
-                break;
-            case PassiveType.MoveSpeedUp:
-                SetBoostSpeed(passiveTable.id, passiveTable.effectValue);
-                break;
+            if (upgrade.Type == UpgradeValueType.Additive) add += upgrade.Value;
+            else mul += upgrade.Value;
         }
-    }
 
-    public void SetAddedEffectAbleRange(string id, float range)
-    {
-        if (!_effectAbleRangeModifiers.TryAdd(id, range))
-            _effectAbleRangeModifiers[id] += range;
-
-        _totalAddedEffectAbleRange = 0f;
-        foreach (var mod in _effectAbleRangeModifiers.Values)
-            _totalAddedEffectAbleRange += mod;
-    }
-
-    public void SetAddedEffectValue(string id, int value)
-    {
-        if (!_effectValueModifiers.TryAdd(id, value))
-            _effectValueModifiers[id] += value;
-
-        _totalAddedEffectValue = 0;
-        foreach (var mod in _effectValueModifiers.Values)
-            _totalAddedEffectValue += mod;
-    }
-
-    public void SetBoostSpeed(string id, float speed)
-    {
-        if (!_speedModifiers.TryAdd(id, speed))
-            _speedModifiers[id] += speed;
-
-        _totalBoostSpeed = 0f;
-        foreach (var mod in _speedModifiers.Values)
-            _totalBoostSpeed += mod;
+        return baseValue * (1 + mul) + add;
     }
 }

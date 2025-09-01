@@ -18,9 +18,9 @@ public class UnitStatusSystem : MonoBehaviour
     {
         GetComponents();
         _targetSystem.Init(unitController);
-        HpSystem.Init(unitController.MaxHp, unitController.TeamType);
+        HpSystem.Init(unitController.MaxHp, unitController.TeamType, unitController.UnitTable.maxHp);
         MoveSystem.Init(unitController, _targetSystem, RotationSystem);
-        AnimationSystem.Init(_recycleObject.Release);
+        AnimationSystem.Init(_recycleObject.Release, unitController);
         ActionSystem.Init(unitController, AnimationSystem, _targetSystem, RotationSystem);
         _collider2D = GetComponent<Collider2D>();
     }

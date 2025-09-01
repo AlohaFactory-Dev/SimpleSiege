@@ -1,4 +1,5 @@
 using System;
+using UniRx;
 using UnityEngine;
 
 public class TrapBuilding : Building, ICaster
@@ -9,6 +10,7 @@ public class TrapBuilding : Building, ICaster
     public TargetType TargetType => TargetType.Enemy;
     public AreaType AreaType => AreaType.Circle;
     public float EffectRange => BuildingTable.values[1];
+    public IReadOnlyReactiveProperty<float> EffectActionSpeed => new ReactiveProperty<float>(1f);
     private UnitDetector _unitDetector;
 
 
