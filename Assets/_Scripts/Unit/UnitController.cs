@@ -34,6 +34,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private bool _isWallUnit;
     private readonly string _floatingTextId = "FloatingText";
 
+    public UnitState State => state;
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _unitUpgradeController.EffectValue;
     public IReadOnlyReactiveProperty<int> MaxHp => _unitUpgradeController.MaxHp;
@@ -120,9 +121,9 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     {
         if (IsUntargetable) return;
 
-        var floatingText = _factoryManager.FloatingTextFactory.GetText(_floatingTextId);
-        floatingText.SetText(damage.ToString());
-        floatingText.Play(floatingEffectPoint.position);
+        // var floatingText = _factoryManager.FloatingTextFactory.GetText(_floatingTextId);
+        // floatingText.SetText(damage.ToString());
+        // floatingText.Play(floatingEffectPoint.position);
 
         if (_statusSystem.HpSystem.TakeDamage(damage))
         {
