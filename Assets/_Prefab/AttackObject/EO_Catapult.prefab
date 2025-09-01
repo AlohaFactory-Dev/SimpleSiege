@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 3481830821446101246, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 325cae25619275c429045973322f1e77, type: 3}
+      objectReference: {fileID: 21300000, guid: 89a7636b388ead94186ad7f204814265, type: 3}
     - target: {fileID: 5631333308938200897, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -72,9 +72,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5631333308938200897, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631333308938200897, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631333308938200897, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631333308938200897, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631333308938200897, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5741920412342075147, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_Name
       value: EO_Catapult
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: howitzerHeight
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
