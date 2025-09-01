@@ -46,6 +46,12 @@ public class CardSelectionManager
         {
             _spellController.CastSpell(position, SelectedCard.CardTable.id);
         }
+
+        int currentAmount = _cardPoolManager.GetCardAmount(SelectedCard.CardTable.id);
+        if (currentAmount <= 0)
+        {
+            DisableSelectedCard();
+        }
     }
 
     private void DisableSelectedCard()
