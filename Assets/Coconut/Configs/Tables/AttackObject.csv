@@ -1,9 +1,5 @@
 id,spawnPointId,destinationPointId,fireType,speedType,speedRandomMin,speedRandomMax,onLookat,delayRandomMin,delayRandomMax,scale
 EO_Archer,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_Catapult,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_FlameWizard,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_Sniper,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_Archer,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_Catapult,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_FlameWizard,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
-EO_Sniper,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,0.5
+EO_Catapult,Default,Default,Howitzer,Time,1.25,1.25,TRUE,0,0,0.5
+EO_FlameWizard,Default,Default,Normal,Speed,5,5,TRUE,0,0,0.5
+EO_Sniper,Default,Default,Normal,Speed,10,10,TRUE,0,0,0.5
