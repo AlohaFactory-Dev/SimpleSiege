@@ -1,3 +1,4 @@
+using UniRx;
 using UnityEngine;
 
 public interface ICaster
@@ -9,4 +10,5 @@ public interface ICaster
     public TeamType TeamType { get; }
     public AreaType AreaType { get; }
     public float EffectRange { get; }
+    public IReadOnlyReactiveProperty<float> EffectActionSpeed { get; }
 }

@@ -1,4 +1,5 @@
 using System;
+using UniRx;
 using UnityEngine;
 
 
@@ -6,10 +7,10 @@ public class UnitAnimationSystem : MonoBehaviour
 {
     private Animator _animator;
     private UnitAnimationEventHandler _animationEventHandler;
-    private UnitTable _unitTable;
     public float AcionDuration { get; private set; }
+    private IDisposable _speedChangeSubscription;
 
-    public void Init(Action onDieAction)
+    public void Init(Action onDieAction, UnitController unitController)
     {
         _animator = GetComponentInChildren<Animator>();
         _animationEventHandler = _animator.GetComponentInChildren<UnitAnimationEventHandler>();
@@ -25,6 +26,20 @@ public class UnitAnimationSystem : MonoBehaviour
                 break;
             }
         }
+
+        if (_speedChangeSubscription != null)
+        {
+            _speedChangeSubscription.Dispose();
+            _speedChangeSubscription = null;
+        }
+
+        _speedChangeSubscription = unitController.EffectActionSpeed.Subscribe(SetActionSpeed).AddTo(this);
+        SetActionSpeed(unitController.EffectActionSpeed.Value);
+    }
+
+    private void SetActionSpeed(float speed)
+    {
+        _animator.SetFloat("EffectActionSpeed", speed);
     }
 
     public void SetOnAction(Action onAction)

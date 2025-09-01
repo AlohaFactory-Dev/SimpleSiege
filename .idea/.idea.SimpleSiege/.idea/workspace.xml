@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Building.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Building.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Passive.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Passive.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoconutMilk/BasicUI/Runtime/BarGauge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoconutMilk/BasicUI/Runtime/BarGauge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/AllEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/AllEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DataTable/PassiveTableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DataTable/PassiveTableList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Passive/PassiveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Passive/PassiveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/HpSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/HpSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/ITarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/ITarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/KingSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@9057452c86/Runtime/Triggers/MonoBehaviourMessagesTriggers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.22.3/Editor/GUI/AssetSettingsAnalyzeTreeView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.4/Runtime/Components/CinemachineTrackedDolly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.12/Editor/ShaderGUI/ParticleGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.12/Editor/UpgradeUtility.cs" root0="SKIP_HIGHLIGHTING" />
@@ -151,6 +166,10 @@
       <workItem from="1756257250241" duration="28315000" />
       <workItem from="1756338557444" duration="32093000" />
       <workItem from="1756427908849" duration="14019000" />
+      <workItem from="1756450703780" duration="130000" />
+      <workItem from="1756688653248" duration="59000" />
+      <workItem from="1756688934907" duration="5525000" />
+      <workItem from="1756694718711" duration="1080000" />
     </task>
     <servers />
   </component>
@@ -252,10 +271,10 @@
           <line>53</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'UnActivateSkill'">
             <startOffsets>
-              <option value="1644" />
+              <option value="1733" />
             </startOffsets>
             <endOffsets>
-              <option value="1658" />
+              <option value="1747" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />

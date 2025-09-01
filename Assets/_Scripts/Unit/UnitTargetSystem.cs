@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
@@ -8,6 +9,7 @@ public class UnitTargetSystem : MonoBehaviour
     private UnitController _unitController;
     private CircleCollider2D _collider;
     private readonly List<ITarget> _targetsInSight = new();
+    private IDisposable _updateSightRangeDisposable;
 
     public void Init(UnitController unitController)
     {
@@ -15,7 +17,20 @@ public class UnitTargetSystem : MonoBehaviour
         _unitController = unitController;
         _collider = GetComponent<CircleCollider2D>();
         _collider.isTrigger = true;
-        _collider.radius = unitController.UnitTable.sightRange;
+
+        if (_updateSightRangeDisposable != null)
+        {
+            _updateSightRangeDisposable.Dispose();
+            _updateSightRangeDisposable = null;
+        }
+
+        _updateSightRangeDisposable = unitController.SightRange.Subscribe(SetSiegeRange).AddTo(this);
+        SetSiegeRange(unitController.SightRange.Value);
+    }
+
+    private void SetSiegeRange(float range)
+    {
+        _collider.radius = range;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -57,11 +72,6 @@ public class UnitTargetSystem : MonoBehaviour
         }
     }
 
-    public void SetSiegeRange(float range)
-    {
-        _collider.radius = range;
-    }
-
 
     public ITarget FindTarget()
     {
@@ -86,9 +96,9 @@ public class UnitTargetSystem : MonoBehaviour
             foreach (var t in _targetsInSight)
             {
                 if (t.IsUntargetable) continue;
-                if (t.MaxHp > maxHp)
+                if (t.MaxHp.Value > maxHp)
                 {
-                    maxHp = t.MaxHp;
+                    maxHp = t.MaxHp.Value;
                     closest = t;
                 }
             }

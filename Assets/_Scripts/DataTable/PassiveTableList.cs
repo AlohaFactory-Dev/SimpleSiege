@@ -12,9 +12,10 @@ public class PassiveTable
     [CSVColumn] public string nameKey;
     [CSVColumn] public string descriptionKey;
     [CSVColumn] public string iconKey;
+    [CSVColumn] public UpgradeValueType upgradeValueType;
     [CSVColumn] public float effectValue;
     [CSVColumn] public int probability;
-    [CSVColumn] public PassiveType passiveType;
+    [CSVColumn] public UpgradeType passiveType;
     [CSVColumn] public List<string> targetIds;
     [CSVColumn] public List<float> values;
     [CSVColumn] public List<string> etcIds;

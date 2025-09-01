@@ -66,7 +66,7 @@ public class PassiveManager
         {
             if (passiveTable.targetIds.Contains(unit.UnitTable.id) || passiveTable.targetIds.Contains("All"))
             {
-                unit.UnitUpgradeController.ApplyPassive(passiveTable);
+                unit.UnitUpgradeController.ApplyUpgrade(passiveTable.id, passiveTable.passiveType, new UpgradeValue(passiveTable.upgradeValueType, passiveTable.effectValue));
             }
         }
     }

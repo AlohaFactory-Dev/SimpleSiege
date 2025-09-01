@@ -50,7 +50,14 @@ namespace Aloha.CoconutMilk
         private void EditorOnValueChanged()
         {
             fillImage.fillAmount = value / maxValue;
-            if (_stringFormatter != null) fillText.text = _stringFormatter(this.value, maxValue);
+            if (_stringFormatter != null) fillText.text = _stringFormatter(value, maxValue);
+        }
+
+        public void SetMaxValue(float maxValue)
+        {
+            this.maxValue = maxValue;
+            fillImage.fillAmount = value / maxValue;
+            if (_stringFormatter != null) fillText.text = _stringFormatter(value, maxValue);
         }
     }
 }

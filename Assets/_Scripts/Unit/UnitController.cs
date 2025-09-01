@@ -36,8 +36,9 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _unitUpgradeController.EffectValue;
-    public int MaxHp => _unitUpgradeController.MaxHp;
+    public IReadOnlyReactiveProperty<int> MaxHp => _unitUpgradeController.MaxHp;
     public float EffectAbleRange => _unitUpgradeController.EffectAbleRange;
+    public IReadOnlyReactiveProperty<float> SightRange => _unitUpgradeController.SightRange;
     public float MoveSpeed => _unitUpgradeController.MoveSpeed;
     public TargetGroup Group => TargetGroup.Unit;
     public bool IsUntargetable => state == UnitState.Dead || state == UnitState.Spawn || _isWallUnit;
@@ -50,7 +51,8 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public string ProjectTileId => _unitTable.projectTileId;
     public UnitStatusSystem StatusSystem => _statusSystem;
     public AreaType AreaType => _unitTable.areaType;
-    public float EffectRange => _unitTable.effectRange;
+    public float EffectRange => _unitUpgradeController.EffectRange;
+    public IReadOnlyReactiveProperty<float> EffectActionSpeed => _unitUpgradeController.EffectActionSpeed;
 
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 
@@ -61,8 +63,8 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     {
         _isWallUnit = false;
         _unitTable = unitTable;
-        Init();
         _unitUpgradeController = new UnitUpgradeController(_unitTable);
+        Init();
 
         transform.position = position;
         _statusSystem.Init(this);
@@ -95,7 +97,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public void SetWallUnit(string id, float effectAbleRange)
     {
         _isWallUnit = true;
-        _unitUpgradeController.SetAddedEffectAbleRange(id, effectAbleRange);
+        _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRange, new UpgradeValue(UpgradeValueType.Multiplicative, effectAbleRange));
         ChangeState(UnitState.Siege);
     }
 

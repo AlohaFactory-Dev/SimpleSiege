@@ -1,4 +1,5 @@
 using Aloha.Coconut;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -26,7 +27,7 @@ public class Building : MonoBehaviour, ITarget
         }
     }
 
-    public int MaxHp => BuildingTable.maxHp;
+    public IReadOnlyReactiveProperty<int> MaxHp { get; private set; }
     protected BuildingTable BuildingTable { get; private set; }
     private HpSystem _hpSystem;
     private BuildingAnimationSystem _animationSystem;
@@ -42,9 +43,10 @@ public class Building : MonoBehaviour, ITarget
         _animationSystem = GetComponent<BuildingAnimationSystem>();
         _collider2D = GetComponent<Collider2D>();
         _animationEventHandler = _animationSystem.GetComponentInChildren<BuildingAnimationEventHandler>();
+        MaxHp = new ReadOnlyReactiveProperty<int>(new ReactiveProperty<int>(BuildingTable.maxHp));
         _hasHpSystem = _hpSystem != null;
         if (_hasHpSystem)
-            _hpSystem.Init(BuildingTable.maxHp, BuildingTable.teamType);
+            _hpSystem.Init(MaxHp, BuildingTable.teamType, BuildingTable.maxHp);
         _animationSystem.Init();
         _animationEventHandler.Init(Remove);
         CustomInit();
