@@ -17,8 +17,50 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1b0d0f2bc905e0240b9ef8635ae53147
   m_SerializeEntries:
+  - m_GUID: 03c8c82a826a4fe4aa004bf41989002a
+    m_Address: passive_MaxHpUp_P_FlameWizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05a69e17d57919b42a0ff89949e0b52d
+    m_Address: passive_EffectValueUp_P_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05c09c9a60c9ae34e99e6f5c4f3bff66
+    m_Address: passive_EffectValueUp_P_SkeletonSoldier
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1785e165d5bdbb640a5ad4027560a09d
+    m_Address: passive_EffectValueUp_P_FlameWizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 198c91a1e4230834695404b62bcfddc8
     m_Address: SkeletonSoldier
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a1e018f2ad27c1498771aec20cb3f01
+    m_Address: passive_EffectRangeUp_P_Swordsman_P_Cavalry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b02e5af2d6f5e54fb7f58802a7ed7ec
+    m_Address: passive_EffectRangeUp_P_Catapult_P_Giant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26e1e4da62c127c478b03364a8ae5ecb
+    m_Address: passive_EffectValueUp_P_Giant
     m_ReadOnly: 0
     m_SerializedLabels:
     - Image
@@ -29,8 +71,38 @@ MonoBehaviour:
     m_SerializedLabels:
     - Image
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b89b534c688f1445aeee2755b9c6461
+    m_Address: passive_MaxHpUp_P_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4add37e6d6a34cf4c89727edbb860045
+    m_Address: passive_EffectValueUp_P_Swordsman
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ebec808d4be57f40962be84c19d8a6d
+    m_Address: passive_EffectRangeUp_P_SkeletonSoldier_P_Giant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f10aa01aa7ee4c47a95d9a7b115eeae
+    m_Address: passive_EffectActionSpeedUp_P_SkeletonSoldier_P_FlameWizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5ffa28b9549f5a149a8d2243bc8e6f3d
     m_Address: Giant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6075861ad08648449bfd83bdb3ca2860
+    m_Address: passive_MaxHpUp_P_Catapult
     m_ReadOnly: 0
     m_SerializedLabels:
     - Image
@@ -41,8 +113,62 @@ MonoBehaviour:
     m_SerializedLabels:
     - Image
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ed5e2ad60d0c3b4493e9e39ef08f05c
+    m_Address: passive_EffectRangeUp_P_FlameWizard_P_Catapult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7883457b426563049a37e6e02422cf67
     m_Address: Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7da20ab8a144f164f854fecdfaf511fa
+    m_Address: passive_MaxHpUp_P_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f4e7be5cb8a69342ba7dcc4a0661d5f
+    m_Address: passive_EffectRangeUp_P_Sniper_P_Cavalry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86428dbbac2713b4db9aafb27d851180
+    m_Address: passive_MaxHpUp_P_Giant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92303d93a03d6d84ebdd9e7ab1cf5279
+    m_Address: passive_EffectRangeUp_P_Swordsman_P_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96bcbc27fc3610b41b8fe5aefb75d219
+    m_Address: passive_EffectRangeUp_P_Archer_P_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9803bd831eed896489b6bf2f05a71791
+    m_Address: passive_EffectValueUp_P_Cavalry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a78589939acf573499d0c79ee3b7d99c
+    m_Address: passive_EffectValueUp_P_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0cc2418fb5a7f04cb2ed7329b9063c4
+    m_Address: passive_MaxHpUp_P_Cavalry
     m_ReadOnly: 0
     m_SerializedLabels:
     - Image
@@ -53,8 +179,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Image
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bba5cb57d9d7f6441b9d08ceec8d1466
+    m_Address: passive_MaxHpUp_P_Swordsman
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c4fccb540cab0a943ab3d411bbcc98cf
     m_Address: King
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6ffc7754e01dd8418cec0103ebe5a36
+    m_Address: passive_MaxHpUp_P_King
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce7779626ca2d2547af540b95b9d56bb
+    m_Address: passive_EffectValueUp_P_King
     m_ReadOnly: 0
     m_SerializedLabels:
     - Image
@@ -67,6 +211,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8132991c04a1534f86f4e8fa7ad4002
     m_Address: Cavalry
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f80db059958ff4b4cad8ac3b393b86bb
+    m_Address: passive_EffectValueUp_P_Catapult
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc91a32f283d7974e8abd71db77a212a
+    m_Address: passive_MaxHpUp_P_SkeletonSoldier
     m_ReadOnly: 0
     m_SerializedLabels:
     - Image
