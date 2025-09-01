@@ -69,7 +69,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         transform.position = position;
         _statusSystem.Init(this);
 
-
         if (onAutoMove)
         {
             state = UnitState.Spawn;
@@ -97,7 +96,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public void SetWallUnit(string id, float effectAbleRange)
     {
         _isWallUnit = true;
-        _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRange, new UpgradeValue(UpgradeValueType.Multiplicative, effectAbleRange));
+        _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRangeUp, new UpgradeValue(UpgradeValueType.Multiplicative, effectAbleRange));
         ChangeState(UnitState.Siege);
     }
 

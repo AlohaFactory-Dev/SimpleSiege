@@ -39,11 +39,11 @@ public class UnitUpgradeController
     // 프로퍼티
     public float EffectAbleRange { get; private set; }
     public int EffectValue { get; private set; }
-    public ReactiveProperty<int> MaxHp { get; private set; }
+    public ReactiveProperty<int> MaxHp { get; private set; } = new();
     public float MoveSpeed { get; private set; }
-    public ReactiveProperty<float> SightRange { get; private set; }
+    public ReactiveProperty<float> SightRange { get; private set; } = new();
     public float EffectRange { get; private set; }
-    public ReactiveProperty<float> EffectActionSpeed { get; private set; }
+    public ReactiveProperty<float> EffectActionSpeed { get; private set; } = new();
 
     public UnitUpgradeController(UnitTable unitTable)
     {
@@ -85,22 +85,22 @@ public class UnitUpgradeController
     {
         switch (upgradeType)
         {
-            case UpgradeType.EffectAbleRange:
+            case UpgradeType.EffectAbleRangeUp:
                 AddUpgrade(_effectAbleRangeUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
                 break;
-            case UpgradeType.EffectValue:
+            case UpgradeType.EffectValueUp:
                 AddUpgrade(_effectValueUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
                 break;
-            case UpgradeType.MoveSpeed:
+            case UpgradeType.MoveSpeedUp:
                 AddUpgrade(_speedUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
                 break;
-            case UpgradeType.MaxHp:
+            case UpgradeType.MaxHpUp:
                 AddUpgrade(_maxHpUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
                 break;
-            case UpgradeType.EffectRange:
+            case UpgradeType.EffectRangeUp:
                 AddUpgrade(_effectRangeUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
                 break;
-            case UpgradeType.EffectActionSpeed:
+            case UpgradeType.EffectActionSpeedUp:
                 AddUpgrade(_attackSpeedUpgrades, id, skillUpgrade.Value, skillUpgrade.Type);
                 break;
         }
