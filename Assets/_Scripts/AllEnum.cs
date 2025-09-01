@@ -12,4 +12,4 @@ public enum TargetSelectionType { Nearest, HighestHp }
 
 public enum TargetGroup { All, Building, Unit }
 
-public enum UpgradeType { EffectAbleRange, EffectValue, MoveSpeed, MaxHp, EffectRange, EffectActionSpeed }
+public enum UpgradeType { EffectAbleRangeUp, EffectValueUp, MoveSpeedUp, MaxHpUp, EffectRangeUp, EffectActionSpeedUp }
