@@ -176,11 +176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1147672307698109641, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: id
-      value: E_Wall_Archer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: m_Name
       value: Wall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -203,6 +207,10 @@ PrefabInstance:
     - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Name
       value: BarrackBuilding (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8520129513705818015, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -410,11 +418,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1147672307698109641, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: id
-      value: E_Wall_Archer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -610,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarrackBuilding (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8520129513705818015, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.75
@@ -671,6 +687,10 @@ PrefabInstance:
     - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Name
       value: BarrackBuilding (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8520129513705818015, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -776,11 +796,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1147672307698109641, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: id
-      value: E_Wall_Archer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: m_Name
       value: Wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -803,6 +827,10 @@ PrefabInstance:
     - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Name
       value: BarrackBuilding
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8520129513705818015, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -904,11 +932,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1147672307698109641, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: id
-      value: E_Wall_Archer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979657028440165615, guid: 6df7622005a7d0d4186608962db6417d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
