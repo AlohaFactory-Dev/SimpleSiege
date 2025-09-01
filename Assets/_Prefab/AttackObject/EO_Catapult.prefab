@@ -100,6 +100,46 @@ PrefabInstance:
       propertyPath: howitzerHeight
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[0].inSlope
+      value: 1.836591
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[1].inSlope
+      value: 0.45337638
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[0].outSlope
+      value: 1.836591
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[1].inWeight
+      value: 0.041946292
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[1].outSlope
+      value: 0.45337638
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[0].outWeight
+      value: 0.030201342
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: normalCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_Time
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8369572787828610767, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
