@@ -595,6 +595,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2862055665830019698, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: id
+      value: E_Barrack_Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862055665830019698, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: spawnPoint.Array.size
       value: 10
       objectReference: {fileID: 0}

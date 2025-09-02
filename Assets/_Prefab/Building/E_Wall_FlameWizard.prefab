@@ -128,11 +128,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4473465386880607227, guid: 9c36b24496f58ed41b23fdab2cbe36c6, type: 3}
       propertyPath: m_Name
-      value: Wall_FlameWizard
+      value: E_Wall_FlameWizard
       objectReference: {fileID: 0}
     - target: {fileID: 4975380538454437781, guid: 9c36b24496f58ed41b23fdab2cbe36c6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791985574458197711, guid: 9c36b24496f58ed41b23fdab2cbe36c6, type: 3}
+      propertyPath: id
+      value: E_Wall_FlameWizard
       objectReference: {fileID: 0}
     - target: {fileID: 5791985574458197711, guid: 9c36b24496f58ed41b23fdab2cbe36c6, type: 3}
       propertyPath: spawnPoints.Array.size
