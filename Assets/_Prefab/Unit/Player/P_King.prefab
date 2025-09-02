@@ -180,6 +180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_King
       objectReference: {fileID: 0}
+    - target: {fileID: 8871557777459079765, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+      propertyPath: m_Radius
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 9061571285628317336, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -251,17 +255,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce32307465ac2e4a98aba93063102cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillInterval: 10
+  skillInterval: 5
   spawnUnits:
   - spwanUnitId: P_Swordsman
-    amount: 5
-    probability: 10
+    amount: 3
+    probability: 100
   - spwanUnitId: P_Archer
     amount: 3
-    probability: 10
+    probability: 100
   - spwanUnitId: P_Cavalry
-    amount: 2
-    probability: 10
+    amount: 1
+    probability: 100
 --- !u!4 &8116968912446139727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2589488314655287618, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
