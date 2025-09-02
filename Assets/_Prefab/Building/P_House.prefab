@@ -8,34 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8357003377265262816, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_Radius
-      value: 0.3
+    - target: {fileID: 2862055665830019698, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: boundary
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 911563870678583652, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 911563870678583652, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 911563870678583652, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.17
+    - target: {fileID: 2862055665830019698, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: spawnPoint
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Name
-      value: E_TreasureBox
+      value: P_House
       objectReference: {fileID: 0}
-    - target: {fileID: 5683846894032145213, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130274956797976366, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a39315a81f8b3684b85aa034a95c78e4, type: 3}
     - target: {fileID: 8520129513705818015, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -76,10 +60,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9222463741171293355, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.6
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2862055665830019698, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
     m_RemovedGameObjects:
@@ -90,14 +70,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 3368609363527639084}
+      addedObject: {fileID: 1935682307855129359}
   m_SourcePrefab: {fileID: 100100000, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
 --- !u!1 &4473465386880607227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
   m_PrefabInstance: {fileID: 828853989922276025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3368609363527639084
+--- !u!114 &1935682307855129359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4473465386880607227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021d49716cad456ca09c9cffbe8eb95f, type: 3}
+  m_Script: {fileID: 11500000, guid: e14335e8e2c64bdab399acd246596a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: E_TreasureBox
+  id: P_House

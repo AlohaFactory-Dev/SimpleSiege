@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Name
-      value: House
+      value: E_House
       objectReference: {fileID: 0}
     - target: {fileID: 8520129513705818015, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -89,4 +89,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14335e8e2c64bdab399acd246596a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 
+  id: E_House
