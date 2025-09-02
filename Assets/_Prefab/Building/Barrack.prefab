@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e77da0bdb01f462e8267f95bd23f4dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 1}
 --- !u!1 &3860815640377794882
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,8 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  spawnPoint:
-  - {fileID: 0}
+  spawnPoint: []
 --- !u!50 &1268921791295274025
 Rigidbody2D:
   serializedVersion: 4
@@ -482,6 +482,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7532899173452514692}
     m_Modifications:
     - target: {fileID: 338829777011814022, guid: 42d0a2594bc420342bc3a787ec1ff35f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987600006078854168, guid: 42d0a2594bc420342bc3a787ec1ff35f, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
