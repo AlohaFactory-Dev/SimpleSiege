@@ -78,11 +78,20 @@ public class UnitActionSystem : MonoBehaviour
                     Vector3 dir = (targetPos - currentPos).normalized;
                     _rotationSystem.Rotate(dir, ref lastYRotation); // 변경
                     _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
+                    _unitAnimationSystem.PlayAction();
                     yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                     // 액션 간격 대기
                     _unitAnimationSystem.PlayIdle();
                     yield return new WaitForSeconds(_unitTable.actionInterval);
                 }
+                else
+                {
+                    yield return null;
+                }
+            }
+            else
+            {
+                yield return null;
             }
         }
     }

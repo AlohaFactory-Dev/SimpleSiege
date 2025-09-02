@@ -104,11 +104,24 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         ChangeState(UnitState.Move);
     }
 
-    public void SetWallUnit(string id, float effectAbleRange)
+    public void SetWallUnit(string id, float effectAbleRange, Vector2 position)
     {
+        ColliderActive(false);
         _isWallUnit = true;
         _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRangeUp, new UpgradeValue(UpgradeValueType.Multiplicative, effectAbleRange));
+        transform.position = position;
         ChangeState(UnitState.Siege);
+    }
+
+    public void SetBarrackUnit(Vector2 position)
+    {
+        ColliderActive(false);
+        transform.position = position;
+    }
+
+    public void ColliderActive(bool isActive)
+    {
+        _collider2D.enabled = isActive;
     }
 
 

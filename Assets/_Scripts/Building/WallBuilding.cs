@@ -4,7 +4,7 @@ using Zenject;
 
 public class WallBuilding : Building
 {
-    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Transform[] spawnPoints;
     [Inject] private UnitManager _unitManager;
     private string SpawnUnitId => BuildingTable.stringValues[0];
     private int SpawnAmount => (int)BuildingTable.values[0];
@@ -14,12 +14,14 @@ public class WallBuilding : Building
     protected override void CustomInit()
     {
         if (string.IsNullOrEmpty(SpawnUnitId)) return;
-        Vector2 spawnPosition = (Vector2)spawnPoint.position + Random.insideUnitCircle;
-        var units = _unitManager.SpawnUnit(spawnPosition, SpawnUnitId, SpawnAmount, false);
+
+        var units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, SpawnAmount, false);
         _units.AddRange(units);
-        foreach (var unit in _units)
+
+        for (int i = 0; i < _units.Count; i++)
         {
-            unit.SetWallUnit("Wall", EffectAbleRange);
+            var spawnPoint = spawnPoints[i % spawnPoints.Length];
+            units[i].SetWallUnit("Wall", EffectAbleRange, spawnPoint.position);
         }
     }
 

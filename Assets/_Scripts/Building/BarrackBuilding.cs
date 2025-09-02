@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class BarrackBuilding : Building
 {
     [Inject] private UnitManager _unitManager;
-    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Transform[] spawnPoint;
     [SerializeField] private GameObject boundary;
     private UnitDetector _unitDetector;
     private string SpawnUnitId => BuildingTable.stringValues[0];
@@ -20,10 +20,13 @@ public class BarrackBuilding : Building
     {
         _unitDetector = GetComponentInChildren<UnitDetector>();
         _hasUnits = true;
-        Vector2 spawnPosition = (Vector2)spawnPoint.position + Random.insideUnitCircle;
-        _units = _unitManager.SpawnUnit(spawnPosition, SpawnUnitId, SpawnAmount);
+        _units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, SpawnAmount);
         _unitDetector.Init(OnDetect);
         _unitDetector.SetRadius(DetectorRadius);
+        for (int i = 0; i < _units.Count; i++)
+        {
+            _units[i].SetBarrackUnit(spawnPoint[i].position);
+        }
     }
 
 
@@ -47,6 +50,11 @@ public class BarrackBuilding : Building
     {
         if (_hasUnits)
         {
+            for (int i = 0; i < _units.Count; i++)
+            {
+                _units[i].ColliderActive(true);
+            }
+
             _hasUnits = false;
             boundary.SetActive(false);
             foreach (var unit in _units)
