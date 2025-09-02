@@ -118,3 +118,4 @@ Passive,passive_AttackPowerUp_P_Swordsman_P_Archer/Desc,passive_AttackPowerUp_P_
 Passive,passive_MoveSpeedUp_P_Catapult_P_Giant/Desc,passive_MoveSpeedUp_P_Catapult_P_Giant/Desc,투석기<c> 거인의 이속이 30% 증가
 Passive,passive_AttackSpeedUp_P_SkeletonSoldier_P_FlameWizard/Desc,passive_AttackSpeedUp_P_SkeletonSoldier_P_FlameWizard/Desc,해골 병사<c> 화염 마법사의 공속이 50% 증가
 Passive,passive_AttackPowerUp_P_Sniper_P_Cavalry/Desc,passive_AttackPowerUp_P_Sniper_P_Cavalry/Desc,저격수<c> 기병의 공격력이 50% 증가
+SystemUI,ToastMessage/NoSpawnableZone,유닛 생성 불가 지역입니다,유닛 생성 불가 지역입니다

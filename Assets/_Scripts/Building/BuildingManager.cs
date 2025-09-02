@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
+    [SerializeField] private SpawnableZoneController spawnAbleZoneController;
     private List<Building> _allBuildings = new List<Building>();
     private List<Building> _playerBuildings = new List<Building>();
     private List<Building> _enemyBuildings = new List<Building>();
@@ -12,14 +13,17 @@ public class BuildingManager : MonoBehaviour
 
     public void Init()
     {
+        transform.localPosition = Vector3.zero;
+        spawnAbleZoneController.Init(this);
         var buildings = GetComponentsInChildren<Building>();
         foreach (var building in buildings)
         {
-            building.Init();
+            building.Init(this);
+            AddBuilding(building);
         }
     }
 
-    public void AddBuilding(Building building)
+    private void AddBuilding(Building building)
     {
         if (!_allBuildings.Contains(building))
             _allBuildings.Add(building);

@@ -12,7 +12,6 @@ public class StageInstaller : MonoInstaller
     private InputManager _inputManager;
     private CameraController _cameraController;
     private StageUI _stageUI;
-    private BuildingManager _buildingManager;
     private StageManager _stageManager;
 
     public override void InstallBindings()
@@ -27,17 +26,13 @@ public class StageInstaller : MonoInstaller
         _inputManager = GetComponentInChildren<InputManager>();
         _cameraController = GetComponentInChildren<CameraController>();
         _stageUI = GetComponentInChildren<StageUI>();
-        _buildingManager = GetComponentInChildren<BuildingManager>();
         _stageManager = GetComponentInChildren<StageManager>();
-
 
         Container.Bind<CoconutCanvas>().FromInstance(_coconutCanvas).AsSingle().NonLazy();
         Container.Bind<FactoryManager>().FromInstance(_factoryManager).AsSingle().NonLazy();
         Container.Bind<InputManager>().FromInstance(_inputManager).AsSingle().NonLazy();
         Container.Bind<CameraController>().FromInstance(_cameraController).AsSingle().NonLazy();
         Container.Bind<StageUI>().FromInstance(_stageUI).AsSingle().NonLazy();
-        Container.Bind<BuildingManager>().FromInstance(_buildingManager).AsSingle().NonLazy();
-
 
         Container.Bind<CardSelectionManager>().AsSingle().NonLazy();
         Container.Bind<SpellController>().AsSingle().NonLazy();
@@ -57,7 +52,7 @@ public class StageInstaller : MonoInstaller
         try
         {
             await _factoryManager.Init(Container);
-            _stageManager.Init();
+            await _stageManager.Init();
         }
         catch (Exception e)
         {

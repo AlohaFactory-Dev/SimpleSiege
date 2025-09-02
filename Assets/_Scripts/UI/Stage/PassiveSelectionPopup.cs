@@ -24,7 +24,7 @@ public class PassiveSelectionPopup : UISlice
         _passiveCards = GetComponentsInChildren<PassiveCard>(true);
         for (int i = 0; i < _passiveCards.Length; i++)
         {
-            _passiveCards[i].Init(OnClose, OnBlockObject);
+            _passiveCards[i].Init(CloseView, OnBlockObject);
         }
     }
 

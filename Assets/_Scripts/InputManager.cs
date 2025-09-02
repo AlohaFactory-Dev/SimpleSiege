@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Aloha.Coconut;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,10 +9,9 @@ using Zenject;
 public class InputManager : MonoBehaviour
 {
     [Inject] private CardSelectionManager _cardSelectionManager;
-
     private bool _isPointerDown;
     private Coroutine _spawnCoroutine;
-    private Camera _camera;
+    [SerializeField] Camera _camera;
 
     private int _spawnableLayerMask;
 
@@ -91,9 +91,14 @@ public class InputManager : MonoBehaviour
             {
                 _cardSelectionManager.UseSelectedCard(worldPos);
             }
+            else
+            {
+                SystemUI.ShowToastMessage(TextTableV2.Get("SystemUI/ToastMessage/NoSpawnableZone"));
+            }
 
             return;
         }
+
 
         _cardSelectionManager.UseSelectedCard(worldPos);
     }

@@ -12,10 +12,8 @@ public class UnitAnimationSystem : MonoBehaviour
 
     public void Init(Action onDieAction, UnitController unitController)
     {
-        _animator = GetComponentInChildren<Animator>();
-        _animationEventHandler = _animator.GetComponentInChildren<UnitAnimationEventHandler>();
+        GetComponents();
         _animationEventHandler.Init(onDieAction);
-
         // Animator에 연결된 모든 AnimationClip 가져오기
         var clips = _animator.runtimeAnimatorController.animationClips;
         foreach (var clip in clips)
@@ -35,6 +33,13 @@ public class UnitAnimationSystem : MonoBehaviour
 
         _speedChangeSubscription = unitController.EffectActionSpeed.Subscribe(SetActionSpeed).AddTo(this);
         SetActionSpeed(unitController.EffectActionSpeed.Value);
+    }
+
+    private void GetComponents()
+    {
+        if (_animator != null) return;
+        _animator = GetComponentInChildren<Animator>();
+        _animationEventHandler = _animator.GetComponentInChildren<UnitAnimationEventHandler>();
     }
 
     private void SetActionSpeed(float speed)

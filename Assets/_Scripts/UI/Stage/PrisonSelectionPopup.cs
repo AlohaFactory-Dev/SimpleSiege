@@ -15,6 +15,7 @@ public class PrisonSelectionPopup : UISlice
 
     protected override void Open(UIOpenArgs openArgs)
     {
+        StageConainer.Get<StageUI>().CardContainer.OnFirst();
         GameManager.Pause();
         Init();
         blockObject.SetActive(false);
@@ -50,6 +51,7 @@ public class PrisonSelectionPopup : UISlice
 
     protected override void OnClose()
     {
+        StageConainer.Get<StageUI>().CardContainer.OnLast();
         GameManager.Resume();
         base.OnClose();
     }

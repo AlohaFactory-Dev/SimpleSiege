@@ -24,7 +24,7 @@ public class WallBuilding : Building
         }
     }
 
-    protected override void DestroyBuilding()
+    protected override void Remove()
     {
         foreach (var unit in _units)
         {
@@ -32,6 +32,6 @@ public class WallBuilding : Building
         }
 
         _units.Clear();
-        base.DestroyBuilding();
+        base.Remove();
     }
 }

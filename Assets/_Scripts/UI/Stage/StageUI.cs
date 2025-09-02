@@ -6,6 +6,7 @@ using UnityEngine;
 public class StageUI : MonoBehaviour
 {
     [SerializeField] private CardContainer cardContainer;
+    public CardContainer CardContainer => cardContainer;
 
     public void Init()
     {
