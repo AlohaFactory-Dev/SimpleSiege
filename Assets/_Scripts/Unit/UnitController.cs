@@ -64,6 +64,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
     {
+        IsBarrackUnit = false;
         _isWallUnit = false;
         _unitTable = unitTable;
         _unitUpgradeController = new UnitUpgradeController(_unitTable);
