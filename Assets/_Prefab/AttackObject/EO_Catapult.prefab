@@ -98,39 +98,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: howitzerHeight
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[0].inSlope
-      value: 1.836591
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[1].inSlope
-      value: 0.45337638
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[0].outSlope
-      value: 1.836591
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[1].inWeight
-      value: 0.041946292
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[1].outSlope
-      value: 0.45337638
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[0].outWeight
-      value: 0.030201342
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 8106328999174517283, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: m_Time

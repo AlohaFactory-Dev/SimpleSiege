@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_King
       objectReference: {fileID: 0}
+    - target: {fileID: 8871557777459079765, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+      propertyPath: m_Radius
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 9061571285628317336, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -225,8 +229,39 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2589488314655287618, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7432762816880350524}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437624498646725531}
   m_SourcePrefab: {fileID: 100100000, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+--- !u!1 &2206096723998707495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+  m_PrefabInstance: {fileID: 6001875395353248781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &437624498646725531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206096723998707495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce32307465ac2e4a98aba93063102cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillInterval: 5
+  spawnUnits:
+  - spwanUnitId: P_Swordsman
+    amount: 3
+    probability: 100
+  - spwanUnitId: P_Archer
+    amount: 3
+    probability: 100
+  - spwanUnitId: P_Cavalry
+    amount: 1
+    probability: 100
 --- !u!4 &8116968912446139727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2589488314655287618, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}

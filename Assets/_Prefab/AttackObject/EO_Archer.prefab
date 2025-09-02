@@ -205,7 +205,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  howitzerHeight: 1.5
+  howitzerHeight: 2
   normalCurve:
     serializedVersion: 2
     m_Curve:
@@ -240,7 +240,7 @@ SortingGroup:
   m_GameObject: {fileID: 5741920412342075147}
   m_Enabled: 1
   m_SortingLayerID: 234697985
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!1 &7059761176496997483
