@@ -12,7 +12,7 @@ public class BuildingManager : MonoBehaviour
 
     public void Init()
     {
-        var buildings = GetComponentsInChildren<Building>(true);
+        var buildings = GetComponentsInChildren<Building>();
         foreach (var building in buildings)
         {
             building.Init();
