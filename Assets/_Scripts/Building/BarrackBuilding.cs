@@ -10,7 +10,6 @@ public class BarrackBuilding : Building
     [SerializeField] private Transform[] spawnPoint;
     private UnitDetector _unitDetector;
     private string SpawnUnitId => BuildingTable.stringValues[0];
-    private int SpawnAmount => (int)BuildingTable.values[0];
     private float DetectorRadius => BuildingTable.values[1];
     private bool _hasUnits;
     private List<UnitController> _units = new();
@@ -19,7 +18,7 @@ public class BarrackBuilding : Building
     {
         _unitDetector = GetComponentInChildren<UnitDetector>();
         _hasUnits = true;
-        _units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, SpawnAmount);
+        _units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, spawnPoint.Length);
         _unitDetector.Init(OnDetect);
         _unitDetector.SetRadius(DetectorRadius);
         for (int i = 0; i < _units.Count; i++)

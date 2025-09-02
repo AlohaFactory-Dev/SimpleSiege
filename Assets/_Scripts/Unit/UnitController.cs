@@ -108,7 +108,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     {
         ColliderActive(false);
         _isWallUnit = true;
-        _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRangeUp, new UpgradeValue(UpgradeValueType.Multiplicative, effectAbleRange));
+        _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRangeUp, new UpgradeValue(UpgradeValueType.Additive, effectAbleRange));
         transform.position = position;
         ChangeState(UnitState.Siege);
     }

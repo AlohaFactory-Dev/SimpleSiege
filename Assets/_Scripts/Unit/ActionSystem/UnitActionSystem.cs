@@ -77,7 +77,7 @@ public class UnitActionSystem : MonoBehaviour
                     Vector3 targetPos = target.Transform.position;
                     Vector3 dir = (targetPos - currentPos).normalized;
                     _rotationSystem.Rotate(dir, ref lastYRotation); // 변경
-                    _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
+                    _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController, targetPos));
                     _unitAnimationSystem.PlayAction();
                     yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                     // 액션 간격 대기
@@ -111,7 +111,8 @@ public class UnitActionSystem : MonoBehaviour
         {
             if (target != null)
             {
-                _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController));
+                Vector2 targetPos = target.Transform.position;
+                _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController, targetPos));
                 yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                 if (target.IsUntargetable)
                 {
@@ -130,9 +131,9 @@ public class UnitActionSystem : MonoBehaviour
         }
     }
 
-    private void OnAction(ITarget target, ICaster caster)
+    private void OnAction(ITarget target, ICaster caster, Vector2 targetPos)
     {
-        _unitAction.Execute(target, caster, _unitController.EffectValue);
+        _unitAction.Execute(target, caster, _unitController.EffectValue, targetPos);
         _onActionNotice.OnNext(Unit.Default);
     }
 
