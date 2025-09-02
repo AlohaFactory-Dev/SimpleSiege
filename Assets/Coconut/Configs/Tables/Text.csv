@@ -66,56 +66,56 @@ Card,Unit/P_Giant/Desc,Giant,느리지만 강력한 거인. 건물만 공격
 Card,Unit/P_FlameWizard/Desc,FlameWizard,강력한 광역 화염 공격.
 Card,Unit/P_Sniper/Desc,Sniper,매우 긴 거리에서 저격. 공격력이 매우 강하지만 공속이 낮음.
 Card,Unit/P_Cavalry/Desc,Cavalry,이동 속력이 빠른 기병. 도움닫기 이후 돌진 상태가 되면 처음 충돌한 적에게 피해 2배
-Passive,passive_AttackPowerUp_P_King/Name,passive_AttackPowerUp_P_King/Name,왕의 열정
-Passive,passive_AttackPowerUp_P_Swordsman/Name,passive_AttackPowerUp_P_Swordsman/Name,검사의 열정
-Passive,passive_AttackPowerUp_P_Archer/Name,passive_AttackPowerUp_P_Archer/Name,궁수의 열정
-Passive,passive_AttackPowerUp_P_Catapult/Name,passive_AttackPowerUp_P_Catapult/Name,투석기의 열정
-Passive,passive_AttackPowerUp_P_SkeletonSoldier/Name,passive_AttackPowerUp_P_SkeletonSoldier/Name,해골 병사의 열정
-Passive,passive_AttackPowerUp_P_Giant/Name,passive_AttackPowerUp_P_Giant/Name,거인의 열정
-Passive,passive_AttackPowerUp_P_FlameWizard/Name,passive_AttackPowerUp_P_FlameWizard/Name,화염 마법사의 열정
-Passive,passive_AttackPowerUp_P_Sniper/Name,passive_AttackPowerUp_P_Sniper/Name,저격수의 열정
-Passive,passive_AttackPowerUp_P_Cavalry/Name,passive_AttackPowerUp_P_Cavalry/Name,기병의 열정
-Passive,passive_MaxHpUp_P_King/Name,passive_MaxHpUp_P_King/Name,왕의 근성
-Passive,passive_MaxHpUp_P_Swordsman/Name,passive_MaxHpUp_P_Swordsman/Name,검사의 근성
-Passive,passive_MaxHpUp_P_Archer/Name,passive_MaxHpUp_P_Archer/Name,궁수의 근성
-Passive,passive_MaxHpUp_P_Catapult/Name,passive_MaxHpUp_P_Catapult/Name,투석기의 근성
-Passive,passive_MaxHpUp_P_SkeletonSoldier/Name,passive_MaxHpUp_P_SkeletonSoldier/Name,해골 병사의 근성
-Passive,passive_MaxHpUp_P_Giant/Name,passive_MaxHpUp_P_Giant/Name,거인의 근성
-Passive,passive_MaxHpUp_P_FlameWizard/Name,passive_MaxHpUp_P_FlameWizard/Name,화염 마법사의 근성
-Passive,passive_MaxHpUp_P_Sniper/Name,passive_MaxHpUp_P_Sniper/Name,저격수의 근성
-Passive,passive_MaxHpUp_P_Cavalry/Name,passive_MaxHpUp_P_Cavalry/Name,기병의 근성
-Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Name,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Name,강력 폭발
-Passive,passive_MaxHpUp_P_Swordsman_P_Cavalry/Name,passive_MaxHpUp_P_Swordsman_P_Cavalry/Name,판금 갑옷
-Passive,passive_EffectAbleRangeUp_P_Archer_P_Sniper/Name,passive_EffectAbleRangeUp_P_Archer_P_Sniper/Name,매의 눈
-Passive,passive_AttackPowerUp_P_SkeletonSoldier_P_Giant/Name,passive_AttackPowerUp_P_SkeletonSoldier_P_Giant/Name,격투 단련
-Passive,passive_AttackPowerUp_P_Swordsman_P_Archer/Name,passive_AttackPowerUp_P_Swordsman_P_Archer/Name,군사 훈련
-Passive,passive_MoveSpeedUp_P_Catapult_P_Giant/Name,passive_MoveSpeedUp_P_Catapult_P_Giant/Name,빠른 발걸음
-Passive,passive_AttackSpeedUp_P_SkeletonSoldier_P_FlameWizard/Name,passive_AttackSpeedUp_P_SkeletonSoldier_P_FlameWizard/Name,마법 가속
-Passive,passive_AttackPowerUp_P_Sniper_P_Cavalry/Name,passive_AttackPowerUp_P_Sniper_P_Cavalry/Name,집중
-Passive,passive_AttackPowerUp_P_King/Desc,passive_AttackPowerUp_P_King/Desc,왕의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Swordsman/Desc,passive_AttackPowerUp_P_Swordsman/Desc,검사의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Archer/Desc,passive_AttackPowerUp_P_Archer/Desc,궁수의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Catapult/Desc,passive_AttackPowerUp_P_Catapult/Desc,투석기의 공격력 +50%
-Passive,passive_AttackPowerUp_P_SkeletonSoldier/Desc,passive_AttackPowerUp_P_SkeletonSoldier/Desc,해골 병사의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Giant/Desc,passive_AttackPowerUp_P_Giant/Desc,거인의 공격력 +50%
-Passive,passive_AttackPowerUp_P_FlameWizard/Desc,passive_AttackPowerUp_P_FlameWizard/Desc,화염 마법사의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Sniper/Desc,passive_AttackPowerUp_P_Sniper/Desc,저격수의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Cavalry/Desc,passive_AttackPowerUp_P_Cavalry/Desc,기병의 공격력 +50%
-Passive,passive_MaxHpUp_P_King/Desc,passive_MaxHpUp_P_King/Desc,왕의 체력 +50%
-Passive,passive_MaxHpUp_P_Swordsman/Desc,passive_MaxHpUp_P_Swordsman/Desc,검사의 체력 +50%
-Passive,passive_MaxHpUp_P_Archer/Desc,passive_MaxHpUp_P_Archer/Desc,궁수의 체력 +50%
-Passive,passive_MaxHpUp_P_Catapult/Desc,passive_MaxHpUp_P_Catapult/Desc,투석기의 체력 +50%
-Passive,passive_MaxHpUp_P_SkeletonSoldier/Desc,passive_MaxHpUp_P_SkeletonSoldier/Desc,해골 병사의 체력 +50%
-Passive,passive_MaxHpUp_P_Giant/Desc,passive_MaxHpUp_P_Giant/Desc,거인의 체력 +50%
-Passive,passive_MaxHpUp_P_FlameWizard/Desc,passive_MaxHpUp_P_FlameWizard/Desc,화염 마법사의 체력 +50%
-Passive,passive_MaxHpUp_P_Sniper/Desc,passive_MaxHpUp_P_Sniper/Desc,저격수의 체력 +50%
-Passive,passive_MaxHpUp_P_Cavalry/Desc,passive_MaxHpUp_P_Cavalry/Desc,기병의 체력 +50%
-Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Desc,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Desc,화염 마법사<c> 투석기의 피해 범위 +100%
-Passive,passive_MaxHpUp_P_Swordsman_P_Cavalry/Desc,passive_MaxHpUp_P_Swordsman_P_Cavalry/Desc,검사<c> 기병의 체력 +50%
-Passive,passive_EffectAbleRangeUp_P_Archer_P_Sniper/Desc,passive_EffectAbleRangeUp_P_Archer_P_Sniper/Desc,궁수<c> 저격수의 시야<c> 사거리 +30%
-Passive,passive_AttackPowerUp_P_SkeletonSoldier_P_Giant/Desc,passive_AttackPowerUp_P_SkeletonSoldier_P_Giant/Desc,해골 병사<c> 거인의 공격력 +50%
-Passive,passive_AttackPowerUp_P_Swordsman_P_Archer/Desc,passive_AttackPowerUp_P_Swordsman_P_Archer/Desc,검사<c> 궁수의 공격력 +50%
-Passive,passive_MoveSpeedUp_P_Catapult_P_Giant/Desc,passive_MoveSpeedUp_P_Catapult_P_Giant/Desc,투석기<c> 거인의 이속 +30%
-Passive,passive_AttackSpeedUp_P_SkeletonSoldier_P_FlameWizard/Desc,passive_AttackSpeedUp_P_SkeletonSoldier_P_FlameWizard/Desc,해골 병사<c> 화염 마법사의 공속 +50%
-Passive,passive_AttackPowerUp_P_Sniper_P_Cavalry/Desc,passive_AttackPowerUp_P_Sniper_P_Cavalry/Desc,저격수<c> 기병의 공격력 +50%
+Passive,passive_EffectValueUp_P_King/Name,왕의 열정,왕의 열정
+Passive,passive_EffectValueUp_P_Swordsman/Name,검사의 열정,검사의 열정
+Passive,passive_EffectValueUp_P_Archer/Name,궁수의 열정,궁수의 열정
+Passive,passive_EffectValueUp_P_Catapult/Name,투석기의 열정,투석기의 열정
+Passive,passive_EffectValueUp_P_SkeletonSoldier/Name,해골 병사의 열정,해골 병사의 열정
+Passive,passive_EffectValueUp_P_Giant/Name,거인의 열정,거인의 열정
+Passive,passive_EffectValueUp_P_FlameWizard/Name,화염 마법사의 열정,화염 마법사의 열정
+Passive,passive_EffectValueUp_P_Sniper/Name,저격수의 열정,저격수의 열정
+Passive,passive_EffectValueUp_P_Cavalry/Name,기병의 열정,기병의 열정
+Passive,passive_MaxHpUp_P_King/Name,왕의 근성,왕의 근성
+Passive,passive_MaxHpUp_P_Swordsman/Name,검사의 근성,검사의 근성
+Passive,passive_MaxHpUp_P_Archer/Name,궁수의 근성,궁수의 근성
+Passive,passive_MaxHpUp_P_Catapult/Name,투석기의 근성,투석기의 근성
+Passive,passive_MaxHpUp_P_SkeletonSoldier/Name,해골 병사의 근성,해골 병사의 근성
+Passive,passive_MaxHpUp_P_Giant/Name,거인의 근성,거인의 근성
+Passive,passive_MaxHpUp_P_FlameWizard/Name,화염 마법사의 근성,화염 마법사의 근성
+Passive,passive_MaxHpUp_P_Sniper/Name,저격수의 근성,저격수의 근성
+Passive,passive_MaxHpUp_P_Cavalry/Name,기병의 근성,기병의 근성
+Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Name,강력 폭발,강력 폭발
+Passive,passive_EffectRangeUp_P_Swordsman_P_Cavalry/Name,판금 갑옷,판금 갑옷
+Passive,passive_EffectRangeUp_P_Archer_P_Sniper/Name,매의 눈,매의 눈
+Passive,passive_EffectRangeUp_P_SkeletonSoldier_P_Giant/Name,격투 단련,격투 단련
+Passive,passive_EffectRangeUp_P_Swordsman_P_Archer/Name,군사 훈련,군사 훈련
+Passive,passive_EffectRangeUp_P_Catapult_P_Giant/Name,빠른 발걸음,빠른 발걸음
+Passive,passive_EffectActionSpeedUp_P_SkeletonSoldier_P_FlameWizard/Name,마법 가속,마법 가속
+Passive,passive_EffectRangeUp_P_Sniper_P_Cavalry/Name,집중,집중
+Passive,passive_EffectValueUp_P_King/Desc,왕의 공격력 +50%,왕의 공격력 +50%
+Passive,passive_EffectValueUp_P_Swordsman/Desc,검사의 공격력 +50%,검사의 공격력 +50%
+Passive,passive_EffectValueUp_P_Archer/Desc,궁수의 공격력 +50%,궁수의 공격력 +50%
+Passive,passive_EffectValueUp_P_Catapult/Desc,투석기의 공격력 +50%,투석기의 공격력 +50%
+Passive,passive_EffectValueUp_P_SkeletonSoldier/Desc,해골 병사의 공격력 +50%,해골 병사의 공격력 +50%
+Passive,passive_EffectValueUp_P_Giant/Desc,거인의 공격력 +50%,거인의 공격력 +50%
+Passive,passive_EffectValueUp_P_FlameWizard/Desc,화염 마법사의 공격력 +50%,화염 마법사의 공격력 +50%
+Passive,passive_EffectValueUp_P_Sniper/Desc,저격수의 공격력 +50%,저격수의 공격력 +50%
+Passive,passive_EffectValueUp_P_Cavalry/Desc,기병의 공격력 +50%,기병의 공격력 +50%
+Passive,passive_MaxHpUp_P_King/Desc,왕의 체력 +50%,왕의 체력 +50%
+Passive,passive_MaxHpUp_P_Swordsman/Desc,검사의 체력 +50%,검사의 체력 +50%
+Passive,passive_MaxHpUp_P_Archer/Desc,궁수의 체력 +50%,궁수의 체력 +50%
+Passive,passive_MaxHpUp_P_Catapult/Desc,투석기의 체력 +50%,투석기의 체력 +50%
+Passive,passive_MaxHpUp_P_SkeletonSoldier/Desc,해골 병사의 체력 +50%,해골 병사의 체력 +50%
+Passive,passive_MaxHpUp_P_Giant/Desc,거인의 체력 +50%,거인의 체력 +50%
+Passive,passive_MaxHpUp_P_FlameWizard/Desc,화염 마법사의 체력 +50%,화염 마법사의 체력 +50%
+Passive,passive_MaxHpUp_P_Sniper/Desc,저격수의 체력 +50%,저격수의 체력 +50%
+Passive,passive_MaxHpUp_P_Cavalry/Desc,기병의 체력 +50%,기병의 체력 +50%
+Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Desc,화염 마법사<c> 투석기의 피해 범위 +100%,화염 마법사<c> 투석기의 피해 범위 +100%
+Passive,passive_EffectRangeUp_P_Swordsman_P_Cavalry/Desc,검사<c> 기병의 체력 +50%,검사<c> 기병의 체력 +50%
+Passive,passive_EffectRangeUp_P_Archer_P_Sniper/Desc,궁수<c> 저격수의 시야<c> 사거리 +30%,궁수<c> 저격수의 시야<c> 사거리 +30%
+Passive,passive_EffectRangeUp_P_SkeletonSoldier_P_Giant/Desc,해골 병사<c> 거인의 공격력 +50%,해골 병사<c> 거인의 공격력 +50%
+Passive,passive_EffectRangeUp_P_Swordsman_P_Archer/Desc,검사<c> 궁수의 공격력 +50%,검사<c> 궁수의 공격력 +50%
+Passive,passive_EffectRangeUp_P_Catapult_P_Giant/Desc,투석기<c> 거인의 이속 +30%,투석기<c> 거인의 이속 +30%
+Passive,passive_EffectActionSpeedUp_P_SkeletonSoldier_P_FlameWizard/Desc,해골 병사<c> 화염 마법사의 공속 +50%,해골 병사<c> 화염 마법사의 공속 +50%
+Passive,passive_EffectRangeUp_P_Sniper_P_Cavalry/Desc,저격수<c> 기병의 공격력 +50%,저격수<c> 기병의 공격력 +50%
 SystemUI,ToastMessage/NoSpawnableZone,유닛 생성 불가 지역입니다,유닛 생성 불가 지역입니다

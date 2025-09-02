@@ -29,7 +29,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - AttackObject
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9d8ce90415ee69e4e8bdc4f7477898b1
+  - m_GUID: 75080155c2dd16247b3a07b3392b2583
     m_Address: EO_King
     m_ReadOnly: 0
     m_SerializedLabels:
