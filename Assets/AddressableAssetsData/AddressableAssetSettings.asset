@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: a117f9b745b4544438a62ac26cafc10d
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: c41b17cc1234c5a28a64107593774ec8
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 802ae0071b58b934383e41b7e5cfb038, type: 2}
   - {fileID: 11400000, guid: 492a1206a145b854c84afb524839f18e, type: 2}
   - {fileID: 11400000, guid: 07baa8150dfb1b64e95f2d588d2cf75e, type: 2}
+  - {fileID: 11400000, guid: 736facd363c1e864a8adde3eb27f9e73, type: 2}
   - {fileID: 11400000, guid: 69a90c65ce3c01c4c97418df897e69f1, type: 2}
   - {fileID: 11400000, guid: 083114081d524b3499832fa8f64e0f77, type: 2}
   - {fileID: 11400000, guid: 4a52f69138249ca49b636677d8e73429, type: 2}
@@ -103,6 +104,7 @@ MonoBehaviour:
     - Particle
     - AttackObject
     - Image
+    - Map
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: aed33003afaf85f4786a21a418edd9ee, type: 2}

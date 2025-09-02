@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Map
+  m_EditorClassIdentifier: 
+  m_GroupName: Map
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 41725dd24d646544c8758a5f57b526ab
+  m_SerializeEntries:
+  - m_GUID: 41e52fcbdaba87149a2f07094770f8a2
+    m_Address: Assets/_Prefab/Map/Map_Stage1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Map
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bd5413c8e9df8640818a5dba925edad
+    m_Address: Assets/_Prefab/Map/Map_Stage2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Map
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af8e1acb41ba6a1409ca0ab90d7b705b
+    m_Address: Assets/_Prefab/Map/Map_Stage3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Map
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c500563653463c343839ec906c2c5ab2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d16cec28d946e8b4aa1e53e6323f9bcc, type: 2}
+    - {fileID: 11400000, guid: b0e4699c482856d42955aaa4e094a205, type: 2}

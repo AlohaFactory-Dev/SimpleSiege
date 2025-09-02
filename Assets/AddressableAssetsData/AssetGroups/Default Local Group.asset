@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: a117f9b745b4544438a62ac26cafc10d
   m_SerializeEntries:
+  - m_GUID: 06414f16a24668d48ae7f30144800c3f
+    m_Address: Assets/_Prefab/Map/Map.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0d12308bb07045047a0caa430ccf3581
     m_Address: Property_Key_Golden
     m_ReadOnly: 0
