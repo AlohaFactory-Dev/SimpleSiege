@@ -8,4 +8,8 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Building_Trap
   m_Controller: {fileID: 9100000, guid: 27aade8220ba32e4082cb049d8d6e7ee, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9d4fe81ae9dcf6049a6f9f399c22225b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9a1c880f9121c514fa6c9a504a2730f3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5890190ab89219244a151c9ef809c891, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6475fef56baf01649aca261e357e55cd, type: 2}
