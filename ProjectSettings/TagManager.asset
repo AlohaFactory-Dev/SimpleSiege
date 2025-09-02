@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Building
+    uniqueID: 1577079179
+    locked: 0
   - name: Unit
     uniqueID: 1256385861
     locked: 0
