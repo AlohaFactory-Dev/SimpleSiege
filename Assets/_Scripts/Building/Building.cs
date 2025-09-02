@@ -8,13 +8,14 @@ using Zenject;
 public class Building : MonoBehaviour, ITarget
 {
     [Inject] private BuildingManager _buildingManager;
-    [Inject] private FactoryManager _factoryManager;
     [SerializeField] private string id;
     public Transform Transform => transform;
     public TeamType TeamType => BuildingTable.teamType;
     public TargetGroup Group => TargetGroup.Building;
     public Collider2D Collider2D => _collider2D;
     private Collider2D _collider2D;
+
+    public Transform DamageEffectPoint => transform;
 
 
     public bool IsUntargetable
@@ -61,13 +62,6 @@ public class Building : MonoBehaviour, ITarget
 
     public virtual void TakeDamage(ICaster caster, int damage)
     {
-        if (!TableManager.IsMagicNumber(caster.EffectVfxId))
-        {
-            var particle = _factoryManager.ParticleFactory.GetParticle(caster.EffectVfxId);
-            particle.Init(transform.position);
-            particle.Play();
-        }
-
         if (IsDestroyed) return;
         if (_hpSystem.TakeDamage(damage))
         {

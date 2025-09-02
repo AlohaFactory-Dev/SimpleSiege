@@ -19,7 +19,6 @@ public enum UnitState
 
 public class UnitController : MonoBehaviour, ITarget, ICaster
 {
-    [Inject] FactoryManager _factoryManager;
     [Inject] UnitManager _unitManager;
 
     [SerializeField] private Transform damageEffectPoint;
@@ -35,6 +34,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private bool _isWallUnit;
     private readonly string _floatingTextId = "FloatingText";
 
+    public Transform DamageEffectPoint => damageEffectPoint;
     public UnitState State => state;
     public UnitTable UnitTable => _unitTable;
     public int EffectValue => _unitUpgradeController.EffectValue;
@@ -135,12 +135,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         // floatingText.SetText(damage.ToString());
         // floatingText.Play(floatingEffectPoint.position);
 
-        if (!TableManager.IsMagicNumber(caster.EffectVfxId))
-        {
-            var particle = _factoryManager.ParticleFactory.GetParticle(caster.EffectVfxId);
-            particle.Init(damageEffectPoint.position);
-            particle.Play();
-        }
 
         if (_statusSystem.HpSystem.TakeDamage(damage))
         {

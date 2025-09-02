@@ -10,4 +10,5 @@ public interface ITarget
     public bool IsUntargetable { get; }
     public IReadOnlyReactiveProperty<int> MaxHp { get; }
     public void TakeDamage(ICaster caster, int damage);
+    public Transform DamageEffectPoint { get; }
 }

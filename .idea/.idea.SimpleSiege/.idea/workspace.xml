@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/AttackObject.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/AttackObject.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationEventHandler.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,15 +117,13 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="47360">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="47360" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -180,6 +173,7 @@
       <workItem from="1756709991737" duration="1056000" />
       <workItem from="1756711074254" duration="2132000" />
       <workItem from="1756713298661" duration="275000" />
+      <workItem from="1756713603270" duration="4718000" />
     </task>
     <servers />
   </component>
