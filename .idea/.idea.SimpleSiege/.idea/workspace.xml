@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/Inguz Media Studio/The 2DFX Elemental Hits Vol.2/URP unitypackage/The 2DFX Elemental Hits Vol.2 URP.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/JMO Assets/Cartoon FX FREE (old legacy effects).unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Map/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Map/Map.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,10 +112,10 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="64304">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="55108">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="64304" />
+      <option name="pid" value="55108" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -174,7 +173,7 @@
       <workItem from="1756713603270" duration="4718000" />
       <workItem from="1756770850542" duration="4674000" />
       <workItem from="1756775918946" duration="270000" />
-      <workItem from="1756776251563" duration="255000" />
+      <workItem from="1756776251563" duration="8465000" />
     </task>
     <servers />
   </component>
@@ -221,42 +220,133 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_Scripts/Building/WallBuilding.cs</url>
-          <line>17</line>
+          <line>16</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Building\WallBuilding.cs" containingFunctionPresentation="메서드 'CustomInit'">
             <startOffsets>
-              <option value="642" />
+              <option value="497" />
             </startOffsets>
             <endOffsets>
-              <option value="725" />
+              <option value="592" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Building/WallBuilding.cs</url>
-          <line>21</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Building\WallBuilding.cs" containingFunctionPresentation="메서드 'CustomInit'">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs</url>
+          <line>110</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitController.cs" containingFunctionPresentation="메서드 'SetWallUnit'">
             <startOffsets>
-              <option value="817" />
+              <option value="3712" />
             </startOffsets>
             <endOffsets>
-              <option value="859" />
+              <option value="3845" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/UnitManager.cs</url>
-          <line>19</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\UnitManager.cs" containingFunctionPresentation="메서드 'SpawnUnit'">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>85</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'ApplyUpgrade'">
             <startOffsets>
-              <option value="695" />
+              <option value="3056" />
             </startOffsets>
             <endOffsets>
-              <option value="739" />
+              <option value="3076" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>110</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'AddUpgrade'">
+            <startOffsets>
+              <option value="4186" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4201" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>113</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'AddUpgrade'">
+            <startOffsets>
+              <option value="4283" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4300" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>118</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'RecalculateAll'">
+            <startOffsets>
+              <option value="4356" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4439" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>124</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'RecalculateAll'">
+            <startOffsets>
+              <option value="4868" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4951" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>129</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'CalculateUpgrade'">
+            <startOffsets>
+              <option value="5064" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5079" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitUpgradeController.cs</url>
+          <line>110</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitUpgradeController.cs" containingFunctionPresentation="메서드 'AddUpgrade'">
+            <startOffsets>
+              <option value="4202" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4218" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/PrisonUnitSelectionManager.cs</url>
+          <line>23</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\PrisonUnitSelectionManager.cs" containingFunctionPresentation="메서드 'GetPrisonUnits'">
+            <startOffsets>
+              <option value="868" />
+            </startOffsets>
+            <endOffsets>
+              <option value="966" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

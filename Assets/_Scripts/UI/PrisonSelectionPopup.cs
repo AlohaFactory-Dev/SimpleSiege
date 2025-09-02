@@ -30,7 +30,7 @@ public class PrisonSelectionPopup : UISlice
         _prisonCards = GetComponentsInChildren<PrisonCard>(true);
         for (int i = 0; i < _prisonCards.Length; i++)
         {
-            _prisonCards[i].Init(OnClose, OnBlockObject);
+            _prisonCards[i].Init(CloseView, OnBlockObject);
         }
     }
 
@@ -44,11 +44,7 @@ public class PrisonSelectionPopup : UISlice
         var selectedCard = _prisonUnitSelectionManager.GetPrisonUnits();
         for (int i = 0; i < _prisonCards.Length; i++)
         {
-            if (!_prisonCards[i].gameObject.activeSelf)
-            {
-                _prisonCards[i].Refresh(selectedCard[i]);
-                return;
-            }
+            _prisonCards[i].Refresh(selectedCard[i]);
         }
     }
 

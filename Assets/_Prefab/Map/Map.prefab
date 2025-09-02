@@ -97,8 +97,8 @@ GameObject:
   - component: {fileID: 3691632272049702725}
   - component: {fileID: 1851127891603737710}
   - component: {fileID: 7288911605348172807}
-  m_Layer: 0
-  m_Name: Wall
+  m_Layer: 10
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
