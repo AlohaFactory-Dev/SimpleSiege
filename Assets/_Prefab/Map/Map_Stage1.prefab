@@ -2326,7 +2326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2758424284827858163, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: m_Offset.y
-      value: 30.8
+      value: 35.6
       objectReference: {fileID: 0}
     - target: {fileID: 3748987801676836234, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.y
