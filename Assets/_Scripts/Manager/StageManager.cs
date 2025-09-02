@@ -39,10 +39,6 @@ public class StageManager : MonoBehaviour
         _passiveManager.Init();
     }
 
-    private void Update()
-    {
-        _unitManager.UpdateSortingOrderTimer(Time.deltaTime);
-    }
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)
     {

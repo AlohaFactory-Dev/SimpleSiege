@@ -18,7 +18,7 @@ public class BarrackBuilding : Building
     {
         _unitDetector = GetComponentInChildren<UnitDetector>();
         _hasUnits = true;
-        _units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, spawnPoint.Length);
+        _units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, spawnPoint.Length, false);
         _unitDetector.Init(OnDetect);
         _unitDetector.SetRadius(DetectorRadius);
         for (int i = 0; i < _units.Count; i++)
