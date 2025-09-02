@@ -71,27 +71,22 @@ public class BuildingManager : MonoBehaviour
 
     private void GetNearestEnemyBuilding(Building destroyedBuilding)
     {
-        // EnemyBuilding이 파괴된 경우
-        if (_enemyBuildings.Count > 0)
+        // 파괴되지 않은 빌딩만 필터링
+        var validEnemyBuildings = _enemyBuildings.FindAll(b => b);
+
+        if (validEnemyBuildings.Count > 0)
         {
-            // 남아있는 EnemyBuilding 중 y가 가장 낮은 건물 찾기
-            Building lowestYBuilding = _enemyBuildings[0];
-            foreach (var b in _enemyBuildings)
+            Building lowestYBuilding = validEnemyBuildings[0];
+            foreach (var b in validEnemyBuildings)
             {
                 if (b.transform.position.y < lowestYBuilding.transform.position.y)
                     lowestYBuilding = b;
             }
 
-            // 파괴된 건물이 가장 낮은 y값을 가진 건물이었는지 확인
             if (destroyedBuilding.transform.position.y <= lowestYBuilding.transform.position.y)
             {
                 OnNearestEnemyBuildingDestroyed.OnNext(destroyedBuilding.transform.position);
             }
         }
-        // else
-        // {
-        //     // 마지막 EnemyBuilding이 파괴된 경우에도 실행
-        //     OnNearestEnemyBuildingDestroyed.OnNext(destroyedBuilding.transform.position);
-        // }
     }
 }

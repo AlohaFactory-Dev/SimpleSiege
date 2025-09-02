@@ -20,7 +20,7 @@ public class RangedAttackAction : IUnitAction
         var projectileTable = TableListContainer.Get<AttackObjectTableList>().GetAttackObjectTable(caster.ProjectTileId);
         projectTile.Init(
             caster.Transform.position,
-            () => Attack(caster, target, target.Transform.position),
+            () => Attack(caster, target, targetPos),
             projectileTable,
             targetPos
         );

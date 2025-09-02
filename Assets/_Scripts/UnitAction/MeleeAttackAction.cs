@@ -17,7 +17,8 @@ public class MeleeAttackAction : IUnitAction
     public void Execute(ITarget target, ICaster caster, int effectValue, Vector2 targetPos)
     {
         if (target == null || target.IsUntargetable) return;
-        var targets = _targetFindSystem.FindEffectTargets(caster, target, target.Transform.position);
+        var targets = _targetFindSystem.FindEffectTargets(caster, target, targetPos);
+
         targets.ForEach(t =>
         {
             if (caster.AreaType == AreaType.Single)
@@ -25,7 +26,7 @@ public class MeleeAttackAction : IUnitAction
                 if (!TableManager.IsMagicNumber(caster.EffectVfxId))
                 {
                     var particle = _factoryManager.ParticleFactory.GetParticle(caster.EffectVfxId);
-                    particle.Init(t.DamageEffectPoint.position);
+                    particle.Init(targetPos);
                     particle.Play();
                 }
             }
