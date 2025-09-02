@@ -28,17 +28,22 @@ public class RangedAttackAction : IUnitAction
 
     private void Attack(ICaster caster, ITarget target, Vector3 position)
     {
-        if (target == null || target.IsUntargetable) return;
+        if (target == null || target.IsUntargetable)
+        {
+            return;
+        }
+
+        if (caster.AreaType == AreaType.Circle)
+        {
+            PlayParticle(caster.EffectVfxId, position);
+        }
+
         var targets = _targetFindSystem.FindEffectTargets(caster, target, position);
 
 
         if (caster.AreaType == AreaType.Single)
         {
             PlayParticle(caster.EffectVfxId, targets[0].DamageEffectPoint.position);
-        }
-        else
-        {
-            PlayParticle(caster.EffectVfxId, position);
         }
 
 

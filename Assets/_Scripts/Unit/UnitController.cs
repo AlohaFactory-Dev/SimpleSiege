@@ -60,6 +60,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
     private UnitUpgradeController _unitUpgradeController;
     private SortingGroup _sortingGroup;
+    public bool IsBarrackUnit { get; private set; }
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
     {
@@ -115,8 +116,16 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
     public void SetBarrackUnit(Vector2 position)
     {
+        IsBarrackUnit = true;
         ColliderActive(false);
         transform.position = position;
+    }
+
+    public void OffBarrackUnit()
+    {
+        IsBarrackUnit = false;
+        ColliderActive(false);
+        ChangeState(UnitState.Move);
     }
 
     public void ColliderActive(bool isActive)
