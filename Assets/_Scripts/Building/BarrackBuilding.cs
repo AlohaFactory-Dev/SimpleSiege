@@ -8,7 +8,6 @@ public class BarrackBuilding : Building
 {
     [Inject] private UnitManager _unitManager;
     [SerializeField] private Transform[] spawnPoint;
-    [SerializeField] private GameObject boundary;
     private UnitDetector _unitDetector;
     private string SpawnUnitId => BuildingTable.stringValues[0];
     private int SpawnAmount => (int)BuildingTable.values[0];
@@ -56,7 +55,6 @@ public class BarrackBuilding : Building
             }
 
             _hasUnits = false;
-            boundary.SetActive(false);
             foreach (var unit in _units)
             {
                 unit.ChangeState(UnitState.Move);
