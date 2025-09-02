@@ -125,7 +125,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public void OffBarrackUnit()
     {
         IsBarrackUnit = false;
-        ColliderActive(false);
+        ColliderActive(true);
         ChangeState(UnitState.Move);
     }
 
