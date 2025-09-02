@@ -1,6 +1,6 @@
 id,spawnPointId,destinationPointId,fireType,speedType,speedRandomMin,speedRandomMax,onLookat,delayRandomMin,delayRandomMax,scale
 EO_King,Default,Default,Normal,Speed,9,9,TRUE,0,0,1
 EO_Archer,Default,Default,Howitzer,Time,0.75,0.75,TRUE,0,0,1
-EO_Catapult,Default,Default,Howitzer,Time,3,3,FALSE,0,0,1
+EO_Catapult,Default,Default,Howitzer,Time,2.5,2.5,FALSE,0,0,1
 EO_FlameWizard,Default,Default,Normal,Speed,7,7,TRUE,0,0,1
 EO_Sniper,Default,Default,Normal,Speed,40,40,TRUE,0,0,1

@@ -18,15 +18,22 @@ public class KingSkill : MonoBehaviour
     [SerializeField] private float skillInterval = 10f;
     [SerializeField] private SkillData[] spawnUnits;
     [Inject] private UnitManager _unitManager;
-    private float skillTimer = 0f;
+    private float _skillTimer = 0f;
+    private UnitController _unitController;
+
+    private void Start()
+    {
+        _unitController = GetComponent<UnitController>();
+    }
 
     private void Update()
     {
-        skillTimer += Time.deltaTime;
-        if (skillTimer >= skillInterval)
+        if (_unitController.IsBarrackUnit) return;
+        _skillTimer += Time.deltaTime;
+        if (_skillTimer >= skillInterval)
         {
             ActivateSkill();
-            skillTimer = 0f;
+            _skillTimer = 0f;
         }
     }
 

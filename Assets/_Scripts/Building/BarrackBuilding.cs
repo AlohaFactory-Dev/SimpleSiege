@@ -48,15 +48,10 @@ public class BarrackBuilding : Building
     {
         if (_hasUnits)
         {
-            for (int i = 0; i < _units.Count; i++)
-            {
-                _units[i].ColliderActive(true);
-            }
-
             _hasUnits = false;
             foreach (var unit in _units)
             {
-                unit.ChangeState(UnitState.Move);
+                unit.OffBarrackUnit();
             }
 
             _units.Clear();
