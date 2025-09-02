@@ -4,7 +4,7 @@ public class BuildingAnimationSystem : MonoBehaviour
 {
     private Animator _animator;
 
-    private readonly int _destroyTrigger = Animator.StringToHash("DestroyBuilding");
+    private readonly int _destroyTrigger = Animator.StringToHash("Destroy");
     private readonly int _hitTrigger = Animator.StringToHash("Hit");
 
     public void Init()
