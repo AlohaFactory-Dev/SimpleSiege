@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using _Scripts.Map;
 using Aloha.Coconut;
 using Aloha.Coconut.UI;
 using FactorySystem;
@@ -26,11 +25,9 @@ public class StageManager : MonoBehaviour
     [Inject] private StageUI _stageUI;
     [Inject] private PassiveManager _passiveManager;
     [Inject] private InputManager _inputManager;
-    [Inject] private CameraController _cameraController;
     [Inject] private UnitManager _unitManager;
     public StageTable CurrentStageTable { get; private set; }
 
-    private BuildingManager _buildingManager; // 직접 관리
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)
     {
@@ -62,22 +59,15 @@ public class StageManager : MonoBehaviour
         CurrentStageTable = GlobalConainer.Get<SelectedStageManager>().CurrentStage;
         var mapGO = await LoadMapByIdAsync(CurrentStageTable.mapId);
 
-        StageConainer.Container.InstantiatePrefab(mapGO, transform);
-
+        var map = StageConainer.Container.InstantiatePrefab(mapGO, transform);
         // BuildingManager를 직접 할당
-        _buildingManager = GetComponentInChildren<BuildingManager>();
-        if (_buildingManager == null)
-        {
-            Debug.LogError("BuildingManager를 찾을 수 없습니다.");
-            return;
-        }
-
-        GetComponentInChildren<SpawnableZoneController>().Init();
+        var buildingManager = map.GetComponentInChildren<BuildingManager>();
+        var cameraController = map.GetComponentInChildren<CameraController>();
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
-        _cameraController.Init();
+        cameraController.Init();
         _inputManager.Init();
-        _buildingManager.Init();
-        _buildingManager.OnStageResult.Subscribe(EndStage).AddTo(this);
+        buildingManager.Init();
+        buildingManager.OnStageResult.Subscribe(EndStage).AddTo(this);
         _passiveManager.Init();
     }
 

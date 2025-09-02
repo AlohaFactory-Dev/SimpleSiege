@@ -7,7 +7,7 @@ using Zenject;
 [RequireComponent(typeof(BuildingAnimationSystem))]
 public class Building : MonoBehaviour, ITarget
 {
-    [Inject] private BuildingManager _buildingManager;
+    private BuildingManager _buildingManager;
     [SerializeField] private string id;
     public Transform Transform => transform;
     public TeamType TeamType => BuildingTable.teamType;
@@ -39,10 +39,10 @@ public class Building : MonoBehaviour, ITarget
     private bool _hasHpSystem;
     protected bool IsDestroyed;
 
-    public void Init()
+    public void Init(BuildingManager buildingManager)
     {
+        _buildingManager = buildingManager;
         BuildingTable = TableListContainer.Get<BuildingTableLis>().GetBuildingTable(id);
-        _buildingManager.AddBuilding(this);
         _hpSystem = GetComponentInChildren<HpSystem>();
         _animationSystem = GetComponent<BuildingAnimationSystem>();
         _collider2D = GetComponent<Collider2D>();

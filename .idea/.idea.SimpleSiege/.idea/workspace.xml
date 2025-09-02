@@ -5,38 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Factory/MapFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Factory/MapFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Map.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Map.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/AttackObject.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/AttackObject.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Building.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Building.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Card.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Card.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Text.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Text.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoconutMilk/Equipment/EquipmentUI/EquipmentPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoconutMilk/Equipment/EquipmentUI/EquipmentPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoconutMilk/SystemUI/Runtime/ToastMessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoconutMilk/SystemUI/Runtime/ToastMessageBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Animation/UnitAnimation/UnitAnimatorBase.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animation/UnitAnimation/UnitAnimatorBase.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Animation/UnitCard/Selected.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animation/UnitCard/Selected.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Animation/UnitCard/UnSelected.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animation/UnitCard/UnSelected.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/AttackObject/EO_King.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/AttackObject/EO_King.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/E_Barrack_King.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/E_Barrack_King.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Installer/LobbyInstaller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Installer/LobbyInstaller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Installer/StageInstaller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Installer/StageInstaller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Map/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Map/Map.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Map/Map_Stage1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Map/Map_Stage1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Map/SpawnableZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Map/SpawnableZone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/Enemy/E_King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/Enemy/E_King.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scene/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scene/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/StageInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/StageInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scene/Stage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/LobbyInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ContainerManager/LobbyInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Manager/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Manager/StageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/CardContainer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/CardContainer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckCard.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckCard.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckSelectionPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/DeckSelectionPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PassiveCard.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PassiveCard.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PassiveSelectionPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PassiveSelectionPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PrisonCard.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PrisonCard.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PrisonSelectionPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PrisonSelectionPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/StageResultPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/StageResultPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/StageUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/StageUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/UnitCard.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/UnitCard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Map/SpawnableZoneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Map/SpawnableZoneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/Lobby/LobbyUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitStatusSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitStatusSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,23 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1071a2cb0cb3433aae80a793c277a04846ac00/4e/bda3d85d/IObserver`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/9a/a0a972f9/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b8f645257c94d1296f440a10c6f388e961000/24/e1549b27/Editor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,6 +94,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/18f5482d17338a7bbdeae155929167e4a8be10b5d2e9aed96c2562ed98f34f/System.Collections.ObjectModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Plugins/Zenject/Source/Internal/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Plugins/Zenject/Source/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Runtime/Core/CoconutConfig.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProtoType/Assets/Coconut/Runtime/Core/TableManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/DataTable/UnitTableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Manager/SelectedStageManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -243,43 +260,17 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Manager/GameManager.cs</url>
-          <line>83</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Manager\GameManager.cs" containingFunctionPresentation="메서드 'Resume'">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/InputManager.cs</url>
+          <line>88</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\InputManager.cs" containingFunctionPresentation="메서드 'HandleInput'">
             <startOffsets>
-              <option value="2255" />
+              <option value="2337" />
             </startOffsets>
             <endOffsets>
-              <option value="2274" />
+              <option value="2408" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Manager/GameManager.cs</url>
-          <line>78</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Manager\GameManager.cs" containingFunctionPresentation="메서드 'Pause'">
-            <startOffsets>
-              <option value="2182" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2201" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/UI/Lobby/LobbyUI.cs</url>
-          <line>23</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\UI\Lobby\LobbyUI.cs" containingFunctionPresentation="메서드 'OnButtonClick'">
-            <startOffsets>
-              <option value="632" />
-            </startOffsets>
-            <endOffsets>
-              <option value="691" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="71" />
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

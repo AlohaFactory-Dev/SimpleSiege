@@ -6,6 +6,7 @@ using Aloha.Coconut.UI;
 using Aloha.CoconutMilk;
 using CoconutMilk.Equipments;
 using Cysharp.Threading.Tasks;
+using ProtoTypeUI;
 using UnityEngine;
 using Zenject;
 
@@ -35,12 +36,13 @@ public class GameManager
     private async UniTask LoadLobby()
     {
         await _gameSceneManager.LoadSceneAsync("Lobby");
-        // LobbyConainer.Get<LobbyUI>().Show();
+        LobbyConainer.Get<LobbyUI>().ActiveUI(true);
     }
 
     public void LoadStage(bool isFirstLogin = false)
     {
-        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(Load, Resume));
+        LobbyConainer.Get<LobbyUI>().ActiveUI(false);
+        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(Load, Pause));
 
         async UniTask Load()
         {
@@ -51,13 +53,13 @@ public class GameManager
 
     public void ReLoadStage()
     {
-        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(ReLoad, Resume));
+        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(ReLoad, Pause));
 
         async UniTask ReLoad()
         {
             Pause();
             await _gameSceneManager.ReloadSceneAsync("Stage");
-            // await StageConainer.Get<StageManager>().Init();
+            LobbyConainer.Get<LobbyUI>().ActiveUI(false);
         }
     }
 

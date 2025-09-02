@@ -36,6 +36,7 @@ public class UnitTargetSystem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         var target = other.GetComponent<ITarget>();
+        if (target == null || target.IsUntargetable) return;
         if (CheckAddAble(target))
         {
             if (!_targetsInSight.Contains(target))

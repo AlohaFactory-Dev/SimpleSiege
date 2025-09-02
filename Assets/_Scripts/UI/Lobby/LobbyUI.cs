@@ -25,5 +25,10 @@ namespace ProtoTypeUI
             GlobalConainer.Get<SelectedStageManager>().SetStage(index);
             GlobalConainer.Get<GameManager>().LoadStage();
         }
+
+        public void ActiveUI(bool isActive)
+        {
+            gameObject.SetActive(isActive);
+        }
     }
 }
