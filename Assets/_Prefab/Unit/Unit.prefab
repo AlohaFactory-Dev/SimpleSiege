@@ -180,8 +180,8 @@ MonoBehaviour:
   translator:
     autoReset: 1
     useCustomMixMode: 1
-    layerMixModes: 01000000
-    layerBlendModes: 01000000
+    layerMixModes: 0100000001000000
+    layerBlendModes: 0100000002000000
   updateTiming: 1
 --- !u!114 &6100564814281705920
 MonoBehaviour:
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcf17261486412cab21edbe32c56d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &5490549532395483168
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +642,10 @@ PrefabInstance:
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
