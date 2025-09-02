@@ -110,6 +110,9 @@ public class UnitTargetSystem : MonoBehaviour
     public float GetEdgeDistance(Vector3 unitPos, ITarget target)
     {
         var targetCollider2D = target.Collider2D;
+        if (!targetCollider2D)
+            return float.MaxValue;
+
         if (targetCollider2D is BoxCollider2D box)
         {
             return Vector3.Distance(unitPos, box.bounds.ClosestPoint(unitPos));

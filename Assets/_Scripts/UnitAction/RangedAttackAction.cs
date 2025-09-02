@@ -13,7 +13,7 @@ public class RangedAttackAction : IUnitAction
         _targetFindSystem = new EffectTargetFindSystem();
     }
 
-    public void Execute(ITarget target, ICaster caster, int effectValue)
+    public void Execute(ITarget target, ICaster caster, int effectValue, Vector2 targetPos)
     {
         _effectValue = effectValue;
         var projectTile = StageConainer.Get<FactoryManager>().AttackObjectFactory.GetAttackObject(caster.ProjectTileId);
@@ -22,12 +22,13 @@ public class RangedAttackAction : IUnitAction
             caster.Transform.position,
             () => Attack(caster, target, target.Transform.position),
             projectileTable,
-            target.Transform.position
+            targetPos
         );
     }
 
     private void Attack(ICaster caster, ITarget target, Vector3 position)
     {
+        if (target == null || target.IsUntargetable) return;
         var targets = _targetFindSystem.FindEffectTargets(caster, target, position);
 
 

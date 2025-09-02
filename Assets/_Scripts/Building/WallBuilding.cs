@@ -7,15 +7,14 @@ public class WallBuilding : Building
     [SerializeField] private Transform[] spawnPoints;
     [Inject] private UnitManager _unitManager;
     private string SpawnUnitId => BuildingTable.stringValues[0];
-    private int SpawnAmount => (int)BuildingTable.values[0];
-    private float EffectAbleRange => BuildingTable.values[1];
+    private float EffectAbleRange => BuildingTable.values[0];
     private List<UnitController> _units = new();
 
     protected override void CustomInit()
     {
         if (string.IsNullOrEmpty(SpawnUnitId)) return;
 
-        var units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, SpawnAmount, false);
+        var units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, spawnPoints.Length, false);
         _units.AddRange(units);
 
         for (int i = 0; i < _units.Count; i++)
