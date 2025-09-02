@@ -10,7 +10,7 @@ public class BarrackBuilding : Building
     [SerializeField] private Transform[] spawnPoint;
     private UnitDetector _unitDetector;
     private string SpawnUnitId => BuildingTable.stringValues[0];
-    private float DetectorRadius => BuildingTable.values[1];
+    private float DetectorRadius => BuildingTable.values[0];
     private bool _hasUnits;
     private List<UnitController> _units = new();
 
