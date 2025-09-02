@@ -24,8 +24,10 @@ public class GlobalInstaller : MonoInstaller
         _saveDataManager.LinkFileDataSaver();
         _saveDataManager.Lock(true);
 
+
         Container.Bind<GameSceneManager>().AsSingle().NonLazy();
         Container.Bind<CoconutCanvas>().FromInstance(coconutCanvas).AsSingle().NonLazy();
+        Container.Bind<SelectedStageManager>().AsSingle().NonLazy();
         Container.Bind<GameManager>().AsSingle().NonLazy();
     }
 

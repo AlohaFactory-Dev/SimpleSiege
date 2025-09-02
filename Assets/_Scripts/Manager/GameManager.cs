@@ -28,7 +28,7 @@ public class GameManager
         await TableListContainer.InitAllTables();
         await ImageContainer.InitializeAsync();
         _container.Bind<PropertyIconPool>().AsSingle().NonLazy();
-        LoadStage();
+        await LoadLobby();
     }
 
 
