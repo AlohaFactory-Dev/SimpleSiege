@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using _Scripts.Map;
 using Aloha.Coconut;
 using Aloha.Coconut.UI;
 using FactorySystem;
@@ -31,6 +32,7 @@ public class StageManager : MonoBehaviour
     public void Init()
     {
         CurrentStageTable = TableListContainer.Get<StageTableList>().GetStageTable(1);
+        GetComponentInChildren<SpawnableZoneController>().Init();
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
         _cameraController.Init();
         _inputManager.Init();
