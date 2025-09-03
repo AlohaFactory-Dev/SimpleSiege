@@ -475,7 +475,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.35
+  m_Radius: 0.4
 --- !u!114 &4503925953523051392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +497,7 @@ SortingGroup:
   m_GameObject: {fileID: 5609040471862577962}
   m_Enabled: 1
   m_SortingLayerID: 1256385861
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &7293451561144350728
