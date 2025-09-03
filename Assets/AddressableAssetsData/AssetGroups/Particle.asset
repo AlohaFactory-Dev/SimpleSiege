@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Particle
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a9ef5d32e9c52d4791cfc1be8a23de1
+    m_Address: EVFX_Trap
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Particle
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5bafaa7888fd2da40a60d886a9b65a38
     m_Address: EVFX_Sniper
     m_ReadOnly: 0
