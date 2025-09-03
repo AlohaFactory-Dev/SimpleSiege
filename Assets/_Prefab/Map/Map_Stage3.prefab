@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &554825298013331316
 Transform:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1332603236487446405
 Transform:
   m_ObjectHideFlags: 0
@@ -4405,6 +4405,10 @@ PrefabInstance:
     - target: {fileID: 8250717502575086740, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: m_Name
       value: Map_Stage3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716174595648929983, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
+      propertyPath: m_Size.y
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
