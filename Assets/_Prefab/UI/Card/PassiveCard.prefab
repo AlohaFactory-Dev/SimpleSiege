@@ -142,8 +142,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4.
-    \uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4. \uD328\uC2DC\uBE0C
-    \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4. "
+    \uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 193ad95af16d8db4a97eff9d700a4ad0, type: 2}
   m_sharedMaterial: {fileID: -7237721383533162279, guid: 193ad95af16d8db4a97eff9d700a4ad0, type: 2}
@@ -170,7 +169,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.6
+  m_fontSize: 27.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -182,7 +181,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
