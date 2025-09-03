@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 0.076495215, g: 0.076495215, b: 0.084905684, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -641,6 +641,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3410424626235963196}
     m_Modifications:
+    - target: {fileID: 2526247224148306786, guid: 50dbb258418527e4397d7fb73634796b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6825038931631371463, guid: 50dbb258418527e4397d7fb73634796b, type: 3}
       propertyPath: m_Name
       value: PassiveCard (1)
