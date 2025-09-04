@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/TrapAttackEventHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/TrapAttackEventHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Animation/BuildingAnimation/Building_Trap_Destroy.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Animation/BuildingAnimation/Building_Trap_Destroy.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/E_Trap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/E_Trap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Building/TrapBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Building/TrapBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/Stage/StageResultPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/Stage/StageResultPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/RangedAttackAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAction/RangedAttackAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/MessagingUnityPlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/MessagingUnityPlayerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +36,16 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1071a2cb0cb3433aae80a793c277a04846ac00/4e/bda3d85d/IObserver`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/9a/a0a972f9/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/ab/9e3ea355/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/c0/a3ac662f/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b8f645257c94d1296f440a10c6f388e961000/24/e1549b27/Editor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4f4e904d309e4466a1759ad432add4b828800/50/cf23c000/LinqExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f402f2945a7e49e4ba3cbb6c00f6963520a00/9c/cfb82f43/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
@@ -185,7 +189,7 @@
       <workItem from="1756776251563" duration="15344000" />
       <workItem from="1756947907372" duration="36000" />
       <workItem from="1756948316019" duration="7390000" />
-      <workItem from="1756955995707" duration="22000" />
+      <workItem from="1756955995707" duration="5800000" />
     </task>
     <servers />
   </component>
@@ -218,27 +222,14 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Map/SpawnableZoneController.cs</url>
-          <line>19</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Map\SpawnableZoneController.cs" containingFunctionPresentation="메서드 'OnNearestEnemyBuildingDestroyed'">
-            <startOffsets>
-              <option value="582" />
-            </startOffsets>
-            <endOffsets>
-              <option value="681" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_Scripts/Building/BuildingAnimationEventHandler.cs</url>
           <line>20</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Building\BuildingAnimationEventHandler.cs" containingFunctionPresentation="메서드 'OnHitEffectEvent'">
             <startOffsets>
-              <option value="614" />
+              <option value="618" />
             </startOffsets>
             <endOffsets>
-              <option value="645" />
+              <option value="649" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="97" />

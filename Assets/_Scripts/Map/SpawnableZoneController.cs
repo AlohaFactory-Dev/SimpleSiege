@@ -31,6 +31,6 @@ public class SpawnableZoneController : MonoBehaviour
     private void OnNearestEnemyBuildingDestroyed(Vector2 position)
     {
         topObj.position = new Vector2(0, position.y - distance);
-        zoneObj.localScale = new Vector2(transform.localScale.x, _defaultHeight + position.y - distance);
+        zoneObj.localScale = new Vector2(zoneObj.localScale.x, _defaultHeight + position.y - distance);
     }
 }
