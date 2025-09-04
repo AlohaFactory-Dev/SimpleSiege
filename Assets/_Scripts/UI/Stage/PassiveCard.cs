@@ -11,6 +11,8 @@ public class PassiveCard : MonoBehaviour
     [SerializeField] private Image iconImage;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private GameObject grade1BG;
+    [SerializeField] private GameObject grade2BG;
     private Animator _animator;
     private Button _button;
     private PassiveTable _passiveTable;
@@ -47,5 +49,7 @@ public class PassiveCard : MonoBehaviour
         iconImage.sprite = ImageContainer.GetImage(passiveTable.iconKey);
         nameText.text = TextTableV2.Get(passiveTable.nameKey);
         descriptionText.text = TextTableV2.Get(passiveTable.descriptionKey);
+        grade2BG.SetActive(passiveTable.grade == 2);
+        grade1BG.SetActive(passiveTable.grade == 1);
     }
 }
