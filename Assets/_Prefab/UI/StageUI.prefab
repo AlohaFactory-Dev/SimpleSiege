@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 4194594782488104163}
   - component: {fileID: 5722842080182625690}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 2880552571955188106}
   - component: {fileID: 3084415514700998005}
   - component: {fileID: 8450709002877565392}
+  - component: {fileID: 8051301171742938625}
   m_Layer: 5
   m_Name: CardContainer
   m_TagString: Untagged
@@ -322,6 +323,7 @@ MonoBehaviour:
   unitCardPrefab: {fileID: 994343194311381579, guid: c1ce32795a95ad24593fc1b585562075, type: 3}
   blackObject: {fileID: 7635844691054642499}
   canvas: {fileID: 8541509168799091919}
+  canvasGroup: {fileID: 8051301171742938625}
 --- !u!114 &8450709002877565392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,3 +350,15 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &8051301171742938625
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7684320110772520536}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

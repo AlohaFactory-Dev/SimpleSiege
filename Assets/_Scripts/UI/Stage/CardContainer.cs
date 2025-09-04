@@ -10,6 +10,7 @@ public class CardContainer : MonoBehaviour
     [SerializeField] private UnitCard unitCardPrefab;
     [SerializeField] private GameObject blackObject;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private CanvasGroup canvasGroup;
 
     public void Init()
     {
@@ -29,11 +30,13 @@ public class CardContainer : MonoBehaviour
         blackObject.SetActive(true);
         canvas.overrideSorting = true;
         canvas.sortingOrder = 9999;
+        canvasGroup.alpha = 0.3f;
     }
 
     public void OnLast()
     {
         blackObject.SetActive(false);
         canvas.overrideSorting = false;
+        canvasGroup.alpha = 1f;
     }
 }
