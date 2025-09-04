@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5718016828509266738}
+  m_Father: {fileID: 8074697288449048427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7490791519952990705
 SpriteRenderer:
@@ -231,7 +231,7 @@ PrefabInstance:
     - {fileID: 5683846894032145213, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
     - {fileID: 9170473512896057786, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4961511368508023179, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8903537474788867538, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5009635634560293513}
     m_AddedComponents:
@@ -306,8 +306,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 1.2}
   m_EdgeRadius: 0
---- !u!4 &5718016828509266738 stripped
+--- !u!4 &8074697288449048427 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4961511368508023179, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8903537474788867538, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
   m_PrefabInstance: {fileID: 828853989922276025}
   m_PrefabAsset: {fileID: 0}
