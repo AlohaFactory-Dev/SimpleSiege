@@ -87,10 +87,7 @@ public class BuildingManager : MonoBehaviour
                     lowestYBuilding = b;
             }
 
-            if (destroyedBuilding.transform.position.y < lowestYBuilding.transform.position.y)
-            {
-                OnNearestEnemyBuildingDestroyed.OnNext(destroyedBuilding.transform.position);
-            }
+            OnNearestEnemyBuildingDestroyed.OnNext(lowestYBuilding.transform.position);
         }
     }
 }

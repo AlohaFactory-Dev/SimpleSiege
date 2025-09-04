@@ -61,16 +61,9 @@ public class UnitCard : MonoBehaviour
         _currentAmount = amount;
         amountText.text = $"x{_currentAmount}";
         _animator.SetTrigger("Add");
+        _button.interactable = true;
     }
 
-    // Add 애니메이션 끝에 호출될 함수 (애니메이터에서 Animation Event로 호출)
-    public void OnAddAnimationEnd()
-    {
-        if (!_button.interactable)
-        {
-            AbleCard();
-        }
-    }
 
     private void Consume(int amount)
     {
@@ -84,15 +77,13 @@ public class UnitCard : MonoBehaviour
         _animator.SetTrigger("Disable");
     }
 
-    private void AbleCard()
-    {
-        _button.interactable = true;
-        SetSelected(false);
-    }
-
-
     public void SetSelected(bool selected)
     {
-        _animator.SetBool("IsSelected", selected);
+        if (_isSelected == selected) return;
+        _isSelected = selected;
+        if (selected)
+            _animator.SetTrigger("Select");
+        else
+            _animator.SetTrigger("Deselected");
     }
 }

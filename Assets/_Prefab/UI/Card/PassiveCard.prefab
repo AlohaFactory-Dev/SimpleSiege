@@ -357,7 +357,6 @@ GameObject:
   - component: {fileID: 7857743182493923562}
   - component: {fileID: 7879389225964465693}
   - component: {fileID: 2564957162596687210}
-  - component: {fileID: 7542031145418901242}
   - component: {fileID: 1240213970077669317}
   m_Layer: 5
   m_Name: PassiveCard
@@ -466,19 +465,6 @@ MonoBehaviour:
   iconImage: {fileID: 1647058023025580051}
   nameText: {fileID: 3332751007528790356}
   descriptionText: {fileID: 7415026755369230347}
---- !u!114 &7542031145418901242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6825038931631371463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d34a3c3ab9442b14ea47476dd6e75f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 7454458747770937645}
 --- !u!225 &1240213970077669317
 CanvasGroup:
   m_ObjectHideFlags: 0
