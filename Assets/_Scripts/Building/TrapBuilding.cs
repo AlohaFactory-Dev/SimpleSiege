@@ -1,4 +1,5 @@
 using System;
+using FactorySystem;
 using UniRx;
 using UnityEngine;
 
@@ -42,5 +43,9 @@ public class TrapBuilding : Building, ICaster
                 target.TakeDamage(this, EffectValue);
             }
         }
+
+        var particle = StageConainer.Get<FactoryManager>().ParticleFactory.GetParticle("EVFX_Trap");
+        particle.Init(transform.position);
+        particle.Play();
     }
 }
