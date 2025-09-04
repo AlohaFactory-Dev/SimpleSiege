@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill_Old.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill_Old.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Unit.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Unit.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Building.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Building.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/PrisonUnitPool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/PrisonUnitPool.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coconut/Configs/Tables/Unit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Cavalry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Cavalry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Cavalry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Cavalry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +184,7 @@
       <workItem from="1756947907372" duration="36000" />
       <workItem from="1756948316019" duration="7390000" />
       <workItem from="1756955995707" duration="5800000" />
-      <workItem from="1756964353640" duration="4135000" />
+      <workItem from="1756964353640" duration="6313000" />
     </task>
     <servers />
   </component>
@@ -234,42 +219,81 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
-          <line>80</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'FindTargetAndActivate'">
-            <startOffsets>
-              <option value="2547" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2653" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitMoveSystem.cs</url>
-          <line>68</line>
-          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitMoveSystem.cs" containingFunctionPresentation="메서드 'MoveRoutine'">
-            <startOffsets>
-              <option value="2190" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2271" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
-          <line>70</line>
+          <line>63</line>
           <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'Update'">
             <startOffsets>
-              <option value="2280" />
+              <option value="2158" />
             </startOffsets>
             <endOffsets>
-              <option value="2359" />
+              <option value="2237" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
+          <line>104</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'UnActivateSkill'">
+            <startOffsets>
+              <option value="3587" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3601" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
+          <line>82</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'FindTargetAndActivate'">
+            <startOffsets>
+              <option value="2909" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2925" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitMoveSystem.cs</url>
+          <line>46</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitMoveSystem.cs" containingFunctionPresentation="메서드 'MoveRoutine'">
+            <startOffsets>
+              <option value="1252" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1292" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/CavalrySkill.cs</url>
+          <line>93</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitSkill\CavalrySkill.cs" containingFunctionPresentation="메서드 'ActivateSkill'">
+            <startOffsets>
+              <option value="3085" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3125" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/UI/Stage/UnitCard.cs</url>
+          <line>88</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\UI\Stage\UnitCard.cs" containingFunctionPresentation="메서드 'SetSelected'">
+            <startOffsets>
+              <option value="2560" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2591" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
