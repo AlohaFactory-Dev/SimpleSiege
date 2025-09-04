@@ -69,8 +69,8 @@ public class CavalrySkill : MonoBehaviour
 
     private void FindTargetAndActivate()
     {
-        // 중심에서 y방향으로 _detectionBoxSize만큼 박스 영역을 설정
-        Vector2 center = (Vector2)_unitController.transform.position + new Vector2(0, _detectionBoxSize.y * 0.5f);
+        float direction = _unitController.TeamType == TeamType.Player ? 1 : -1;
+        Vector2 center = (Vector2)_unitController.transform.position + new Vector2(0, direction * _detectionBoxSize.y * 0.5f);
         Vector2 size = _detectionBoxSize;
         Collider2D[] targets = Physics2D.OverlapBoxAll(center, size, 0f);
 
