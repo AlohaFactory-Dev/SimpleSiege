@@ -61,10 +61,7 @@ public class UnitCard : MonoBehaviour
         _currentAmount = amount;
         amountText.text = $"x{_currentAmount}";
         _animator.SetTrigger("Add");
-        if (_isSelected)
-            _animator.SetTrigger("Select");
-        else
-            _animator.SetTrigger("Deselected");
+        SetSelected(_isSelected);
         _button.interactable = true;
     }
 
@@ -78,12 +75,12 @@ public class UnitCard : MonoBehaviour
     public void DisableCard()
     {
         _button.interactable = false;
+        _isSelected = false;
         _animator.SetTrigger("Disable");
     }
 
     public void SetSelected(bool selected)
     {
-        if (_isSelected == selected) return;
         _isSelected = selected;
         if (selected)
             _animator.SetTrigger("Select");
