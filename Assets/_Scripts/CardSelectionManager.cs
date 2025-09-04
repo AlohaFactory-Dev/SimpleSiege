@@ -1,11 +1,13 @@
 using Aloha.Coconut;
 using UnityEngine;
 using Zenject;
+using UniRx; // ReactiveProperty를 사용하기 위해 추가
 
 public class CardSelectionManager
 {
     public UnitCard SelectedCard { get; private set; }
-    public bool IsCardSelected => SelectedCard != null;
+    public IReadOnlyReactiveProperty<bool> IsCardSelected => _isCardSelected;
+    private ReactiveProperty<bool> _isCardSelected { get; } = new ReactiveProperty<bool>(false);
     [Inject] private UnitManager _unitManager;
     [Inject] private SpellController _spellController;
     [Inject] private CardPoolManager _cardPoolManager;
@@ -17,6 +19,7 @@ public class CardSelectionManager
             // 이미 선택된 카드를 다시 선택하면 해제
             card.SetSelected(false);
             SelectedCard = null;
+            _isCardSelected.Value = false;
         }
         else
         {
@@ -24,13 +27,14 @@ public class CardSelectionManager
                 SelectedCard.SetSelected(false);
             SelectedCard = card;
             card.SetSelected(true);
+            _isCardSelected.Value = true;
         }
     }
 
     public void UseSelectedCard(Vector2 position)
     {
         // 카드 사용 로직 구현
-        if (!IsCardSelected) return;
+        if (!IsCardSelected.Value) return;
         // 예: 유닛 생성, 마나 소모 등
         if (!_cardPoolManager.ConsumeCard(SelectedCard.CardTable.id))
         {
@@ -58,6 +62,7 @@ public class CardSelectionManager
     {
         SelectedCard.DisableCard();
         SelectedCard = null;
+        _isCardSelected.Value = false;
         SystemUI.ShowToastMessage(TextTableV2.Get("UnitCard/DisableCard"));
     }
 }

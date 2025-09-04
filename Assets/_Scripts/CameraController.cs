@@ -66,7 +66,7 @@ public class CameraController : MonoBehaviour
             _lastScreenHeight = Screen.height;
         }
 
-        if (Input.GetMouseButtonDown(0) && !_cardSelectionManager.IsCardSelected)
+        if (Input.GetMouseButtonDown(0) && !_cardSelectionManager.IsCardSelected.Value)
         {
             if (EventSystem.current.IsPointerOverGameObject())
             {

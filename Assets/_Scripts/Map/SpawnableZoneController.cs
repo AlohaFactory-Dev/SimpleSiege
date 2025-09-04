@@ -4,19 +4,33 @@ using Zenject;
 
 public class SpawnableZoneController : MonoBehaviour
 {
+    [Inject] private CardSelectionManager _cardSelectionManager;
+    [SerializeField] private Transform topObj;
+    [SerializeField] private Transform zoneObj;
     [SerializeField] private float distance;
     private BuildingManager _buildingManager;
     private float _defaultHeight;
+    private Animator _animator;
 
     public void Init(BuildingManager buildingManager)
     {
+        _animator = GetComponent<Animator>();
         _buildingManager = buildingManager;
+        _cardSelectionManager.IsCardSelected.Subscribe(card =>
+        {
+            if (card)
+                _animator.SetTrigger("Show");
+            else
+                _animator.SetTrigger("Hide");
+        }).AddTo(this);
         _buildingManager.OnNearestEnemyBuildingDestroyed.Subscribe(OnNearestEnemyBuildingDestroyed).AddTo(this);
-        _defaultHeight = -transform.position.y;
+        _defaultHeight = -zoneObj.position.y;
     }
+
 
     private void OnNearestEnemyBuildingDestroyed(Vector2 position)
     {
-        transform.localScale = new Vector2(transform.localScale.x, _defaultHeight + position.y - distance);
+        topObj.position = new Vector2(0, position.y - distance);
+        zoneObj.localScale = new Vector2(transform.localScale.x, _defaultHeight + position.y - distance);
     }
 }

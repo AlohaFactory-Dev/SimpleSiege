@@ -11,6 +11,7 @@ public class PassiveSelectionPopup : UISlice
 
     protected override void Open(UIOpenArgs openArgs)
     {
+        StageConainer.Get<StageUI>().CardContainer.OnFirst();
         GameManager.Pause();
         Init();
         Refresh();
@@ -45,6 +46,7 @@ public class PassiveSelectionPopup : UISlice
 
     protected override void OnClose()
     {
+        StageConainer.Get<StageUI>().CardContainer.OnLast();
         GameManager.Resume();
         base.OnClose();
     }
