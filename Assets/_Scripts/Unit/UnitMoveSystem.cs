@@ -9,15 +9,15 @@ public class UnitMoveSystem : MonoBehaviour
     private UnitController _unitController;
     private ITarget _target;
     private UnitTargetSystem _targetSystem;
-    private UnitRotationSystem _rotationSystem; // 추가
-    public bool OnOnlyMoveYAxis = false; // Y축 이동만 할지 여부
+    private UnitRotationSystem _rotationSystem;
+    public bool OnOnlyMoveYAxis = false;
 
-    public void Init(UnitController unit, UnitTargetSystem targetSystem, UnitRotationSystem rotationSystem) // 파라미터 추가
+    public void Init(UnitController unit, UnitTargetSystem targetSystem, UnitRotationSystem rotationSystem)
     {
         _unitController = unit;
         _unitTable = unit.UnitTable;
         _targetSystem = targetSystem;
-        _rotationSystem = rotationSystem; // 초기화
+        _rotationSystem = rotationSystem;
     }
 
     public void StartMove()
@@ -41,25 +41,25 @@ public class UnitMoveSystem : MonoBehaviour
         float lastYRotation = 0f;
         while (true)
         {
-            Vector3 nextPosition = _unitController.Rigidbody2D.position;
+            Vector3 currentPosition = _unitController.Transform.position;
+            Vector3 nextPosition = currentPosition;
             _target = _targetSystem.FindTarget();
 
             if (_target != null && !OnOnlyMoveYAxis)
             {
                 Vector3 targetPos = _target.Transform.position;
-                Vector3 currentPos = _unitController.Rigidbody2D.position;
-                Vector3 dir = (targetPos - currentPos).normalized;
+                Vector3 dir = (targetPos - currentPosition).normalized;
 
-                float edgeDistance = _targetSystem.GetEdgeDistance(currentPos, _target);
+                float edgeDistance = _targetSystem.GetEdgeDistance(currentPosition, _target);
 
                 if (edgeDistance > _unitController.EffectAbleRange)
                 {
                     nextPosition += dir * (_unitController.MoveSpeed * Time.deltaTime);
-                    _rotationSystem.Rotate(dir, ref lastYRotation); // 변경
+                    _rotationSystem.Rotate(dir, ref lastYRotation);
                 }
                 else
                 {
-                    _rotationSystem.Rotate(targetPos - currentPos, ref lastYRotation); // 변경
+                    _rotationSystem.Rotate(targetPos - currentPosition, ref lastYRotation);
                     _unitController.ChangeState(UnitState.Action, _target);
                     yield break;
                 }
@@ -70,9 +70,11 @@ public class UnitMoveSystem : MonoBehaviour
                 nextPosition += dir * (_unitController.MoveSpeed * Time.deltaTime);
             }
 
-            _unitController.Rigidbody2D.MovePosition(nextPosition);
+            // Physics2D 최적화: MovePosition 대신 직접 Transform 조작
+            _unitController.Transform.position = nextPosition;
 
-            yield return new WaitForFixedUpdate();
+            // Physics2D 최적화: WaitForFixedUpdate 대신 일반 yield 사용
+            yield return null;
         }
     }
 }

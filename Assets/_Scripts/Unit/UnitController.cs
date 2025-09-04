@@ -142,9 +142,16 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
     private void FixedUpdate()
     {
-        Rigidbody2D.rotation = 0f;
-        Rigidbody2D.angularVelocity = 0f;
-        Rigidbody2D.velocity = Vector2.zero;
+        // Physics2D 최적화: 불필요한 경우 물리 계산 스킵
+        if (state == UnitState.Dead || _isWallUnit || IsBarrackUnit) return;
+
+
+        if (Rigidbody2D.velocity.magnitude > 0.1f)
+        {
+            Rigidbody2D.rotation = 0f;
+            Rigidbody2D.angularVelocity = 0f;
+            Rigidbody2D.velocity = Vector2.zero;
+        }
     }
 
 
