@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce32307465ac2e4a98aba93063102cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillInterval: 5
+  skillInterval: 10
   spawnUnits:
   - spwanUnitId: P_Swordsman
     amount: 2
