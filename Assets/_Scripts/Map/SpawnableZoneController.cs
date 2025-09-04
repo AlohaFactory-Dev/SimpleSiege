@@ -4,6 +4,7 @@ using Zenject;
 
 public class SpawnableZoneController : MonoBehaviour
 {
+    [SerializeField] private float distance;
     private BuildingManager _buildingManager;
     private float _defaultHeight;
 
@@ -16,9 +17,6 @@ public class SpawnableZoneController : MonoBehaviour
 
     private void OnNearestEnemyBuildingDestroyed(Vector2 position)
     {
-        if (position.y <= _defaultHeight)
-        {
-            transform.localScale = new Vector2(transform.localScale.x, _defaultHeight + position.y - 3);
-        }
+        transform.localScale = new Vector2(transform.localScale.x, _defaultHeight + position.y - distance);
     }
 }

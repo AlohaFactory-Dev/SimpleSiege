@@ -56,7 +56,6 @@ public class CardSelectionManager
 
     private void DisableSelectedCard()
     {
-        SelectedCard.SetSelected(false);
         SelectedCard.DisableCard();
         SelectedCard = null;
         SystemUI.ShowToastMessage(TextTableV2.Get("UnitCard/DisableCard"));

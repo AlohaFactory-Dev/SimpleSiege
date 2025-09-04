@@ -16,6 +16,7 @@ public class TrapBuilding : Building, ICaster
 
     protected override void CustomInit()
     {
+        Collider2D.isTrigger = true;
         _unitDetector = GetComponentInChildren<UnitDetector>();
         _unitDetector.Init(OnDetect);
     }

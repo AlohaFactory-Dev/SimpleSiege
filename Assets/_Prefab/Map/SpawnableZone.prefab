@@ -93,10 +93,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354606269033463240}
+  - component: {fileID: 7003926652854842061}
   - component: {fileID: 8107628070803531557}
   - component: {fileID: 6391933779946505178}
   - component: {fileID: 4953045935766539048}
-  - component: {fileID: 7003926652854842061}
   m_Layer: 6
   m_Name: SpawnableZone
   m_TagString: Untagged
@@ -120,6 +120,19 @@ Transform:
   - {fileID: 7988673513919954063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7003926652854842061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546885652911059389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aac200b9d4645cdaf2767772639be57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 3
 --- !u!212 &8107628070803531557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -238,15 +251,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7003926652854842061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546885652911059389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aac200b9d4645cdaf2767772639be57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
