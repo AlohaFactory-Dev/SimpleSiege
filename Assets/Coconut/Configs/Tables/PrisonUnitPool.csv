@@ -1,10 +1,10 @@
 id,amount,probability
 P_King,1,500
-P_Swordsman,25,1000
-P_Archer,25,1000
+P_Swordsman,20,1000
+P_Archer,20,1000
 P_Catapult,5,500
-P_SkeletonSoldier,50,1000
+P_SkeletonSoldier,40,1000
 P_Giant,5,500
-P_FlameWizard,12,500
+P_FlameWizard,10,500
 P_Sniper,5,500
-P_Cavalry,12,500
+P_Cavalry,10,500

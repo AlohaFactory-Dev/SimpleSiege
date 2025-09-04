@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: howitzerHeight
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7397109831544510962, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       propertyPath: normalCurve.m_Curve.Array.data[0].inSlope
