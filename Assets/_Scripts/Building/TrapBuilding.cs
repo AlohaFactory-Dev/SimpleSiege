@@ -12,13 +12,15 @@ public class TrapBuilding : Building, ICaster
     public float EffectRange => BuildingTable.values[1];
     public IReadOnlyReactiveProperty<float> EffectActionSpeed => new ReactiveProperty<float>(1f);
     private UnitDetector _unitDetector;
-
+    private TrapAttackEventHandler _attackEventHandler;
 
     protected override void CustomInit()
     {
         Collider2D.isTrigger = true;
         _unitDetector = GetComponentInChildren<UnitDetector>();
+        _attackEventHandler = GetComponentInChildren<TrapAttackEventHandler>();
         _unitDetector.Init(OnDetect);
+        _attackEventHandler.Init(Attack);
     }
 
     private void OnDetect(UnitController unit)
@@ -30,7 +32,7 @@ public class TrapBuilding : Building, ICaster
         }
     }
 
-    protected override void Remove()
+    private void Attack()
     {
         var units = Physics2D.OverlapCircleAll(transform.position, EffectRange, LayerMask.GetMask("Unit"));
         foreach (var unitCollider in units)
@@ -40,7 +42,5 @@ public class TrapBuilding : Building, ICaster
                 target.TakeDamage(this, EffectValue);
             }
         }
-
-        base.Remove();
     }
 }
