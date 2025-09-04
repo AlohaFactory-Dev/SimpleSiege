@@ -46,6 +46,5 @@ public class StageResultPopup : UISlice
     {
         CloseView();
         GlobalConainer.Get<GameManager>().UnloadStage();
-        GlobalConainer.Get<GameManager>().LoadLobby();
     }
 }

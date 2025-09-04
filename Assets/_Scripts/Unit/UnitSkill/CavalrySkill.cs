@@ -36,7 +36,7 @@ public class CavalrySkill : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         var target = other.GetComponent<ITarget>();
-        if (target != null && target.TeamType != _unitController.UnitTable.teamType)
+        if (target != null && target.TeamType != _unitController.TeamType && !target.IsUntargetable)
         {
             target.TakeDamage(_unitController, Mathf.CeilToInt(_unitController.EffectValue * _effectValueMultiplier));
             if (target.Group == TargetGroup.Building)
@@ -78,7 +78,7 @@ public class CavalrySkill : MonoBehaviour
         foreach (var collider in targets)
         {
             var target = collider.GetComponent<ITarget>();
-            if (target != null && target.TeamType != _unitController.TeamType)
+            if (target != null && target.TeamType != _unitController.TeamType && !target.IsUntargetable)
             {
                 ActivateSkill();
                 break;

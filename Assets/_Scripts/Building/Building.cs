@@ -8,6 +8,7 @@ using Zenject;
 public class Building : MonoBehaviour, ITarget
 {
     private BuildingManager _buildingManager;
+    public string Id => id;
     [SerializeField] private string id;
     public Transform Transform => transform;
     public TeamType TeamType => BuildingTable.teamType;
