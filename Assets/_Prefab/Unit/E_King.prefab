@@ -253,13 +253,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillInterval: 5
   spawnUnits:
-  - spwanUnitId: E_Swordsman
-    amount: 3
+  - spwanUnitId: P_Swordsman
+    amount: 2
     probability: 100
-  - spwanUnitId: E_Archer
-    amount: 3
+  - spwanUnitId: P_Archer
+    amount: 2
     probability: 100
-  - spwanUnitId: E_Cavalry
+  - spwanUnitId: P_Cavalry
     amount: 1
     probability: 100
 --- !u!4 &8116968912446139727 stripped
