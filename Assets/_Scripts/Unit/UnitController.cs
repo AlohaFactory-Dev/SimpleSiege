@@ -72,6 +72,11 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
         transform.position = position;
         _statusSystem.Init(this);
+        var cavalry = GetComponentInChildren<CavalrySkill>();
+        if (cavalry)
+        {
+            cavalry.Init(this);
+        }
 
         if (onAutoMove)
         {

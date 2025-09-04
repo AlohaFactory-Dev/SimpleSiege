@@ -10,6 +10,7 @@ public class UnitMoveSystem : MonoBehaviour
     private ITarget _target;
     private UnitTargetSystem _targetSystem;
     private UnitRotationSystem _rotationSystem; // 추가
+    public bool OnOnlyMoveYAxis = false; // Y축 이동만 할지 여부
 
     public void Init(UnitController unit, UnitTargetSystem targetSystem, UnitRotationSystem rotationSystem) // 파라미터 추가
     {
@@ -43,7 +44,7 @@ public class UnitMoveSystem : MonoBehaviour
             Vector3 nextPosition = _unitController.Rigidbody2D.position;
             _target = _targetSystem.FindTarget();
 
-            if (_target != null)
+            if (_target != null && !OnOnlyMoveYAxis)
             {
                 Vector3 targetPos = _target.Transform.position;
                 Vector3 currentPos = _unitController.Rigidbody2D.position;

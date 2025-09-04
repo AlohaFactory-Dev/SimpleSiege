@@ -95,6 +95,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b923c8f4cfc4ee41918b075808617db
+    m_Address: E_Cavalry_Old
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a85850998da7bf04cb17d3e74977763e
     m_Address: P_King
     m_ReadOnly: 0
