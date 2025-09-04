@@ -36,6 +36,7 @@ public class DeckSelectionPopup : UISlice
         UpdateDeckSizeText();
         startGameButton.onClick.AddListener(() =>
         {
+            Debug.Log("게임 시작");
             StageConainer.Get<StageManager>().StartStage();
             CloseView();
         });
