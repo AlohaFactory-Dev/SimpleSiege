@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topObj: {fileID: 7988673513919954063}
-  zoneObj: {fileID: 0}
+  zoneObj: {fileID: 6320668465613390333}
   distance: 5
 --- !u!95 &4953045935766539048
 Animator:
