@@ -19,6 +19,9 @@ public class BuildingManager : MonoBehaviour
         foreach (var building in buildings)
         {
             building.Init(this);
+
+            if (building.Id == "E_Trap") // 트랩 건물은 제외
+                continue;
             AddBuilding(building);
         }
     }
