@@ -24,6 +24,16 @@ public class WallBuilding : Building
         }
     }
 
+    protected override void DestroyBuilding()
+    {
+        foreach (var unit in _units)
+        {
+            unit.ChangeState(UnitState.Dead);
+        }
+
+        base.DestroyBuilding();
+    }
+
     protected override void Remove()
     {
         foreach (var unit in _units)
