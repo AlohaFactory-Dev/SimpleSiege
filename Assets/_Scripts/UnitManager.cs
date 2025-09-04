@@ -41,16 +41,6 @@ public class UnitManager
     private float _sortingOrderUpdateInterval = 0.1f;
     private float _sortingOrderUpdateTimer = 0f;
 
-    // 이 메서드를 MonoBehaviour에서 매 프레임 호출하세요.
-    public void UpdateSortingOrderTimer(float deltaTime)
-    {
-        _sortingOrderUpdateTimer += deltaTime;
-        if (_sortingOrderUpdateTimer >= _sortingOrderUpdateInterval)
-        {
-            SetAllUnitSortingOrder();
-            _sortingOrderUpdateTimer = 0f;
-        }
-    }
 
     private void SetAllUnitSortingOrder()
     {

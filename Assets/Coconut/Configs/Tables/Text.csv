@@ -64,8 +64,8 @@ Card,Unit/P_Catapult/Desc,Catapult,강력한 광역 투석 공격. 빠른 적은
 Card,Unit/P_SkeletonSoldier/Desc,SkeletonSoldier,약하지만 엄청나게 수가 많은 해골
 Card,Unit/P_Giant/Desc,Giant,느리지만 강력한 거인. 건물만 공격
 Card,Unit/P_FlameWizard/Desc,FlameWizard,강력한 광역 화염 공격
-Card,Unit/P_Sniper/Desc,Sniper,매우 긴 거리에서 저격. 공격력이 매우 강하지만 공속이 낮음.
-Card,Unit/P_Cavalry/Desc,Cavalry,이동 속력이 빠른 기병. 적을 관통하며 돌진함
+Card,Unit/P_Sniper/Desc,Sniper,매우 긴 거리에서 저격. 공격력이 매우 강하지만 공속이 낮음
+Card,Unit/P_Cavalry/Desc,Cavalry,이동 속력이 빠른 기병. 돌진해서 적을 뚫고 지나감
 Passive,passive_EffectValueUp_P_King/Name,왕의 열정,왕의 열정
 Passive,passive_EffectValueUp_P_Swordsman/Name,검사의 열정,검사의 열정
 Passive,passive_EffectValueUp_P_Archer/Name,궁수의 열정,궁수의 열정

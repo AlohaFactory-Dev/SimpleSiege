@@ -48,6 +48,7 @@ public class CavalrySkill : MonoBehaviour
 
     private void Update()
     {
+        if (_unitController.State == UnitState.Spawn) return;
         if (!_onSkill)
         {
             if (coolDownTimer < coolDownTime)

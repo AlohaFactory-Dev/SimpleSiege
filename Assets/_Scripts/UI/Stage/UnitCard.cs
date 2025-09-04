@@ -61,6 +61,10 @@ public class UnitCard : MonoBehaviour
         _currentAmount = amount;
         amountText.text = $"x{_currentAmount}";
         _animator.SetTrigger("Add");
+        if (_isSelected)
+            _animator.SetTrigger("Select");
+        else
+            _animator.SetTrigger("Deselected");
         _button.interactable = true;
     }
 
