@@ -531,10 +531,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 967815572709541053, guid: 913ef2ab7b675334d8e54cc116c3cb7f, type: 3}
-      propertyPath: m_text
-      value: "\uB2E4\uC2DC\uD558\uAE30"
-      objectReference: {fileID: 0}
     - target: {fileID: 4077399200779460992, guid: 913ef2ab7b675334d8e54cc116c3cb7f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -622,10 +618,6 @@ PrefabInstance:
     - target: {fileID: 4634388617253698063, guid: 913ef2ab7b675334d8e54cc116c3cb7f, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856893241153827183, guid: 913ef2ab7b675334d8e54cc116c3cb7f, type: 3}
-      propertyPath: m_text
-      value: "\uB2E4\uC2DC\uD558\uAE30"
       objectReference: {fileID: 0}
     - target: {fileID: 5515457847272870487, guid: 913ef2ab7b675334d8e54cc116c3cb7f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

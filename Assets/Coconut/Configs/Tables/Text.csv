@@ -104,7 +104,7 @@ Passive,passive_EffectValueUp_P_Cavalry/Desc,기병의 공격력 <color=#4df765>
 Passive,passive_MaxHpUp_P_King/Desc,왕의 체력 <color=#4df765>+300%</color>,왕의 체력 <color=#4df765>+300%</color>
 Passive,passive_MaxHpUp_P_Swordsman/Desc,검사의 체력 <color=#4df765>+50%</color>,검사의 체력 <color=#4df765>+50%</color>
 Passive,passive_MaxHpUp_P_Archer/Desc,궁수의 체력 <color=#4df765>+100%</color>,궁수의 체력 <color=#4df765>+100%</color>
-Passive,passive_MaxHpUp_P_Catapult/Desc,투석기의 체력 <color=#4df765>+50%</color>,투석기의 체력 <color=#4df765>+50%</color>
+Passive,passive_MaxHpUp_P_Catapult/Desc,투석기의 체력 <color=#4df765>+100%</color>,투석기의 체력 <color=#4df765>+100%</color>
 Passive,passive_MaxHpUp_P_SkeletonSoldier/Desc,해골 병사의 체력 <color=#4df765>+100%</color>,해골 병사의 체력 <color=#4df765>+100%</color>
 Passive,passive_MaxHpUp_P_Giant/Desc,거인의 체력 <color=#4df765>+50%</color>,거인의 체력 <color=#4df765>+50%</color>
 Passive,passive_MaxHpUp_P_FlameWizard/Desc,화염 마법사의 체력 <color=#4df765>+100%</color>,화염 마법사의 체력 <color=#4df765>+100%</color>
