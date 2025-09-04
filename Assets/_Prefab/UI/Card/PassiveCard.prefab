@@ -295,14 +295,14 @@ MonoBehaviour:
     \uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 193ad95af16d8db4a97eff9d700a4ad0, type: 2}
-  m_sharedMaterial: {fileID: -7237721383533162279, guid: 193ad95af16d8db4a97eff9d700a4ad0, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 8ee43a0fa7a56a64996eec40c2674e2e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284310643
-  m_fontColor: {r: 0.4528302, g: 0.39173615, b: 0.36525455, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
