@@ -258,10 +258,10 @@ MonoBehaviour:
   skillInterval: 5
   spawnUnits:
   - spwanUnitId: P_Swordsman
-    amount: 3
+    amount: 2
     probability: 100
   - spwanUnitId: P_Archer
-    amount: 3
+    amount: 2
     probability: 100
   - spwanUnitId: P_Cavalry
     amount: 1
