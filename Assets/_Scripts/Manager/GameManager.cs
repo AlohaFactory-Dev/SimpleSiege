@@ -29,13 +29,19 @@ public class GameManager
         await TableListContainer.InitAllTables();
         await ImageContainer.InitializeAsync();
         _container.Bind<PropertyIconPool>().AsSingle().NonLazy();
-        await LoadLobby();
+
+        await _gameSceneManager.LoadSceneAsync("Lobby");
     }
 
 
-    public async UniTask LoadLobby()
+    public void ReLoadLobby()
     {
-        await _gameSceneManager.LoadSceneAsync("Lobby");
+        UnloadStage();
+        LoadLobby();
+    }
+
+    private async UniTask LoadLobby()
+    {
         LobbyConainer.Get<LobbyUI>().ActiveUI(true);
     }
 
