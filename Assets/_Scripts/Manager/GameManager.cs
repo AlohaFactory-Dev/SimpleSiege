@@ -33,7 +33,7 @@ public class GameManager
     }
 
 
-    private async UniTask LoadLobby()
+    public async UniTask LoadLobby()
     {
         await _gameSceneManager.LoadSceneAsync("Lobby");
         LobbyConainer.Get<LobbyUI>().ActiveUI(true);

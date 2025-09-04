@@ -5,14 +5,14 @@ public class BuildingAnimationEventHandler : MonoBehaviour
 {
     private Action _onDestroyAction;
     [SerializeField] private Color hitColor = new Color32(193, 193, 193, 255);
-    private MeshRenderer[] _renderers;
+    private SpriteRenderer[] _renderers;
     private MaterialPropertyBlock _block;
     private readonly int _id = Shader.PropertyToID("_Black");
 
     public void Init(Action onDestroyAction)
     {
         _onDestroyAction = onDestroyAction;
-        _renderers = GetComponentsInChildren<MeshRenderer>();
+        _renderers = GetComponentsInChildren<SpriteRenderer>();
         _block = new MaterialPropertyBlock();
     }
 

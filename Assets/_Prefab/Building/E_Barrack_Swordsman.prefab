@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2190327089917599152, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2085207a614c371458823e219499cbe7, type: 2}
     - target: {fileID: 2809547921063696627, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -346,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 554711554223090365}
     - target: {fileID: 3860815640377794882, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_Name
-      value: Barrack_Swordsman
+      value: E_Barrack_Swordsman
       objectReference: {fileID: 0}
     - target: {fileID: 6219050397406592975, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
       propertyPath: m_LocalPosition.x
