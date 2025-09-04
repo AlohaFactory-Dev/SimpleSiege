@@ -57,7 +57,7 @@ Card,Unit/P_Giant/Name,Giant,거인
 Card,Unit/P_FlameWizard/Name,FlameWizard,화염 마법사
 Card,Unit/P_Sniper/Name,Sniper,저격수
 Card,Unit/P_Cavalry/Name,Cavalry,기병
-Card,Unit/P_King/Desc,King,주기적으로 지원군 (검사/궁수/기병 중에서 랜덤) 소환.
+Card,Unit/P_King/Desc,King,주기적으로 지원군 (검사/궁수/기병 중에서 랜덤) 소환
 Card,Unit/P_Swordsman/Desc,Swordsman,근거리에서 적을 공격하는 병사
 Card,Unit/P_Archer/Desc,Archer,원거리에서 적을 공격하는 병사
 Card,Unit/P_Catapult/Desc,Catapult,강력한 광역 투석 공격. 빠른 적은 잘 못 맞춤
