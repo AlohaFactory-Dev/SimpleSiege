@@ -4,138 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Editor/DisableBitcode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Editor/DisableBitcode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Android.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Android/libs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Android/libs/facebook-android-wrapper-17.0.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Android/libs/facebook-android-wrapper-17.0.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Canvas.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Canvas/CanvasJSSDKBindings.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Canvas/CanvasJSSDKBindings.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Editor/Dependencies.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Editor/Dependencies.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Editor/Facebook.Unity.Editor.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Editor/Facebook.Unity.Editor.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Facebook.Unity.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Facebook.Unity.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/Facebook.Unity.Windows.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/Facebook.Unity.Windows.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/LibFBGManaged.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/LibFBGManaged.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/METADATA.bzl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/METADATA.bzl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/XInputDotNetPure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/XInputDotNetPure.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/LibFBGPlatform.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/LibFBGPlatform.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/LibFBGUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/LibFBGUI.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/METADATA.bzl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/METADATA.bzl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/WebView2Loader.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/WebView2Loader.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/XInputInterface.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/XInputInterface.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/cpprest_2_10.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/cpprest_2_10.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/libcrypto-3-x64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/libcrypto-3-x64.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/libcurl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/libcurl.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/libssl-3-x64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/libssl-3-x64.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/tinyxml2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/tinyxml2.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/zlib1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x64/zlib1.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/LibFBGPlatform.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/LibFBGPlatform.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/LibFBGUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/LibFBGUI.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/METADATA.bzl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/METADATA.bzl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/WebView2Loader.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/WebView2Loader.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/XInputInterface.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/XInputInterface.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/cpprest_2_10.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/cpprest_2_10.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/libcrypto-3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/libcrypto-3.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/libcurl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/libcurl.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/libssl-3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/libssl-3.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/tinyxml2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/tinyxml2.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/zlib1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/Windows/x86/zlib1.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/iOS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/iOS/Facebook.Unity.IOS.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/Plugins/iOS/Facebook.Unity.IOS.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBSDK+Internal.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBSDK+Internal.h.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityInterface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityInterface.h.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityInterface.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityInterface.mm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnitySDKDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnitySDKDelegate.h.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnitySDKDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnitySDKDelegate.m.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityUtility.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityUtility.h.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityUtility.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/FBUnityUtility.mm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKShareTournamentDialog.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKShareTournamentDialog.swift.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKTournament.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKTournament.swift.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKTournamentFetcher.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKTournamentFetcher.swift.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKTournamentUpdater.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/Swift/FBSDKTournamentUpdater.swift.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/fixup.projmods" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Editor/iOS/fixup.projmods.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Resources/FacebookSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/SDK/Resources/FacebookSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlohaSdk/Sdk/FacebookSDK/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.8.1/firebase-analytics-unity-11.8.1.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.8.1/firebase-analytics-unity-11.8.1.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/11.8.1/firebase-app-unity-11.8.1.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/11.8.1/firebase-app-unity-11.8.1.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-auth-unity/11.8.1/firebase-auth-unity-11.8.1.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-auth-unity/11.8.1/firebase-auth-unity-11.8.1.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-config-unity/11.8.1/firebase-config-unity-11.8.1.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-config-unity/11.8.1/firebase-config-unity-11.8.1.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-messaging-unity/11.8.1/firebase-messaging-unity-11.8.1.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-messaging-unity/11.8.1/firebase-messaging-unity-11.8.1.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,21 +29,6 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1071a2cb0cb3433aae80a793c277a04846ac00/4e/bda3d85d/IObserver`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/9a/a0a972f9/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/ab/9e3ea355/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
@@ -195,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/ICaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitAnimationSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitSkill/KingSkill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@9057452c86/Runtime/Linq/Union.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@9057452c86/Runtime/Triggers/MonoBehaviourMessagesTriggers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.neuecc.unirx@6baeccf6c5/UnityEngineBridge/ReactiveProperty.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.22.3/Editor/GUI/AssetSettingsAnalyzeTreeView.cs" root0="SKIP_HIGHLIGHTING" />
@@ -260,15 +115,13 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="61688">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="61688" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -326,6 +179,7 @@
       <workItem from="1756948316019" duration="7390000" />
       <workItem from="1756955995707" duration="5800000" />
       <workItem from="1756964353640" duration="12515000" />
+      <workItem from="1756977212786" duration="3307000" />
     </task>
     <servers />
   </component>

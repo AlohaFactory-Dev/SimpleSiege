@@ -23,7 +23,8 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        // 마우스 클릭 또는 터치 입력 처리
+#if UNITY_EDITOR || UNITY_STANDALONE
+        // 마우스 입력 처리 (에디터 및 PC)
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             OnPointerDown();
@@ -32,6 +33,18 @@ public class InputManager : MonoBehaviour
         {
             OnPointerUp();
         }
+#elif UNITY_ANDROID || UNITY_IOS
+        // 터치 입력 처리 (모바일)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began &&
+            !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+        {
+            OnPointerDown();
+        }
+        else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            OnPointerUp();
+        }
+#endif
     }
 
     private void OnPointerDown()

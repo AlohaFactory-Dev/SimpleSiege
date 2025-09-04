@@ -27,7 +27,8 @@ public class StageManager : MonoBehaviour
     [Inject] private InputManager _inputManager;
     [Inject] private UnitManager _unitManager;
     public StageTable CurrentStageTable { get; private set; }
-
+    private float startTime;
+    public float EndTime => Time.time - startTime;
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)
     {
@@ -39,6 +40,7 @@ public class StageManager : MonoBehaviour
     {
         // 스테이지 시작 로직 구현
         Time.timeScale = 1f;
+        startTime = Time.time;
         _cardPoolManager.SetCardPool();
         _stageUI.Init();
     }
