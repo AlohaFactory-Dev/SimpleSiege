@@ -15,6 +15,7 @@ public class PassiveTable
     [CSVColumn] public UpgradeValueType upgradeValueType;
     [CSVColumn] public float effectValue;
     [CSVColumn] public int probability;
+    [CSVColumn] public int grade;
     [CSVColumn] public UpgradeType passiveType;
     [CSVColumn] public List<string> targetIds;
     [CSVColumn] public List<float> values;

@@ -57,7 +57,7 @@ Card,Unit/P_Giant/Name,Giant,거인
 Card,Unit/P_FlameWizard/Name,FlameWizard,화염 마법사
 Card,Unit/P_Sniper/Name,Sniper,저격수
 Card,Unit/P_Cavalry/Name,Cavalry,기병
-Card,Unit/P_King/Desc,King,주기적으로 지원군 (검사/궁수/기병 중에서 랜덤) 소환.
+Card,Unit/P_King/Desc,King,주기적으로 지원군 (검사/궁수/기병 중에서 랜덤) 소환
 Card,Unit/P_Swordsman/Desc,Swordsman,근거리에서 적을 공격하는 병사
 Card,Unit/P_Archer/Desc,Archer,원거리에서 적을 공격하는 병사
 Card,Unit/P_Catapult/Desc,Catapult,강력한 광역 투석 공격. 빠른 적은 잘 못 맞춤
@@ -65,7 +65,7 @@ Card,Unit/P_SkeletonSoldier/Desc,SkeletonSoldier,약하지만 엄청나게 수�
 Card,Unit/P_Giant/Desc,Giant,느리지만 강력한 거인. 건물만 공격
 Card,Unit/P_FlameWizard/Desc,FlameWizard,강력한 광역 화염 공격
 Card,Unit/P_Sniper/Desc,Sniper,매우 긴 거리에서 저격. 공격력이 매우 강하지만 공속이 낮음.
-Card,Unit/P_Cavalry/Desc,Cavalry,이동 속력이 빠른 기병. 도움닫기 이후 돌진하면 첫 충돌한 적에게 피해 2배
+Card,Unit/P_Cavalry/Desc,Cavalry,이동 속력이 빠른 기병. 적을 관통하며 돌진함
 Passive,passive_EffectValueUp_P_King/Name,왕의 열정,왕의 열정
 Passive,passive_EffectValueUp_P_Swordsman/Name,검사의 열정,검사의 열정
 Passive,passive_EffectValueUp_P_Archer/Name,궁수의 열정,궁수의 열정
@@ -92,16 +92,16 @@ Passive,passive_EffectRangeUp_P_Swordsman_P_Archer/Name,군사 훈련,군사 훈
 Passive,passive_EffectRangeUp_P_Catapult_P_Giant/Name,빠른 발걸음,빠른 발걸음
 Passive,passive_EffectActionSpeedUp_P_SkeletonSoldier_P_FlameWizard/Name,마법 가속,마법 가속
 Passive,passive_EffectRangeUp_P_Sniper_P_Cavalry/Name,집중,집중
-Passive,passive_EffectValueUp_P_King/Desc,왕의 공격력 <color=#1DC631>+50%</color>,왕의 공격력 <color=#1DC631>+50%</color>
+Passive,passive_EffectValueUp_P_King/Desc,왕의 공격력 <color=#1DC631>+300%</color>,왕의 공격력 <color=#1DC631>+300%</color>
 Passive,passive_EffectValueUp_P_Swordsman/Desc,검사의 공격력 <color=#1DC631>+50%</color>,검사의 공격력 <color=#1DC631>+50%</color>
 Passive,passive_EffectValueUp_P_Archer/Desc,궁수의 공격력 <color=#1DC631>+50%</color>,궁수의 공격력 <color=#1DC631>+50%</color>
 Passive,passive_EffectValueUp_P_Catapult/Desc,투석기의 공격력 <color=#1DC631>+50%</color>,투석기의 공격력 <color=#1DC631>+50%</color>
-Passive,passive_EffectValueUp_P_SkeletonSoldier/Desc,해골 병사의 공격력 <color=#1DC631>+50%</color>,해골 병사의 공격력 <color=#1DC631>+50%</color>
+Passive,passive_EffectValueUp_P_SkeletonSoldier/Desc,해골 병사의 공격력 <color=#1DC631>+100%</color>,해골 병사의 공격력 <color=#1DC631>+100%</color>
 Passive,passive_EffectValueUp_P_Giant/Desc,거인의 공격력 <color=#1DC631>+50%</color>,거인의 공격력 <color=#1DC631>+50%</color>
 Passive,passive_EffectValueUp_P_FlameWizard/Desc,화염 마법사의 공격력 <color=#1DC631>+50%</color>,화염 마법사의 공격력 <color=#1DC631>+50%</color>
 Passive,passive_EffectValueUp_P_Sniper/Desc,저격수의 공격력 <color=#1DC631>+50%</color>,저격수의 공격력 <color=#1DC631>+50%</color>
 Passive,passive_EffectValueUp_P_Cavalry/Desc,기병의 공격력 <color=#1DC631>+50%</color>,기병의 공격력 <color=#1DC631>+50%</color>
-Passive,passive_MaxHpUp_P_King/Desc,왕의 체력 <color=#1DC631>+50%</color>,왕의 체력 <color=#1DC631>+50%</color>
+Passive,passive_MaxHpUp_P_King/Desc,왕의 체력 <color=#1DC631>+300%</color>,왕의 체력 <color=#1DC631>+300%</color>
 Passive,passive_MaxHpUp_P_Swordsman/Desc,검사의 체력 <color=#1DC631>+50%</color>,검사의 체력 <color=#1DC631>+50%</color>
 Passive,passive_MaxHpUp_P_Archer/Desc,궁수의 체력 <color=#1DC631>+50%</color>,궁수의 체력 <color=#1DC631>+50%</color>
 Passive,passive_MaxHpUp_P_Catapult/Desc,투석기의 체력 <color=#1DC631>+50%</color>,투석기의 체력 <color=#1DC631>+50%</color>
@@ -110,7 +110,7 @@ Passive,passive_MaxHpUp_P_Giant/Desc,거인의 체력 <color=#1DC631>+50%</color
 Passive,passive_MaxHpUp_P_FlameWizard/Desc,화염 마법사의 체력 <color=#1DC631>+50%</color>,화염 마법사의 체력 <color=#1DC631>+50%</color>
 Passive,passive_MaxHpUp_P_Sniper/Desc,저격수의 체력 <color=#1DC631>+50%</color>,저격수의 체력 <color=#1DC631>+50%</color>
 Passive,passive_MaxHpUp_P_Cavalry/Desc,기병의 체력 <color=#1DC631>+50%</color>,기병의 체력 <color=#1DC631>+50%</color>
-Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Desc,화염 마법사<c> 투석기의 피해 범위 <color=#1DC631>+100%</color>,화염 마법사<c> 투석기의 피해 범위 <color=#1DC631>+100%</color>
+Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Desc,화염 마법사<c> 투석기의 피해 범위 <color=#1DC631>+50%</color>,화염 마법사<c> 투석기의 피해 범위 <color=#1DC631>+50%</color>
 Passive,passive_EffectRangeUp_P_Swordsman_P_Cavalry/Desc,검사<c> 기병의 체력 <color=#1DC631>+50%</color>,검사<c> 기병의 체력 <color=#1DC631>+50%</color>
 Passive,passive_EffectRangeUp_P_Archer_P_Sniper/Desc,궁수<c> 저격수의 시야<c> 사거리 <color=#1DC631>+30%</color>,궁수<c> 저격수의 시야<c> 사거리 <color=#1DC631>+30%</color>
 Passive,passive_EffectRangeUp_P_SkeletonSoldier_P_Giant/Desc,해골 병사<c> 거인의 공격력 <color=#1DC631>+50%</color>,해골 병사<c> 거인의 공격력 <color=#1DC631>+50%</color>
