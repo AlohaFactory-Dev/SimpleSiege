@@ -21,7 +21,7 @@ public class BuildingAnimationEventHandler : MonoBehaviour
         _block.SetColor(_id, hitColor);
         foreach (var renderer in _renderers)
         {
-            renderer.SetPropertyBlock(_block);
+            renderer.material.SetColor(_id, hitColor);
         }
     }
 
@@ -30,7 +30,7 @@ public class BuildingAnimationEventHandler : MonoBehaviour
         _block.SetColor(_id, Color.black);
         foreach (var renderer in _renderers)
         {
-            renderer.SetPropertyBlock(_block);
+            renderer.material.SetColor(_id, Color.black);
         }
     }
 
