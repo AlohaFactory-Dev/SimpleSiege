@@ -292,7 +292,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4.
-    \uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4."
+    \uD328\uC2DC\uBE0C \uC2A4\uD0AC \uC124\uBA85 \uCE78 \uC785\uB2C8\uB2E4. <color=#4df765>+50%</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 193ad95af16d8db4a97eff9d700a4ad0, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 8ee43a0fa7a56a64996eec40c2674e2e, type: 2}
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 21
-  m_fontSizeMax: 32
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
