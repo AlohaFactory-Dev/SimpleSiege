@@ -144,7 +144,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4077399200779460992}
   - component: {fileID: 293246915670623565}
-  - component: {fileID: 5992611976734478913}
   - component: {fileID: 8561958744498917143}
   m_Layer: 5
   m_Name: PausePopup
@@ -184,21 +183,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4634388617253698063}
   m_CullTransparentMesh: 1
---- !u!114 &5992611976734478913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4634388617253698063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a9370e3e6f458096816b2519c3c22d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winUI: {fileID: 6538168737669981632}
-  loseUI: {fileID: 0}
-  restartButton: {fileID: 181179971570411397}
 --- !u!114 &8561958744498917143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,17 +563,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45b1d2a50dfc5645bd4b3f1527136b2, type: 3}
---- !u!114 &181179971570411397 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8054081634786564985, guid: f45b1d2a50dfc5645bd4b3f1527136b2, type: 3}
-  m_PrefabInstance: {fileID: 7874111472977968380}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &4456139907465013172 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5805444521601342280, guid: f45b1d2a50dfc5645bd4b3f1527136b2, type: 3}
