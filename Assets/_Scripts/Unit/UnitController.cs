@@ -143,13 +143,28 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private void FixedUpdate()
     {
         // Physics2D 최적화: 불필요한 경우 물리 계산 스킵
-        if (state == UnitState.Dead || _isWallUnit || IsBarrackUnit) return;
-
-
-        if (Rigidbody2D.velocity.magnitude > 0.1f)
+        if (state == UnitState.Dead || _isWallUnit || IsBarrackUnit)
         {
-            Rigidbody2D.rotation = 0f;
-            Rigidbody2D.angularVelocity = 0f;
+            // 완전히 정지된 상태에서는 물리 계산 불필요
+            if (Rigidbody2D.bodyType != RigidbodyType2D.Static)
+            {
+                Rigidbody2D.bodyType = RigidbodyType2D.Static;
+            }
+
+            return;
+        }
+
+        // 활성 상태일 때는 Dynamic으로 설정 (유닛간 밀어내기 위해)
+        if (Rigidbody2D.bodyType != RigidbodyType2D.Dynamic)
+        {
+            Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+            // 중력 제거
+            Rigidbody2D.gravityScale = 0f;
+        }
+
+
+        if (State == UnitState.Action)
+        {
             Rigidbody2D.velocity = Vector2.zero;
         }
     }

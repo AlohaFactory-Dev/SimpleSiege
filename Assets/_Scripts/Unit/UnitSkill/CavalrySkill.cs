@@ -48,7 +48,7 @@ public class CavalrySkill : MonoBehaviour
 
     private void Update()
     {
-        if (_unitController.State == UnitState.Spawn) return;
+        if (_unitController.State == UnitState.Spawn || _unitController.State == UnitState.Dead) return;
         if (!_onSkill)
         {
             if (coolDownTimer < coolDownTime)
@@ -96,7 +96,7 @@ public class CavalrySkill : MonoBehaviour
         _unitController.StatusSystem.AnimationSystem.PlaySkill();
         _onSkill = true;
         _unitController.UnitUpgradeController.ApplyUpgrade(_skillId, UpgradeType.MoveSpeedUp, new UpgradeValue(UpgradeValueType.Additive, _boostSpeed));
-        _unitController.StatusSystem.MoveSystem.OnOnlyMoveYAxis = true;
+        _unitController.StatusSystem.MoveSystem.onOnlyMoveYAxis = true;
         _unitController.Collider2D.isTrigger = true;
     }
 
@@ -107,7 +107,7 @@ public class CavalrySkill : MonoBehaviour
         _collider2D.enabled = false;
         _onSkill = false;
         _unitController.UnitUpgradeController.ApplyUpgrade(_skillId, UpgradeType.MoveSpeedUp, new UpgradeValue(UpgradeValueType.Additive, -_boostSpeed));
-        _unitController.StatusSystem.MoveSystem.OnOnlyMoveYAxis = false;
+        _unitController.StatusSystem.MoveSystem.onOnlyMoveYAxis = false;
         _unitController.Collider2D.isTrigger = false;
     }
 }

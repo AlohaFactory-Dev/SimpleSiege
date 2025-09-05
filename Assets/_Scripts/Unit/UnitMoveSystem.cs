@@ -10,7 +10,7 @@ public class UnitMoveSystem : MonoBehaviour
     private ITarget _target;
     private UnitTargetSystem _targetSystem;
     private UnitRotationSystem _rotationSystem;
-    public bool OnOnlyMoveYAxis = false;
+    [HideInInspector] public bool onOnlyMoveYAxis = false;
 
     public void Init(UnitController unit, UnitTargetSystem targetSystem, UnitRotationSystem rotationSystem)
     {
@@ -42,10 +42,10 @@ public class UnitMoveSystem : MonoBehaviour
         while (true)
         {
             Vector3 currentPosition = _unitController.Transform.position;
-            Vector3 nextPosition = currentPosition;
+            Vector2 targetVelocity = Vector2.zero;
             _target = _targetSystem.FindTarget();
 
-            if (_target != null && !OnOnlyMoveYAxis)
+            if (_target != null && !onOnlyMoveYAxis)
             {
                 Vector3 targetPos = _target.Transform.position;
                 Vector3 dir = (targetPos - currentPosition).normalized;
@@ -54,7 +54,7 @@ public class UnitMoveSystem : MonoBehaviour
 
                 if (edgeDistance > _unitController.EffectAbleRange)
                 {
-                    nextPosition += dir * (_unitController.MoveSpeed * Time.deltaTime);
+                    targetVelocity = new Vector2(dir.x, dir.y) * _unitController.MoveSpeed;
                     _rotationSystem.Rotate(dir, ref lastYRotation);
                 }
                 else
@@ -66,15 +66,13 @@ public class UnitMoveSystem : MonoBehaviour
             }
             else
             {
-                Vector3 dir = _unitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
-                nextPosition += dir * (_unitController.MoveSpeed * Time.deltaTime);
+                Vector2 dir = _unitTable.teamType == TeamType.Player ? Vector2.up : Vector2.down;
+                targetVelocity = dir * _unitController.MoveSpeed;
             }
 
-            // Physics2D 최적화: MovePosition 대신 직접 Transform 조작
-            _unitController.Transform.position = nextPosition;
+            _unitController.Rigidbody2D.velocity = targetVelocity;
 
-            // Physics2D 최적화: WaitForFixedUpdate 대신 일반 yield 사용
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
     }
 }

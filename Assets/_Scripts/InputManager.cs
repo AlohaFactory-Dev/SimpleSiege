@@ -112,7 +112,6 @@ public class InputManager : MonoBehaviour
             return;
         }
 
-
         _cardSelectionManager.UseSelectedCard(worldPos);
     }
 }
