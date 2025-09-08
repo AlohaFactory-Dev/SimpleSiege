@@ -103,6 +103,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _skeletonMecanim = GetComponentInChildren<SkeletonMecanim>();
         Rigidbody2D.mass = _unitTable.mass;
         gameObject.layer = LayerMask.NameToLayer(UnitTable.teamType == TeamType.Player ? "Player" : "Enemy");
+        gameObject.tag = UnitTable.teamType.ToString();
     }
 
     public void SetSortingOrder(int order)

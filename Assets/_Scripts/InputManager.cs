@@ -12,7 +12,6 @@ public class InputManager : MonoBehaviour
     private bool _isPointerDown;
     private Coroutine _spawnCoroutine;
     [SerializeField] Camera _camera;
-
     private int _spawnableLayerMask;
 
     public void Init()

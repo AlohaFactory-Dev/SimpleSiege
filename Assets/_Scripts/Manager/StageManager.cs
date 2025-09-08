@@ -27,8 +27,12 @@ public class StageManager : MonoBehaviour
     [Inject] private InputManager _inputManager;
     [Inject] private UnitManager _unitManager;
     public StageTable CurrentStageTable { get; private set; }
+
+    public CameraController CameraController { get; private set; }
+
     private float startTime;
     public float EndTime => Time.time - startTime;
+    public bool isInit { get; private set; }
 
     public void OpenPopup(StagePopupConfig config, UIOpenArgs args = null)
     {
@@ -64,13 +68,14 @@ public class StageManager : MonoBehaviour
         var map = StageConainer.Container.InstantiatePrefab(mapGO, transform);
         // BuildingManager를 직접 할당
         var buildingManager = map.GetComponentInChildren<BuildingManager>();
-        var cameraController = map.GetComponentInChildren<CameraController>();
+        CameraController = map.GetComponentInChildren<CameraController>();
         OpenPopup(StagePopupConfig.DeckSelectionViewConfig);
-        cameraController.Init();
+        CameraController.Init();
         _inputManager.Init();
         buildingManager.Init();
         buildingManager.OnStageResult.Subscribe(EndStage).AddTo(this);
         _passiveManager.Init();
+        isInit = true;
     }
 
     private async Task<GameObject> LoadMapByIdAsync(string mapId)
