@@ -36,6 +36,7 @@ public class CavalrySkill : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_unitController.State == UnitState.Dead) return;
         var target = other.GetComponent<ITarget>();
         if (target != null && !target.IsUntargetable)
         {
