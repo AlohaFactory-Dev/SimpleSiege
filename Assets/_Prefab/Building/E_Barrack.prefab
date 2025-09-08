@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1288461572194367888}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: SubBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4961511368508023179}
   - component: {fileID: 3385620612343671223}
   - component: {fileID: 3632796327108873750}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 1268921791295274025}
   - component: {fileID: -3547254222116276887}
   - component: {fileID: -8357003377265262816}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: E_Barrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2661727247838728520}
   - component: {fileID: 2190327089917599152}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: SubImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7532899173452514692}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpawnPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8903537474788867538}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: MainBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 911563870678583652}
   - component: {fileID: 7130274956797976366}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: MainImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,6 +533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 7634005098541666552, guid: 42d0a2594bc420342bc3a787ec1ff35f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -621,6 +625,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPBarContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 785750722405238329, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270776026477856315, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -664,6 +676,26 @@ PrefabInstance:
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625439784846712622, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871094278499586272, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225570678527789622, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436621294471218680, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826872921683451117, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

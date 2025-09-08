@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2589488314655287618}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8324898323632172507}
   - component: {fileID: 7452899522643485243}
   - component: {fileID: 6100564814281705920}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Spine Mecanim GameObject (Character)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 6073264355716543704}
   - component: {fileID: 4630896364693173912}
   - component: {fileID: 2663205703538485292}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: TargetSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 4503925953523051392}
   - component: {fileID: 2214815757488877774}
   - component: {fileID: 7293451561144350728}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2781468937587836844}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: DamageEffectPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2488888932158108950}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: FloatingTextPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,6 +587,14 @@ PrefabInstance:
     - target: {fileID: 785750722405238329, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_Name
       value: HPBarContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 785750722405238329, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270776026477856315, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_Pivot.x
@@ -659,6 +667,26 @@ PrefabInstance:
     - target: {fileID: 1874413197842150723, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625439784846712622, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871094278499586272, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225570678527789622, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436621294471218680, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826872921683451117, guid: e3e0f814706a3624ba4a13b5e04f0e3a, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

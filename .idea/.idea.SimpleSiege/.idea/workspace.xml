@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="" />
+    <list default="true" id="2ee00a10-a832-4e5d-854d-53284857b251" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/TargetLayerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/TargetLayerController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleSiege/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/BuildingPart/UnitDetector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/BuildingPart/UnitDetector.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Building/E_Barrack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Building/E_Barrack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Archer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Catapult.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Catapult.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Cavalry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Cavalry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_FlameWizard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_FlameWizard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Giant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Giant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_King.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_SkeletonSoldier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_SkeletonSoldier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Sniper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Sniper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Swordsman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/E_Swordsman.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/Misc/Unit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/Misc/Unit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Archer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Catapult.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Catapult.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Cavalry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Cavalry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_FlameWizard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_FlameWizard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Giant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Giant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_King.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_SkeletonSoldier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_SkeletonSoldier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Sniper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Sniper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Swordsman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefab/Unit/P_Swordsman.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +114,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
+    &quot;do_not_show_Android_plugin_suggestion&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;design&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -115,13 +147,15 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26304">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26304" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -181,6 +215,8 @@
       <workItem from="1756964353640" duration="12515000" />
       <workItem from="1756977212786" duration="3307000" />
       <workItem from="1756981069567" duration="2489000" />
+      <workItem from="1757036284005" duration="13923000" />
+      <workItem from="1757290047515" duration="4540000" />
     </task>
     <servers />
   </component>
@@ -225,6 +261,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Unit/UnitTargetSystem.cs</url>
+          <line>42</line>
+          <properties documentPath="E:\Unity\Projects\SimpleSiege\Assets\_Scripts\Unit\UnitTargetSystem.cs" containingFunctionPresentation="메서드 'OnTriggerEnter2D'">
+            <startOffsets>
+              <option value="1443" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1468" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -72,6 +72,8 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
         transform.position = position;
         _statusSystem.Init(this);
+
+
         var cavalry = GetComponentInChildren<CavalrySkill>();
         if (cavalry)
         {
@@ -95,6 +97,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _collider2D = GetComponent<Collider2D>();
         _sortingGroup = GetComponent<SortingGroup>();
         Rigidbody2D.mass = _unitTable.mass;
+        gameObject.layer = LayerMask.NameToLayer(UnitTable.teamType == TeamType.Player ? "Player" : "Enemy");
     }
 
     public void SetSortingOrder(int order)

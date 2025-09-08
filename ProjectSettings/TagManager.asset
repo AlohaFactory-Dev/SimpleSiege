@@ -9,16 +9,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - SpawnableZone
-  - Unit
-  - Building
-  - TargetDetector
+  - Enemy
+  - EnemyDetector
+  - PlayerDetector
   - Wall
-  - 
-  - 
+  - BuildingDetector
+  - Building
   - 
   - 
   - 

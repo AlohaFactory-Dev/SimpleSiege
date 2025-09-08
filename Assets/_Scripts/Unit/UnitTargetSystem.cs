@@ -18,6 +18,9 @@ public class UnitTargetSystem : MonoBehaviour
         _collider = GetComponent<CircleCollider2D>();
         _collider.isTrigger = true;
 
+        gameObject.layer = TargetLayerController.GetLayerMaskByTargetType(_unitController.TeamType, _unitController.TargetType, _unitController.UnitTable.targetGroup);
+
+        Physics2D.IgnoreCollision(_unitController.Collider2D, _collider);
         if (_updateSightRangeDisposable != null)
         {
             _updateSightRangeDisposable.Dispose();
