@@ -71,8 +71,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _unitTable = unitTable;
         _unitUpgradeController = new UnitUpgradeController(_unitTable);
         Init();
-        _skeletonMecanim.skeleton.SetToSetupPose();
-        _skeletonMecanim.Update(0f); // 즉시 반영
 
         transform.position = position;
         _statusSystem.Init(this);
@@ -90,6 +88,8 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
             ChangeState(UnitState.Spawn);
             StartCoroutine(WaitAndMove(_unitTable.idleTimeAfterSpawn));
         }
+
+        _skeletonMecanim.Update(0f); // 즉시 반영
     }
 
     private void Init()
