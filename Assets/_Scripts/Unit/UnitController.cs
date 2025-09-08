@@ -5,6 +5,7 @@ using UnityEngine;
 using UniRx;
 using Zenject;
 using FactorySystem;
+using Spine.Unity;
 using UnityEngine.Rendering;
 
 public enum UnitState
@@ -33,6 +34,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private bool _isInitialized;
     private bool _isWallUnit;
     private readonly string _floatingTextId = "FloatingText";
+    private SkeletonMecanim _skeletonMecanim;
 
     public Transform DamageEffectPoint => damageEffectPoint;
     public UnitState State => state;
@@ -69,6 +71,8 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _unitTable = unitTable;
         _unitUpgradeController = new UnitUpgradeController(_unitTable);
         Init();
+        _skeletonMecanim.skeleton.SetToSetupPose();
+        _skeletonMecanim.Update(0f); // 즉시 반영
 
         transform.position = position;
         _statusSystem.Init(this);
@@ -96,6 +100,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         Rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
         _sortingGroup = GetComponent<SortingGroup>();
+        _skeletonMecanim = GetComponentInChildren<SkeletonMecanim>();
         Rigidbody2D.mass = _unitTable.mass;
         gameObject.layer = LayerMask.NameToLayer(UnitTable.teamType == TeamType.Player ? "Player" : "Enemy");
     }
