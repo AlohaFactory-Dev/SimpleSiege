@@ -96,15 +96,15 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: Obj_Trap_Circle
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 1}
+    alignment: 2
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 159
-      y: 519
-      width: 75
-      height: 122
+      x: 812
+      y: 470
+      width: 95
+      height: 52
     spriteID: 5b69f8ca66c07d64b956777df504ed00
     spriteBone: []
     spriteOutline: []
@@ -113,8 +113,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 159, y: 504}
-    spritePosition: {x: 218, y: 15}
+    uvTransform: {x: 812, y: 470}
+    spritePosition: {x: 206, y: 0}
   - name: Obj_TrapClose_R
     originalName: 
     pivot: {x: 1, y: 0.5}
@@ -122,10 +122,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 519
+      x: 516
+      y: 470
       width: 147
-      height: 495
+      height: 503
     spriteID: ed8c4bd6acb3e8a4ba5556e439bacf17
     spriteBone: []
     spriteOutline: []
@@ -134,8 +134,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 519}
-    spritePosition: {x: 201, y: 13}
+    uvTransform: {x: 516, y: 470}
+    spritePosition: {x: 195, y: 9}
   - name: Obj_TrapClose_L
     originalName: 
     pivot: {x: 0, y: 0.5}
@@ -143,10 +143,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 261
-      y: 519
+      x: 664
+      y: 470
       width: 147
-      height: 495
+      height: 503
     spriteID: fc5f0688e99dcf04b90b965437a3c80e
     spriteBone: []
     spriteOutline: []
@@ -155,8 +155,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 261, y: 519}
-    spritePosition: {x: 160, y: 13}
+    uvTransform: {x: 664, y: 470}
+    spritePosition: {x: 173, y: 9}
   - name: Obj_TrapOpen_R
     originalName: 
     pivot: {x: 0, y: 0.5}
@@ -165,10 +165,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 249
-      height: 507
-    spriteID: d4fc7cf4094efc346b50bb335c6f5b9e
+      y: 470
+      width: 248
+      height: 512
+    spriteID: 85a3b91f6d5089f4c8ee81395517a252
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -176,8 +176,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -26, y: 4}
-    spritePosition: {x: 255, y: 0}
+    uvTransform: {x: 4, y: 470}
+    spritePosition: {x: 254, y: 0}
   - name: Obj_TrapOpen_L
     originalName: 
     pivot: {x: 1, y: 0.5}
@@ -185,10 +185,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 261
-      y: 4
-      width: 249
-      height: 507
+      x: 260
+      y: 470
+      width: 247
+      height: 512
     spriteID: ece61281bdfb4ac4985997c52100c268
     spriteBone: []
     spriteOutline: []
@@ -197,8 +197,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 261, y: 4}
-    spritePosition: {x: 5, y: 0}
+    uvTransform: {x: 260, y: 470}
+    spritePosition: {x: 6, y: 0}
+  - name: Obj_Trap_Circle02
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 812
+      y: 530
+      width: 86
+      height: 41
+    spriteID: f142a614b0086be46bd4c60a763c785f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 812, y: 530}
+    spritePosition: {x: 212, y: 471}
   - name: Obj_Trap_Center
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -206,10 +227,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 518
+      x: 4
       y: 4
-      width: 282
-      height: 408
+      width: 293
+      height: 458
     spriteID: b82111887b79c4f42b84fcd070421795
     spriteBone: []
     spriteOutline: []
@@ -218,8 +239,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 518, y: 4}
-    spritePosition: {x: 115, y: 52}
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 110, y: 9}
   characterData:
     bones: []
     parts: []
@@ -272,7 +293,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: 5b69f8ca66c07d64b956777df504ed00
     layerID: 1384
-    mosaicPosition: {x: 159, y: 519}
+    mosaicPosition: {x: 812, y: 470}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -282,7 +303,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: ed8c4bd6acb3e8a4ba5556e439bacf17
     layerID: 1388
-    mosaicPosition: {x: 4, y: 519}
+    mosaicPosition: {x: 516, y: 470}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -292,7 +313,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: fc5f0688e99dcf04b90b965437a3c80e
     layerID: 1385
-    mosaicPosition: {x: 261, y: 519}
+    mosaicPosition: {x: 664, y: 470}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -300,9 +321,9 @@ ScriptedImporter:
     spriteName: Obj_TrapOpen_R
     isGroup: 0
     parentIndex: 0
-    spriteID: d4fc7cf4094efc346b50bb335c6f5b9e
-    layerID: 1344
-    mosaicPosition: {x: 4, y: 4}
+    spriteID: 85a3b91f6d5089f4c8ee81395517a252
+    layerID: 1400
+    mosaicPosition: {x: 4, y: 470}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -312,7 +333,17 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: ece61281bdfb4ac4985997c52100c268
     layerID: 1343
-    mosaicPosition: {x: 261, y: 4}
+    mosaicPosition: {x: 260, y: 470}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Obj_Trap_Circle02
+    spriteName: Obj_Trap_Circle02
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f142a614b0086be46bd4c60a763c785f
+    layerID: 1398
+    mosaicPosition: {x: 812, y: 530}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -322,7 +353,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: b82111887b79c4f42b84fcd070421795
     layerID: 1363
-    mosaicPosition: {x: 518, y: 4}
+    mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
