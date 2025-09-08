@@ -11,12 +11,12 @@ public class Factory
     private Transform _parent;
     private bool _useDynamicSize;
 
-    private Queue<RecycleObject> _pool = new Queue<RecycleObject>();
-    private Dictionary<RecycleObject, bool> _poolFindContainer = new Dictionary<RecycleObject, bool>();
-    private List<RecycleObject> _usingPool = new List<RecycleObject>();
-    private Dictionary<RecycleObject, int> _cachedUsingPoolIndexes = new Dictionary<RecycleObject, int>();
+    private readonly Queue<RecycleObject> _pool = new Queue<RecycleObject>();
+    private readonly Dictionary<RecycleObject, bool> _poolFindContainer = new Dictionary<RecycleObject, bool>();
+    private readonly List<RecycleObject> _usingPool = new List<RecycleObject>();
+    private readonly Dictionary<RecycleObject, int> _cachedUsingPoolIndexes = new Dictionary<RecycleObject, int>();
     private RecycleObject _tempObject;
-    private DiContainer _container;
+    private readonly DiContainer _container;
     private int _tempIndex;
 
     public Factory(DiContainer container, RecycleObject prefab, int defaultPoolSize, Transform parent, bool useDynamicSize = true)

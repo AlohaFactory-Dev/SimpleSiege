@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8dce73dec7182a41aec0d7a3b2da2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PoolSize: 5
+  PoolSize: 10
 --- !u!114 &6743545943705685865
 MonoBehaviour:
   m_ObjectHideFlags: 0

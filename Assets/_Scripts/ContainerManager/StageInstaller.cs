@@ -1,5 +1,4 @@
 using System;
-using _Scripts;
 using Aloha.Coconut.UI;
 using FactorySystem;
 using UnityEngine;
