@@ -22,7 +22,7 @@ public class UnitDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<UnitController>(out var target) && !target.IsUntargetable)
+        if (other.TryGetComponent<UnitController>(out var target))
         {
             _onDetect?.Invoke(target);
         }
