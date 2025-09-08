@@ -3,21 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - SpawnableZone
+  - Enemy
+  - EnemyDetector
+  - PlayerDetector
+  - Wall
+  - BuildingDetector
+  - Building
   - 
   - 
   - 
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Building
+    uniqueID: 1577079179
+    locked: 0
+  - name: Unit
+    uniqueID: 1256385861
+    locked: 0
+  - name: Particle
+    uniqueID: 2333504555
+    locked: 0
+  - name: Projectile
+    uniqueID: 234697985
     locked: 0

@@ -32,8 +32,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a004e70f2ef635848a3b0b75152d0691
+    m_Address: DeckSelectionViewConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a5a09133eb17d0244a9af85d4bc686b3
     m_Address: SceneTransitionViewConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b07d25818d6fa8a4a8ed134087c1efc7
+    m_Address: PrisonSelectionViewConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d34889770df826e43bf64c0e687c164a
+    m_Address: StageResultViewConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e251b2fefe49e4743873a5f8daff3bc9
+    m_Address: PassiveSelectionViewConfig
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

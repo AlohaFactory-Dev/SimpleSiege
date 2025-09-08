@@ -5,6 +5,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
+using LobbyUI = Aloha.CoconutMilk.EquipmentSample.LobbyUI;
 
 public class EquipmentPopup : UISlice
 {
@@ -29,7 +30,7 @@ public class EquipmentPopup : UISlice
         _isInitialized = true;
         inventory.Init();
         equipmentSlotViewer.Init();
-        mergeButton.onClick.AddListener(() => { LobbyConainer.Get<LobbyUI>().OpenPopup(LobbyPopupId.EquipmentMergePopupConfig); });
+        mergeButton.onClick.AddListener(() => { LobbyConainer.Get<Aloha.CoconutMilk.EquipmentSample.LobbyUI>().OpenPopup(LobbyPopupId.EquipmentMergePopupConfig); });
         equipmentInventoryOrderFilter.Init();
         _equipmentSystem.OnEquipStateUpdated.Subscribe(x =>
         {

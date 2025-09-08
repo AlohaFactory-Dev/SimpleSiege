@@ -8,7 +8,7 @@ using UnityEngine;
 [Serializable]
 public class EtcTable
 {
-    [CSVColumn] public string Id;
+    [CSVColumn] public string id;
     [CSVColumn] public List<float> values;
 }
 
@@ -29,7 +29,7 @@ public class EtcTableList : ITableList
             return objectInfo;
         }
 
-        var info = _etcTableList.Find(a => a.Id == id);
+        var info = _etcTableList.Find(a => a.id == id);
         if (info == null)
         {
             Debug.LogError($"EtcInfo not found. id: {id}");

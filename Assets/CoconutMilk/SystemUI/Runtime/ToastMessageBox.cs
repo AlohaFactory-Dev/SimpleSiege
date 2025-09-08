@@ -15,14 +15,14 @@ namespace Aloha.CoconutMilk
 
         private float _offset;
         private Tween _offsetTween;
-    
+
         public void Show(string message, float duration)
         {
             _offset = 0;
             canvasGroup.alpha = 1;
             textMesh.text = message;
             transform.localScale = Vector3.zero;
-        
+
             var sequence = DOTween.Sequence();
             sequence.Append(transform.DOScale(1, .2f))
                 .AppendInterval(duration)
@@ -31,14 +31,14 @@ namespace Aloha.CoconutMilk
                 {
                     _offsetTween?.Kill();
                     OnComplete.OnNext(Unit.Default);
-                });
+                }).SetUpdate(true);
         }
 
         public void IncreaseOffset()
         {
             _offset += offset;
             _offsetTween?.Kill();
-            _offsetTween = transform.DOLocalMoveY(_offset, .2f);
+            _offsetTween = transform.DOLocalMoveY(_offset, .2f).SetUpdate(true);
         }
     }
 }

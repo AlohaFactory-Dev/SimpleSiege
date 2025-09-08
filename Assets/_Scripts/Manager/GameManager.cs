@@ -6,6 +6,7 @@ using Aloha.Coconut.UI;
 using Aloha.CoconutMilk;
 using CoconutMilk.Equipments;
 using Cysharp.Threading.Tasks;
+using ProtoTypeUI;
 using UnityEngine;
 using Zenject;
 
@@ -28,19 +29,26 @@ public class GameManager
         await TableListContainer.InitAllTables();
         await ImageContainer.InitializeAsync();
         _container.Bind<PropertyIconPool>().AsSingle().NonLazy();
-        LoadStage();
+
+        await _gameSceneManager.LoadSceneAsync("Lobby");
     }
 
 
+    public void ReLoadLobby()
+    {
+        UnloadStage();
+        LoadLobby();
+    }
+
     private async UniTask LoadLobby()
     {
-        await _gameSceneManager.LoadSceneAsync("Lobby");
-        // LobbyConainer.Get<LobbyUI>().Show();
+        LobbyConainer.Get<LobbyUI>().ActiveUI(true);
     }
 
     public void LoadStage(bool isFirstLogin = false)
     {
-        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(Load, Resume));
+        LobbyConainer.Get<LobbyUI>().ActiveUI(false);
+        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(Load, Pause));
 
         async UniTask Load()
         {
@@ -51,13 +59,13 @@ public class GameManager
 
     public void ReLoadStage()
     {
-        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(ReLoad, Resume));
+        _coconutCanvas.Open(SceneTransitionViewer.ConfigName, new SceneTransitionViewer.SceneTransitionOpenArgs(ReLoad, Pause));
 
         async UniTask ReLoad()
         {
             Pause();
             await _gameSceneManager.ReloadSceneAsync("Stage");
-            // await StageConainer.Get<StageManager>().Init();
+            LobbyConainer.Get<LobbyUI>().ActiveUI(false);
         }
     }
 
@@ -74,12 +82,12 @@ public class GameManager
         }
     }
 
-    public void Pause()
+    public static void Pause()
     {
         Time.timeScale = 0;
     }
 
-    public void Resume()
+    public static void Resume()
     {
         Time.timeScale = 1;
     }

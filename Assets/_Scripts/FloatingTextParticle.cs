@@ -6,10 +6,10 @@ using Random = UnityEngine.Random;
 
 public class FloatingTextParticle : RecycleParticle
 {
-    private readonly string show = "show";
+    private readonly string _show = "show";
     private Animator _animator;
     private Action<RecycleObject> _restoreAction;
-    private TextMeshPro textMesh;
+    private TextMeshPro _textMesh;
     [SerializeField] private float randomYMinRange = 0f;
     [SerializeField] private float randomYMaxRange = 2f;
     [SerializeField] private float randomXMinRange = -0.75f;
@@ -18,7 +18,7 @@ public class FloatingTextParticle : RecycleParticle
 
     public override void Play()
     {
-        _animator.SetTrigger(show);
+        _animator.SetTrigger(_show);
     }
 
     public void Restore_Event()
@@ -29,13 +29,13 @@ public class FloatingTextParticle : RecycleParticle
     public override void InitializeByFactory(Action<RecycleObject> releaseAction)
     {
         _restoreAction = releaseAction;
-        textMesh = GetComponentInChildren<TextMeshPro>();
+        _textMesh = GetComponentInChildren<TextMeshPro>();
         _animator = GetComponent<Animator>();
     }
 
     public void SetText(string text)
     {
-        textMesh.text = text;
+        _textMesh.text = text;
     }
 
 

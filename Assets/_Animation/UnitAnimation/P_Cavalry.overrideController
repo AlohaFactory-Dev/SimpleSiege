@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: P_Cavalry
+  m_Controller: {fileID: 9100000, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -1465635428190372499, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+    m_OverrideClip: {fileID: -1830676379898063590, guid: 5f0d8871fb6c44a48bf3f589e9ac5bd8, type: 2}
+  - m_OriginalClip: {fileID: 4270591404401411008, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+    m_OverrideClip: {fileID: 4333724299696446491, guid: 5f0d8871fb6c44a48bf3f589e9ac5bd8, type: 2}
+  - m_OriginalClip: {fileID: 3639676199276583020, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+    m_OverrideClip: {fileID: -3930039553045448093, guid: 5f0d8871fb6c44a48bf3f589e9ac5bd8, type: 2}
+  - m_OriginalClip: {fileID: -8714016023161164839, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+    m_OverrideClip: {fileID: 4508360535003857581, guid: 5f0d8871fb6c44a48bf3f589e9ac5bd8, type: 2}
+  - m_OriginalClip: {fileID: -3689727257167922347, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+    m_OverrideClip: {fileID: -3863604178094806187, guid: 5f0d8871fb6c44a48bf3f589e9ac5bd8, type: 2}
+  - m_OriginalClip: {fileID: -1930150646418456213, guid: 6632ba4775bf9c243993390427b8f11f, type: 2}
+    m_OverrideClip: {fileID: 6381692617358949193, guid: 5f0d8871fb6c44a48bf3f589e9ac5bd8, type: 2}
