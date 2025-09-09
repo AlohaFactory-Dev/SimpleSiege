@@ -28,7 +28,14 @@ public class UnitStatusSystem : MonoBehaviour
 
     private void Release()
     {
-        _recycleObject.Release();
+        if (_recycleObject)
+        {
+            _recycleObject.Release();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 
