@@ -8,8 +8,6 @@ public class KingAddController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Instantiate(addUnitEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
         }
     }
 }

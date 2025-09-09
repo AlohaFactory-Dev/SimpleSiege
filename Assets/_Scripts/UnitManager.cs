@@ -37,22 +37,29 @@ public class UnitManager
         return spawnedUnits;
     }
 
-
-    private float _sortingOrderUpdateInterval = 0.1f;
-    private float _sortingOrderUpdateTimer = 0f;
-
-
-    private void SetAllUnitSortingOrder()
+    public void SetDeployedUnit(UnitController[] units)
     {
-        // y값 기준 오름차순 정렬 (y가 낮은게 먼저)
-        _allUnit.Sort((a, b) => a.transform.position.y.CompareTo(b.transform.position.y));
-        // y가 낮은 유닛부터 sortingOrder를 높게 설정
-        for (int i = 0; i < _allUnit.Count; i++)
+        foreach (var unit in units)
         {
-            // 예시: sortingOrder를 1000에서 시작해서 y가 낮을수록 높게
-            _allUnit[i].SetSortingOrder(-i);
+            var table = TableListContainer.Get<UnitTableList>().GetUnitTable(unit.gameObject.name);
+            unit.Spawn(unit.transform.position, table, false);
+            unit.Collider2D.enabled = false;
+            if (unit.TeamType == TeamType.Player)
+            {
+                if (!PlayerUnits.Contains(unit))
+                    PlayerUnits.Add(unit);
+            }
+            else
+            {
+                if (!EnemyUnits.Contains(unit))
+                    EnemyUnits.Add(unit);
+            }
+
+            if (!_allUnit.Contains(unit))
+                _allUnit.Add(unit);
         }
     }
+
 
     public void RemoveUnit(UnitController unit)
     {

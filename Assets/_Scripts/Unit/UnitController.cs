@@ -106,14 +106,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         gameObject.tag = UnitTable.teamType.ToString();
     }
 
-    public void SetSortingOrder(int order)
-    {
-        if (_sortingGroup != null)
-        {
-            _sortingGroup.sortingOrder = order;
-        }
-    }
-
     private IEnumerator WaitAndMove(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Cinemachine;
@@ -23,6 +24,8 @@ public class CameraController : MonoBehaviour
     private int _lastScreenWidth;
     private int _lastScreenHeight;
     private bool _isInitialized = false;
+
+    private bool _blockInput = false;
 
     public void Init()
     {
@@ -113,6 +116,46 @@ public class CameraController : MonoBehaviour
         }
 
         // 카메라 실제 위치 갱신
+        _trackedDolly.m_PathPosition = _currentPathPosition;
+    }
+
+    public void PlayCameraMove(float targetNormalizedPosition, float duration, AnimationCurve curve)
+    {
+        _blockInput = true;
+        StartCoroutine(MoveCameraToPosition(targetNormalizedPosition, duration, curve));
+    }
+
+    public void PlaySequenceCameraMove(CPIManager.CameraMoving[] cameraMoving, AnimationCurve curve)
+    {
+        StartCoroutine(SequenceCameraMove(cameraMoving, curve));
+    }
+
+    private IEnumerator SequenceCameraMove(CPIManager.CameraMoving[] cameraMoving, AnimationCurve curve)
+    {
+        _blockInput = false;
+        foreach (var camMove in cameraMoving)
+        {
+            yield return StartCoroutine(MoveCameraToPosition(camMove.normalizedPosition, camMove.duration, curve));
+        }
+    }
+
+
+    private IEnumerator MoveCameraToPosition(float targetPosition, float duration, AnimationCurve curve)
+    {
+        float startPosition = _currentPathPosition;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            float curvedT = curve.Evaluate(t);
+            _currentPathPosition = Mathf.Lerp(startPosition, targetPosition, curvedT);
+            _trackedDolly.m_PathPosition = _currentPathPosition;
+            yield return null;
+        }
+
+        _currentPathPosition = targetPosition;
         _trackedDolly.m_PathPosition = _currentPathPosition;
     }
 }
