@@ -7,7 +7,6 @@ public class KingGroupController : MonoBehaviour
 {
     [SerializeField] private Transform[] kingPoints;
     [Inject] private UnitManager _unitManager;
-    [Inject] InputManager _inputManager;
     [Inject] StageManager _stageManager;
     private Camera _camera;
     private int _kingCount = 1;
@@ -18,7 +17,6 @@ public class KingGroupController : MonoBehaviour
         _camera = Camera.main;
         AddKing(1);
         _stageManager.CameraController.enabled = false;
-        _inputManager.enabled = false;
     }
 
     private void Update()
