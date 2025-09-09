@@ -9,6 +9,7 @@ public class UnitTargetSystem : MonoBehaviour
     private UnitController _unitController;
     private CircleCollider2D _collider;
     private readonly List<ITarget> _targetsInSight = new();
+    [SerializeField] private List<UnitController> unitControllers;
     private IDisposable _updateSightRangeDisposable;
 
     public void Init(UnitController unitController)
@@ -39,11 +40,11 @@ public class UnitTargetSystem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         var target = other.GetComponent<ITarget>();
-        if (target == null || target.IsUntargetable) return;
         if (CheckAddAble(target))
         {
-            if (!_targetsInSight.Contains(target))
-                _targetsInSight.Add(target);
+            if (!_targetsInSight.Contains(target)) return;
+            _targetsInSight.Add(target);
+            unitControllers.Add(target as UnitController);
         }
     }
 
