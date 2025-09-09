@@ -9,7 +9,6 @@ public class UnitTargetSystem : MonoBehaviour
     private UnitController _unitController;
     private CircleCollider2D _collider;
     private readonly List<ITarget> _targetsInSight = new();
-    [SerializeField] private List<UnitController> unitControllers;
     private IDisposable _updateSightRangeDisposable;
 
     public void Init(UnitController unitController)
@@ -42,9 +41,8 @@ public class UnitTargetSystem : MonoBehaviour
         var target = other.GetComponent<ITarget>();
         if (CheckAddAble(target))
         {
-            if (!_targetsInSight.Contains(target)) return;
-            _targetsInSight.Add(target);
-            unitControllers.Add(target as UnitController);
+            if (!_targetsInSight.Contains(target))
+                _targetsInSight.Add(target);
         }
     }
 
@@ -70,7 +68,7 @@ public class UnitTargetSystem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        var enemy = other.GetComponent<UnitController>();
+        var enemy = other.GetComponent<ITarget>();
         if (_targetsInSight.Contains(enemy))
         {
             _targetsInSight.Remove(enemy);
