@@ -13,6 +13,6 @@ public class RecycleObject : MonoBehaviour
 
     public void Release()
     {
-        release(this);
+        release?.Invoke(this);
     }
 }
