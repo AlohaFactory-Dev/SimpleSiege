@@ -41,7 +41,7 @@ public class UnitManager
     {
         foreach (var unit in units)
         {
-            var table = TableListContainer.Get<UnitTableList>().GetUnitTable(unit.gameObject.name);
+            var table = TableListContainer.Get<UnitTableList>().GetUnitTable(unit.id);
             unit.Spawn(unit.transform.position, table, false);
             unit.Collider2D.enabled = false;
             if (unit.TeamType == TeamType.Player)
