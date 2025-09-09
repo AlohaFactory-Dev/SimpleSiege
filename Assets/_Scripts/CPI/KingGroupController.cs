@@ -10,6 +10,7 @@ public class KingGroupController : MonoBehaviour
     [Inject] InputManager _inputManager;
     [Inject] StageManager _stageManager;
     private Camera _camera;
+    private int _kingCount = 1;
 
     private IEnumerator Start()
     {
@@ -30,6 +31,16 @@ public class KingGroupController : MonoBehaviour
             Vector3 newPosition = transform.position;
             newPosition.x = mousePosition.x;
             transform.position = newPosition;
+        }
+    }
+
+    public void AddKing()
+    {
+        if (kingPoints.Length < _kingCount)
+        {
+            var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false)[0];
+            king.transform.parent = transform;
+            _kingCount++;
         }
     }
 }
