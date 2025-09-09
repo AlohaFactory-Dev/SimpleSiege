@@ -15,7 +15,6 @@ public class CPIManager : MonoBehaviour
         public float duration;
     }
 
-    [Inject] InputManager _inputManager;
 
     [Inject] StageManager _stageManager;
     [SerializeField] private DeployedUnitController deployedUnitController;
@@ -36,7 +35,6 @@ public class CPIManager : MonoBehaviour
     {
         yield return new WaitUntil(() => _stageManager.isInit);
         _stageManager.CameraController.enabled = false;
-        _inputManager.enabled = false;
     }
 
     private void Update()
