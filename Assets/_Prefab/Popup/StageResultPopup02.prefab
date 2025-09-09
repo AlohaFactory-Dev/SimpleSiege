@@ -747,7 +747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4718842748635884267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3959676653172656333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1559,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2381697592191196225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2642,7 +2642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6286901692166678944, guid: 5513e249aa5964a4fbe2e2be032c87ac, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 42.65
       objectReference: {fileID: 0}
     - target: {fileID: 6286901692166678944, guid: 5513e249aa5964a4fbe2e2be032c87ac, type: 3}
       propertyPath: m_fontAsset
@@ -3068,7 +3068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282347635360310395, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_SortingLayer
-      value: 32709
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3442087988273845047, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_LocalScale.x
@@ -3180,7 +3180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835307238220759739, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_SortingLayer
-      value: 32709
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5143916598520104212, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_Enabled
@@ -3188,7 +3188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143916598520104212, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_SortingLayer
-      value: 32709
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6482068339167983468, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_Name
@@ -3204,7 +3204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6489661820265959343, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_SortingLayer
-      value: 32709
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7498334665440359327, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_Enabled
@@ -3212,7 +3212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7498334665440359327, guid: 425e280d0a2dad645b90b88275815a57, type: 3}
       propertyPath: m_SortingLayer
-      value: 32709
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
