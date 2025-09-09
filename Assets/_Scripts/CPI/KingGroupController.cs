@@ -34,13 +34,21 @@ public class KingGroupController : MonoBehaviour
         }
     }
 
-    public void AddKing()
+    public void AddKing(int value)
     {
-        if (kingPoints.Length < _kingCount)
+        for (int i = 0; i < value; i++)
         {
-            var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false)[0];
-            king.transform.parent = transform;
-            _kingCount++;
+            if (kingPoints.Length < _kingCount)
+            {
+                var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false)[0];
+                king.transform.parent = transform;
+                king.Collider2D.enabled = false;
+                _kingCount++;
+            }
+            else
+            {
+                break;
+            }
         }
     }
 }
