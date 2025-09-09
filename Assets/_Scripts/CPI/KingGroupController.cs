@@ -16,9 +16,7 @@ public class KingGroupController : MonoBehaviour
     {
         yield return new WaitUntil(() => _stageManager.isInit);
         _camera = Camera.main;
-        var king = _unitManager.SpawnUnit(kingPoints[0].position, "P_King", 1, false)[0];
-        king.transform.parent = transform;
-        king.Collider2D.enabled = false;
+        AddKing(1);
         _stageManager.CameraController.enabled = false;
         _inputManager.enabled = false;
     }
@@ -38,11 +36,12 @@ public class KingGroupController : MonoBehaviour
     {
         for (int i = 0; i < value; i++)
         {
-            if (kingPoints.Length < _kingCount)
+            if (kingPoints.Length > _kingCount)
             {
                 var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false)[0];
                 king.transform.parent = transform;
                 king.Collider2D.enabled = false;
+                king.GetComponent<KingSkill>().SetGroup();
                 _kingCount++;
             }
             else

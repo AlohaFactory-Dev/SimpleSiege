@@ -20,6 +20,7 @@ public class KingSkill : MonoBehaviour
     [Inject] private UnitManager _unitManager;
     private float _skillTimer = 0f;
     private UnitController _unitController;
+    private bool _isInGroup = false;
 
     private void Start()
     {
@@ -28,13 +29,18 @@ public class KingSkill : MonoBehaviour
 
     private void Update()
     {
-        if (_unitController.IsBarrackUnit) return;
+        if (_unitController.IsBarrackUnit || _isInGroup) return;
         _skillTimer += Time.deltaTime;
         if (_skillTimer >= skillInterval)
         {
             ActivateSkill();
             _skillTimer = 0f;
         }
+    }
+
+    public void SetGroup()
+    {
+        _isInGroup = true;
     }
 
     private void ActivateSkill()

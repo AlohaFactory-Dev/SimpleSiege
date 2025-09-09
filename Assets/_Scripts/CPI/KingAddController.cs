@@ -26,6 +26,7 @@ public class KingAddController : MonoBehaviour
         if (other.TryGetComponent<KingGroupController>(out var kingGroupController))
         {
             kingGroupController.GetComponent<KingGroupController>().AddKing(value);
+            Destroy(gameObject);
         }
     }
 }

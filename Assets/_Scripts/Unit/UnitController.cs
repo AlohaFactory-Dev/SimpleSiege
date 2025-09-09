@@ -62,7 +62,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 
     private UnitUpgradeController _unitUpgradeController;
-    private SortingGroup _sortingGroup;
     public bool IsBarrackUnit { get; private set; }
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
@@ -100,7 +99,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
-        _sortingGroup = GetComponent<SortingGroup>();
         _skeletonMecanim = GetComponentInChildren<SkeletonMecanim>();
         Rigidbody2D.mass = _unitTable.mass;
         gameObject.layer = LayerMask.NameToLayer(UnitTable.teamType == TeamType.Player ? "Player" : "Enemy");
