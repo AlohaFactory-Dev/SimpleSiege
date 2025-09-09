@@ -20,6 +20,7 @@ public enum UnitState
 
 public class UnitController : MonoBehaviour, ITarget, ICaster
 {
+    public string id;
     [Inject] UnitManager _unitManager;
 
     [SerializeField] private Transform damageEffectPoint;
