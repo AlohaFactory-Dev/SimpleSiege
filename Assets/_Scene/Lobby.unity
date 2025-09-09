@@ -130,6 +130,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 733353605285696726, guid: c75fab15ae2413b41b205e3638d97c33, type: 3}
+      propertyPath: m_text
+      value: Aiden
+      objectReference: {fileID: 0}
+    - target: {fileID: 733353605285696726, guid: c75fab15ae2413b41b205e3638d97c33, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 947536419083128118, guid: c75fab15ae2413b41b205e3638d97c33, type: 3}
+      propertyPath: m_text
+      value: Eliot
+      objectReference: {fileID: 0}
+    - target: {fileID: 947536419083128118, guid: c75fab15ae2413b41b205e3638d97c33, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 954405706843639431, guid: c75fab15ae2413b41b205e3638d97c33, type: 3}
+      propertyPath: m_text
+      value: Daisy
+      objectReference: {fileID: 0}
     - target: {fileID: 1355489501596935081, guid: c75fab15ae2413b41b205e3638d97c33, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
