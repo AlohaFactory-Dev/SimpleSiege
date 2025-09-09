@@ -162,6 +162,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7588743254908211329, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
+      propertyPath: spawnInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588743254908211329, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
+      propertyPath: spawnUnitIds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7588743254908211329, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
+      propertyPath: spawnUnitIds.Array.data[0]
+      value: P_SkeletonSoldier
+      objectReference: {fileID: 0}
     - target: {fileID: 7753954890967450096, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5
