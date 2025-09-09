@@ -43,6 +43,13 @@ public class KingSkill : MonoBehaviour
         _isInGroup = true;
     }
 
+
+    public void GroupSpawnSkill(string id)
+    {
+        _unitManager.SpawnUnit((Vector2)transform.position + Vector2.up, id, 1, true, false);
+    }
+
+
     private void ActivateSkill()
     {
         int totalProbability = spawnUnits.Sum(skill => skill.probability);
