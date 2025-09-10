@@ -20,7 +20,7 @@ public class UnitAnimationSystem : MonoBehaviour
         {
             if (clip.name == "action")
             {
-                AcionDuration = clip.length;
+                AcionDuration = clip.length * 0.25f;
                 break;
             }
         }
@@ -32,7 +32,7 @@ public class UnitAnimationSystem : MonoBehaviour
         }
 
         _speedChangeSubscription = unitController.EffectActionSpeed.Subscribe(SetActionSpeed).AddTo(this);
-        SetActionSpeed(unitController.EffectActionSpeed.Value);
+        SetActionSpeed(unitController.EffectActionSpeed.Value * 4);
     }
 
     private void GetComponents()
