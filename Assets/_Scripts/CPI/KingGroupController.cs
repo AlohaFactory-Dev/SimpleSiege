@@ -7,9 +7,10 @@ using Zenject;
 public class KingGroupController : MonoBehaviour
 {
     private int spawnIndex = 0;
+    private float _spawnTimer = 0f;
+
     [SerializeField] private string[] spawnUnitIds;
     [SerializeField] private float spawnInterval = 5f;
-    private float _spawnTimer = 0f;
     [SerializeField] private Transform[] kingPoints;
     [Inject] private UnitManager _unitManager;
     [Inject] StageManager _stageManager;
@@ -20,17 +21,23 @@ public class KingGroupController : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => _stageManager.isInit);
+        StageConainer.Container.BindInstance(this).AsSingle().NonLazy();
         _camera = Camera.main;
         AddKing(1);
         _stageManager.CameraController.enabled = false;
     }
 
-    public void UpgradeSpawn()
+    public void UpgradeSpawn(string skinId)
     {
         spawnIndex++;
         if (spawnIndex >= spawnUnitIds.Length)
         {
             spawnIndex = spawnUnitIds.Length - 1;
+        }
+
+        foreach (var skill in _kingSkills)
+        {
+            skill.GetComponent<KingSkinController>().ChangeSkin(skinId);
         }
     }
 
