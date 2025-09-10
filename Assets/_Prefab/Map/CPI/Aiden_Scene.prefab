@@ -1545,6 +1545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_Barrack_SkeletonSoldier_CPI (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 250414131836392156, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1249161187029185004, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: spawnPoint.Array.size
       value: 13
@@ -1618,6 +1622,10 @@ PrefabInstance:
     - target: {fileID: 250414131836392156, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_Name
       value: E_Barrack_SkeletonSoldier_CPI
+      objectReference: {fileID: 0}
+    - target: {fileID: 250414131836392156, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1249161187029185004, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: spawnPoint.Array.size
@@ -1762,6 +1770,10 @@ PrefabInstance:
     - target: {fileID: 250414131836392156, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: m_Name
       value: E_Barrack_Giant_CPI
+      objectReference: {fileID: 0}
+    - target: {fileID: 250414131836392156, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4244656638754557118, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: m_Enabled
