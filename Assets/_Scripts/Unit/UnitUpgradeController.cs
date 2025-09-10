@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UniRx;
 using UnityEngine;
 
@@ -16,6 +18,7 @@ public class UpgradeValue
     }
 }
 
+[Serializable]
 public class UnitUpgradeController
 {
     // 기본값
@@ -37,12 +40,12 @@ public class UnitUpgradeController
     private readonly Dictionary<string, UpgradeValue> _attackSpeedUpgrades = new();
 
     // 프로퍼티
-    public float EffectAbleRange { get; private set; }
-    public int EffectValue { get; private set; }
+    [ShowInInspector] public float EffectAbleRange { get; private set; }
+    [ShowInInspector] public int EffectValue { get; private set; }
     public ReactiveProperty<int> MaxHp { get; private set; } = new();
-    public float MoveSpeed { get; private set; }
+    [ShowInInspector] public float MoveSpeed { get; private set; }
     public ReactiveProperty<float> SightRange { get; private set; } = new();
-    public float EffectRange { get; private set; }
+    [ShowInInspector] public float EffectRange { get; private set; }
     public ReactiveProperty<float> EffectActionSpeed { get; private set; } = new();
 
     public UnitUpgradeController(UnitTable unitTable)

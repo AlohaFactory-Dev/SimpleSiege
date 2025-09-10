@@ -7,7 +7,7 @@ public class HpSystem : MonoBehaviour
 {
     [SerializeField] private BarGauge enemyHpBar;
     [SerializeField] private BarGauge playerHpBar;
-    private int _baseMaxHp;
+    [SerializeField] private int _baseMaxHp;
     private BarGauge _selectedHpBar;
     private int _currentHp;
     public bool IsDead => _currentHp <= 0;

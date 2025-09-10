@@ -61,7 +61,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
 
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 
-    private UnitUpgradeController _unitUpgradeController;
+    [SerializeField] private UnitUpgradeController _unitUpgradeController;
     public bool IsBarrackUnit { get; private set; }
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
