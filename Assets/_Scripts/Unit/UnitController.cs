@@ -176,9 +176,11 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     }
 
 
-    public void ChangeState(UnitState newState, ITarget target = null)
+    public void ChangeState(UnitState newState, ITarget target = null, bool isCPI = false)
     {
-        if (state == UnitState.Dead) return;
+        if (!isCPI)
+            if (state == UnitState.Dead)
+                return;
         state = newState;
         _statusSystem.ApplyState(target, newState);
     }

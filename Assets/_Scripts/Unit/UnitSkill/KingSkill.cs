@@ -50,7 +50,7 @@ public class KingSkill : MonoBehaviour
         foreach (var unit in units)
         {
             unit.Collider2D.enabled = true;
-            unit.ChangeState(UnitState.Move);
+            unit.ChangeState(UnitState.Move, null, true);
         }
     }
 
