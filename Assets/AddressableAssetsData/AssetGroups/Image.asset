@@ -173,6 +173,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Image
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b165f9e2efcaf684f85c30f7cf8c28df
+    m_Address: CavalryGold
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b18ddfe544a5c724f80da5ccf405699c
     m_Address: Archer
     m_ReadOnly: 0

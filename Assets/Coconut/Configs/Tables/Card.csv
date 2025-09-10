@@ -8,4 +8,4 @@ P_Giant,Unit,8,0.2,0.1,1,Giant,Card/Unit/P_Giant/Name,Card/Unit/P_Giant/Desc,[-9
 P_FlameWizard,Unit,15,0.2,0.1,1,FlameWizard,Card/Unit/P_FlameWizard/Name,Card/Unit/P_FlameWizard/Desc,[-99999;-99999;-99999;-99999;-99999]
 P_Sniper,Unit,8,0.2,0.1,1,Sniper,Card/Unit/P_Sniper/Name,Card/Unit/P_Sniper/Desc,[-99999;-99999;-99999;-99999;-99999]
 P_Cavalry,Unit,15,0.2,0.1,1,Cavalry,Card/Unit/P_Cavalry/Name,Card/Unit/P_Cavalry/Desc,[-99999;-99999;-99999;-99999;-99999]
-P_CavalryGold,Unit,1,0.2,0.1,1,Cavalry,Card/Unit/P_CavalryGold/Name,Card/Unit/P_CavalryGold/Desc,[-99999;-99999;-99999;-99999;-99999]
+P_CavalryGold,Unit,1,0.2,0.1,1,CavalryGold,Card/Unit/P_Cavalry/Name,Card/Unit/P_Cavalry/Desc,[-99999;-99999;-99999;-99999;-99999]
