@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ab4883e58545da8920e7260efa560d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   damageEffectPoint: {fileID: 2781468937587836844}
   floatingEffectPoint: {fileID: 2488888932158108950}
   state: 0
@@ -451,7 +452,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5609040471862577962}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 18af5c630a834054997249235eaac499, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
