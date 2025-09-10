@@ -41,21 +41,23 @@ public class CPIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+            StageConainer.Get<InputRecorder>().AddEvent("StartBattle");
             StartBattle();
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
+            StageConainer.Get<InputRecorder>().AddEvent("MoveCameraSequence");
             MoveCameraSequence();
         }
     }
 
-    private void StartBattle()
+    public void StartBattle()
     {
         deployedUnitController.StartBattle();
     }
 
-    private void MoveCameraSequence()
+    public void MoveCameraSequence()
     {
         if (_endCameraMove) return;
         if (onSequenceCameraMoving)
