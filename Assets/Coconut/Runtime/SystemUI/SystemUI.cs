@@ -37,7 +37,7 @@ namespace Aloha.Coconut
 
         public static void ShowToastMessage(string message, float duration = 1f)
         {
-            _instance._toastMessageViewer.Show(message, duration);
+            // _instance._toastMessageViewer.Show(message, duration);
         }
 
         public static void ShowNotEnoughToastMessage(string propertyId)
