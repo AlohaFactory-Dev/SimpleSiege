@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  hpText: {fileID: 6536567838773449135}
+  hpText: {fileID: 4736595218374688888}
   skinId: 
 --- !u!61 &4811583529656387860
 BoxCollider2D:
@@ -554,3 +554,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7315126645203950063, guid: d6062615e6430a841a1ff5708ee79dc0, type: 3}
   m_PrefabInstance: {fileID: 6747628190728819237}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4736595218374688888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2026514655626924637, guid: d6062615e6430a841a1ff5708ee79dc0, type: 3}
+  m_PrefabInstance: {fileID: 6747628190728819237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
