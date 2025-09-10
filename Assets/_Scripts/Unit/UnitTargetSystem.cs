@@ -16,6 +16,7 @@ public class UnitTargetSystem : MonoBehaviour
         _targetsInSight.Clear();
         _unitController = unitController;
         _collider = GetComponent<CircleCollider2D>();
+        _collider.enabled = true;
         _collider.isTrigger = true;
 
         gameObject.layer = TargetLayerController.GetLayerMaskByTargetType(_unitController.TeamType, _unitController.TargetType, _unitController.UnitTable.targetGroup);
@@ -34,6 +35,12 @@ public class UnitTargetSystem : MonoBehaviour
     private void SetSiegeRange(float range)
     {
         _collider.radius = range;
+    }
+
+    public void Clear()
+    {
+        _targetsInSight.Clear();
+        _collider.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

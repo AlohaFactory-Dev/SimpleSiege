@@ -9,6 +9,7 @@ public class UnitStatusSystem : MonoBehaviour
     public UnitActionSystem ActionSystem { get; private set; }
     public UnitAnimationSystem AnimationSystem { get; private set; }
     public UnitRotationSystem RotationSystem { get; private set; }
+    public UnitTargetSystem TargetSystem => _targetSystem;
     public HpSystem HpSystem { get; private set; }
     private UnitTargetSystem _targetSystem;
     private Collider2D _collider2D;

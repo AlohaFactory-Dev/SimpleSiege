@@ -240,8 +240,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 5.5}
-  m_Size: {x: 1, y: 10}
+  m_Offset: {x: 0, y: 9}
+  m_Size: {x: 1, y: 17}
   m_Direction: 0
 --- !u!1 &1520039376324709295
 GameObject:
@@ -608,7 +608,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.3299997, y: 40}
+  m_Size: {x: 3.3299997, y: 64.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -692,7 +692,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.3299997, y: 40}
+  m_Size: {x: 3.3299997, y: 64.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -760,7 +760,7 @@ Transform:
   m_GameObject: {fileID: 5141287043921974771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.31, y: -0.14999998, z: 0}
+  m_LocalPosition: {x: 3.31, y: 5.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -877,8 +877,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 5.5}
-  m_Size: {x: 1, y: 10}
+  m_Offset: {x: 0, y: 9}
+  m_Size: {x: 1, y: 17}
   m_Direction: 0
 --- !u!1 &5543862304422102954
 GameObject:
@@ -906,7 +906,7 @@ Transform:
   m_GameObject: {fileID: 5543862304422102954}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.33, y: -0.14999998, z: 0}
+  m_LocalPosition: {x: -3.33, y: 5.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1323,6 +1323,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4852902608430165251}
     m_Modifications:
+    - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
+      propertyPath: hp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
+      propertyPath: value
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3870191766200016822, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1465,7 +1473,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: hp
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: value
@@ -1537,13 +1545,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_Barrack_SkeletonSoldier_CPI (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1249161187029185004, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
+      propertyPath: spawnPoint.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244656638754557118, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 11.78
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1579,7 +1595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693602877555509446, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: autoSpawnInterval
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1603,13 +1619,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_Barrack_SkeletonSoldier_CPI
       objectReference: {fileID: 0}
+    - target: {fileID: 1249161187029185004, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
+      propertyPath: spawnPoint.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244656638754557118, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 13.91
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1645,7 +1669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693602877555509446, guid: dff429bc67998a84aa4119ec7c09273d, type: 3}
       propertyPath: autoSpawnInterval
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1667,7 +1691,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: hp
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: value
@@ -1739,13 +1763,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_Barrack_Giant_CPI
       objectReference: {fileID: 0}
+    - target: {fileID: 4244656638754557118, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 11.36
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1781,11 +1809,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6754232008451439212, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: autoSpawnInterval
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6963541867460742225, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230096599122874901, guid: 7ed17ab5b281744458bd45cdf567e8f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1977,7 +2009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7588743254908211329, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: spawnInterval
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7588743254908211329, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: spawnUnitIds.Array.size
@@ -2025,10 +2057,10 @@ PrefabInstance:
       addedObject: {fileID: 5124590098482261110}
     - targetCorrespondingSourceObject: {fileID: 6760674142760069639, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1534694473907863362}
+      addedObject: {fileID: 8840071873082843359}
     - targetCorrespondingSourceObject: {fileID: 6760674142760069639, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8840071873082843359}
+      addedObject: {fileID: 1534694473907863362}
     - targetCorrespondingSourceObject: {fileID: 6760674142760069639, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8760421278797724293}
@@ -2054,7 +2086,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: hp
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 701104654490920560, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: value
