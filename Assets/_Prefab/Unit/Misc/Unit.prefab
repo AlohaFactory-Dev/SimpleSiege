@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ab4883e58545da8920e7260efa560d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   damageEffectPoint: {fileID: 2781468937587836844}
   floatingEffectPoint: {fileID: 2488888932158108950}
   state: 0
@@ -431,7 +432,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 8b3a70adeff9b9446ba953b8821fea39, type: 2}
+  m_Material: {fileID: 6200000, guid: cac0fe0831f8aac4fa72136c7d7b80d7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

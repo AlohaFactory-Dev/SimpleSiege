@@ -24,6 +24,7 @@ public class KingUpgradeController : MonoBehaviour
         if (_currentHp <= 0)
         {
             StageConainer.Get<KingGroupController>().UpgradeSpawn(skinId);
+            Destroy(gameObject);
         }
     }
 }

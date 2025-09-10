@@ -5,7 +5,10 @@ using UnityEngine;
 public class KingAddController : MonoBehaviour
 {
     [SerializeField] private TextMeshPro addUnitText;
+    [SerializeField] private TextMeshPro hpText;
     [SerializeField] private int value = 1;
+    [SerializeField] private int hp;
+    private int _currentHp;
     private Rigidbody2D _rigidbody;
     private float _speed = 1f;
 
@@ -16,16 +19,29 @@ public class KingAddController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Start()
     {
-        _rigidbody.MovePosition(_rigidbody.position + Vector2.down * (_speed * Time.deltaTime));
+        addUnitText.text = "+" + value;
+        _currentHp = hp;
+        hpText.text = _currentHp.ToString();
+
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    // private void FixedUpdate()
+    // {
+    //     _rigidbody.MovePosition(_rigidbody.position + Vector2.down * (_speed * Time.deltaTime));
+    // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<KingGroupController>(out var kingGroupController))
+        _currentHp--;
+        hpText.text = _currentHp.ToString();
+
+        other.GetComponent<UnitController>().ForceRelease();
+        if (_currentHp <= 0)
         {
-            kingGroupController.GetComponent<KingGroupController>().AddKing(value);
+            StageConainer.Get<KingGroupController>().AddKing(value);
             Destroy(gameObject);
         }
     }
