@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: a117f9b745b4544438a62ac26cafc10d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3ec51377d89b4e74681480cc9a0de39e
+    m_Address: Assets/_Animation/BuildingAnimation/Building_E_Prison_Dialogue_Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c500563653463c343839ec906c2c5ab2, type: 2}
   m_SchemaSet:

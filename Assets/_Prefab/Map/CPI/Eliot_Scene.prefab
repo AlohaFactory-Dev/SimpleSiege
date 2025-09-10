@@ -5705,6 +5705,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9060462798936098086, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060462798936098086, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060462798936098086, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060462798936098086, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -8444,6 +8456,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4473465386880607227, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473465386880607227, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5336841333213295743, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
@@ -11762,6 +11778,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4473465386880607227, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5336841333213295743, guid: 72a1893766a5c57409c1e20b8bc042ef, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -11858,11 +11878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4180871087658886698, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: cameraMoving.Array.data[1].duration
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4180871087658886698, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: cameraMoving.Array.data[2].duration
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4180871087658886698, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: cameraMoveCurve.m_Curve.Array.data[0].inSlope
@@ -11942,6 +11962,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184144562367983422, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411375938022727967, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250717502575086740, guid: 06414f16a24668d48ae7f30144800c3f, type: 3}
