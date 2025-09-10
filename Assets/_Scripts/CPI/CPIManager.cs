@@ -34,7 +34,6 @@ public class CPIManager : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => _stageManager.isInit);
-        StageConainer.Container.BindInstance(this).AsSingle().NonLazy();
         _stageManager.CameraController.enabled = false;
     }
 
@@ -42,11 +41,13 @@ public class CPIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+            StageConainer.Get<InputRecorder>().AddEvent("StartBattle");
             StartBattle();
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
+            StageConainer.Get<InputRecorder>().AddEvent("MoveCameraSequence");
             MoveCameraSequence();
         }
     }
