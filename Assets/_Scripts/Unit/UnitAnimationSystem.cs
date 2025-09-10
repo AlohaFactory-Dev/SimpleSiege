@@ -9,6 +9,7 @@ public class UnitAnimationSystem : MonoBehaviour
     private UnitAnimationEventHandler _animationEventHandler;
     public float AcionDuration { get; private set; }
     private IDisposable _speedChangeSubscription;
+    [SerializeField] private float multiplySpeed = 1f;
 
     public void Init(Action onDieAction, UnitController unitController)
     {
@@ -20,7 +21,7 @@ public class UnitAnimationSystem : MonoBehaviour
         {
             if (clip.name == "action")
             {
-                AcionDuration = clip.length * 0.25f;
+                AcionDuration = clip.length * 1 / multiplySpeed;
                 break;
             }
         }
@@ -32,7 +33,7 @@ public class UnitAnimationSystem : MonoBehaviour
         }
 
         _speedChangeSubscription = unitController.EffectActionSpeed.Subscribe(SetActionSpeed).AddTo(this);
-        SetActionSpeed(unitController.EffectActionSpeed.Value * 4);
+        SetActionSpeed(unitController.EffectActionSpeed.Value * multiplySpeed);
     }
 
     private void GetComponents()
