@@ -245,6 +245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       insertIndex: 1
       addedObject: {fileID: -3426020010188528444}
+    - targetCorrespondingSourceObject: {fileID: 5609040471862577962, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 693183030095588154}
   m_SourcePrefab: {fileID: 100100000, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
 --- !u!1 &2206096723998707495 stripped
 GameObject:
@@ -274,6 +277,18 @@ MonoBehaviour:
   - spwanUnitId: P_Cavalry
     amount: 1
     probability: 100
+--- !u!114 &693183030095588154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206096723998707495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd6847eac124dc284ddb78fa77c8af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8116968912446139727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2589488314655287618, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
