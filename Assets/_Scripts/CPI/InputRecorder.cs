@@ -4,19 +4,15 @@ using System.IO;
 using System;
 using System.Collections;
 using System.Text;
+using Zenject;
 
 [Serializable]
 public struct InputEvent
 {
-    public enum EventType { KeyDown, KeyUp, MouseClick }
-
-    public EventType Type;
-    public KeyCode Key;
-    public Vector2 MousePosition;
+    public string ActionId; // 행동 id를 string으로 변경
     public float Time;
 }
 
-// 입력 이벤트 리스트를 직렬화하기 위한 래퍼 클래스
 [Serializable]
 public class InputEventList
 {
@@ -28,88 +24,65 @@ public class InputRecorder : MonoBehaviour
     [SerializeField] private bool isRecording = false;
     private List<InputEvent> _events = new List<InputEvent>();
     private float _startTime;
+    [Inject] StageManager _stageManager;
 
-    void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitUntil(() => _stageManager.isInit);
+        StageConainer.Container.BindInstance(this).AsSingle().NonLazy();
         _startTime = Time.time;
+        string path = Path.Combine(Application.persistentDataPath, "InputEvents.json");
+        if (!isRecording && File.Exists(path))
+        {
+            string json = File.ReadAllText(path, Encoding.UTF8);
+            InputEventList wrapper = JsonUtility.FromJson<InputEventList>(json);
+            if (wrapper?.events != null && wrapper.events.Count > 0)
+            {
+                _events = wrapper.events;
+                PlayEvents();
+            }
+        }
     }
 
-    void Update()
+    public void AddEvent(string actionId)
     {
-        if (!isRecording) return;
-
-        // 키 입력 저장
-        foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+        _events.Add(new InputEvent
         {
-            if (Input.GetKeyDown(kcode))
-            {
-                _events.Add(new InputEvent
-                {
-                    Type = InputEvent.EventType.KeyDown,
-                    Key = kcode,
-                    Time = Time.time - _startTime
-                });
-            }
-
-            if (Input.GetKeyUp(kcode))
-            {
-                _events.Add(new InputEvent
-                {
-                    Type = InputEvent.EventType.KeyUp,
-                    Key = kcode,
-                    Time = Time.time - _startTime
-                });
-            }
-        }
-
-        // 마우스 클릭 저장
-        if (Input.GetMouseButtonDown(0))
-        {
-            _events.Add(new InputEvent
-            {
-                Type = InputEvent.EventType.MouseClick,
-                MousePosition = Input.mousePosition,
-                Time = Time.time - _startTime
-            });
-        }
+            ActionId = actionId,
+            Time = Time.time - _startTime
+        });
     }
 
 #if UNITY_EDITOR
     void OnApplicationQuit()
     {
         if (_events.Count > 0)
-        {
             SaveEventsToJson();
-        }
     }
 #endif
 
-    // 저장된 입력을 재생하는 예시
-    public void PlayEvents()
+    private void PlayEvents()
     {
         StartCoroutine(PlayCoroutine());
     }
 
-    private IEnumerator<WaitForSeconds> PlayCoroutine()
+    private IEnumerator PlayCoroutine()
     {
         foreach (var e in _events)
         {
             yield return new WaitForSeconds(e.Time);
-            if (e.Type == InputEvent.EventType.KeyDown)
+            if (e.ActionId == "MoveCameraSequence")
             {
-                // 키 입력을 자동으로 발생시키는 것은 Unity에서 직접적으로 불가능
-                // 대신 해당 키 입력에 대응하는 함수를 호출
-                Debug.Log($"A키 입력됨");
+                StageConainer.Get<CPIManager>().MoveCameraSequence();
             }
-            else if (e.Type == InputEvent.EventType.MouseClick)
+            else if (e.ActionId == "StartBattle")
             {
-                Debug.Log($"마우스 클릭: {e.MousePosition}");
+                StageConainer.Get<CPIManager>().StartBattle();
             }
         }
     }
 
-    // 입력 이벤트를 JSON 파일로 저장
-    public void SaveEventsToJson()
+    private void SaveEventsToJson()
     {
         string path = Path.Combine(Application.persistentDataPath, "InputEvents.json");
         InputEventList wrapper = new InputEventList { events = _events };
