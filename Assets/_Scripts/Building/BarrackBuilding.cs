@@ -57,4 +57,16 @@ public class BarrackBuilding : Building
             _units.Clear();
         }
     }
+
+    public void AutoSpawn()
+    {
+        _hasUnits = true;
+        _units = _unitManager.SpawnUnit(transform.position, SpawnUnitId, spawnPoint.Length, false);
+        for (int i = 0; i < _units.Count; i++)
+        {
+            _units[i].SetBarrackUnit(spawnPoint[i].position);
+        }
+
+        EmissionUnits();
+    }
 }

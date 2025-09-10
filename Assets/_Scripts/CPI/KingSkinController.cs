@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Spine.Unity;
 
@@ -13,6 +14,7 @@ public class KingSkinController : MonoBehaviour
 
     public void ChangeSkin(string skinName)
     {
+        if (skinName == String.Empty) return;
         skeletonMecanim.Skeleton.SetSkin(skinName);
         skeletonMecanim.Skeleton.SetSlotsToSetupPose();
     }
