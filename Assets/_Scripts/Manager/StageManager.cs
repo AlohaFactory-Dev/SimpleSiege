@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using Aloha.Coconut;
 using Aloha.Coconut.UI;
@@ -29,7 +30,7 @@ public class StageManager : MonoBehaviour
     public StageTable CurrentStageTable { get; private set; }
 
     public CameraController CameraController { get; private set; }
-
+    [SerializeField] private float stageEndDelay = 0.5f;
     private float startTime;
     public float EndTime => Time.time - startTime;
     public bool isInit { get; private set; }
@@ -51,6 +52,12 @@ public class StageManager : MonoBehaviour
 
     private void EndStage(TeamType team)
     {
+        StartCoroutine(EndCoroutine(team));
+    }
+
+    private IEnumerator EndCoroutine(TeamType team)
+    {
+        yield return new WaitForSeconds(stageEndDelay);
         Time.timeScale = 0f;
         var args = new StageResultPopup.Args()
         {

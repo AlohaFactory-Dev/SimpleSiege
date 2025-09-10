@@ -1,6 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.IO;
+using System;
+using System.Collections;
+using System.Text;
 
+[Serializable]
 public struct InputEvent
 {
     public enum EventType { KeyDown, KeyUp, MouseClick }
@@ -11,8 +16,16 @@ public struct InputEvent
     public float Time;
 }
 
+// 입력 이벤트 리스트를 직렬화하기 위한 래퍼 클래스
+[Serializable]
+public class InputEventList
+{
+    public List<InputEvent> events = new List<InputEvent>();
+}
+
 public class InputRecorder : MonoBehaviour
 {
+    [SerializeField] private bool isRecording = false;
     private List<InputEvent> _events = new List<InputEvent>();
     private float _startTime;
 
@@ -23,15 +36,30 @@ public class InputRecorder : MonoBehaviour
 
     void Update()
     {
+        if (!isRecording) return;
+
         // 키 입력 저장
-        if (Input.GetKeyDown(KeyCode.A))
+        foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
         {
-            _events.Add(new InputEvent
+            if (Input.GetKeyDown(kcode))
             {
-                Type = InputEvent.EventType.KeyDown,
-                Key = KeyCode.A,
-                Time = Time.time - _startTime
-            });
+                _events.Add(new InputEvent
+                {
+                    Type = InputEvent.EventType.KeyDown,
+                    Key = kcode,
+                    Time = Time.time - _startTime
+                });
+            }
+
+            if (Input.GetKeyUp(kcode))
+            {
+                _events.Add(new InputEvent
+                {
+                    Type = InputEvent.EventType.KeyUp,
+                    Key = kcode,
+                    Time = Time.time - _startTime
+                });
+            }
         }
 
         // 마우스 클릭 저장
@@ -45,6 +73,16 @@ public class InputRecorder : MonoBehaviour
             });
         }
     }
+
+#if UNITY_EDITOR
+    void OnApplicationQuit()
+    {
+        if (_events.Count > 0)
+        {
+            SaveEventsToJson();
+        }
+    }
+#endif
 
     // 저장된 입력을 재생하는 예시
     public void PlayEvents()
@@ -68,5 +106,15 @@ public class InputRecorder : MonoBehaviour
                 Debug.Log($"마우스 클릭: {e.MousePosition}");
             }
         }
+    }
+
+    // 입력 이벤트를 JSON 파일로 저장
+    public void SaveEventsToJson()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "InputEvents.json");
+        InputEventList wrapper = new InputEventList { events = _events };
+        string json = JsonUtility.ToJson(wrapper, true);
+        File.WriteAllText(path, json, Encoding.UTF8);
+        Debug.Log($"입력 이벤트가 저장되었습니다: {path}");
     }
 }

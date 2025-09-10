@@ -34,6 +34,7 @@ public class CPIManager : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => _stageManager.isInit);
+        StageConainer.Container.BindInstance(this).AsSingle().NonLazy();
         _stageManager.CameraController.enabled = false;
     }
 
@@ -50,12 +51,12 @@ public class CPIManager : MonoBehaviour
         }
     }
 
-    private void StartBattle()
+    public void StartBattle()
     {
         deployedUnitController.StartBattle();
     }
 
-    private void MoveCameraSequence()
+    public void MoveCameraSequence()
     {
         if (_endCameraMove) return;
         if (onSequenceCameraMoving)
