@@ -64,8 +64,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: 387634da54cd1da4a9adc8b7491387a4, type: 2}
   - {fileID: 2100000, guid: f3a1c428b5072ba48adaae8bb905fa6b, type: 2}
   - {fileID: 2100000, guid: 387634da54cd1da4a9adc8b7491387a4, type: 2}
+  - {fileID: 2100000, guid: f3a1c428b5072ba48adaae8bb905fa6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -284,6 +286,10 @@ PrefabInstance:
     - target: {fileID: 424969763631428082, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: id
       value: P_Cavalry
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505906620916471845, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
+      propertyPath: multipleSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5520597560962139090, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_Name

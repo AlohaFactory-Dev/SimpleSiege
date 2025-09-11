@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2206096723998707495, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
       propertyPath: m_Name
-      value: P_King
+      value: P_KingGold
       objectReference: {fileID: 0}
     - target: {fileID: 3354014924143684245, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 3354014924143684245, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654688245888549983, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
