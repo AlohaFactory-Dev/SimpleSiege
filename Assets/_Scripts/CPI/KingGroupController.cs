@@ -8,6 +8,8 @@ public class KingGroupController : MonoBehaviour
 {
     private int spawnIndex = 0;
     private float _spawnTimer = 0f;
+    [SerializeField] private float initialDelay = 2f;
+    private float _initialDelayTimer = 0f;
 
     [SerializeField] private string[] spawnUnitIds;
     [SerializeField] private float spawnInterval = 5f;
@@ -49,6 +51,12 @@ public class KingGroupController : MonoBehaviour
             Vector3 newPosition = transform.position;
             newPosition.x = mousePosition.x;
             transform.position = newPosition;
+        }
+
+        if (_initialDelayTimer < initialDelay)
+        {
+            _initialDelayTimer += Time.deltaTime;
+            return;
         }
 
         if (_spawnTimer >= spawnInterval)
