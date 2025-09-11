@@ -1,4 +1,12 @@
-stageId,stageNumber,stageIconId,mapId,enemyAttackPowerLevel,enemyHpLevel,stageNameKey,stageDescriptionKey,,,,,,,,,stageRewardIds,stageRewardAmounts,stageRewardProgress,stageRewardProgressValue
-stage_1,1,UI_Stage_Icon_1,Map_Stage1,1,1,Lobby/CurrentStageCard/Name/Stage1,-99999,,,,,,,,,[-99999;EquipmentStone],[0;4],[20;40;60;80],[0.2;0.4;0.6;0.8]
-stage_2,2,UI_Stage_Icon_1,Map_Stage2,1,1,Lobby/CurrentStageCard/Name/Stage2,-99999,,,,,,,,,[-99999;EquipmentStone],[0;5],[20;40;60;80],[0.2;0.4;0.6;0.8]
-stage_3,3,UI_Stage_Icon_1,Map_Stage3,1,1,Lobby/CurrentStageCard/Name/Stage1,-99999,,,,,,,,,[EquipmentScroll;EquipmentStone],[2;6],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stageId,stageNumber,stageSpawnId,stageIconId,mapId,stageNameId,stageDescription,stageRewardIds,stageRewardAmounts,stageRewardProgress,stageRewardProgressValue
+stage_1,1,stage_1,UI_Stage_Icon_1,BG_Stage01_Forest,Lobby/CurrentStageCard/Name/Stage1,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;-99999;EquipmentStone],[700;1;5;0;4],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_2,2,stage_2,UI_Stage_Icon_1,BG_Stage02_CheeseKitchen,Lobby/CurrentStageCard/Name/Stage2,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;-99999;EquipmentStone],[750;1;6;0;5],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_3,3,stage_3,UI_Stage_Icon_1,BG_Stage01_Forest,Lobby/CurrentStageCard/Name/Stage1,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[800;1;7;2;6],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_4,4,stage_4,UI_Stage_Icon_1,BG_Stage02_CheeseKitchen,Lobby/CurrentStageCard/Name/Stage2,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[850;1;8;2;7],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_5,5,stage_5,UI_Stage_Icon_1,BG_Stage01_Forest,Lobby/CurrentStageCard/Name/Stage1,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[900;1;9;2;8],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_6,6,stage_6,UI_Stage_Icon_1,BG_Stage02_CheeseKitchen,Lobby/CurrentStageCard/Name/Stage2,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[950;1;10;3;9],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_7,7,stage_7,UI_Stage_Icon_1,BG_Stage01_Forest,Lobby/CurrentStageCard/Name/Stage1,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[1000;1;11;3;10],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_8,8,stage_8,UI_Stage_Icon_1,BG_Stage02_CheeseKitchen,Lobby/CurrentStageCard/Name/Stage2,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[1050;1;12;3;11],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_9,9,stage_9,UI_Stage_Icon_1,BG_Stage01_Forest,Lobby/CurrentStageCard/Name/Stage1,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[1100;1;13;4;12],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_10,10,stage_10,UI_Stage_Icon_1,BG_Stage02_CheeseKitchen,Lobby/CurrentStageCard/Name/Stage2,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[1150;1;14;4;13],[20;40;60;80],[0.2;0.4;0.6;0.8]
+stage_11,11,stage_11,UI_Stage_Icon_1,BG_Stage01_Forest,Lobby/CurrentStageCard/Name/Stage3,-99999,[Gem;EquipmentKey_HighQuality;EquipmentKey_Supply;EquipmentScroll;EquipmentStone],[1200;1;15;4;14],[20;40;60;80],[0.2;0.4;0.6;0.8]

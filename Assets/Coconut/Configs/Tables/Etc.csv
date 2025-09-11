@@ -1,2 +1,3 @@
-id,values
-initial,[5;-99999;-99999;-99999;-99999;-99999]
+Id,values
+Stamina,[50;600;1;5;-99999;-99999]
+EquipmentRandomBoxCeiling,[10;10;10;-99999;-99999;-99999]
