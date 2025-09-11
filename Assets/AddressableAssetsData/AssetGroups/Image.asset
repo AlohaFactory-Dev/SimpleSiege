@@ -215,6 +215,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Image
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e69d5d1bedc21874a9f4b5e28ac22a4b
+    m_Address: KingGold
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Image
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8132991c04a1534f86f4e8fa7ad4002
     m_Address: Cavalry
     m_ReadOnly: 0

@@ -27,7 +27,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     [SerializeField] private Transform floatingEffectPoint;
     [SerializeField] private UnitState state;
 
-    private UnitTable _unitTable;
+    [SerializeField] private UnitTable _unitTable;
     private UnitStatusSystem _statusSystem;
     private Collider2D _collider2D;
     private float _attackTimer;

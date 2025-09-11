@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using _DataTable.Script;
@@ -5,6 +6,7 @@ using Aloha.Coconut;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
+[Serializable]
 public class UnitTable
 {
     [CSVColumn] public string id;
