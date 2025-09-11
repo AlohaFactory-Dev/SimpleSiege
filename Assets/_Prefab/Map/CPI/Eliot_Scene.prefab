@@ -549,8 +549,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1417079841735811879}
   m_SourcePrefab: {fileID: 100100000, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+--- !u!1 &259644858373380216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+  m_PrefabInstance: {fileID: 64132090916145828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1417079841735811879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259644858373380216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!4 &4626246195330055845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
@@ -719,8 +742,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4204818840237368325}
   m_SourcePrefab: {fileID: 100100000, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+--- !u!1 &132489114377610246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+  m_PrefabInstance: {fileID: 193395809156200154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4204818840237368325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132489114377610246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!4 &4791682522468123355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
@@ -4591,8 +4637,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7871254663404097982}
   m_SourcePrefab: {fileID: 100100000, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+--- !u!1 &3389536685225907830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+  m_PrefabInstance: {fileID: 3203092856173692074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7871254663404097982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3389536685225907830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!4 &7828318625260368043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
@@ -9903,13 +9972,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8606637882712147214}
   m_SourcePrefab: {fileID: 100100000, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
 --- !u!4 &1369372247769497916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
   m_PrefabInstance: {fileID: 6039486969798505789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5812237499076454369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
+  m_PrefabInstance: {fileID: 6039486969798505789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8606637882712147214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812237499076454369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!1001 &6078580163016398830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10445,13 +10537,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8188051641214912029}
   m_SourcePrefab: {fileID: 100100000, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
 --- !u!4 &1756385259603611475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
   m_PrefabInstance: {fileID: 6381462945846737746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6626524507892590990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
+  m_PrefabInstance: {fileID: 6381462945846737746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8188051641214912029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6626524507892590990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!1001 &6386327937527390654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10895,13 +11010,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2681248457663911839}
   m_SourcePrefab: {fileID: 100100000, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
 --- !u!4 &1813944152085566578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
   m_PrefabInstance: {fileID: 6484058882708725875}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6522803667555938991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+  m_PrefabInstance: {fileID: 6484058882708725875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2681248457663911839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522803667555938991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!1001 &6566522562339485708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14670,13 +14808,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3298257882810036779}
   m_SourcePrefab: {fileID: 100100000, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
 --- !u!4 &3677448652820336099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
   m_PrefabInstance: {fileID: 8347564551821900258}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8115811884980251454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+  m_PrefabInstance: {fileID: 8347564551821900258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3298257882810036779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115811884980251454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!1001 &8356884530742777060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15120,13 +15281,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7756741530439319509}
   m_SourcePrefab: {fileID: 100100000, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
 --- !u!4 &4092720643800588127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
   m_PrefabInstance: {fileID: 8654843258461006686}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8891662873166100866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 53b04cf41c172ee439df1e502946721d, type: 3}
+  m_PrefabInstance: {fileID: 8654843258461006686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7756741530439319509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8891662873166100866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!1001 &8659186495405270561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16012,13 +16196,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 250414131836392156, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 491259591925772389}
   m_SourcePrefab: {fileID: 100100000, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
 --- !u!4 &4341627409275429910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
   m_PrefabInstance: {fileID: 8975923145740570647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9216973807293186763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 250414131836392156, guid: 3a84b3cb0487a1244956473da32a398d, type: 3}
+  m_PrefabInstance: {fileID: 8975923145740570647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &491259591925772389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216973807293186763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpawnInterval: 5
+  unitId: E_SkeletonSoldier
+  spawnCount: 1
 --- !u!1001 &8999716370240935752
 PrefabInstance:
   m_ObjectHideFlags: 0

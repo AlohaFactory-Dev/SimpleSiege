@@ -23,7 +23,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - Map
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: af8e1acb41ba6a1409ca0ab90d7b705b
+  - m_GUID: 3355b20016c753c4cbcbbbf231c86adc
     m_Address: Map_Stage3
     m_ReadOnly: 0
     m_SerializedLabels:
