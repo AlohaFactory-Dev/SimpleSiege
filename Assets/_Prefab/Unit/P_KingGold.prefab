@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 581867581490715314, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 581867581490715314, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 581867581490715314, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688776011694905371, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: initialSkinName
+      value: PlayerGold
+      objectReference: {fileID: 0}
     - target: {fileID: 2206096723998707495, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
       propertyPath: m_Name
-      value: P_King
+      value: P_KingGold
       objectReference: {fileID: 0}
     - target: {fileID: 3354014924143684245, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +67,22 @@ PrefabInstance:
     - target: {fileID: 3354014924143684245, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074984999004379416, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074984999004379416, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074984999004379416, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654688245888549983, guid: a85850998da7bf04cb17d3e74977763e, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
