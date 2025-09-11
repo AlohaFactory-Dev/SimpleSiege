@@ -6,6 +6,7 @@ public class AutoSpawn : MonoBehaviour
     [SerializeField] private float autoSpawnInterval;
     [SerializeField] private string unitId;
     [SerializeField] private float spawnCount;
+    private bool upgrade;
     private float _timer;
 
     private void Update()
@@ -19,7 +20,14 @@ public class AutoSpawn : MonoBehaviour
             {
                 unit.Collider2D.enabled = true;
                 unit.ChangeState(UnitState.Move, null, true);
+                if (!upgrade) continue;
+                unit.UnitUpgradeController.ApplyUpgrade("aa", UpgradeType.MaxHpUp, new UpgradeValue(UpgradeValueType.Multiplicative, 1.2f));
             }
         }
+    }
+
+    public void Upgrade()
+    {
+        upgrade = true;
     }
 }

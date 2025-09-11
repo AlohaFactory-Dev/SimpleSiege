@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.Utilities;
 using UnityEngine;
 using Zenject;
 
@@ -10,9 +11,11 @@ public class KingGroupController : MonoBehaviour
     private float _spawnTimer = 0f;
     [SerializeField] private float initialDelay = 2f;
     private float _initialDelayTimer = 0f;
+    [SerializeField] private AutoSpawn[] autoSpawns;
 
     [SerializeField] private string[] spawnUnitIds;
     [SerializeField] private float spawnInterval = 5f;
+    [SerializeField] private float spawnInterval2 = 2f;
     [SerializeField] private Transform[] kingPoints;
     [Inject] private UnitManager _unitManager;
     [Inject] StageManager _stageManager;
@@ -36,6 +39,7 @@ public class KingGroupController : MonoBehaviour
         {
             spawnIndex = spawnUnitIds.Length - 1;
         }
+
 
         foreach (var skill in _kingSkills)
         {
@@ -73,6 +77,7 @@ public class KingGroupController : MonoBehaviour
 
     public void AddKing(int value)
     {
+        autoSpawns.ForEach(x => x.Upgrade());
         for (int i = 0; i < value; i++)
         {
             if (kingPoints.Length > _kingCount)

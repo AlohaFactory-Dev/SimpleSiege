@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5908592654100370373, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9a715b4098724ea4e99b1ad618ffb21b, type: 2}
     - target: {fileID: 8966086465386011015, guid: 2cdf849390c8eee4085bcabf95b3dfcd, type: 3}
       propertyPath: m_Name
-      value: KingAddController
+      value: KingAddController_1_Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

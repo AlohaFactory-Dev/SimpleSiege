@@ -8,6 +8,7 @@ public class KingAddController : MonoBehaviour
     [SerializeField] private TextMeshPro hpText;
     [SerializeField] private int value = 1;
     [SerializeField] private int hp;
+    private Animator animator;
     private int _currentHp;
     private Rigidbody2D _rigidbody;
     private float _speed = 1f;
@@ -24,6 +25,7 @@ public class KingAddController : MonoBehaviour
         addUnitText.text = "+" + value;
         _currentHp = hp;
         hpText.text = _currentHp.ToString();
+        animator = GetComponentInChildren<Animator>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -37,7 +39,7 @@ public class KingAddController : MonoBehaviour
     {
         _currentHp--;
         hpText.text = _currentHp.ToString();
-
+        animator.SetTrigger("Hit");
         other.GetComponent<UnitController>().ForceRelease();
         if (_currentHp <= 0)
         {
