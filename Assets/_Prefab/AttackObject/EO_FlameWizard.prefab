@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 212421540589031356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.78, z: 0.198}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -780,7 +780,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -833,7 +833,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4595,7 +4595,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3113305608044244933}
   - {fileID: 214322735597812216}
   m_Father: {fileID: 5000665670453784780}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
@@ -9409,12 +9408,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5556784673332820098}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.000000014901161, w: 1}
+  m_LocalRotation: {x: 0.5, y: -0.49999997, z: -0.49999997, w: 0.50000006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 214147454617984688}
+  m_Father: {fileID: 9156808291961429404}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!198 &4348605878436079456
 ParticleSystem:
@@ -14269,10 +14268,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2754682175977801908, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
       insertIndex: 1
       addedObject: {fileID: 214147454617984688}
+    - targetCorrespondingSourceObject: {fileID: 2039271460724598244, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3113305608044244933}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
 --- !u!4 &5000665670453784780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2754682175977801908, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+  m_PrefabInstance: {fileID: 7160571909655148664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9156808291961429404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2039271460724598244, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
   m_PrefabInstance: {fileID: 7160571909655148664}
   m_PrefabAsset: {fileID: 0}
