@@ -42,9 +42,10 @@ public class AttackObject : MonoBehaviour
     private TrailRenderer _trailRenderer;
     private ParticleSystem _particleSystem;
     private Vector3 _previousPosition;
+    private float releaseDelay = 2f;
     bool _isInitialized;
 
-    public virtual void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition, bool autoFire = true)
+    public void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition, bool autoFire = true)
     {
         TargetPosition = targetPosition;
         GetComponents();
@@ -149,9 +150,16 @@ public class AttackObject : MonoBehaviour
         _sequence.OnComplete(() =>
         {
             _onHit?.Invoke();
-            _recycleObject.Release();
+            StartCoroutine(ReleaseDelay());
         });
         _sequence.Play();
+    }
+
+    protected IEnumerator ReleaseDelay()
+    {
+        mainObject.gameObject.SetActive(false);
+        yield return new WaitForSeconds(releaseDelay);
+        _recycleObject.Release();
     }
 
     private void UpdateHowitzerRotation()
