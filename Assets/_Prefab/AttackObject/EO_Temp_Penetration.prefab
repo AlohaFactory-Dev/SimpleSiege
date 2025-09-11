@@ -168,6 +168,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   mainObject: {fileID: 9156808291961429404}
+  offObject: {fileID: 6447253107504250478}
   distance: 5
 --- !u!58 &3246900696342399094
 CircleCollider2D:
@@ -204,6 +205,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!1 &6447253107504250478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4190116477592946198, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
+  m_PrefabInstance: {fileID: 7160571909655148664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9156808291961429404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2039271460724598244, guid: c1eef22fd0eff8e4c956272b95bb8490, type: 3}
