@@ -19188,6 +19188,10 @@ PrefabInstance:
       propertyPath: distance
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4566629657753945089, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+      propertyPath: offObject
+      value: 
+      objectReference: {fileID: 923663223981909594}
     - target: {fileID: 5000665670453784780, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19240,6 +19244,11 @@ PrefabInstance:
       addedObject: {fileID: 8308651586381050868}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+--- !u!1 &923663223981909594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447253107504250478, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+  m_PrefabInstance: {fileID: 6172390290164963380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3079117323398546856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156808291961429404, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
