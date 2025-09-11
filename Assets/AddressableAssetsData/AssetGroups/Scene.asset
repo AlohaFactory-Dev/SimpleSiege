@@ -17,13 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 8bd841c21e97bca47ad51248f52c1917
   m_SerializeEntries:
-  - m_GUID: 5644e6b9d884e5f4695148d5ae260594
-    m_Address: Lobby
+  - m_GUID: 0f312a633025afd4cab56c5b46d15bac
+    m_Address: Stage
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b2e7984eb1745fd47b5dcd3dc31aeeae
-    m_Address: Stage
+  - m_GUID: 5644e6b9d884e5f4695148d5ae260594
+    m_Address: Lobby
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

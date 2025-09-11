@@ -222,7 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa8daf33fff490fbfd09e03765d9483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 0
+  autoSpawnInterval: 3
+  unitId: E_Giant
+  spawnCount: 1
 --- !u!4 &6802620093103453722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7532899173452514692, guid: d4bfd1b5e0dc8a146abf8774bb0856df, type: 3}
