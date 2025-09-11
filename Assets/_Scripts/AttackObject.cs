@@ -29,21 +29,26 @@ public class AttackObject : MonoBehaviour
     [SerializeField]
     private float howitzerHeight;
 
-    [BoxGroup("Normal")] [SerializeField] private AnimationCurve normalCurve;
+    [BoxGroup("Normal")] [SerializeField] protected AnimationCurve normalCurve;
 
     [SerializeField] private Transform mainObject;
-    private RecycleObject _recycleObject;
+    [SerializeField] private GameObject offObject;
+    protected RecycleObject _recycleObject;
     private AttackObjectTable _table;
-    private Action _onHit;
+    protected AttackObjectTable Table => _table;
+    protected Vector2 TargetPosition;
+    protected Action _onHit;
     private Sequence _sequence;
     private FireType FireType => _table.fireType;
     private TrailRenderer _trailRenderer;
-    private ParticleSystem _particleSystem;
+    private ParticleSystem[] _particleSystem;
     private Vector3 _previousPosition;
+    private float releaseDelay = 2f;
     bool _isInitialized;
 
-    public void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition)
+    public void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition, bool autoFire = true)
     {
+        TargetPosition = targetPosition;
         GetComponents();
 
         if (_trailRenderer)
@@ -53,29 +58,32 @@ public class AttackObject : MonoBehaviour
             transform.position = position; // 위치 먼저 할당
             _trailRenderer.enabled = true;
         }
-        else if (_particleSystem)
+        else if (_particleSystem.Length > 0)
         {
-            _particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            foreach (var ps in _particleSystem)
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             transform.position = position; // 위치 먼저 할당
-            _particleSystem.Play();
+
+            foreach (var ps in _particleSystem) ps.Play();
         }
         else
         {
             transform.position = position;
         }
 
-        mainObject.gameObject.SetActive(true);
+        offObject.SetActive(true);
         mainObject.transform.localPosition = Vector3.zero;
         _table = table;
         mainObject.localScale = Vector3.one * _table.scale;
         _onHit = onHit;
+        if (!autoFire) return;
         if (table.delayRandomMin == 0)
         {
             Fire(targetPosition);
         }
         else
         {
-            mainObject.gameObject.SetActive(false);
+            offObject.SetActive(false);
             StartCoroutine(FireDelay(Random.Range(table.delayRandomMin, table.delayRandomMax), targetPosition));
         }
     }
@@ -85,7 +93,7 @@ public class AttackObject : MonoBehaviour
         if (_isInitialized) return;
         _recycleObject = GetComponent<RecycleObject>();
         _trailRenderer = GetComponentInChildren<TrailRenderer>();
-        _particleSystem = GetComponentInChildren<ParticleSystem>();
+        _particleSystem = GetComponentsInChildren<ParticleSystem>();
         _isInitialized = true;
     }
 
@@ -93,7 +101,7 @@ public class AttackObject : MonoBehaviour
     private IEnumerator FireDelay(float delay, Vector2 targetPosition)
     {
         yield return new WaitForSeconds(delay);
-        mainObject.gameObject.SetActive(true);
+        offObject.SetActive(true);
 
         Fire(targetPosition);
     }
@@ -145,9 +153,16 @@ public class AttackObject : MonoBehaviour
         _sequence.OnComplete(() =>
         {
             _onHit?.Invoke();
-            _recycleObject.Release();
+            StartCoroutine(ReleaseDelay());
         });
         _sequence.Play();
+    }
+
+    protected IEnumerator ReleaseDelay()
+    {
+        offObject.SetActive(false);
+        yield return new WaitForSeconds(releaseDelay);
+        _recycleObject.Release();
     }
 
     private void UpdateHowitzerRotation()

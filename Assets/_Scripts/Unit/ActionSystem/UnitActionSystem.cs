@@ -107,11 +107,15 @@ public class UnitActionSystem : MonoBehaviour
 
     private IEnumerator ActionRoutine(ITarget target)
     {
+        float lastYRotation = 0f;
         while (true)
         {
             if (target != null)
             {
                 Vector2 targetPos = target.Transform.position;
+                Vector3 dir = (targetPos - _unitController.Rigidbody2D.position).normalized;
+
+                _rotationSystem.Rotate(dir, ref lastYRotation);
                 _unitAnimationSystem.SetOnAction(() => OnAction(target, _unitController, targetPos));
                 yield return new WaitForSeconds(_unitAnimationSystem.AcionDuration);
                 if (target.IsUntargetable)

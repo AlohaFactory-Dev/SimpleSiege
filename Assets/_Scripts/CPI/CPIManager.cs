@@ -15,7 +15,6 @@ public class CPIManager : MonoBehaviour
         public float duration;
     }
 
-    [Inject] InputManager _inputManager;
 
     [Inject] StageManager _stageManager;
     [SerializeField] private DeployedUnitController deployedUnitController;
@@ -36,28 +35,29 @@ public class CPIManager : MonoBehaviour
     {
         yield return new WaitUntil(() => _stageManager.isInit);
         _stageManager.CameraController.enabled = false;
-        _inputManager.enabled = false;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+            StageConainer.Get<InputRecorder>().AddEvent("StartBattle");
             StartBattle();
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
+            StageConainer.Get<InputRecorder>().AddEvent("MoveCameraSequence");
             MoveCameraSequence();
         }
     }
 
-    private void StartBattle()
+    public void StartBattle()
     {
         deployedUnitController.StartBattle();
     }
 
-    private void MoveCameraSequence()
+    public void MoveCameraSequence()
     {
         if (_endCameraMove) return;
         if (onSequenceCameraMoving)

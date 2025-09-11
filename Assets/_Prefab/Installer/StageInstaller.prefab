@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
---- !u!1 &4147655461489075736
+--- !u!1 &4125584192379006293
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,22 +53,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4454984124764625783}
-  - component: {fileID: 9124671558651843226}
+  - component: {fileID: 8952587906344231387}
+  - component: {fileID: 3156144667454160371}
   m_Layer: 0
-  m_Name: PhysicsOptimizationManager
+  m_Name: Recorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4454984124764625783
+--- !u!4 &8952587906344231387
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147655461489075736}
+  m_GameObject: {fileID: 4125584192379006293}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -77,18 +77,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6929765062167540743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9124671558651843226
+--- !u!114 &3156144667454160371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147655461489075736}
+  m_GameObject: {fileID: 4125584192379006293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd194b887a544acb8d07d0e6e8db8dc2, type: 3}
+  m_Script: {fileID: 11500000, guid: f3daca27b9134c7ba12db4763fb8bfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRecording: 0
 --- !u!1 &7525399302340534096
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +126,7 @@ Transform:
   - {fileID: 2980906682456212697}
   - {fileID: 246148445420561107}
   - {fileID: 4872934954317952737}
-  - {fileID: 4454984124764625783}
+  - {fileID: 8952587906344231387}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6856090997296983684
@@ -217,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e334caca574c9083c00b28bad5a751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageEndDelay: 0.5
 --- !u!1 &9046853207676634581
 GameObject:
   m_ObjectHideFlags: 0

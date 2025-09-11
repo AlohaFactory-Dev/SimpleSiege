@@ -1,26 +1,44 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class KingGroupController : MonoBehaviour
 {
+    private int spawnIndex = 0;
+    private float _spawnTimer = 0f;
+
+    [SerializeField] private string[] spawnUnitIds;
+    [SerializeField] private float spawnInterval = 5f;
     [SerializeField] private Transform[] kingPoints;
     [Inject] private UnitManager _unitManager;
-    [Inject] InputManager _inputManager;
     [Inject] StageManager _stageManager;
     private Camera _camera;
-    private int _kingCount = 1;
+    private int _kingCount = 0;
+    private List<KingSkill> _kingSkills = new List<KingSkill>();
 
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => _stageManager.isInit);
+        StageConainer.Container.BindInstance(this).AsSingle().NonLazy();
         _camera = Camera.main;
-        var king = _unitManager.SpawnUnit(kingPoints[0].position, "P_King", 1, false)[0];
-        king.transform.parent = transform;
-        king.Collider2D.enabled = false;
+        AddKing(1);
         _stageManager.CameraController.enabled = false;
-        _inputManager.enabled = false;
+    }
+
+    public void UpgradeSpawn(string skinId)
+    {
+        spawnIndex++;
+        if (spawnIndex >= spawnUnitIds.Length)
+        {
+            spawnIndex = spawnUnitIds.Length - 1;
+        }
+
+        foreach (var skill in _kingSkills)
+        {
+            skill.GetComponent<KingSkinController>().ChangeSkin(skinId);
+        }
     }
 
     private void Update()
@@ -32,15 +50,37 @@ public class KingGroupController : MonoBehaviour
             newPosition.x = mousePosition.x;
             transform.position = newPosition;
         }
+
+        if (_spawnTimer >= spawnInterval)
+        {
+            _spawnTimer = 0f;
+            foreach (var skill in _kingSkills)
+            {
+                skill.GroupSpawnSkill(spawnUnitIds[spawnIndex]);
+            }
+        }
+
+        _spawnTimer += Time.deltaTime;
     }
 
-    public void AddKing()
+    public void AddKing(int value)
     {
-        if (kingPoints.Length < _kingCount)
+        for (int i = 0; i < value; i++)
         {
-            var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false)[0];
-            king.transform.parent = transform;
-            _kingCount++;
+            if (kingPoints.Length > _kingCount)
+            {
+                var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false, false)[0];
+                king.transform.parent = transform;
+                king.Collider2D.enabled = false;
+                var skill = king.GetComponent<KingSkill>();
+                skill.SetGroup();
+                _kingSkills.Add(skill);
+                _kingCount++;
+            }
+            else
+            {
+                break;
+            }
         }
     }
 }

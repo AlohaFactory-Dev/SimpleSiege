@@ -35,6 +35,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Unit
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a6002fa13c82f741b8828ccba7f2ee9
+    m_Address: P_CavalryGold
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0afb585cf24482140976d61a71bfe217
     m_Address: E_Catapult
     m_ReadOnly: 0
@@ -73,6 +79,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 59a113c11a3fad240b28e43bb23daf43
     m_Address: E_Sniper
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Unit
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cbbb06c97e0ca54baae1e1c28b75c67
+    m_Address: P_KingGold
     m_ReadOnly: 0
     m_SerializedLabels:
     - Unit

@@ -11,13 +11,13 @@ public class UnitManager
     private List<UnitController> _allUnit = new();
 
 
-    public List<UnitController> SpawnUnit(Vector2 spawnPosition, string id, int amount, bool onAutoMove = true)
+    public List<UnitController> SpawnUnit(Vector2 spawnPosition, string id, int amount, bool onAutoMove = true, bool isRandomOffset = true)
     {
         var table = TableListContainer.Get<UnitTableList>().GetUnitTable(id);
         var spawnedUnits = new List<UnitController>();
         for (int i = 0; i < amount; i++)
         {
-            var offset = Random.insideUnitCircle * 0.5f; // 약간의 랜덤 오프셋 추가
+            var offset = isRandomOffset ? Random.insideUnitCircle * 0.5f : Vector2.zero;
             var unit = _factoryManager.UnitFactroy.GetUnit(table.id);
             unit.Spawn(spawnPosition + offset, table, onAutoMove);
             // 유닛의 팀 설정
@@ -41,7 +41,7 @@ public class UnitManager
     {
         foreach (var unit in units)
         {
-            var table = TableListContainer.Get<UnitTableList>().GetUnitTable(unit.gameObject.name);
+            var table = TableListContainer.Get<UnitTableList>().GetUnitTable(unit.id);
             unit.Spawn(unit.transform.position, table, false);
             unit.Collider2D.enabled = false;
             if (unit.TeamType == TeamType.Player)

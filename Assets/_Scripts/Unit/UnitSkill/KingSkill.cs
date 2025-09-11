@@ -20,6 +20,7 @@ public class KingSkill : MonoBehaviour
     [Inject] private UnitManager _unitManager;
     private float _skillTimer = 0f;
     private UnitController _unitController;
+    private bool _isInGroup = false;
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class KingSkill : MonoBehaviour
 
     private void Update()
     {
-        if (_unitController.IsBarrackUnit) return;
+        if (_unitController.IsBarrackUnit || _isInGroup) return;
         _skillTimer += Time.deltaTime;
         if (_skillTimer >= skillInterval)
         {
@@ -36,6 +37,23 @@ public class KingSkill : MonoBehaviour
             _skillTimer = 0f;
         }
     }
+
+    public void SetGroup()
+    {
+        _isInGroup = true;
+    }
+
+
+    public void GroupSpawnSkill(string id)
+    {
+        var units = _unitManager.SpawnUnit((Vector2)transform.position + Vector2.up, id, 1, false, false);
+        foreach (var unit in units)
+        {
+            unit.Collider2D.enabled = true;
+            unit.ChangeState(UnitState.Move);
+        }
+    }
+
 
     private void ActivateSkill()
     {
@@ -48,6 +66,7 @@ public class KingSkill : MonoBehaviour
             if (randomValue <= cumulativeProbability)
             {
                 _unitManager.SpawnUnit(transform.position, skill.spwanUnitId, skill.amount);
+
 
                 break;
             }

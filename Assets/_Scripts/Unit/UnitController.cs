@@ -20,13 +20,14 @@ public enum UnitState
 
 public class UnitController : MonoBehaviour, ITarget, ICaster
 {
+    public string id;
     [Inject] UnitManager _unitManager;
 
     [SerializeField] private Transform damageEffectPoint;
     [SerializeField] private Transform floatingEffectPoint;
     [SerializeField] private UnitState state;
 
-    private UnitTable _unitTable;
+    [SerializeField] private UnitTable _unitTable;
     private UnitStatusSystem _statusSystem;
     private Collider2D _collider2D;
     private float _attackTimer;
@@ -45,7 +46,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public IReadOnlyReactiveProperty<float> SightRange => _unitUpgradeController.SightRange;
     public float MoveSpeed => _unitUpgradeController.MoveSpeed;
     public TargetGroup Group => TargetGroup.Unit;
-    public bool IsUntargetable => state == UnitState.Dead || state == UnitState.Spawn || _isWallUnit;
+    public bool IsUntargetable => state == UnitState.Dead || state == UnitState.Spawn || _isWallUnit || isNotTargetable;
     public Rigidbody2D Rigidbody2D { get; private set; }
     public Collider2D Collider2D => _collider2D;
     public Transform Transform => transform;
@@ -57,12 +58,13 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public AreaType AreaType => _unitTable.areaType;
     public float EffectRange => _unitUpgradeController.EffectRange;
     public IReadOnlyReactiveProperty<float> EffectActionSpeed => _unitUpgradeController.EffectActionSpeed;
+    public TargetGroup TargetGroup => _unitTable.targetGroup;
 
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 
     private UnitUpgradeController _unitUpgradeController;
-    private SortingGroup _sortingGroup;
     public bool IsBarrackUnit { get; private set; }
+    private bool isNotTargetable;
 
     public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
     {
@@ -99,7 +101,6 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _statusSystem = GetComponentInChildren<UnitStatusSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
-        _sortingGroup = GetComponent<SortingGroup>();
         _skeletonMecanim = GetComponentInChildren<SkeletonMecanim>();
         Rigidbody2D.mass = _unitTable.mass;
         gameObject.layer = LayerMask.NameToLayer(UnitTable.teamType == TeamType.Player ? "Player" : "Enemy");
@@ -119,6 +120,11 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
         _unitUpgradeController.ApplyUpgrade(id, UpgradeType.EffectAbleRangeUp, new UpgradeValue(UpgradeValueType.Additive, effectAbleRange));
         transform.position = position;
         ChangeState(UnitState.Siege);
+    }
+
+    public void SetNotTargetable(bool isNotTargetable)
+    {
+        this.isNotTargetable = isNotTargetable;
     }
 
     public void SetBarrackUnit(Vector2 position)

@@ -39,7 +39,7 @@ public class UnitTargetSystem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         var target = other.GetComponent<ITarget>();
-        if (target == null || target.IsUntargetable) return;
+        if (target == null) return;
         if (CheckAddAble(target))
         {
             if (!_targetsInSight.Contains(target))
@@ -69,7 +69,7 @@ public class UnitTargetSystem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        var enemy = other.GetComponent<UnitController>();
+        var enemy = other.GetComponent<ITarget>();
         if (_targetsInSight.Contains(enemy))
         {
             _targetsInSight.Remove(enemy);
