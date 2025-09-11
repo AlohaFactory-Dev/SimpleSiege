@@ -36,7 +36,7 @@ Transform:
   - {fileID: 778096756086364669}
   - {fileID: 6578287894044790386}
   - {fileID: 2148174201243655302}
-  m_Father: {fileID: 3079117323398546856}
+  m_Father: {fileID: 1210714767543052536}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &65796777153326034
 ParticleSystem:
@@ -24475,7 +24475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3238105757779232627, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
       propertyPath: m_Name
-      value: EO_CavalryGold2
+      value: EO_KingGold
       objectReference: {fileID: 0}
     - target: {fileID: 5000665670453784780, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24524,13 +24524,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 9156808291961429404, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: 5000665670453784780, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+      insertIndex: 1
       addedObject: {fileID: 2268533304226007101}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
---- !u!4 &3079117323398546856 stripped
+--- !u!4 &1210714767543052536 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9156808291961429404, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5000665670453784780, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
   m_PrefabInstance: {fileID: 6172390290164963380}
   m_PrefabAsset: {fileID: 0}
