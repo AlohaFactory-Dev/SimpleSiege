@@ -14,6 +14,7 @@ public class TrapBuilding : Building, ICaster
     public IReadOnlyReactiveProperty<float> EffectActionSpeed => new ReactiveProperty<float>(1f);
     private UnitDetector _unitDetector;
     private TrapAttackEventHandler _attackEventHandler;
+    public TargetGroup TargetGroup => TargetGroup.Unit;
 
     protected override void CustomInit()
     {

@@ -1,0 +1,2 @@
+id,enemyActionDelay,idleTime,attackPower,maxHp,armorValue,evasionValue,criticalRate,criticalMultValue,debuffResistance,skinType,skinName,defaultAbilityId,defaultPassiveId
+P_0_JellyCat_Blue,0.5,1,60,300,0,0,0,2,0,[BodyAcc;HeadAcc;Weapon],[body_acc/Cloth_Bag_Travel;head_acc/Cloth_StrawHat;weapon/GreenOnion],[Abl_P_BasicAttack_G0;Abl_P_BasicAttack_G0;Abl_P_BasicAttack_G0;Abl_P_BasicAttack_G0;Abl_P_BasicAttack_G0;Abl_P_BasicAttack_G0],[-99999;-99999;-99999]

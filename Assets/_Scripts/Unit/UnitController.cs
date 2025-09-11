@@ -27,7 +27,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     [SerializeField] private Transform floatingEffectPoint;
     [SerializeField] private UnitState state;
 
-    private UnitTable _unitTable;
+    [SerializeField] private UnitTable _unitTable;
     private UnitStatusSystem _statusSystem;
     private Collider2D _collider2D;
     private float _attackTimer;
@@ -58,6 +58,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public AreaType AreaType => _unitTable.areaType;
     public float EffectRange => _unitUpgradeController.EffectRange;
     public IReadOnlyReactiveProperty<float> EffectActionSpeed => _unitUpgradeController.EffectActionSpeed;
+    public TargetGroup TargetGroup => _unitTable.targetGroup;
 
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 
@@ -176,9 +177,14 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     }
 
 
-    public void ChangeState(UnitState newState, ITarget target = null)
+    public void ChangeState(UnitState newState, ITarget target = null, bool autoMove = false)
     {
-        if (state == UnitState.Dead) return;
+        if (autoMove)
+        {
+            if (state == UnitState.Dead)
+                return;
+        }
+
         state = newState;
         _statusSystem.ApplyState(target, newState);
     }
