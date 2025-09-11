@@ -6,3 +6,4 @@ EO_FlameWizard,Default,Default,Normal,Speed,7,7,TRUE,0,0,1
 EO_Sniper,Default,Default,Normal,Speed,40,40,TRUE,0,0,1
 EO_CavalryGold,Default,Default,Normal,Speed,15,15,TRUE,0,0,1
 EO_KingGold,Default,Default,Normal,Speed,9,9,TRUE,0,0,1
+EO_Sniper_Penetration,Default,Default,Normal,Speed,40,40,TRUE,0,0,1

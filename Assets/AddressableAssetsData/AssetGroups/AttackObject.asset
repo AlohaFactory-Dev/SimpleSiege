@@ -59,6 +59,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - AttackObject
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c20b22c1cf6cbc24fb7e0261dba87164
+    m_Address: EO_Sniper_Penetration
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AttackObject
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da8d315e43eff134c9680e76e5c66261
     m_Address: EO_FlameWizard
     m_ReadOnly: 0

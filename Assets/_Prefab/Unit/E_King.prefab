@@ -259,16 +259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce32307465ac2e4a98aba93063102cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillInterval: 10
+  skillInterval: 3
   spawnUnits:
-  - spwanUnitId: P_Swordsman
-    amount: 2
-    probability: 100
-  - spwanUnitId: P_Archer
-    amount: 2
-    probability: 100
-  - spwanUnitId: P_Cavalry
-    amount: 1
+  - spwanUnitId: E_FlameWizard
+    amount: 3
     probability: 100
 --- !u!4 &8116968912446139727 stripped
 Transform:
