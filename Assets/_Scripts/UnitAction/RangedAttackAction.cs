@@ -18,12 +18,32 @@ public class RangedAttackAction : IUnitAction
         _effectValue = effectValue;
         var projectTile = StageConainer.Get<FactoryManager>().AttackObjectFactory.GetAttackObject(caster.ProjectTileId);
         var projectileTable = TableListContainer.Get<AttackObjectTableList>().GetAttackObjectTable(caster.ProjectTileId);
-        projectTile.Init(
-            caster.Transform.position,
-            () => Attack(caster, target, targetPos),
-            projectileTable,
-            targetPos
-        );
+
+
+        if (projectTile is PenetrationAttackObject)
+        {
+            projectTile.Init(
+                caster.Transform.position,
+                () => PlayParticle(caster.EffectVfxId, targetPos),
+                projectileTable,
+                targetPos
+            );
+            (projectTile as PenetrationAttackObject).Set(caster, t => PenetrationAttack(caster, t));
+        }
+        else
+        {
+            projectTile.Init(
+                caster.Transform.position,
+                () => Attack(caster, target, targetPos),
+                projectileTable,
+                targetPos
+            );
+        }
+    }
+
+    private void PenetrationAttack(ICaster caster, ITarget target)
+    {
+        target.TakeDamage(caster, _effectValue);
     }
 
     private void Attack(ICaster caster, ITarget target, Vector3 position)

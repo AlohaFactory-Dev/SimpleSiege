@@ -58,6 +58,7 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     public AreaType AreaType => _unitTable.areaType;
     public float EffectRange => _unitUpgradeController.EffectRange;
     public IReadOnlyReactiveProperty<float> EffectActionSpeed => _unitUpgradeController.EffectActionSpeed;
+    public TargetGroup TargetGroup => _unitTable.targetGroup;
 
     public UnitUpgradeController UnitUpgradeController => _unitUpgradeController;
 

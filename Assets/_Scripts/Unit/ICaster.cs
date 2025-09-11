@@ -10,5 +10,6 @@ public interface ICaster
     public TeamType TeamType { get; }
     public AreaType AreaType { get; }
     public float EffectRange { get; }
+    public TargetGroup TargetGroup { get; }
     public IReadOnlyReactiveProperty<float> EffectActionSpeed { get; }
 }
