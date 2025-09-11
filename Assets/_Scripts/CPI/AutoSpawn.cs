@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class BarrackAutoSpawn : MonoBehaviour
+public class AutoSpawn : MonoBehaviour
 {
     [SerializeField] private float autoSpawnInterval;
     [SerializeField] private string unitId;
@@ -17,6 +17,7 @@ public class BarrackAutoSpawn : MonoBehaviour
             var units = StageConainer.Get<UnitManager>().SpawnUnit(transform.position, unitId, (int)spawnCount, false);
             foreach (var unit in units)
             {
+                unit.Collider2D.enabled = true;
                 unit.ChangeState(UnitState.Move, null, true);
             }
         }
