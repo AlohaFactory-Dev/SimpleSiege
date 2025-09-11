@@ -20,13 +20,14 @@ public class RangedAttackAction : IUnitAction
         var projectileTable = TableListContainer.Get<AttackObjectTableList>().GetAttackObjectTable(caster.ProjectTileId);
 
 
-        if (projectTile is PenetrationAttackObject)
+        if (projectTile as PenetrationAttackObject)
         {
             projectTile.Init(
                 caster.Transform.position,
                 () => PlayParticle(caster.EffectVfxId, targetPos),
                 projectileTable,
-                targetPos
+                targetPos,
+                false
             );
             (projectTile as PenetrationAttackObject).Set(caster, t => PenetrationAttack(caster, t));
         }
