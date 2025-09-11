@@ -20,7 +20,7 @@ public class RangedAttackAction : IUnitAction
         var projectileTable = TableListContainer.Get<AttackObjectTableList>().GetAttackObjectTable(caster.ProjectTileId);
 
 
-        if (projectTile is PenetrationAttackObejct)
+        if (projectTile is PenetrationAttackObject)
         {
             projectTile.Init(
                 caster.Transform.position,
@@ -28,7 +28,7 @@ public class RangedAttackAction : IUnitAction
                 projectileTable,
                 targetPos
             );
-            (projectTile as PenetrationAttackObejct).Set(caster, t => PenetrationAttack(caster, t));
+            (projectTile as PenetrationAttackObject).Set(caster, t => PenetrationAttack(caster, t));
         }
         else
         {
