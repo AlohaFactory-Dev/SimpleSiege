@@ -65,9 +65,11 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private UnitUpgradeController _unitUpgradeController;
     public bool IsBarrackUnit { get; private set; }
     private bool isNotTargetable;
+    public bool IsDeployed { get; private set; }
 
-    public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
+    public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove, bool isDeployed = false)
     {
+        IsDeployed = isDeployed;
         IsBarrackUnit = false;
         _isWallUnit = false;
         _unitTable = unitTable;
