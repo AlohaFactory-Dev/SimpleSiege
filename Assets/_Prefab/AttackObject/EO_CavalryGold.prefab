@@ -14356,7 +14356,7 @@ Transform:
   - {fileID: 7591381299972727426}
   - {fileID: 7567456311949188732}
   - {fileID: 3281011012437986884}
-  m_Father: {fileID: 1210714767543052536}
+  m_Father: {fileID: 3079117323398546856}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5461382212382587480
 ParticleSystem:
@@ -19235,13 +19235,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5000665670453784780, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
-      insertIndex: 1
+    - targetCorrespondingSourceObject: {fileID: 9156808291961429404, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 8308651586381050868}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
---- !u!4 &1210714767543052536 stripped
+--- !u!4 &3079117323398546856 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5000665670453784780, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9156808291961429404, guid: 49129df9a55c27042a9c4419f5d68f25, type: 3}
   m_PrefabInstance: {fileID: 6172390290164963380}
   m_PrefabAsset: {fileID: 0}
