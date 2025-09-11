@@ -910,6 +910,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5184144562367983422}
     m_Modifications:
+    - target: {fileID: 313226613243574950, guid: f71f7a1b44ee672409eaa7be4b95446f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517808174239929074, guid: f71f7a1b44ee672409eaa7be4b95446f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3437255095252453514, guid: f71f7a1b44ee672409eaa7be4b95446f, type: 3}
       propertyPath: kingPoints.Array.size
       value: 9

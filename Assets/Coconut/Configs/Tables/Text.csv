@@ -1,693 +1,121 @@
-group,key,English,Korean,중복 체크
-#그룹,#키,영어 텍스트<br>(쌍따옴표 (") 쓰면 안 됨.),한글 텍스트,메모
-Common,Yes,Yes,예,-99999
-Common,No,No,아니오,-99999
-Common,OK,OK,확인,-99999
-Common,Cancel,Cancel,취소,-99999
-Common,Error,Error,오류,-99999
-Common,Warning,Warning,경고,-99999
-Common,Notice,Notice,알림,-99999
-Common,Grade/None,None,없음,-99999
-Common,Grade/Common,Common,일반,-99999
-Common,Grade/Great,Great,우수,-99999
-Common,Grade/Rare,Rare,희귀,-99999
-Common,Grade/Epic,Epic,에픽,-99999
-Common,Grade/Epic1,Epic +1,에픽 +1,-99999
-Common,Grade/Epic2,Epic +2,에픽 +2,-99999
-Common,Grade/Legendary,Legendary,전설,-99999
-Common,Grade/Legendary1,Legendary +1,전설 +1,-99999
-Common,Grade/Legendary2,Legendary +2,전설 +2,-99999
-Common,Grade/Legendary3,Legendary +3,전설 +3,-99999
-Common,Grade/Mythic,Mythic,신화,-99999
-Common,Grade/Mythic1,Mythic +1,신화 +1,-99999
-Common,Grade/Mythic2,Mythic +2,신화 +2,-99999
-Common,Grade/Mythic3,Mythic +3,신화 +3,-99999
-Common,Grade/Mythic4,Mythic +4,신화 +4,-99999
-Common,EquipmentType/Weapon,Weapon,무기,-99999
-Common,EquipmentType/Armor,Armor,방어구,-99999
-Common,EquipmentType/Ring,Ring,반지,-99999
-Common,EquipmentType/Accessories,Accessories,장신구,-99999
-Common,TapToClose,Tap to close,탭하여 닫기,-99999
-Account,LinkFailed,Failed to link account,계정 연동 실패,-99999
-Account,AnonymousSignOutWarning,Game data of guest account will be deleted if you sign out.<br> Do you really want to sign out?,게스트 계정에서 로그아웃하면 모든 정보가 삭제됩니다.<br> 정말로 로그아웃하시겠습니까?,-99999
-Account,SignOutWarning,Do you really want to sign out?,정말로 로그아웃하시겠습니까?,-99999
-Account,WithdrawWarning,When you delete your account<c> all data collected by the game is deleted and cannot be recovered. <br> Any data stored on your device will also be deleted. <br> Are you sure you want to delete your account? <br> <br> <size=70%> All data includes personal information such as email<c> nickname<c> and PID<c> please check our Privacy Policy for details.,계정 삭제시 게임이 수집하는 모든 데이터가 삭제되며 복구가 불가능합니다. <br> 또한<c> 기기에 저장된 데이터도 모두 초기화됩니다. <br> 정말로 계정을 삭제하시겠습니까? <br> <br> <size=70%> 모든 데이터엔 이메일<c> 닉네임<c> PID 등의 개인정보가 포함되며 상세한 항목은 개인정보 처리방침을 확인해주시기 바랍니다.,-99999
-Account,AccountChangeWarning,Game data of current account will be deleted if you sign in to the other account.<br> Do you really want to sign in?,다른 계정으로 로그인하면 현재 계정의 모든 데이터가 삭제되며 복구가 불가능합니다.<br> 정말로 다른 계정으로 로그인하시겠습니까?,-99999
-Account,RestartGame,Please restart the game.,게임을 다시 시작해주세요.,-99999
-TextFilter,BlankSpace,Blank spaces are not allowed.,공백 문자는 사용할 수 없습니다.,-99999
-TextFilter,InvalidCharacter,You can't use special characters.,특수 문자는 사용할 수 없습니다.,-99999
-TextFilter,BannedWordIncluded,Contains an unavailable word.,사용할 수 없는 단어가 포함되어있습니다.,-99999
-TextFilter,InvalidLength,Your nickname must be least 4 characters and no more than 20 characters.,닉네임은 4자 이상 20자 이하여야 합니다.,-99999
-SystemUI,ToastMessage/NotEnough,Not enough {[property]},{[property]}이(가) 부족합니다.,-99999
-UI,Dmg/Critical,<size=110%><sprite name=Damage_Critical><color=#ff6f16>Critical Hit</color></size>,<size=110%><sprite name=Damage_Critical><color=#ff6f16>치명타</color></size>,-99999
-UI,Dmg/Normal,<sprite name=Damage_Normal><color=#ff6f16>Damage</color>,<sprite name=Damage_Normal><color=#ff6f16>피해</color>,-99999
-UI,Abl/MainWeapon,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color>,-99999
-UI,Abl/Teafork,<sprite name=Skill_Teafork><color=#5c482f>Tea fork</color>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color>,-99999
-UI,Abl/Jar,<sprite name=Skill_Jar><color=#5c482f>Jar</color>,<sprite name=Skill_Jar><color=#5c482f>병</color>,-99999
-UI,Abl/Snack,<sprite name=Skill_Snack><color=#5c482f>Snack</color>,<sprite name=Skill_Snack><color=#5c482f>간식</color>,-99999
-UI,Abl/HotSauce,<sprite name=Skill_Teafork><color=#5c482f>Hot Sauce</color>,<sprite name=Skill_Teafork><color=#5c482f>핫 소스</color>,-99999
-UI,Abl/Passive,<sprite name=Skill_Passive><color=#5c482f>Passive</color>,<sprite name=Skill_Passive><color=#5c482f>패시브</color>,-99999
-UI,Sta/Freeze,<sprite name=Status_Freeze><color=#00baff>Freeze</color>,<sprite name=Status_Freeze><color=#00baff>동결</color>,-99999
-UI,Sta/BurningOil,<sprite name=Status_Flame><color=#ff6f16>Burning Oil</color>,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>,-99999
-UI,Sta/StickyJam,<sprite name=Status_Jam><color=#f4b900>Sticky Jam</color>,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>,-99999
-UI,Sta/Kettle,<sprite name=Status_Kettle><color=#f4b900>Kettle</color>,<sprite name=Status_Kettle><color=#f4b900>주전자</color>,-99999
-UI,Sta/Chili,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color>,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>,-99999
-UI,Sta/BombChili,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color>,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>,-99999
-UI,Sta/Shield,<sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color>,<sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color>,-99999
-UI,Sta/EnergyDrink,<sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color>,<sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color>,-99999
-UI,Sta/Meat,<sprite name=Status_Meat><color=#f4b900>Well-cooked Meat</color>,<sprite name=Status_Meat><color=#f4b900>잘 구운 고기</color>,-99999
-UI,Sta/MintCandy,<sprite name=Status_MintCandy><color=#00baff>Mint Candy</color>,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>,-99999
-UI,Sta/KitchenKnife,<sprite name=Status_Knife><color=#ff6f16>Kitchen Knife</color>,<sprite name=Status_Knife><color=#ff6f16>식칼</color>,-99999
-UI,Sta/CookingTimer,<sprite name=Status_CookingTimer><color=#00baff>Cooking Timer</color>,<sprite name=Status_CookingTimer><color=#00baff>쿠킹 타이머</color>,-99999
-UI,Sta/PepperShaker,<sprite name=Status_PepperShaker><color=#ff6f16>Pepper Shaker</color>,<sprite name=Status_PepperShaker><color=#ff6f16>후추 통</color>,-99999
-UI,Sta/Tomato,<sprite name=Status_Tomato><color=#73e312>Tomato</color>,<sprite name=Status_Tomato><color=#73e312>토마토</color>,-99999
-UI,Sta/Apron,<sprite name=Status_Apron><color=#ff6f16>Apron</color>,<sprite name=Status_Apron><color=#ff6f16>앞치마</color>,-99999
-UI,Sta/CookingHat,<sprite name=Status_CookingHat><color=#00baff>Cooking Hat</color>,<sprite name=Status_CookingHat><color=#00baff>요리 모자</color>,-99999
-UI,Sta/Boots,<sprite name=Status_Boots><color=#00baff>Boots</color>,<sprite name=Status_Boots><color=#00baff>장화</color>,-99999
-UI,Levelbar/Text,LV.{[value]},LV.{[value]},-99999
-UI,SelectPopup/Bench/Default,Drag the skill to equip it where you want,스킬을 드래그해서 원하는 위치에 장착하세요,-99999
-UI,SelectPopup/Bench/Full,<color=#FF7D5A>There is not enough space left! Please drag the skills to the trash can</color>,<color=#FF7D5A>대기 공간이 부족합니다! 스킬을 드래그해서 휴지통에 버려주세요</color>,-99999
-UI,SelectPopup/ChainBonus,<sprite name=Status_CookingTimer><color=#00baff>Attack Speed</color><br>{[value]}% <sprite name=UI_Arrow_Up_White>,<sprite name=Status_CookingTimer><color=#00baff>공격 속도</color><br>{[value]}% <sprite name=UI_Arrow_Up_White>,-99999
-UI,SelectPopup/Select,Select a skill,스킬을 선택하세요,-99999
-UI,SelectPopup/Complete,Complete,완료,-99999
-UI,PassivePopup/Title,Passive skills learned,학습한 패시브 스킬,-99999
-UI,PassivePopup/DesEmpty,Does not have any passive skills,패시브 스킬을 보유하지 않았습니다,-99999
-UI,StageResultPopup/Title/Win,WIN,승리,-99999
-UI,StageResultPopup/Title/Lose,LOSE,패배,-99999
-UI,StageResultPopup/Rewards,REWARDS,보상,-99999
-Lobby,CurrentStageCard/Name/Stage1,{[value]}. Fishing Forest,{[value]}. 낚시터 숲,-99999
-Lobby,CurrentStageCard/Name/Stage2,{[value]}. Cheese Kitchen,{[value]}. 치즈 부엌,-99999
-Lobby,CurrentStageCard/HighestProgress,Highest record: <color=#FFEF84>{[value]}%</color>,최고 기록 : <color=#FFEF84>{[value]}%</color>,-99999
-Lobby,ButtonGameStart/ResourceText,<sprite name=Property_Stamina> x{[value]},<sprite name=Property_Stamina> x{[value]},-99999
-Lobby,BottomToggles/Shop,Shop,상점,-99999
-Lobby,BottomToggles/Equipment,Equipment,장비,-99999
-Lobby,BottomToggles/Main,Main,모험,-99999
-Lobby,BottomToggles/Challenge,Challenge,도전,-99999
-Lobby,BottomToggles/Evolution,Evolution,진화,-99999
-Lobby,BonusButton,Bonus,보너스,-99999
-Lobby,TravelButton,Travel,탐방,-99999
-Lobby,StartButton,Start,시작,-99999
-Lobby,DefaultUserID,AlohaCat,알로하냥,-99999
-Lobby,SideButton/Growth,Growth,성장,-99999
-Lobby,SideButton/Package,Package,패키지,-99999
-Equipment,StatBonus/AttackPower,Attack <color=#10BC0F>+{[value]}</color>,공격력 <color=#10BC0F>+{[value]}</color>,-99999
-Equipment,StatBonus/MaxHp,Health <color=#10BC0F>+{[value]}</color>,체력 <color=#10BC0F>+{[value]}</color>,-99999
-Equipment,StatBonus/Armor,Defense <color=#10BC0F>+{[value]}</color>,방어력 <color=#10BC0F>+{[value]}</color>,-99999
-Equipment,FilterButton/Rarity,Quality,등급,-99999
-Equipment,FilterButton/Part,Slot,부위,-99999
-Equipment,FilterButton/Acquisition,Acquisition,획득,-99999
-Equipment,MergeButton,Merge,합성,-99999
-Equipment,ListTitle/Scroll,Equipment Scrolls,장비 스크롤,-99999
-Equipment,ListTitle/Material,Equipment Materials,장비 재료,-99999
-Equipment,Icon/Level,LV.{[value]},LV.{[value]},-99999
-Equipment,Icon/Grade,+{[value]},+{[value]},-99999
-Equipment,Merge/Toast/NotingToMerge,There are no equipments that can be merged,합성 가능한 장비가 존재하지 않습니다,-99999
-Equipment,Part/Weapon,Weapon,무기,-99999
-Equipment,Part/Body,Armor,방어구,-99999
-Equipment,Part/Ring,Ring,반지,-99999
-Equipment,Part/Accessories,Accessories,장신구,-99999
-Equipment,BatchMergeButton,Quick Merge,일괄 합성,-99999
-Shop,RandomBox/Obtain,Get {[value]},얻기 x{[value]},-99999
-Shop,RandomBox/Card/Supply/Name,Supply Box,보급 상자,-99999
-Shop,RandomBox/Card/HighQuality/Name,High-Quality Box,고급 상자,-99999
-Shop,RandomBox/Card/Legendary/Name,Legendary Box,이벤트 전설 상자,-99999
-Shop,RandomBox/Card/Supply/Description,<color=#8F7F6B>Common</color><c> <color=#0ABC06>Great</color> equipment included,<color=#8F7F6B>일반</color><c> <color=#0ABC06>우수</color> 장비 포함,-99999
-Shop,RandomBox/Card/HighQuality/Description,<color=#0ABC06>Great</color><c> <color=#00BAFF>Rare</color><c> <color=#BC5BE9>Epic</color> equipment included,<color=#0ABC06>우수</color><c> <color=#00BAFF>희귀</color><c> <color=#BC5BE9>에픽</color> 장비 포함,-99999
-Shop,Section/RandomBox/Legendary/Name,Event Equipment Boxes,이벤트 장비 상자,-99999
-Shop,Section/RandomBox/SupplyAndHighQuality/Name,Equipment Boxes,장비 상자,-99999
-Shop,RandomBox/Card/Supply/Ceiling,Get <color=#0ABC06>Great</color> equipment in {[value]} open(s)!,<color=#F4B900>{[value]}</color>회 내에 <color=#0ABC06>우수</color> 장비 획득!,-99999
-Shop,RandomBox/Card/HighQuality/Ceiling,Get <color=#BC5BE9>Epic</color> equipment in {[value]} open(s)!,<color=#F4B900>{[value]}</color>회 내에 <color=#BC5BE9>에픽</color> 장비 획득!,-99999
-Shop,RandomBox/Card/Legendary/Ceiling,Get <color=#BC5BE9>Epic</color> equipment in {[value]} open(s)!,<color=#F4B900>{[value]}</color>회 내에 <color=#BC5BE9>에픽</color> 장비 획득!,-99999
-Popup,StageUI/Result/Clear,Clear,성공,-99999
-Popup,StageUI/Result/Fail,Fail,실패,-99999
-Popup,StageUI/Result/Replay,Replay,다시하기,-99999
-Popup,StageUI/Pause/Resume,Resume,계속하기,-99999
-Popup,StageUI/Pause/ExitBattle,Exit,나가기,-99999
-Popup,StageUI/Result/Ok,OK,확인,-99999
-Popup,EquipmentInfo/Name/Level,Level,레벨,-99999
-Popup,EquipmentInfo/Name/Type,Type,유형,-99999
-Popup,EquipmentInfo/Name/BasicStat,Basic Stat,기본 속성,-99999
-Popup,EquipmentInfo/Name/EquipSkill,Equip Skill,장비 스킬,-99999
-Popup,EquipmentInfo/Button/LevelUp,Enhance,강화,-99999
-Popup,EquipmentInfo/Button/Equip,Equip,장착,-99999
-Popup,EquipmentInfo/Button/UnEquip,Remove,해제,-99999
-Popup,EquipmentInfo/Button/BatchLevelUp,Quick<br>Enhance,일괄 강화,-99999
-Popup,ItemObtainedPopup,Obtained Item!,아이템 획득!,-99999
-Popup,EquipmentInfo/ReachMaxLevel,Reached max level,최대 레벨에 도달했습니다,-99999
-Popup,AnnouncePopup/Desc/NoReturnStamina,Ending the battle won't return the stamina you've already consumed. Are you sure you want to end it?,전투를 종료해도 이미 소모한 스태미나는 반환되지 않습니다. 정말 종료하시겠습니까?,-99999
-FloatingText,Critical,<sprite name=Damage_Critical> <color=#ff6f16>Critical! {[value]}</color>,<sprite name=Damage_Critical> <color=#ff6f16>치명타! {[value]}</color>,-99999
-FloatingText,Evasion,<sprite name=Status_Boots> Evasion!,<sprite name=Status_Boots> 회피!,-99999
-FloatingText,Shield,<sprite name=Status_CoconutShield> Block!,<sprite name=Status_CoconutShield> 막기!,-99999
-FloatingText,Heal,<sprite name=Status_Meat> <color=#73e312>{[value]} Healed </color>,<sprite name=Status_Meat> <color=#73e312>회복 +{[value]} </color>,-99999
-FloatingText,Damage,<color=#ff6f16>{[value]}</color>,<color=#ff6f16>{[value]}</color>,-99999
-FloatingText,MintCandy,<sprite name=Status_MintCandy> Debuff Removed!,<sprite name=Status_MintCandy> 디버프 제거!,-99999
-StatusEffect,Name/Freeze,<sprite name=Status_Freeze><color=#00baff>Freeze</color>,<sprite name=Status_Freeze><color=#00baff>동결</color>,-99999
-StatusEffect,Name/BurningOil,<sprite name=Status_Flame><color=#ff6f16>Burning Oil</color>,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>,-99999
-StatusEffect,Name/StickyJam,<sprite name=Status_Jam><color=#ffd900>Sticky Jam</color>,<sprite name=Status_Jam><color=#ffd900>끈적이는 잼</color>,-99999
-StatusEffect,Name/Kettle,<sprite name=Status_Kettle><color=#f4b900>Kettle</color>,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>,-99999
-StatusEffect,Name/Chili,<sprite name=Status_BombChili><color=#ff6f16>Hot Chili</color>,<sprite name=Status_BombChili><color=#ff6f16>핫 칠리</color>,-99999
-StatusEffect,Name/BombChili,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color>,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>,-99999
-StatusEffect,Name/Shield,<sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color>,<sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color>,-99999
-StatusEffect,Name/EnergyDrink,<sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color>,<sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color>,-99999
-StatusEffect,Name/Meat,<sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color>,<sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color>,-99999
-StatusEffect,Name/MintCandy,<sprite name=Status_MintCandy><color=#00baff>Mint Candy</color>,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>,-99999
-StatusEffect,Name/KitchenKnife,<sprite name=Status_Knife><color=#ff6f16>Kitchen Knife</color>,<sprite name=Status_Knife><color=#ff6f16>식칼</color>,-99999
-StatusEffect,Name/CookingTimer,<sprite name=Status_CookingTimer><color=#00baff>Cooking Timer</color>,<sprite name=Status_CookingTimer><color=#00baff>쿠킹 타이머</color>,-99999
-StatusEffect,Name/PepperShaker,<sprite name=Status_PepperShaker><color=#ff6f16>Pepper Shaker</color>,<sprite name=Status_PepperShaker><color=#ff6f16>후추 통</color>,-99999
-StatusEffect,Name/Tomato,<sprite name=Status_Tomato><color=#73e312>Tomato</color>,<sprite name=Status_Tomato><color=#73e312>토마토</color>,-99999
-StatusEffect,Name/Apron,<sprite name=Status_Apron><color=#ff6f16>Apron</color>,<sprite name=Status_Apron><color=#ff6f16>앞치마</color>,-99999
-StatusEffect,Name/CookingHat,<sprite name=Status_CookingHat><color=#00baff>CookingHat</color>,<sprite name=Status_CookingHat><color=#00baff>요리 모자</color>,-99999
-StatusEffect,Name/Boots,<sprite name=Status_Boots><color=#00baff>Boots</color>,<sprite name=Status_Boots><color=#00baff>장화</color>,-99999
-StatusEffect,Exp/Freeze,Freezes enemies<c> stopping their actions.,적을 얼려서 행동을 멈추게 함,-99999
-StatusEffect,Exp/BurningOil,Continuously damages enemies,적에게 지속적 피해를 줌,-99999
-StatusEffect,Exp/StickyJam,Reduces enemy movement speed and attack power,적의 행동 속력과 공격력을 감소시킴,-99999
-StatusEffect,Exp/Kettle,Deal damage to enemies,적에게 피해를 줌,-99999
-StatusEffect,Exp/Chili,Next hit damage +100%,다음 타격의 피해량 100% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,Exp/BombChili,On the next hit<c> the bomb chili explodes<c> dealing the same damage once more.,다음 타격을 할 때<c> 폭탄 칠리가 터져서 동일한 피해를 한번 더 줌,-99999
-StatusEffect,Exp/Shield,Blocks half damage when hit,타격 당했을 때 피해의 절반을 막음,-99999
-StatusEffect,Exp/EnergyDrink,One skill's action speed increases,스킬 하나의 행동 속력이 빨라짐,-99999
-StatusEffect,Exp/Meat,Restores health,체력을 회복함,-99999
-StatusEffect,Exp/MintCandy,Removes or prevents debuffs,디버프를 제거하거나 방지함,-99999
-StatusEffect,Exp/KitchenKnife,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,Exp/CookingTimer,<color=#00baff>Attack Speed</color> 10% <sprite name=UI_Arrow_Up>,<color=#00baff>공격 속도</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,Exp/PepperShaker,<color=#ff6f16>Critical HIt Chance</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>치명타 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,Exp/Tomato,<color=#73e312>Max Health</color> 10% <sprite name=UI_Arrow_Up>,<color=#73e312>최대 체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,Exp/Apron,<color=#ff6f16>Damage Taken</color> 10% <sprite name=UI_Arrow_Down>,<color=#ff6f16>받는 피해량</color> 10% <sprite name=UI_Arrow_Down>,-99999
-StatusEffect,Exp/CookingHat,<color=#00baff>Debuff Resistance</color> 10% <sprite name=UI_Arrow_Up>,<color=#00baff>디버프 저항</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,Exp/Boots,<color=#00baff>Evasion Chance</color> 10% <sprite name=UI_Arrow_Up>,<color=#00baff>회피 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/Freeze,<sprite name=Status_Freeze><color=#00baff>Freeze</color>: Freezes enemies<c> stopping their actions.,<sprite name=Status_Freeze><color=#00baff>동결</color> : 적을 얼려서 행동을 멈추게 함,-99999
-StatusEffect,NameExp/BurningOil,<sprite name=Status_Flame><color=#ff6f16>Burning Oil</color>: Continuously damages enemies,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> : 적에게 지속적 피해를 줌,-99999
-StatusEffect,NameExp/StickyJam,<sprite name=Status_Jam><color=#ffd900>Sticky Jam</color>: Reduces enemy movement speed and attack power,<sprite name=Status_Jam><color=#ffd900>끈적이는 잼</color> : 적의 행동 속력과 공격력을 감소시킴,-99999
-StatusEffect,NameExp/Kettle,<sprite name=Status_Kettle><color=#f4b900>Kettle</color>: Deal damage to enemies,<sprite name=Status_Kettle><color=#f4b900>주전자 </color> : 적에게 피해를 줌,-99999
-StatusEffect,NameExp/Chili,<sprite name=Status_BombChili><color=#ff6f16>Hot Chili</color>: Next hit damage +100%,<sprite name=Status_BombChili><color=#ff6f16>핫 칠리</color> : 다음 타격의 피해량 100% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/BombChili,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color>: On the next hit<c> the bomb chili explodes<c> dealing the same damage once more.,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> : 다음 타격을 할 때<c> 폭탄 칠리가 터져서 동일한 피해를 한번 더 줌,-99999
-StatusEffect,NameExp/Shield,<sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color>: Blocks half damage when hit,<sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color> : 타격 당했을 때 피해의 절반을 막음,-99999
-StatusEffect,NameExp/EnergyDrink,<sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color>: One skill's action speed increases,<sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> : 스킬 하나의 행동 속력이 빨라짐,-99999
-StatusEffect,NameExp/Meat,<sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color>: Restores health,<sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> : 체력을 회복함,-99999
-StatusEffect,NameExp/MintCandy,<sprite name=Status_MintCandy><color=#00baff>Mint Candy</color>: Removes or prevents debuffs,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> : 디버프를 제거하거나 방지함,-99999
-StatusEffect,NameExp/KitchenKnife,<sprite name=Status_Knife><color=#ff6f16>Kitchen Knife</color>: <color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Status_Knife><color=#ff6f16>식칼</color> : <color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/CookingTimer,<sprite name=Status_CookingTimer><color=#00baff>Cooking Timer</color>: <color=#00baff>Attack Speed</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Status_CookingTimer><color=#00baff>쿠킹 타이머</color> : <color=#00baff>공격 속도</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/PepperShaker,<sprite name=Status_PepperShaker><color=#ff6f16>Pepper Shaker</color>: <color=#ff6f16>Critical HIt Chance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Status_PepperShaker><color=#ff6f16>후추 통</color> : <color=#ff6f16>치명타 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/Tomato,<sprite name=Status_Tomato><color=#73e312>Tomato</color>: <color=#73e312>Max Health</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Status_Tomato><color=#73e312>토마토</color> : <color=#73e312>최대 체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/Apron,<sprite name=Status_Apron><color=#ff6f16>Apron</color>: <color=#ff6f16>Damage Taken</color> 10% <sprite name=UI_Arrow_Down>,<sprite name=Status_Apron><color=#ff6f16>앞치마</color> : <color=#ff6f16>받는 피해량</color> 10% <sprite name=UI_Arrow_Down>,-99999
-StatusEffect,NameExp/CookingHat,<sprite name=Status_CookingHat><color=#00baff>CookingHat</color>: <color=#00baff>Debuff Resistance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Status_CookingHat><color=#00baff>요리 모자</color> : <color=#00baff>디버프 저항</color> 10% <sprite name=UI_Arrow_Up>,-99999
-StatusEffect,NameExp/Boots,<sprite name=Status_Boots><color=#00baff>Boots</color>: <color=#00baff>Evasion Chance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Status_Boots><color=#00baff>장화</color> : <color=#00baff>회피 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-AbilityType,NameExp/MainWeapon,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color>: Hits the enemy in front with melee attack<c> dealing significant damage.,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> : 가장 앞의 적을 근접로 타격해서 큰 피해를 줌.,-99999
-AbilityType,NameExp/Teafork,<sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color>: Fires Tea Fork at multiple random enemies<c> dealing damage.,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> : 랜덤한 다수의 적에게 티 포크를 연사해서 피해를 줌.,-99999
-AbilityType,NameExp/Jar,<sprite name=Skill_Jar><color=#5c482f>Bottle</color>: Throws bottles at multiple enemies<c> dealing damage and debuffing them,<sprite name=Skill_Jar><color=#5c482f>병</color> : 다수의 적에게 병을 던져서 피해를 주고 디버프를 걺,-99999
-AbilityType,NameExp/Snack,<sprite name=Skill_Snack><color=#5c482f>Snack</color>: Grants various buff effects to yourself,<sprite name=Skill_Snack><color=#5c482f>간식</color> : 자신에게 다양한 버프 효과를 부여함,-99999
-AbilityType,NameExp/HotSauce,<sprite name=Skill_Teafork><color=#5c482f>Hot Sauce</color>: Breathes fire<c> dealing damage to multiple enemies,<sprite name=Skill_Teafork><color=#5c482f>핫 소스</color>: 불을 내뿜어 다수의 적에게 피해를 줌,-99999
-AbilityType,NameExp/Passive,<sprite name=Skill_Passive><color=#5c482f>Passive</color>: Strengthens yourself and your skills in various ways,<sprite name=Skill_Passive><color=#5c482f>패시브</color> : 자신과 스킬을 다양한 형태로 강화함,-99999
-Ability,Name/Abl_P_BasicAttack_G0,Basic attack,기본 공격,-99999
-Ability,Name/Abl_P_LeapAttack_G1,<sprite name=Skill_MainWeapon>Leap attack,<sprite name=Skill_MainWeapon>도약 공격,-99999
-Ability,Name/Abl_P_LeapAttackWide_G2,<sprite name=Skill_MainWeapon>Wide leap attack,<sprite name=Skill_MainWeapon>광역 도약 공격,-99999
-Ability,Name/Abl_P_LeapAttackWide_G3,<sprite name=Skill_MainWeapon>Powerful wide leap attack,<sprite name=Skill_MainWeapon>강력한 광역 도약 공격,-99999
-Ability,Name/Abl_P_LeapAttackChili_G2,<sprite name=Skill_MainWeapon>Spicy leap attack,<sprite name=Skill_MainWeapon>매콤한 도약 공격,-99999
-Ability,Name/Abl_P_LeapAttackChili_G3,<sprite name=Skill_MainWeapon>Extra spicy leap attack,<sprite name=Skill_MainWeapon>더욱 매콤한 도약 공격,-99999
-Ability,Name/Abl_P_LeapAttackBurningOil_G2,<sprite name=Skill_MainWeapon>Flame leap attack,<sprite name=Skill_MainWeapon>화염 도약 공격,-99999
-Ability,Name/Abl_P_LeapAttackBurningOil_G3,<sprite name=Skill_MainWeapon>Wild flame leap attack+,<sprite name=Skill_MainWeapon>사나운 화염 도약 공격,-99999
-Ability,Name/Abl_P_Swing_G1,<sprite name=Skill_MainWeapon>Swing,<sprite name=Skill_MainWeapon>휘두르기,-99999
-Ability,Name/Abl_P_SwingFreeze_G2,<sprite name=Skill_MainWeapon>Freeze swing,<sprite name=Skill_MainWeapon>동결 휘두르기,-99999
-Ability,Name/Abl_P_SwingFreeze_G3,<sprite name=Skill_MainWeapon>Instant freeze swing,<sprite name=Skill_MainWeapon>즉석 냉동 휘두르기,-99999
-Ability,Name/Abl_P_SwingShield_G2,<sprite name=Skill_MainWeapon>Swing & block,<sprite name=Skill_MainWeapon>휘두르고 막기,-99999
-Ability,Name/Abl_P_SwingShield_G3,<sprite name=Skill_MainWeapon>Swing & iron wall block,<sprite name=Skill_MainWeapon>휘두르고 철벽 막기,-99999
-Ability,Name/Abl_P_PowerSlam_G1,<sprite name=Skill_MainWeapon>power slam,<sprite name=Skill_MainWeapon>강력 일격,-99999
-Ability,Name/Abl_P_PowerSlamBurningOil_G2,<sprite name=Skill_MainWeapon>Fire power slam,<sprite name=Skill_MainWeapon>화염 강력 일격,-99999
-Ability,Name/Abl_P_PowerSlamBurningOil_G3,<sprite name=Skill_MainWeapon>Ferocious flame power slam,<sprite name=Skill_MainWeapon>사나운 화염 강력 일격,-99999
-Ability,Name/Abl_PowerSlamCoconutShield_G2,<sprite name=Skill_MainWeapon>Coconut power slam,<sprite name=Skill_MainWeapon>코코넛 강력 일격,-99999
-Ability,Name/Abl_PowerSlamCoconutShield_G3,<sprite name=Skill_MainWeapon>Iron coconut power slam,<sprite name=Skill_MainWeapon>철벽 코코넛 강력 일격,-99999
-Ability,Name/Abl_PowerSlamWide_G2,<sprite name=Skill_MainWeapon>Wide powerful Strike,<sprite name=Skill_MainWeapon>광역 강력 일격,-99999
-Ability,Name/Abl_PowerSlamWide_G3,<sprite name=Skill_MainWeapon>Wide super powerful strike+,<sprite name=Skill_MainWeapon>광역 초강력 일격,-99999
-Ability,Name/Abl_P_TeaForkShoot_G1,<sprite name=Skill_Teafork>Throw tea fork,<sprite name=Skill_Teafork>티 포크 투척,-99999
-Ability,Name/Abl_P_TeaForkShootEnergyDrink_G2,<sprite name=Skill_Teafork>A spirited tea fork,<sprite name=Skill_Teafork>기운 넘치는 티 포크,-99999
-Ability,Name/Abl_P_TeaForkShootEnergyDrink_G3,<sprite name=Skill_Teafork>Ferocious tea fork,<sprite name=Skill_Teafork>격렬한 티 포크,-99999
-Ability,Name/Abl_P_TeaForkShootFreeze_G2,<sprite name=Skill_Teafork>Throw ice tea fork,<sprite name=Skill_Teafork>얼음 티 포크 투척,-99999
-Ability,Name/Abl_P_TeaForkShootFreeze_G3,<sprite name=Skill_Teafork>Throw instant freeze tea fork,<sprite name=Skill_Teafork>즉석 냉동 티 포크 투척,-99999
-Ability,Name/Abl_P_TeaForkShootPlus_G2,<sprite name=Skill_Teafork>Continuous tea fork throw,<sprite name=Skill_Teafork>티 포크 연속 투척,-99999
-Ability,Name/Abl_P_TeaForkShootPlus_G3,<sprite name=Skill_Teafork>Tea fork storm,<sprite name=Skill_Teafork>티 포크 폭풍,-99999
-Ability,Name/Abl_P_TeaForkDrop_G1,<sprite name=Skill_Teafork>Tea fork drop,<sprite name=Skill_Teafork>티 포크 낙하,-99999
-Ability,Name/Abl_P_TeaForkDropMeat_G2,<sprite name=Skill_Teafork>Eat meat with a tea fork,<sprite name=Skill_Teafork>티 포크로 고기 먹기,-99999
-Ability,Name/Abl_P_TeaForkDropMeat_G3,<sprite name=Skill_Teafork>Eat a lot of meat with a tea fork,<sprite name=Skill_Teafork>티 포크로 고기 잔뜩 먹기,-99999
-Ability,Name/Abl_P_TeaForkDropStickyJam_G2,<sprite name=Skill_Teafork>Jam tea fork drop,<sprite name=Skill_Teafork>잼 티 포크 낙하,-99999
-Ability,Name/Abl_P_TeaForkDropStickyJam_G3,<sprite name=Skill_Teafork>Pouring jam tea fork,<sprite name=Skill_Teafork>쏟아지는 잼 티 포크,-99999
-Ability,Name/Abl_P_TeaForkDropMintCandy_G2,<sprite name=Skill_Teafork>Refreshing Tea Fork Drop,<sprite name=Skill_Teafork>상큼한 티 포크 낙하,-99999
-Ability,Name/Abl_P_TeaForkDropMintCandy_G3,<sprite name=Skill_Teafork>Appetizing Tea Fork Drop,<sprite name=Skill_Teafork>입맛 돋구는 티 포크 낙하,-99999
-Ability,Name/Abl_P_TeaForkDropPlus_G2,<sprite name=Skill_Teafork>Consecutive tea fork drop,<sprite name=Skill_Teafork>연속 티 포크 낙하,-99999
-Ability,Name/Abl_P_TeaForkDropPlus_G3,<sprite name=Skill_Teafork>Numerous tea forks falling,<sprite name=Skill_Teafork>무수한 잼 티 포크 낙하,-99999
-Ability,Name/Abl_P_JamBottle_G1,<sprite name=Skill_Jar>Jam bottle throw,<sprite name=Skill_Jar>잼 병 던지기,-99999
-Ability,Name/Abl_P_JamBottle_G2,<sprite name=Skill_Jar>Throw a lot of jam bottles,<sprite name=Skill_Jar>잼 병 많이 던지기,-99999
-Ability,Name/Abl_P_JamBottle_G3,<sprite name=Skill_Jar>Pouring jam bottles,<sprite name=Skill_Jar>쏟아지는 잼 병,-99999
-Ability,Name/Abl_P_JamBottleCoconutShield_G2,<sprite name=Skill_Jar>Coconut Flavored Jam Bottle,<sprite name=Skill_Jar>코코넛 맛 잼 병,-99999
-Ability,Name/Abl_P_JamBottleCoconutShield_G3,<sprite name=Skill_Jar>A Bottle of rich coconut flavored jam,<sprite name=Skill_Jar>진한 코코넛 맛 잼 병,-99999
-Ability,Name/Abl_P_FireBottle_G1,<sprite name=Skill_Jar>Fire bottle throw,<sprite name=Skill_Jar>화염 병 던지기,-99999
-Ability,Name/Abl_P_FireBottle_G2,<sprite name=Skill_Jar>Throws a lot of fire bottles,<sprite name=Skill_Jar>화염 병 많이 던지기,-99999
-Ability,Name/Abl_P_FireBottle_G3,<sprite name=Skill_Jar>Pouring fire bottles,<sprite name=Skill_Jar>쏟아지는 화염 병,-99999
-Ability,Name/Abl_P_FireBottlePlus_G2,<sprite name=Skill_Jar>Consecutive fire bottle throw,<sprite name=Skill_Jar>화염 병 연속 던지기,-99999
-Ability,Name/Abl_P_FireBottlePlus_G3,<sprite name=Skill_Jar>Storm of fire bottles,<sprite name=Skill_Jar>화염 병의 폭풍,-99999
-Ability,Name/Abl_P_IceBottle_G1,<sprite name=Skill_Jar>Ice bottle throw,<sprite name=Skill_Jar>얼음 병 던지기,-99999
-Ability,Name/Abl_P_IceBottle_G2,<sprite name=Skill_Jar>Throw a lot of ice bottles,<sprite name=Skill_Jar>얼음 병 많이 던지기,-99999
-Ability,Name/Abl_P_IceBottle_G3,<sprite name=Skill_Jar>Pouring Ice Jar,<sprite name=Skill_Jar>쏟아지는 얼음 병,-99999
-Ability,Name/Abl_P_IceBottleEnergyDrink_G2,<sprite name=Skill_Jar>Invigorating ice bottle,<sprite name=Skill_Jar>기운 나는 얼음 병,-99999
-Ability,Name/Abl_P_IceBottleEnergyDrink_G3,<sprite name=Skill_Jar>Invigorating ice bottle box,<sprite name=Skill_Jar>기운 나는 얼음 병 상자,-99999
-Ability,Name/Abl_P_BombChili_G1,<sprite name=Skill_Snack>Eat bomb chili,<sprite name=Skill_Snack>폭탄 칠리 먹기,-99999
-Ability,Name/Abl_P_BombChili_G2,<sprite name=Skill_Snack>Eat more bomb chilis,<sprite name=Skill_Snack>폭탄 칠리 마구 먹기,-99999
-Ability,Name/Abl_P_BombChili_G3,<sprite name=Skill_Snack>Bomb chili pile,<sprite name=Skill_Snack>폭탄 칠리 무더기,-99999
-Ability,Name/Abl_P_BombChiliEnergyDrink_G2,<sprite name=Skill_Snack>Explosive power,<sprite name=Skill_Snack>폭발적인 힘,-99999
-Ability,Name/Abl_P_BombChiliEnergyDrink_G3,<sprite name=Skill_Snack>Bursting muscles,<sprite name=Skill_Snack>터질 듯한 근육,-99999
-Ability,Name/Abl_P_EnergyDrink_G1,<sprite name=Skill_Snack>Drink energy drink,<sprite name=Skill_Snack>에너지 드링크 마시기,-99999
-Ability,Name/Abl_P_EnergyDrink_G2,<sprite name=Skill_Snack>Drink more energy drinks,<sprite name=Skill_Snack>에너지 드링크 퍼마시기,-99999
-Ability,Name/Abl_P_EnergyDrink_G3,<sprite name=Skill_Snack>Box of energy drinks,<sprite name=Skill_Snack>에너지 드링크 상자,-99999
-Ability,Name/Abl_P_EnergyDrinkMintCandy_G2,<sprite name=Skill_Snack>A refreshing breeze,<sprite name=Skill_Snack>상큼한 바람,-99999
-Ability,Name/Abl_P_EnergyDrinkMintCandy_G3,<sprite name=Skill_Snack>Refreshing typhoon,<sprite name=Skill_Snack>상큼한 태풍,-99999
-Ability,Name/Abl_P_CoconutShield_G1,<sprite name=Skill_Snack>Eat coconut shield,<sprite name=Skill_Snack>코코넛 쉴드 먹기,-99999
-Ability,Name/Abl_P_CoconutShield_G2,<sprite name=Skill_Snack>Eat more coconut shields,<sprite name=Skill_Snack>코코넛 쉴드 마구 먹기,-99999
-Ability,Name/Abl_P_CoconutShield_G3,<sprite name=Skill_Snack>Bag of coconut shields,<sprite name=Skill_Snack>코코넛 쉴드 바구니,-99999
-Ability,Name/Abl_P_CoconutBombChili_G2,<sprite name=Skill_Snack>A balanced diet,<sprite name=Skill_Snack>균형 있는 식사,-99999
-Ability,Name/Abl_P_CoconutBombChili_G3,<sprite name=Skill_Snack>A meal that is both delicious and nutritious,<sprite name=Skill_Snack>맛도 좋고 영양가도 있는 식사,-99999
-Ability,Name/Abl_P_Meat_G1,<sprite name=Skill_Snack>Eat meat,<sprite name=Skill_Snack>고기 먹기,-99999
-Ability,Name/Abl_P_Meat_G2,<sprite name=Skill_Snack>Eat more meat,<sprite name=Skill_Snack>고기 마구 먹기,-99999
-Ability,Name/Abl_P_Meat_G3,<sprite name=Skill_Snack>Mountain of meat,<sprite name=Skill_Snack>고기의 산,-99999
-Ability,Name/Abl_P_MeatCoconutShield_G2,<sprite name=Skill_Snack>A hearty snack,<sprite name=Skill_Snack>든든한 간식,-99999
-Ability,Name/Abl_P_MeatCoconutShield_G3,<sprite name=Skill_Snack>A hearty meal,<sprite name=Skill_Snack>든든한 한끼 식사,-99999
-Ability,Name/Abl_P_MintCandy_G1,<sprite name=Skill_Snack>Eat mint candy,<sprite name=Skill_Snack>민트 사탕 먹기,-99999
-Ability,Name/Abl_P_MintCandy_G2,<sprite name=Skill_Snack>Eat more mint candies,<sprite name=Skill_Snack>민트 사탕 마구 먹기,-99999
-Ability,Name/Abl_P_MintCandy_G3,<sprite name=Skill_Snack>Box of mint candy,<sprite name=Skill_Snack>민트 사탕 상자,-99999
-Ability,Name/Abl_P_MintCandyMeat_G2,<sprite name=Skill_Snack>A strange combination,<sprite name=Skill_Snack>기묘한 조합,-99999
-Ability,Name/Abl_P_MintCandyMeat_G3,<sprite name=Skill_Snack>Master of Taste,<sprite name=Skill_Snack>맛의 달인,-99999
-Ability,Name/Abl_P_SnackSet_G3,<sprite name=Skill_Snack>Gift Set,<sprite name=Skill_Snack>종합 선물 세트,-99999
-Ability,Exp/Abl_P_BasicAttack_G0,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>small damage</color> ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_LeapAttack_G1,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_LeapAttackWide_G2,Hit 2 enemies<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> ,적 2명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_LeapAttackWide_G3,Hit 3 enemies<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> ,적 3명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_LeapAttackChili_G2,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> . Also give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +2,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color> 줌 . 또한 자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +2,-99999
-Ability,Exp/Abl_P_LeapAttackChili_G3,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>small damage</color> . Also give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +3,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color> 줌 . 또한 자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +3,-99999
-Ability,Exp/Abl_P_LeapAttackBurningOil_G2,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> and burning oil +2 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color>를 주고 불 붙은 기름 +2 ,-99999
-Ability,Exp/Abl_P_LeapAttackBurningOil_G3,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> and burning oil +3 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color>를 주고 불 붙은 기름 +3 ,-99999
-Ability,Exp/Abl_P_Swing_G1,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>medium damage</color> and burning oil +3 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>중간 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_SwingFreeze_G2,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>medium damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>중간 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 ,-99999
-Ability,Exp/Abl_P_SwingFreeze_G3,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>medium damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +2 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>중간 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +2 ,-99999
-Ability,Exp/Abl_P_SwingShield_G2,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>medium damage</color> . Also give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +1,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>중간 피해</color> 줌 . 또한 자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +1,-99999
-Ability,Exp/Abl_P_SwingShield_G3,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>medium damage</color> . Also give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +2,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>중간 피해</color> 줌 . 또한 자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +2,-99999
-Ability,Exp/Abl_P_PowerSlam_G1,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>large damage</color> ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>큰 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_PowerSlamBurningOil_G2,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>very large damage</color> and burning oil +3 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>매우 큰 피해</color>를 주고 불 붙은 기름 +3 ,-99999
-Ability,Exp/Abl_P_PowerSlamBurningOil_G3,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>very large damage</color> and burning oil +5 ,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>매우 큰 피해</color>를 주고 불 붙은 기름 +5 ,-99999
-Ability,Exp/Abl_PowerSlamCoconutShield_G2,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>very large damage</color> . Also give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +3,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>매우 큰 피해</color> 줌 . 또한 자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +3,-99999
-Ability,Exp/Abl_PowerSlamCoconutShield_G3,Hit 1 enemy<c> dealing <sprite name=Damage_Normal><color=#ff6f16>very large damage</color> . Also give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +5,적 1명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>매우 큰 피해</color> 줌 . 또한 자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +5,-99999
-Ability,Exp/Abl_PowerSlamWide_G2,Hit 2 enemies<c> dealing <sprite name=Damage_Normal><color=#ff6f16>very large damage</color> ,적 2명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>매우 큰 피해</color> 줌 ,-99999
-Ability,Exp/Abl_PowerSlamWide_G3,Hit 3 enemies<c> dealing <sprite name=Damage_Normal><color=#ff6f16>very large damage</color> ,적 3명을 타격해서 <sprite name=Damage_Normal><color=#ff6f16>매우 큰 피해</color> 줌 ,-99999
-Ability,Exp/Abl_P_TeaForkShoot_G1,Throws a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 3 random enemies. ,랜덤한 적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 던짐 ,-99999
-Ability,Exp/Abl_P_TeaForkShootEnergyDrink_G2,Throws a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 3 random enemies. . Also give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +1,랜덤한 적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 던짐 . 또한 자신에게 <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +1,-99999
-Ability,Exp/Abl_P_TeaForkShootEnergyDrink_G3,Throws a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 3 random enemies. . Also give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +2,랜덤한 적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 던짐 . 또한 자신에게 <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +2,-99999
-Ability,Exp/Abl_P_TeaForkShootFreeze_G2,Deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 2 random enemies and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 ,랜덤한 적 2명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 ,-99999
-Ability,Exp/Abl_P_TeaForkShootFreeze_G3,Deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 2 random enemies and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 ,랜덤한 적 2명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 ,-99999
-Ability,Exp/Abl_P_TeaForkShootPlus_G2,Throws a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 5 random enemies. ,랜덤한 적 5명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 던짐 ,-99999
-Ability,Exp/Abl_P_TeaForkShootPlus_G3,Throws a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 7 random enemies. ,랜덤한 적 7명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 던짐 ,-99999
-Ability,Exp/Abl_P_TeaForkDrop_G1,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 4 random enemies. ,랜덤한 적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 ,-99999
-Ability,Exp/Abl_P_TeaForkDropMeat_G2,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 4 random enemies. . Also give yourself <sprite name=Status_Meat><color=#f4b900>well-cooked meat</color> +2,랜덤한 적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 . 또한 자신에게 <sprite name=Status_Meat><color=#f4b900>잘 구운 고기</color> +2,-99999
-Ability,Exp/Abl_P_TeaForkDropMeat_G3,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 6 random enemies. . Also give yourself <sprite name=Status_Meat><color=#f4b900>well-cooked meat</color> +3,랜덤한 적 6명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 . 또한 자신에게 <sprite name=Status_Meat><color=#f4b900>잘 구운 고기</color> +3,-99999
-Ability,Exp/Abl_P_TeaForkDropStickyJam_G2,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 3 random enemies and creates a <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 ,랜덤한 적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1하는 티 포크를 낙하시킴 ,-99999
-Ability,Exp/Abl_P_TeaForkDropStickyJam_G3,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 5 random enemies and creates a <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 ,랜덤한 적 5명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1하는 티 포크를 낙하시킴 ,-99999
-Ability,Exp/Abl_P_TeaForkDropMintCandy_G2,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 4 random enemies. . Also give yourself <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +2,랜덤한 적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 . 또한 자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +2,-99999
-Ability,Exp/Abl_P_TeaForkDropMintCandy_G3,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 6 random enemies. . Also give yourself <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +3,랜덤한 적 6명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 . 또한 자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +3,-99999
-Ability,Exp/Abl_P_TeaForkDropPlus_G2,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 7 random enemies. ,랜덤한 적 7명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 ,-99999
-Ability,Exp/Abl_P_TeaForkDropPlus_G3,Drops a tea fork that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> to 10 random enemies. ,랜덤한 적 10명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주는 티 포크를 낙하시킴 ,-99999
-Ability,Exp/Abl_P_JamBottle_G1,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and applies <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 to 3 enemies ,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_JamBottle_G2,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and applies <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 to 4 enemies ,적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_JamBottle_G3,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and applies <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 to 5 enemies ,적 5명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_JamBottleCoconutShield_G2,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and applies <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 to 3 enemies . Also give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +1,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1 주는 병을 던짐 . 또한 자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +1,-99999
-Ability,Exp/Abl_P_JamBottleCoconutShield_G3,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and applies <sprite name=Status_Jam><color=#f4b900>sticky jam</color> +1 to 4 enemies . Also give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +1,적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1 주는 병을 던짐 . 또한 자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +1,-99999
-Ability,Exp/Abl_P_FireBottle_G1,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1 to 3 enemies ,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_FireBottle_G2,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1 to 4 enemies ,적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_FireBottle_G3,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1 to 5 enemies ,적 5명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_FireBottlePlus_G2,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1 to 2 enemies (repeat 2 times) ,적 2명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1 주는 병을 던짐 (2회 반복) ,-99999
-Ability,Exp/Abl_P_FireBottlePlus_G3,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1 to 3 enemies (repeat 2 times) ,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1 주는 병을 던짐 (2회 반복) ,-99999
-Ability,Exp/Abl_P_IceBottle_G1,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 to 3 enemies ,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_IceBottle_G2,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 to 3 enemies ,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_IceBottle_G3,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 to 3 enemies ,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 주는 병을 던짐 ,-99999
-Ability,Exp/Abl_P_IceBottleEnergyDrink_G2,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 to 3 enemies . Also give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +1,적 3명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 주는 병을 던짐 . 또한 자신에게 <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +1,-99999
-Ability,Exp/Abl_P_IceBottleEnergyDrink_G3,Throws a bottle that deals <sprite name=Damage_Normal><color=#ff6f16>small damage</color> and <sprite name=Status_Freeze><color=#00baff>freeze</color> +1 to 4 enemies . Also give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +1,적 4명에게<c> <sprite name=Damage_Normal><color=#ff6f16>작은 피해</color>를 주고 <sprite name=Status_Freeze><color=#00baff>동결</color> +1 주는 병을 던짐 . 또한 자신에게 <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +1,-99999
-Ability,Exp/Abl_P_BombChili_G1,Give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +3 ,자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +3 ,-99999
-Ability,Exp/Abl_P_BombChili_G2,Give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +4 ,자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +4 ,-99999
-Ability,Exp/Abl_P_BombChili_G3,Give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +5 ,자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +5 ,-99999
-Ability,Exp/Abl_P_BombChiliEnergyDrink_G2,Give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +3<c> <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +1 ,자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +3<c> <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +1 ,-99999
-Ability,Exp/Abl_P_BombChiliEnergyDrink_G3,Give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +3<c> <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +2 ,자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +3<c> <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +2 ,-99999
-Ability,Exp/Abl_P_EnergyDrink_G1,Give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +3 ,자신에게 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +3 ,-99999
-Ability,Exp/Abl_P_EnergyDrink_G2,Give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +4 ,자신에게 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +4 ,-99999
-Ability,Exp/Abl_P_EnergyDrink_G3,Give yourself <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +5 ,자신에게 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +5 ,-99999
-Ability,Exp/Abl_P_EnergyDrinkMintCandy_G2,Give yourself a <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> +3<c> <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1 ,자신에게 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +3<c> <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1 ,-99999
-Ability,Exp/Abl_P_EnergyDrinkMintCandy_G3,Give yourself a <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> +3<c> <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +2 ,자신에게 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +3<c> <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +2 ,-99999
-Ability,Exp/Abl_P_CoconutShield_G1,Give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +3 ,자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +3 ,-99999
-Ability,Exp/Abl_P_CoconutShield_G2,Give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +3 ,자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +4 ,-99999
-Ability,Exp/Abl_P_CoconutShield_G3,Give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +3 ,자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +5 ,-99999
-Ability,Exp/Abl_P_CoconutBombChili_G2,Give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +3<c> <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +1 ,자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +3<c> <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +1 ,-99999
-Ability,Exp/Abl_P_CoconutBombChili_G3,Give yourself <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +3<c> <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +2 ,자신에게 <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +3<c> <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +2 ,-99999
-Ability,Exp/Abl_P_Meat_G1,Give yourself <sprite name=Status_Meat><color=#f4b900>well-cooked meat</color> +3 ,자신에게 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +3 ,-99999
-Ability,Exp/Abl_P_Meat_G2,Give yourself <sprite name=Status_Meat><color=#f4b900>well-cooked meat</color> +4 ,자신에게 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +4 ,-99999
-Ability,Exp/Abl_P_Meat_G3,Give yourself <sprite name=Status_Meat><color=#f4b900>well-cooked meat</color> +5 ,자신에게 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +5 ,-99999
-Ability,Exp/Abl_P_MeatCoconutShield_G2,Give yourself <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +3<c> <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +1 ,자신에게 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +3<c> <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +1 ,-99999
-Ability,Exp/Abl_P_MeatCoconutShield_G3,Give yourself <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +3<c> <sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> +2 ,자신에게 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +3<c> <sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color> +2 ,-99999
-Ability,Exp/Abl_P_MintCandy_G1,Give yourself a <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +3 ,자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +3 ,-99999
-Ability,Exp/Abl_P_MintCandy_G2,Give yourself a <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +4 ,자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +4 ,-99999
-Ability,Exp/Abl_P_MintCandy_G3,Give yourself a <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +5 ,자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +5 ,-99999
-Ability,Exp/Abl_P_MintCandyMeat_G2,Give yourself <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +3<c> <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +1 ,자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +3<c> <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +1 ,-99999
-Ability,Exp/Abl_P_MintCandyMeat_G3,Give yourself <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +3<c> <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +2 ,자신에게 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +3<c> <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +2 ,-99999
-Ability,Exp/Abl_P_SnackSet_G3,Give yourself <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color><c> <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color><c> <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color><c> <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color><c> <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1 ,자신에게 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color><c> <sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color><c> <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color><c> <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color><c> <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1 ,-99999
-Passive,Name/Passive_P_TempHealOnKill_G1,<sprite name=Skill_Passive><color=#5c482f>(Temporary) Recover on Kill,<sprite name=Skill_Passive><color=#5c482f>(임시) 적 처치시 회복,-99999
-Passive,Name/Passive_P_MainWeaponEnhance_G1,<sprite name=Skill_Passive><color=#5c482f>Sharp weapon,<sprite name=Skill_Passive><color=#5c482f>날카로운 무기,-99999
-Passive,Name/Passive_P_MainWeaponEnhance_G2,<sprite name=Skill_Passive><color=#5c482f>Ultimate melee weapon,<sprite name=Skill_Passive><color=#5c482f>궁극의 근접 무기,-99999
-Passive,Name/Passive_P_MainWeaponBottleEnhance_G3,<sprite name=Skill_Passive><color=#5c482f>Weapon expert,<sprite name=Skill_Passive><color=#5c482f>흉기 전문가,-99999
-Passive,Name/Passive_P_MainWeaponBombChili_G1,<sprite name=Skill_Passive><color=#5c482f>Bomb chili generator,<sprite name=Skill_Passive><color=#5c482f>폭탄 칠리 생성기,-99999
-Passive,Name/Passive_P_MainWeaponBombChili_G3,<sprite name=Skill_Passive><color=#5c482f>Bomb chili factory,<sprite name=Skill_Passive><color=#5c482f>폭탄 칠리 공장,-99999
-Passive,Name/Passive_P_MainWeaponKnife_G1,<sprite name=Skill_Passive><color=#5c482f>Martial arts training,<sprite name=Skill_Passive><color=#5c482f>무술 단련,-99999
-Passive,Name/Passive_P_MainWeaponKnife_G2,<sprite name=Skill_Passive><color=#5c482f>Martial arts master,<sprite name=Skill_Passive><color=#5c482f>무술의 달인,-99999
-Passive,Name/Passive_P_MainWeaponBoots_G1,<sprite name=Skill_Passive><color=#5c482f>Evasion practice,<sprite name=Skill_Passive><color=#5c482f>회피 연습,-99999
-Passive,Name/Passive_P_MainWeaponBoots_G2,<sprite name=Skill_Passive><color=#5c482f>Hit and dodge,<sprite name=Skill_Passive><color=#5c482f>때리고 피하기,-99999
-Passive,Name/Passive_P_MainWeaponBurningOil_G1,<sprite name=Skill_Passive><color=#5c482f>Weapon on fire,<sprite name=Skill_Passive><color=#5c482f>불 붙은 무기,-99999
-Passive,Name/Passive_P_MainWeaponBurningOil_G3,<sprite name=Skill_Passive><color=#5c482f>Weapon summoned from hell,<sprite name=Skill_Passive><color=#5c482f>불지옥에서 소환된 무기,-99999
-Passive,Name/Passive_P_TeaForkEnhance_G1,<sprite name=Skill_Passive><color=#5c482f>Sharp tea fork,<sprite name=Skill_Passive><color=#5c482f>뾰족한 티 포크,-99999
-Passive,Name/Passive_P_TeaForkEnhance_G2,<sprite name=Skill_Passive><color=#5c482f>Final form tea fork,<sprite name=Skill_Passive><color=#5c482f>최종 형태 티 포크 ,-99999
-Passive,Name/Passive_P_TeaForkMainWeapon_G3,<sprite name=Skill_Passive><color=#5c482f>Martial arts expert,<sprite name=Skill_Passive><color=#5c482f>격투술 전문가,-99999
-Passive,Name/Passive_P_TeaForkPepperShaker_G1,<sprite name=Skill_Passive><color=#5c482f>Deadly tea fork,<sprite name=Skill_Passive><color=#5c482f>치명적인 티 포크,-99999
-Passive,Name/Passive_P_TeaForkPepperShaker_G2,<sprite name=Skill_Passive><color=#5c482f>Tea fork polishing,<sprite name=Skill_Passive><color=#5c482f>티 포크 연마,-99999
-Passive,Name/Passive_P_TeaForkTomato_G1,<sprite name=Skill_Passive><color=#5c482f>Absorbing tea fork,<sprite name=Skill_Passive><color=#5c482f>흡수하는 티 포크,-99999
-Passive,Name/Passive_P_TeaForkTomato_G2,<sprite name=Skill_Passive><color=#5c482f>Exploiting tea fork,<sprite name=Skill_Passive><color=#5c482f>착취하는 티 포크,-99999
-Passive,Name/Passive_P_TeaForkKettle_G1,<sprite name=Skill_Passive><color=#5c482f>Kettle drop,<sprite name=Skill_Passive><color=#5c482f>주전자 낙하,-99999
-Passive,Name/Passive_P_TeaForkKettle_G3,<sprite name=Skill_Passive><color=#5c482f>Kettle storm,<sprite name=Skill_Passive><color=#5c482f>주전자 폭풍,-99999
-Passive,Name/Passive_P_TeaForkFreeze_G1,<sprite name=Skill_Passive><color=#5c482f>Tea fork taken out of fridge,<sprite name=Skill_Passive><color=#5c482f>냉장고에서 꺼낸 티 포크,-99999
-Passive,Name/Passive_P_TeaForkFreeze_G3,<sprite name=Skill_Passive><color=#5c482f>Tea fork taken out of freezer,<sprite name=Skill_Passive><color=#5c482f>냉동실에서 꺼낸 티 포크,-99999
-Passive,Name/Passive_P_BottleEnhance_G1,<sprite name=Skill_Passive><color=#5c482f>Breakable bottle,<sprite name=Skill_Passive><color=#5c482f>잘 깨지는 병,-99999
-Passive,Name/Passive_P_BottleEnhance_G2,<sprite name=Skill_Passive><color=#5c482f>Shrapnel explosion bottle,<sprite name=Skill_Passive><color=#5c482f>파편 폭발 병,-99999
-Passive,Name/Passive_P_BottleTeaForkEnhance_G3,<sprite name=Skill_Passive><color=#5c482f>Throwing expert,<sprite name=Skill_Passive><color=#5c482f>투척 전문가,-99999
-Passive,Name/Passive_P_BottleCookingTimer_G1,<sprite name=Skill_Passive><color=#5c482f>Swiftness,<sprite name=Skill_Passive><color=#5c482f>신속성,-99999
-Passive,Name/Passive_P_BottleCookingTimer_G2,<sprite name=Skill_Passive><color=#5c482f>Fast hands,<sprite name=Skill_Passive><color=#5c482f>재빠른 손,-99999
-Passive,Name/Passive_P_BottleCookingHat_G1,<sprite name=Skill_Passive><color=#5c482f>Rebellious nature,<sprite name=Skill_Passive><color=#5c482f>반항적인 성격,-99999
-Passive,Name/Passive_P_BottleCookingHat_G2,<sprite name=Skill_Passive><color=#5c482f>Sturdy leather,<sprite name=Skill_Passive><color=#5c482f>튼튼한 가죽,-99999
-Passive,Name/Passive_P_BottleKettle_G1,<sprite name=Skill_Passive><color=#5c482f>Kettle strike,<sprite name=Skill_Passive><color=#5c482f>주전자 일격,-99999
-Passive,Name/Passive_P_BottleKettle_G3,<sprite name=Skill_Passive><color=#5c482f>Kettle summoner,<sprite name=Skill_Passive><color=#5c482f>주전자 소환사,-99999
-Passive,Name/Passive_P_BottleStickyJam_G1,<sprite name=Skill_Passive><color=#5c482f>Jam-covered bottle,<sprite name=Skill_Passive><color=#5c482f>잼 묻은 병,-99999
-Passive,Name/Passive_P_BottleStickyJam_G3,<sprite name=Skill_Passive><color=#5c482f>Bottle buried in jam,<sprite name=Skill_Passive><color=#5c482f>잼에 파묻힌 병,-99999
-Passive,Name/Passive_P_FreezeBonus_G2,<sprite name=Skill_Passive><color=#5c482f>Quick freeze,<sprite name=Skill_Passive><color=#5c482f>급속 냉동,-99999
-Passive,Name/Passive_P_FreezeBonus_G3,<sprite name=Skill_Passive><color=#5c482f>Ice age,<sprite name=Skill_Passive><color=#5c482f>빙하기,-99999
-Passive,Name/Passive_P_FreezeKettle_G2,<sprite name=Skill_Passive><color=#5c482f>Cold kettle,<sprite name=Skill_Passive><color=#5c482f>차가운 주전자,-99999
-Passive,Name/Passive_P_FreezeKettle_G3,<sprite name=Skill_Passive><color=#5c482f>Frozen kettle,<sprite name=Skill_Passive><color=#5c482f>얼어붙은 주전자,-99999
-Passive,Name/Passive_P_BurningOilBonus_G2,<sprite name=Skill_Passive><color=#5c482f>Add more oil,<sprite name=Skill_Passive><color=#5c482f>기름 더 붓기,-99999
-Passive,Name/Passive_P_BurningOilBonus_G3,<sprite name=Skill_Passive><color=#5c482f>Arsonist,<sprite name=Skill_Passive><color=#5c482f>방화범,-99999
-Passive,Name/Passive_P_BurningOilKettle_G2,<sprite name=Skill_Passive><color=#5c482f>Hot kettle,<sprite name=Skill_Passive><color=#5c482f>뜨거운 주전자,-99999
-Passive,Name/Passive_P_BurningOilKettle_G3,<sprite name=Skill_Passive><color=#5c482f>Burning kettle,<sprite name=Skill_Passive><color=#5c482f>불타는 주전자,-99999
-Passive,Name/Passive_P_StickyJamBonus_G2,<sprite name=Skill_Passive><color=#5c482f>Stickier jam,<sprite name=Skill_Passive><color=#5c482f>더욱 끈적이는 잼,-99999
-Passive,Name/Passive_P_StickyJamBonus_G3,<sprite name=Skill_Passive><color=#5c482f>Hell sticky jam,<sprite name=Skill_Passive><color=#5c482f>지옥 끈끈이 잼,-99999
-Passive,Name/Passive_P_StickyJamBurningOil_G2,<sprite name=Skill_Passive><color=#5c482f>Burning jam,<sprite name=Skill_Passive><color=#5c482f>불타는 잼,-99999
-Passive,Name/Passive_P_StickyJamBurningOil_G3,<sprite name=Skill_Passive><color=#5c482f>Molotov cocktail,<sprite name=Skill_Passive><color=#5c482f>몰로토프 칵테일,-99999
-Passive,Name/Passive_P_KettleEnhance_G2,<sprite name=Skill_Passive><color=#5c482f>Steel kettle,<sprite name=Skill_Passive><color=#5c482f>강철 주전자,-99999
-Passive,Name/Passive_P_KettleEnhance_G3,<sprite name=Skill_Passive><color=#5c482f>Concrete filled kettle,<sprite name=Skill_Passive><color=#5c482f>콘크리트 채운 주전자,-99999
-Passive,Name/Passive_P_KettleStickyJam_G2,<sprite name=Skill_Passive><color=#5c482f>Jam covered kettle,<sprite name=Skill_Passive><color=#5c482f>잼 묻은 주전자,-99999
-Passive,Name/Passive_P_KettleStickyJam_G3,<sprite name=Skill_Passive><color=#5c482f>Jam filled kettle,<sprite name=Skill_Passive><color=#5c482f>잼을 가득 담은 주전자,-99999
-Passive,Name/Passive_P_KettleBonus_G2,<sprite name=Skill_Passive><color=#5c482f>Kettle clone,<sprite name=Skill_Passive><color=#5c482f>주전자 분신술,-99999
-Passive,Name/Passive_P_KettleBonus_G3,<sprite name=Skill_Passive><color=#5c482f>Kettle factory,<sprite name=Skill_Passive><color=#5c482f>주전자 공장,-99999
-Passive,Name/Passive_P_BombChiliBonus_G2,<sprite name=Skill_Passive><color=#5c482f>Consecutive explosion chili,<sprite name=Skill_Passive><color=#5c482f>연속 폭발 칠리,-99999
-Passive,Name/Passive_P_BombChiliBonus_G3,<sprite name=Skill_Passive><color=#5c482f>Chili firecracker,<sprite name=Skill_Passive><color=#5c482f>칠리 폭죽,-99999
-Passive,Name/Passive_P_BombChiliBurningOil_G2,<sprite name=Skill_Passive><color=#5c482f>Fire chili,<sprite name=Skill_Passive><color=#5c482f>불 붙은 칠리,-99999
-Passive,Name/Passive_P_BombChiliMintCandy_G1,<sprite name=Skill_Passive><color=#5c482f>Mint chili,<sprite name=Skill_Passive><color=#5c482f>민트맛 칠리,-99999
-Passive,Name/Passive_P_BombChiliMintCandy_G2,<sprite name=Skill_Passive><color=#5c482f>Sweet and spicy snack,<sprite name=Skill_Passive><color=#5c482f>달고 매운 간식,-99999
-Passive,Name/Passive_P_CoconutShieldEnergyDrink_G1,<sprite name=Skill_Passive><color=#5c482f>Wake Up coconut,<sprite name=Skill_Passive><color=#5c482f>잠이 깨는 코코넛,-99999
-Passive,Name/Passive_P_CoconutShieldEnergyDrink_G2,<sprite name=Skill_Passive><color=#5c482f>Coconut that sparkles your spirit,<sprite name=Skill_Passive><color=#5c482f>정신이 번쩍 드는 코코넛,-99999
-Passive,Name/Passive_P_EnergyDrinkMeat_G1,<sprite name=Skill_Passive><color=#5c482f>A solid energy drink,<sprite name=Skill_Passive><color=#5c482f>든든한 에너지 드링크,-99999
-Passive,Name/Passive_P_EnergyDrinkMeat_G2,<sprite name=Skill_Passive><color=#5c482f>A meal replacement energy drink,<sprite name=Skill_Passive><color=#5c482f>식사 대용 에너지 드링크,-99999
-Passive,Name/Passive_P_MeatBombChili_G1,<sprite name=Skill_Passive><color=#5c482f>Meat that bursts with flavor,<sprite name=Skill_Passive><color=#5c482f>톡톡 터지는 고기,-99999
-Passive,Name/Passive_P_MeatBombChili_G2,<sprite name=Skill_Passive><color=#5c482f>bomb meat,<sprite name=Skill_Passive><color=#5c482f>폭탄 고기,-99999
-Passive,Name/Passive_P_MintCandyCoconutShield_G1,<sprite name=Skill_Passive><color=#5c482f>Coconut flavored candy,<sprite name=Skill_Passive><color=#5c482f>코코넛맛 사탕,-99999
-Passive,Name/Passive_P_MintCandyCoconutShield_G2,<sprite name=Skill_Passive><color=#5c482f>Healthy taste candy,<sprite name=Skill_Passive><color=#5c482f>건강한 맛을 내는 사탕,-99999
-Passive,Name/Weapon_Normal_01_Common,<sprite name=Skill_Passive><color=#5c482f>Weapon skill - common,<sprite name=Skill_Passive><color=#5c482f>대파 - 일반,-99999
-Passive,Name/Weapon_Normal_01_Great,<sprite name=Skill_Passive><color=#5c482f>Green onion - Great,<sprite name=Skill_Passive><color=#5c482f>대파 - 우수,-99999
-Passive,Name/Weapon_Normal_01_Rare,<sprite name=Skill_Passive><color=#5c482f>Green onion - Rare,<sprite name=Skill_Passive><color=#5c482f>대파 - 희귀,-99999
-Passive,Name/Weapon_Normal_01_Epic,<sprite name=Skill_Passive><color=#5c482f>Green onion - Epic,<sprite name=Skill_Passive><color=#5c482f>대파 - 에픽,-99999
-Passive,Name/Weapon_Normal_01_Legendary,<sprite name=Skill_Passive><color=#5c482f>Green onion - Legendary,<sprite name=Skill_Passive><color=#5c482f>대파 - 전설,-99999
-Passive,Name/Weapon_Normal_01_Mythic,<sprite name=Skill_Passive><color=#5c482f>Green onion - Mythic,<sprite name=Skill_Passive><color=#5c482f>대파 - 신화,-99999
-Passive,Name/Weapon_Normal_02_Common,<sprite name=Skill_Passive><color=#5c482f>Fork spear - Common,<sprite name=Skill_Passive><color=#5c482f>포크 창 - 일반,-99999
-Passive,Name/Weapon_Normal_02_Great,<sprite name=Skill_Passive><color=#5c482f>Fork spear - Great,<sprite name=Skill_Passive><color=#5c482f>포크 창 - 우수,-99999
-Passive,Name/Weapon_Normal_02_Rare,<sprite name=Skill_Passive><color=#5c482f>Fork spear - Rare,<sprite name=Skill_Passive><color=#5c482f>포크 창 - 희귀,-99999
-Passive,Name/Weapon_Normal_02_Epic,<sprite name=Skill_Passive><color=#5c482f>Fork spear - Epic,<sprite name=Skill_Passive><color=#5c482f>포크 창 - 에픽,-99999
-Passive,Name/Weapon_Normal_02_Legendary,<sprite name=Skill_Passive><color=#5c482f>Fork spear - Legendary,<sprite name=Skill_Passive><color=#5c482f>포크 창 - 전설,-99999
-Passive,Name/Weapon_Normal_02_Mythic,<sprite name=Skill_Passive><color=#5c482f>Fork spear - Mythic,<sprite name=Skill_Passive><color=#5c482f>포크 창 - 신화,-99999
-Passive,Name/Weapon_Normal_03_Common,<sprite name=Skill_Passive><color=#5c482f>Bottle hammer - Common,<sprite name=Skill_Passive><color=#5c482f>병 망치 - 일반,-99999
-Passive,Name/Weapon_Normal_03_Great,<sprite name=Skill_Passive><color=#5c482f>Bottle hammer - Great,<sprite name=Skill_Passive><color=#5c482f>병 망치 - 우수,-99999
-Passive,Name/Weapon_Normal_03_Rare,<sprite name=Skill_Passive><color=#5c482f>Bottle hammer - Rare,<sprite name=Skill_Passive><color=#5c482f>병 망치 - 희귀,-99999
-Passive,Name/Weapon_Normal_03_Epic,<sprite name=Skill_Passive><color=#5c482f>Bottle hammer - Epic,<sprite name=Skill_Passive><color=#5c482f>병 망치 - 에픽,-99999
-Passive,Name/Weapon_Normal_03_Legendary,<sprite name=Skill_Passive><color=#5c482f>Bottle hammer - Legendary,<sprite name=Skill_Passive><color=#5c482f>병 망치 - 전설,-99999
-Passive,Name/Weapon_Normal_03_Mythic,<sprite name=Skill_Passive><color=#5c482f>Bottle hammer - Mythic,<sprite name=Skill_Passive><color=#5c482f>병 망치 - 신화,-99999
-Passive,Name/Body_Normal_01_Common,<sprite name=Skill_Passive><color=#5c482f>Tomato doll cloth - Common,<sprite name=Skill_Passive><color=#5c482f>토마토 인형 옷 - 일반,-99999
-Passive,Name/Body_Normal_01_Rare,<sprite name=Skill_Passive><color=#5c482f>Tomato doll cloth - Rare,<sprite name=Skill_Passive><color=#5c482f>토마토 인형 옷 - 희귀,-99999
-Passive,Name/Body_Normal_01_Epic,<sprite name=Skill_Passive><color=#5c482f>Tomato doll cloth - Epic,<sprite name=Skill_Passive><color=#5c482f>토마토 인형 옷 - 에픽,-99999
-Passive,Name/Body_Normal_01_Legendary,<sprite name=Skill_Passive><color=#5c482f>Tomato doll cloth - Legendary,<sprite name=Skill_Passive><color=#5c482f>토마토 인형 옷 - 전설,-99999
-Passive,Name/Body_Normal_01_Mythic,<sprite name=Skill_Passive><color=#5c482f>Tomato doll cloth - Mythic,<sprite name=Skill_Passive><color=#5c482f>토마토 인형 옷 - 신화,-99999
-Passive,Name/Body_Normal_02_Common,<sprite name=Skill_Passive><color=#5c482f>Chef cloth - Common,<sprite name=Skill_Passive><color=#5c482f>요리사 옷 - 일반,-99999
-Passive,Name/Body_Normal_02_Rare,<sprite name=Skill_Passive><color=#5c482f>Chef cloth - Rare,<sprite name=Skill_Passive><color=#5c482f>요리사 옷 - 희귀,-99999
-Passive,Name/Body_Normal_02_Epic,<sprite name=Skill_Passive><color=#5c482f>Chef cloth - Epic,<sprite name=Skill_Passive><color=#5c482f>요리사 옷 - 에픽,-99999
-Passive,Name/Body_Normal_02_Legendary,<sprite name=Skill_Passive><color=#5c482f>Chef cloth - Legendary,<sprite name=Skill_Passive><color=#5c482f>요리사 옷 - 전설,-99999
-Passive,Name/Body_Normal_02_Mythic,<sprite name=Skill_Passive><color=#5c482f>Chef cloth - Mythic,<sprite name=Skill_Passive><color=#5c482f>요리사 옷 - 신화,-99999
-Passive,Name/Body_Normal_03_Common,<sprite name=Skill_Passive><color=#5c482f>Raincoat and boots - Common,<sprite name=Skill_Passive><color=#5c482f>비옷과 장화 - 일반,-99999
-Passive,Name/Body_Normal_03_Rare,<sprite name=Skill_Passive><color=#5c482f>Raincoat and boots - Rare,<sprite name=Skill_Passive><color=#5c482f>비옷과 장화 - 희귀,-99999
-Passive,Name/Body_Normal_03_Epic,<sprite name=Skill_Passive><color=#5c482f>Raincoat and boots - Epic,<sprite name=Skill_Passive><color=#5c482f>비옷과 장화 - 에픽,-99999
-Passive,Name/Body_Normal_03_Legendary,<sprite name=Skill_Passive><color=#5c482f>Raincoat and boots - Legendary,<sprite name=Skill_Passive><color=#5c482f>비옷과 장화 - 전설,-99999
-Passive,Name/Body_Normal_03_Mythic,<sprite name=Skill_Passive><color=#5c482f>Raincoat and boots - Mythic,<sprite name=Skill_Passive><color=#5c482f>비옷과 장화 - 신화,-99999
-Passive,Name/Ring_Normal_01_Rare,<sprite name=Skill_Passive><color=#5c482f>Ice ring - Rare,<sprite name=Skill_Passive><color=#5c482f>얼음 반지 - 희귀,-99999
-Passive,Name/Ring_Normal_01_Epic,<sprite name=Skill_Passive><color=#5c482f>Ice ring - Epic,<sprite name=Skill_Passive><color=#5c482f>얼음 반지 - 에픽,-99999
-Passive,Name/Ring_Normal_01_Legendary,<sprite name=Skill_Passive><color=#5c482f>Ice ring - Legendary,<sprite name=Skill_Passive><color=#5c482f>얼음 반지 - 전설,-99999
-Passive,Name/Ring_Normal_01_Mythic,<sprite name=Skill_Passive><color=#5c482f>Ice ring - Mythic,<sprite name=Skill_Passive><color=#5c482f>얼음 반지 - 신화,-99999
-Passive,Name/Ring_Normal_02_Rare,<sprite name=Skill_Passive><color=#5c482f>Flame ring - Rare,<sprite name=Skill_Passive><color=#5c482f>화염 반지 - 희귀,-99999
-Passive,Name/Ring_Normal_02_Epic,<sprite name=Skill_Passive><color=#5c482f>Flame ring - Epic,<sprite name=Skill_Passive><color=#5c482f>화염 반지 - 에픽,-99999
-Passive,Name/Ring_Normal_02_Legendary,<sprite name=Skill_Passive><color=#5c482f>Flame ring - Legendary,<sprite name=Skill_Passive><color=#5c482f>화염 반지 - 전설,-99999
-Passive,Name/Ring_Normal_02_Mythic,<sprite name=Skill_Passive><color=#5c482f>Flame ring - Mythic,<sprite name=Skill_Passive><color=#5c482f>화염 반지 - 신화,-99999
-Passive,Name/Ring_Normal_03_Rare,<sprite name=Skill_Passive><color=#5c482f>Jam ring - Rare,<sprite name=Skill_Passive><color=#5c482f>잼 반지 - 희귀,-99999
-Passive,Name/Ring_Normal_03_Epic,<sprite name=Skill_Passive><color=#5c482f>Jam ring - Epic,<sprite name=Skill_Passive><color=#5c482f>잼 반지 - 에픽,-99999
-Passive,Name/Ring_Normal_03_Legendary,<sprite name=Skill_Passive><color=#5c482f>Jam ring - Legendary,<sprite name=Skill_Passive><color=#5c482f>잼 반지 - 전설,-99999
-Passive,Name/Ring_Normal_03_Mythic,<sprite name=Skill_Passive><color=#5c482f>Jam ring - Mythic,<sprite name=Skill_Passive><color=#5c482f>잼 반지 - 신화,-99999
-Passive,Name/Ring_Normal_04_Rare,<sprite name=Skill_Passive><color=#5c482f>Kettle ring - Rare,<sprite name=Skill_Passive><color=#5c482f>주전자 반지 - 희귀,-99999
-Passive,Name/Ring_Normal_04_Epic,<sprite name=Skill_Passive><color=#5c482f>Kettle ring - Epic,<sprite name=Skill_Passive><color=#5c482f>주전자 반지 - 에픽,-99999
-Passive,Name/Ring_Normal_04_Legendary,<sprite name=Skill_Passive><color=#5c482f>Kettle ring - Legendary,<sprite name=Skill_Passive><color=#5c482f>주전자 반지 - 전설,-99999
-Passive,Name/Ring_Normal_04_Mythic,<sprite name=Skill_Passive><color=#5c482f>Kettle ring - Mythic,<sprite name=Skill_Passive><color=#5c482f>주전자 반지 - 신화,-99999
-Passive,Name/Accessories_Normal_01_Rare,<sprite name=Skill_Passive><color=#5c482f>Bomb chili necklace - Rare,<sprite name=Skill_Passive><color=#5c482f>폭탄 칠리 목걸이 - 희귀,-99999
-Passive,Name/Accessories_Normal_01_Epic,<sprite name=Skill_Passive><color=#5c482f>Bomb chili necklace - Epic,<sprite name=Skill_Passive><color=#5c482f>폭탄 칠리 목걸이 - 에픽,-99999
-Passive,Name/Accessories_Normal_01_Legendary,<sprite name=Skill_Passive><color=#5c482f>Bomb chili necklace - Legendary,<sprite name=Skill_Passive><color=#5c482f>폭탄 칠리 목걸이 - 전설,-99999
-Passive,Name/Accessories_Normal_01_Mythic,<sprite name=Skill_Passive><color=#5c482f>Bomb chili necklace - Mythic,<sprite name=Skill_Passive><color=#5c482f>폭탄 칠리 목걸이 - 신화,-99999
-Passive,Name/Accessories_Normal_02_Rare,<sprite name=Skill_Passive><color=#5c482f>Energy drink brooch - Rare,<sprite name=Skill_Passive><color=#5c482f>에너지 드링크 브로치 - 희귀,-99999
-Passive,Name/Accessories_Normal_02_Epic,<sprite name=Skill_Passive><color=#5c482f>Energy drink brooch - Epic,<sprite name=Skill_Passive><color=#5c482f>에너지 드링크 브로치 - 에픽,-99999
-Passive,Name/Accessories_Normal_02_Legendary,<sprite name=Skill_Passive><color=#5c482f>Energy drink brooch - Legendary,<sprite name=Skill_Passive><color=#5c482f>에너지 드링크 브로치 - 전설,-99999
-Passive,Name/Accessories_Normal_02_Mythic,<sprite name=Skill_Passive><color=#5c482f>Energy drink brooch - Mythic,<sprite name=Skill_Passive><color=#5c482f>에너지 드링크 브로치 - 신화,-99999
-Passive,Name/Accessories_Normal_03_Rare,<sprite name=Skill_Passive><color=#5c482f>Coconut shield key ring - Rare,<sprite name=Skill_Passive><color=#5c482f>코코넛 쉴드 키 링 - 희귀,-99999
-Passive,Name/Accessories_Normal_03_Epic,<sprite name=Skill_Passive><color=#5c482f>Coconut shield key ring - Epic,<sprite name=Skill_Passive><color=#5c482f>코코넛 쉴드 키 링 - 에픽,-99999
-Passive,Name/Accessories_Normal_03_Legendary,<sprite name=Skill_Passive><color=#5c482f>Coconut shield key ring - Legendary,<sprite name=Skill_Passive><color=#5c482f>코코넛 쉴드 키 링 - 전설,-99999
-Passive,Name/Accessories_Normal_03_Mythic,<sprite name=Skill_Passive><color=#5c482f>Coconut shield key ring - Mythic,<sprite name=Skill_Passive><color=#5c482f>코코넛 쉴드 키 링 - 신화,-99999
-Passive,Name/Accessories_Normal_04_Rare,<sprite name=Skill_Passive><color=#5c482f>Photo of well-cooked meat - Rare,<sprite name=Skill_Passive><color=#5c482f>잘 구운 고기 사진 - 희귀,-99999
-Passive,Name/Accessories_Normal_04_Epic,<sprite name=Skill_Passive><color=#5c482f>Photo of well-cooked meat - Epic,<sprite name=Skill_Passive><color=#5c482f>잘 구운 고기 사진 - 에픽,-99999
-Passive,Name/Accessories_Normal_04_Legendary,<sprite name=Skill_Passive><color=#5c482f>Photo of well-cooked meat - Legendary,<sprite name=Skill_Passive><color=#5c482f>잘 구운 고기 사진 - 전설,-99999
-Passive,Name/Accessories_Normal_04_Mythic,<sprite name=Skill_Passive><color=#5c482f>Photo of well-cooked meat - Mythic,<sprite name=Skill_Passive><color=#5c482f>잘 구운 고기 사진 - 신화,-99999
-Passive,Name/Accessories_Normal_05_Rare,<sprite name=Skill_Passive><color=#5c482f>Mint candy bowl - Rare,<sprite name=Skill_Passive><color=#5c482f>민트 사탕 통 - 희귀,-99999
-Passive,Name/Accessories_Normal_05_Epic,<sprite name=Skill_Passive><color=#5c482f>Mint candy bowl - Epic,<sprite name=Skill_Passive><color=#5c482f>민트 사탕 통 - 에픽,-99999
-Passive,Name/Accessories_Normal_05_Legendary,<sprite name=Skill_Passive><color=#5c482f>Mint candy bowl - Legendary,<sprite name=Skill_Passive><color=#5c482f>민트 사탕 통 - 전설,-99999
-Passive,Name/Accessories_Normal_05_Mythic,<sprite name=Skill_Passive><color=#5c482f>Mint candy bowl - Mythic,<sprite name=Skill_Passive><color=#5c482f>민트 사탕 통 - 신화,-99999
-Passive,Exp/Passive_P_TempHealOnKill_G1,(Temporary) When you kill 10 enemies<c> <sprite name=Status_Meat><color=#f4b900>Well-cooked Meat</color> +5. (To be changed in the future: Well-cooked Meat drops randomly when an enemy dies.),(임시) 적 10명 처치할 때마다<c> <sprite name=Status_Meat><color=#f4b900>잘 구운 고기</color> +5. (추후 변경 예정 : 적 사망시 랜덤하게 잘 구운 고기 드랍.),-99999
-Passive,Exp/Passive_P_MainWeaponEnhance_G1,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color> skill damage 30% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬 피해량 30% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponEnhance_G2,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color> skill damage 50% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬 피해량 50% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponBottleEnhance_G3,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color> and <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill damage 40% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color>과 <sprite name=Skill_Jar><color=#5c482f>병</color> 스킬 피해량 40% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponBombChili_G1,Whenever you kill 5 enemies with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +1,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 5명 처치할 때마다<c> <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +1,-99999
-Passive,Exp/Passive_P_MainWeaponBombChili_G3,Whenever you kill 2 enemy with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +1,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 2명 처치할 때마다<c> <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +1,-99999
-Passive,Exp/Passive_P_MainWeaponKnife_G1,Whenever you kill 20 enemies with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> <color=#ff6f16>attack power</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 20명 처치할 때마다<c> <color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponKnife_G2,Whenever you kill 10 enemies with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> <color=#ff6f16>attack power</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 10명 처치할 때마다<c> <color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponBoots_G1,Whenever you kill 20 enemies with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> <color=#00baff>Evasion Chance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 20명 처치할 때마다<c> <color=#00baff>회피 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponBoots_G2,Whenever you kill 10 enemies with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> <color=#00baff>Evasion Chance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 10명 처치할 때마다<c> <color=#00baff>회피 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_MainWeaponBurningOil_G1,When hitting an enemy with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> there is a 25% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 타격시<c> 25% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_MainWeaponBurningOil_G3,When hitting an enemy with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> there is a 50% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_TeaForkEnhance_G1,<sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> Skill Damage 30% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬 피해량 30% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkEnhance_G2,<sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> Skill Damage 50% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬 피해량 50% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkMainWeapon_G3,<sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> and <sprite name=Skill_MainWeapon><color=#5c482f>Melee</color> skill damage 40% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color>와 <sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬 피해량 40% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkPepperShaker_G1,Whenever you kill 20 enemies with a <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> <color=#ff6f16>Critical Hit Chance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 20명 처치할 때마다<c> <color=#ff6f16>치명타 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkPepperShaker_G2,Whenever you kill 10 enemies with a <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> <color=#ff6f16>Critical Hit Chance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 10명 처치할 때마다<c> <color=#ff6f16>치명타 확률</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkTomato_G1,Whenever you kill 20 enemies with a <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> <color=#73e312>max HP</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 20명 처치할 때마다<c> <color=#73e312>최대 체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkTomato_G2,Whenever you kill 10 enemies with a <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> <color=#73e312>max HP</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 10명 처치할 때마다<c> <color=#73e312>최대 체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_TeaForkKettle_G1,When hitting an enemy with the <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> there is a 25% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 타격시<c> 25% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자 </color> +1,-99999
-Passive,Exp/Passive_P_TeaForkKettle_G3,When hitting an enemy with the <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> there is a 50% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자 </color> +1,-99999
-Passive,Exp/Passive_P_TeaForkFreeze_G1,When hitting an enemy with the <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> there is a 25% chance of <sprite name=Status_Freeze><color=#00baff>freezing</color> +1,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 타격시<c> 25% 확률로 <sprite name=Status_Freeze><color=#00baff>동결</color> +1,-99999
-Passive,Exp/Passive_P_TeaForkFreeze_G3,When hitting an enemy with the <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> there is a 50% chance of <sprite name=Status_Freeze><color=#00baff>freezing</color> +1,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Freeze><color=#00baff>동결</color> +1,-99999
-Passive,Exp/Passive_P_BottleEnhance_G1,<sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill damage 30% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬 피해량 30% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleEnhance_G2,<sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill damage 50% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬 피해량 50% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleTeaForkEnhance_G3,<sprite name=Skill_Jar><color=#5c482f>Bottle</color> and <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill damage 40% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color>과 <sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬 피해량 40% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleCookingTimer_G1,Whenever you kill 20 enemies with a <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> <color=#00baff>Attack speed</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 20명 처치할 때마다<c> <color=#00baff>공격 속도</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleCookingTimer_G2,Whenever you kill 10 enemies with a <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> <color=#00baff>Attack speed</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 10명 처치할 때마다<c> <color=#00baff>공격 속도</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleCookingHat_G1,Whenever you kill 20 enemies with a <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> <color=#00baff>Debuff Resistance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 20명 처치할 때마다<c> <color=#00baff>디버프 저항</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleCookingHat_G2,Whenever you kill 10 enemies with a <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> <color=#00baff>Debuff Resistance</color> 10% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 10명 처치할 때마다<c> <color=#00baff>디버프 저항</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_BottleKettle_G1,When hitting an enemy with the <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> there is a 25% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 타격시<c> 25% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자 </color> +1,-99999
-Passive,Exp/Passive_P_BottleKettle_G3,When hitting an enemy with the <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> there is a 50% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자 </color> +1,-99999
-Passive,Exp/Passive_P_BottleStickyJam_G1,When hitting an enemy with the <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> there is a 25% chance of inflicting <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 타격시<c> 25% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Passive_P_BottleStickyJam_G3,When hitting an enemy with the <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> there is a 50% chance of inflicting <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Passive_P_FreezeBonus_G2,When granting <sprite name=Status_Freeze><color=#00baff>Freeze</color><c> there is a 50% chance of <sprite name=Status_Freeze><color=#00baff>Freeze</color> +1,<sprite name=Status_Freeze><color=#00baff>동결</color>을 부여할 때<c> 50% 확률로 <sprite name=Status_Freeze><color=#00baff>동결</color> +1,-99999
-Passive,Exp/Passive_P_FreezeBonus_G3,When granting <sprite name=Status_Freeze><color=#00baff>Freeze</color><c> there is a 100% chance of <sprite name=Status_Freeze><color=#00baff>Freeze</color> +1,<sprite name=Status_Freeze><color=#00baff>동결</color>을 부여할 때<c> 100% 확률로 <sprite name=Status_Freeze><color=#00baff>동결</color> +1,-99999
-Passive,Exp/Passive_P_FreezeKettle_G2,When granting <sprite name=Status_Freeze><color=#00baff>Freeze</color><c> there is a 50% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Status_Freeze><color=#00baff>동결</color>을 부여할 때<c> 50% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자</color> +1,-99999
-Passive,Exp/Passive_P_FreezeKettle_G3,When granting <sprite name=Status_Freeze><color=#00baff>Freeze</color><c> there is a 100% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Status_Freeze><color=#00baff>동결</color>을 부여할 때<c> 100% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자</color> +1,-99999
-Passive,Exp/Passive_P_BurningOilBonus_G2,When granting <sprite name=Status_Flame><color=#ff6f16>burning oil</color><c> there is a 50% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>을 부여할 때<c> 50% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_BurningOilBonus_G3,When granting <sprite name=Status_Flame><color=#ff6f16>burning oil</color><c> there is a 100% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>을 부여할 때<c> 100% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_BurningOilKettle_G2,When granting <sprite name=Status_Flame><color=#ff6f16>burning oil</color><c> there is a 50% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>을 부여할 때<c> 50% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자</color> +1,-99999
-Passive,Exp/Passive_P_BurningOilKettle_G3,When granting <sprite name=Status_Flame><color=#ff6f16>burning oil</color><c> there is a 100% chance of <sprite name=Status_Kettle><color=#f4b900>Kettle</color> +1,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>을 부여할 때<c> 100% 확률로 <sprite name=Status_Kettle><color=#f4b900>주전자</color> +1,-99999
-Passive,Exp/Passive_P_StickyJamBonus_G2,When granting <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color><c> there is a 50% chance of <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>을 부여할 때<c> 50% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Passive_P_StickyJamBonus_G3,When granting <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color><c> there is a 100% chance of <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>을 부여할 때<c> 100% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Passive_P_StickyJamBurningOil_G2,When applying <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color><c> there is a 50% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>을 부여할 때<c> 50% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_StickyJamBurningOil_G3,When applying <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color><c> there is a 100% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>을 부여할 때<c> 100% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_KettleEnhance_G2,<sprite name=Status_Kettle><color=#f4b900>Kettle</color> Damage 100% <sprite name=UI_Arrow_Up>,<sprite name=Status_Kettle><color=#f4b900>주전자</color> 피해량 100% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_KettleEnhance_G3,<sprite name=Status_Kettle><color=#f4b900>Kettle</color> Damage 150% <sprite name=UI_Arrow_Up>,<sprite name=Status_Kettle><color=#f4b900>주전자</color> 피해량 150% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Passive_P_KettleStickyJam_G2,When hit with <sprite name=Status_Kettle><color=#f4b900>Kettle</color><c> there is a 50% chance of <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>로 타격시 50% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Passive_P_KettleStickyJam_G3,When hit with <sprite name=Status_Kettle><color=#f4b900>Kettle</color><c> there is a 100% chance of <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>로 타격시 100% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Passive_P_KettleBonus_G2,<sprite name=Status_Kettle><color=#f4b900>Kettle</color>'s number of attacks + 1,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>의 공격 횟수 + 1,-99999
-Passive,Exp/Passive_P_KettleBonus_G3,<sprite name=Status_Kettle><color=#f4b900>Kettle</color>'s number of attacks + 2,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>의 공격 횟수 + 2,-99999
-Passive,Exp/Passive_P_BombChiliBonus_G2,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> explosion count + 1,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>의 폭발 횟수 + 1,-99999
-Passive,Exp/Passive_P_BombChiliBonus_G3,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> explosion count + 2,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>의 폭발 횟수 + 2,-99999
-Passive,Exp/Passive_P_BombChiliBurningOil_G2,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> has a 100% chance to <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1 when it explodes,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>가 터질 때 100% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Passive_P_BombChiliMintCandy_G1,When you get <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color><c> there is a 50% chance of getting <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>를 획득할 때<c> 50% 확률로 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1,-99999
-Passive,Exp/Passive_P_BombChiliMintCandy_G2,When you get <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color><c> there is a 100% chance of getting <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1,-99999
-Passive,Exp/Passive_P_CoconutShieldEnergyDrink_G1,When you get <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color><c> you have a 50% chance to <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> +1,<sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color>를 획득할 때<c> 50% 확률로 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +1,-99999
-Passive,Exp/Passive_P_CoconutShieldEnergyDrink_G2,When you get <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color><c> you have a 100% chance to <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> +1,<sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +1,-99999
-Passive,Exp/Passive_P_EnergyDrinkMeat_G1,When you get <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color><c> there is a 50% chance of <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +1,<sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color>를 획득할 때<c> 50% 확률로 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +1,-99999
-Passive,Exp/Passive_P_EnergyDrinkMeat_G2,When you get <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color><c> there is a 100% chance of <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +1,<sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +1,-99999
-Passive,Exp/Passive_P_MeatBombChili_G1,When geting <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color><c> there is a 50% chance of adding <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +1,<sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color>를 획득할 때<c> 50% 확률로 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +1,-99999
-Passive,Exp/Passive_P_MeatBombChili_G2,When geting <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color><c> there is a 100% chance of adding <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +1,<sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +1,-99999
-Passive,Exp/Passive_P_MintCandyCoconutShield_G1,When you get <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color><c> you have a 50% chance to <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color> +1,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>를 획득할 때<c> 50% 확률로 <sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color> +1,-99999
-Passive,Exp/Passive_P_MintCandyCoconutShield_G2,When you get <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color><c> you have a 100% chance to <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color> +1,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color> +1,-99999
-Passive,Exp/Weapon_Normal_01_Common,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_01_Great,When hitting an enemy with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> there is a 15% chance of <sprite name=Status_Flame><color=#ff6f16>burning oil</color> +1,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 타격시<c> 15% 확률로 <sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> +1,-99999
-Passive,Exp/Weapon_Normal_01_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_01_Epic,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color> critical hit chance 30% <sprite name=UI_Arrow_Up>,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 치명타 확률 30% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_01_Legendary,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_01_Mythic,When hitting an enemy with a <sprite name=Skill_MainWeapon><color=#5c482f>melee</color> skill<c> there is a 50% chance of <sprite name=Status_Freeze><color=#00baff>Freeze</color> +1,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Freeze><color=#00baff>동결</color> +1,-99999
-Passive,Exp/Weapon_Normal_02_Common,<color=#ff6f16>Critical Hit Chance</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>치명타 확률</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_02_Great,Whenever you kill 5 enemies with a <sprite name=Skill_Teafork><color=#5c482f>Tea fork</color> skill<c> <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 5명 처치할 때마다<c> <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1,-99999
-Passive,Exp/Weapon_Normal_02_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_02_Epic,<sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> Skill Damage 40% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬 피해량 40% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_02_Legendary,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_02_Mythic,When hitting an enemy with the <sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> skill<c> there is a 50% chance of <sprite name=Status_Jam><color=#ffd900>Sticky Jam</color> +1,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬로 적을 타격시<c> 50% 확률로 <sprite name=Status_Jam><color=#ffd900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Weapon_Normal_03_Common,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_03_Great,When hitting an enemy with the <sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill<c> there is a 15% chance of inflicting <sprite name=Status_Freeze><color=#00baff>Freeze</color> +1,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬로 적을 타격시<c> 15% 확률로 <sprite name=Status_Freeze><color=#00baff>동결</color> +1,-99999
-Passive,Exp/Weapon_Normal_03_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_03_Epic,<sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill damage 40% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬 피해량 40% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_03_Legendary,<color=#00baff>Attack Speed</color> 20% <sprite name=UI_Arrow_Up>,<color=#00baff>공격 속도</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Weapon_Normal_03_Mythic,<sprite name=Skill_Jar><color=#5c482f>Bottle</color> skill critical hit chance 50% <sprite name=UI_Arrow_Up>,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬의 치명타 확률 50% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_01_Common,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_01_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_01_Epic,For every 3 enemy killed<c> <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +1,적 3명 처치할 때마다<c> <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +1,-99999
-Passive,Exp/Body_Normal_01_Legendary,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_01_Mythic,When you get <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color><c> there is a 100% chance of getting <sprite name=Status_Meat><color=#ffd900>Well-cooked Meat</color> +1,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color> +1,-99999
-Passive,Exp/Body_Normal_02_Common,<color=#00baff>Debuff Resistance</color> 20% <sprite name=UI_Arrow_Up>,<color=#00baff>디버프 저항</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_02_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_02_Epic,<color=#73e312>Max Health</color> 10% <sprite name=UI_Arrow_Up> Every 120 seconds,120초마다 <color=#73e312>최대 체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_02_Legendary,<color=#00baff>Debuff Resistance</color> 20% <sprite name=UI_Arrow_Up>,<color=#00baff>디버프 저항</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_02_Mythic,Whenever you kill 10 enemies<c> <color=#00baff>Debuff Resistance</color> 10% <sprite name=UI_Arrow_Up>,적 10명 처치할 때마다<c> <color=#00baff>디버프 저항</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_03_Common,<color=#00baff>Evasion Chance</color> 20% <sprite name=UI_Arrow_Up>,<color=#00baff>회피 확률</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_03_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_03_Epic,When you <sprite name=Status_Boots><color=#00baff>evade</color><c> there is a 100% chance of <sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> +1,<sprite name=Status_Boots><color=#00baff>회피</color>를 했을 때 100% 확률로 <sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color> +1,-99999
-Passive,Exp/Body_Normal_03_Legendary,<color=#00baff>Evasion Chance</color> 20% <sprite name=UI_Arrow_Up>,<color=#00baff>회피 확률</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Body_Normal_03_Mythic,When you <sprite name=Status_Boots><color=#00baff>evade</color><c> there is a 100% chance of <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +2,<sprite name=Status_Boots><color=#00baff>회피</color>를 했을 때 100% 확률로 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +2,-99999
-Passive,Exp/Ring_Normal_01_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_01_Epic,<sprite name=Status_Freeze><color=#00baff>Freeze</color> Duration 50% <sprite name=UI_Arrow_Up>,<sprite name=Status_Freeze><color=#00baff>동결</color>의 지속 시간 50% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_01_Legendary,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_01_Mythic, Damage dealt to enemies affected by <sprite name=Status_Freeze><color=#00baff>Freeze</color> +150% <sprite name=UI_Arrow_Up>,<sprite name=Status_Freeze><color=#00baff>동결</color>에 걸린 적에게 주는 피해량 +150% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_02_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_02_Epic,<sprite name=Status_Flame><color=#ff6f16>Burning Oil</color> Damage 80% <sprite name=UI_Arrow_Up>,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color> 피해량 80% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_02_Legendary,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_02_Mythic, Damage dealt to enemies affected by <sprite name=Status_Flame><color=#ff6f16>Burning Oil</color> +100% <sprite name=UI_Arrow_Up>,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>에 걸린 적에게 주는 피해량 +100% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_03_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_03_Epic,<sprite name=Status_Jam><color=#ffd900>Sticky Jam</color> Duration 50% <sprite name=UI_Arrow_Up>,<sprite name=Status_Jam><color=#ffd900>끈적이는 잼</color>의 지속 시간 50% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_03_Legendary,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_03_Mythic, Damage dealt to enemies affected by <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +100% <sprite name=UI_Arrow_Up>,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>에 걸린 적에게 주는 피해량 +100% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_04_Rare,<color=#ff6f16>Attack Power</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_04_Epic,<sprite name=Status_Kettle><color=#f4b900>Kettle</color> Damage 80% <sprite name=UI_Arrow_Up>,<sprite name=Status_Kettle><color=#f4b900>주전자</color> 피해량 80% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_04_Legendary,<color=#ff6f16>Attack Power</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>공격력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Ring_Normal_04_Mythic,When hit with <sprite name=Status_Kettle><color=#f4b900>Kettle</color><c> there is a 100% chance of <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color> +1,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>로 타격시 100% 확률로 <sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color> +1,-99999
-Passive,Exp/Accessories_Normal_01_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_01_Epic,For every 3 enemy killed<c> <sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> +1,적 3명 처치할 때마다<c> <sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> +1,-99999
-Passive,Exp/Accessories_Normal_01_Legendary,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_01_Mythic,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> Damage 120% <sprite name=UI_Arrow_Up>,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color> 피해량 120% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_02_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_02_Epic,For every 3 enemy killed<c> <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> +1,적 3명 처치할 때마다<c> <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +1,-99999
-Passive,Exp/Accessories_Normal_02_Legendary,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_02_Mythic,<sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> acceleration 100% <sprite name=UI_Arrow_Up>,<sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color>의 가속량 100% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_03_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_03_Epic,For every 3 enemy killed<c> <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color> +1,적 3명 처치할 때마다<c> <sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color> +1,-99999
-Passive,Exp/Accessories_Normal_03_Legendary,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_03_Mythic,When you get <sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color><c> you have a 100% chance to <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1,<sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1,-99999
-Passive,Exp/Accessories_Normal_04_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_04_Epic,<sprite name=Status_Meat><color=#f4b900>Well-cooked meat</color> +1 Every 25 seconds,25초마다 <sprite name=Status_Meat><color=#f4b900>잘 구운 고기</color> +1,-99999
-Passive,Exp/Accessories_Normal_04_Legendary,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_04_Mythic,<sprite name=Status_Meat><color=#ffd900>Well-cooked meat</color> restores 100% <sprite name=UI_Arrow_Up>,<sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color>의 회복량 100% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_05_Rare,<color=#ff6f16>HP</color> 10% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 10% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_05_Epic,<sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> +1 Every 25 seconds,25초마다 <sprite name=Status_MintCandy><color=#00baff>민트 사탕</color> +1,-99999
-Passive,Exp/Accessories_Normal_05_Legendary,<color=#ff6f16>HP</color> 20% <sprite name=UI_Arrow_Up>,<color=#ff6f16>체력</color> 20% <sprite name=UI_Arrow_Up>,-99999
-Passive,Exp/Accessories_Normal_05_Mythic,When you get <sprite name=Status_MintCandy><color=#00baff>Mint Candy</color><c> you have a 100% chance to <sprite name=Status_EnergyDrink><color=#ffd900>Energy Drink</color> +1,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>를 획득할 때<c> 100% 확률로 <sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color> +1,-99999
-Property,Name/Coin,Coins,동전,-99999
-Property,Name/Gem,Gems,보석,-99999
-Property,Name/Stamina,Action Points,행동력,-99999
-Property,Name/EquipmentScroll,Equipment Scrolls,장비 스크롤,-99999
-Property,Name/EquipmentStone,Equipment Enhancement Stones,장비 강화석,-99999
-Property,Name/EquipmentKey_Supply,Supply Equipment Keys,보급 장비 열쇠,-99999
-Property,Name/EquipmentKey_HighQuality,High-Quality Equipment Keys,고급 장비 열쇠,-99999
-Property,Name/EquipmentKey_Legendary,Luxury Equipment Keys,명품 장비 열쇠,-99999
-Property,Name/Weapon_Normal_01,Green Onion,대파,-99999
-Property,Name/Weapon_Normal_02,Fork Spear,포크 창,-99999
-Property,Name/Weapon_Normal_03,Bottle Hammer,병 망치,-99999
-Property,Name/Body_Normal_01,Tomato Doll Cloth,토마토 인형 옷,-99999
-Property,Name/Body_Normal_02,Chef Cloth,요리사 옷,-99999
-Property,Name/Body_Normal_03,Raincoat and Boots,비옷과 장화,-99999
-Property,Name/Ring_Normal_01,Ice Ring,얼음 반지,-99999
-Property,Name/Ring_Normal_02,Flame Ring,화염 반지,-99999
-Property,Name/Ring_Normal_03,Jam Ring,잼 반지,-99999
-Property,Name/Ring_Normal_04,Kettle Ring,주전자 반지,-99999
-Property,Name/Accessories_Normal_01,Bomb Chili Necklace,폭탄 칠리 목걸이,-99999
-Property,Name/Accessories_Normal_02,Energy Drink Brooch,에너지 드링크 브로치,-99999
-Property,Name/Accessories_Normal_03,Coconut Shield Key Ring,코코넛 쉴드 키 링,-99999
-Property,Name/Accessories_Normal_04,Photo of Well-Cooked Meat,잘 구운 고기 사진,-99999
-Property,Name/Accessories_Normal_05,Mint Candy Bowl,민트 사탕 통,-99999
-Property,Desc/Coin,Resources Used for Traits,특성에 사용되는 자원,-99999
-Property,Desc/Gem,Rare Resources Used in Various Places,다양한 곳에 사용되는 희귀한 자원,-99999
-Property,Desc/Stamina,Resources Used to Enter Stages,스테이지 입장에 사용되는 자원,-99999
-Property,Desc/EquipmentScroll,Resources Used to Break Through Equipment Max Level,장비 최대 레벨 돌파에 사용되는 자원,-99999
-Property,Desc/EquipmentStone,Resources Used to Level Up Equipment,장비 레벨 업에 사용되는 자원,-99999
-Property,Desc/EquipmentKey_Supply,Keys to Open Supply Boxes,보급 상자를 열 수 있는 열쇠,-99999
-Property,Desc/EquipmentKey_HighQuality,Keys to Open High-Quality Boxes,고급 상자를 열 수 있는 열쇠,-99999
-Property,Desc/EquipmentKey_Legendary,Keys to Open Legendary Boxes,전설 상자를 열 수 있는 열쇠,-99999
-Property,Desc/Weapon_Normal_01,Property/Name/Property/Desc/Weapon_Normal_01,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color> 스킬을 강화하는 무기,-99999
-Property,Desc/Weapon_Normal_02,<sprite name=Skill_Teafork>A weapon that enhances the <color=#5c482f>Tea Fork</color> skill,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color> 스킬을 강화하는 무기,-99999
-Property,Desc/Weapon_Normal_03,<sprite name=Skill_Jar>A weapon that enhances the <color=#5c482f>Bottle</color> skill,<sprite name=Skill_Jar><color=#5c482f>병</color> 스킬을 강화하는 무기,-99999
-Property,Desc/Body_Normal_01,Armor that enhances recovery ability,회복 능력을 강화하는 방어구,-99999
-Property,Desc/Body_Normal_02,Armor that grows more and more as you fight,싸울수록 점점 더 성장하는 방어구,-99999
-Property,Desc/Body_Normal_03,Armor that enhances evasion ability,회피 능력을 강화하는 방어구,-99999
-Property,Desc/Ring_Normal_01,A ring that enhances <sprite name=Status_Freeze><color=#00baff>Freeze</color>,<sprite name=Status_Freeze><color=#00baff>동결</color>를 강화하는 반지,-99999
-Property,Desc/Ring_Normal_02,A ring that enhances <sprite name=Status_Flame><color=#ff6f16>Fire Oil</color>,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>을 강화하는 반지,-99999
-Property,Desc/Ring_Normal_03,A ring that enhances <sprite name=Status_Jam><color=#f4b900>Sticky Jam</color>,<sprite name=Status_Jam><color=#f4b900>끈적이는 잼</color>을 강화하는 반지,-99999
-Property,Desc/Ring_Normal_04,<sprite name=Status_Kettle><color=#f4b900>Kettle</color> enhancement ring,<sprite name=Status_Kettle><color=#f4b900>주전자</color>를 강화하는 반지,-99999
-Property,Desc/Accessories_Normal_01,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> enhancement accessory,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>를 강화하는 장신구,-99999
-Property,Desc/Accessories_Normal_02,<sprite name=Status_EnergyDrink><color=#f4b900>Energy Drink</color> enhancement accessory,<sprite name=Status_EnergyDrink><color=#f4b900>에너지 드링크</color>를 강화하는 장신구,-99999
-Property,Desc/Accessories_Normal_03,<sprite name=Status_CoconutShield><color=#f4b900>Coconut Shield</color> enhancement accessory,<sprite name=Status_CoconutShield><color=#f4b900>코코넛 쉴드</color>를 강화하는 장신구,-99999
-Property,Desc/Accessories_Normal_04,<sprite name=Status_Meat><color=#f4b900>Well-cooked Meat</color> enhancement accessory,<sprite name=Status_Meat><color=#f4b900>잘 구운 고기</color>를 강화하는 장신구,-99999
-Property,Desc/Accessories_Normal_05,<sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> enhancement accessory,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>를 강화하는 장신구,-99999
-LauncherPopup,Tip1,The longer the skill is chained<c> the more <color=#00baff>attack speed</color> <sprite name=UI_Arrow_Up> bonus you receive!,스킬이 길게 연결될수록 <color=#00baff>공격 속도</color> <sprite name=UI_Arrow_Up> 보너스를 받습니다!,-99999
-LauncherPopup,Tip2,You can merge equipments to obtain higher grade equipment,장비를 합성하여 더 높은 등급의 장비를 획득할 수 있습니다,-99999
-LauncherPopup,Tip3,The higher the grade of the equipment<c> the more passive skills you start with,장비의 등급이 높아질수록 더 많은 패시브 스킬을 가지고 시작합니다,-99999
-LauncherPopup,Tip4,You can strengthen the equipment to make it even stronger,장비를 강화하여 더욱 강해질 수 있습니다,-99999
-LauncherPopup,Tip5,<sprite name=Status_Freeze><color=#00baff>Freeze</color> to block enemy attacks,<sprite name=Status_Freeze><color=#00baff>동결</color>시켜서 적의 공격을 저지할 수 있습니다,-99999
-LauncherPopup,Tip6,<sprite name=Status_Flame><color=#ff6f16>Burning Oil</color> deals strong continuous damage,<sprite name=Status_Flame><color=#ff6f16>불 붙은 기름</color>은 강한 지속 피해를 줍니다,-99999
-LauncherPopup,Tip7,<sprite name=Status_Jam><color=#ffd900>Sticky Jam</color> can reduce enemy attack speed and attack power,<sprite name=Status_Jam><color=#ffd900>끈적이는 잼</color>으로 적의 공격 속도와 공격력을 감소시킬 수 있습니다,-99999
-LauncherPopup,Tip8,<sprite name=Status_Kettle><color=#f4b900>Kettle</color> to deal extra damage to enemies,<sprite name=Status_Kettle><color=#f4b900>주전자 </color>로 적에게 추가 피해를 줄 수 있습니다,-99999
-LauncherPopup,Tip9,<sprite name=Status_BombChili><color=#ff6f16>Bomb Chili</color> is good to eat before using high damage skills,<sprite name=Status_BombChili><color=#ff6f16>폭탄 칠리</color>는 피해량이 높은 스킬을 쓰기 전에 먹으면 좋습니다,-99999
-LauncherPopup,Tip10,<sprite name=Status_CoconutShield><color=#ffd900>Coconut Shield</color> blocks half of the damage from enemies,<sprite name=Status_CoconutShield><color=#ffd900>코코넛 쉴드</color>로 적이 주는 피해의 절반을 막습니다,-99999
-LauncherPopup,Tip11,<sprite name=Status_EnergyDrink You can use skills faster with <color=#ffd900>Energy Drink</color>,<sprite name=Status_EnergyDrink><color=#ffd900>에너지 드링크</color>로 더욱 빠르게 스킬을 사용할 수 있습니다,-99999
-LauncherPopup,Tip12,<sprite name=Status_Meat><color=#ffd900>Well-cooked meat</color> can restore health,<sprite name=Status_Meat><color=#ffd900>잘 구운 고기</color>로 체력을 회복할 수 있습니다,-99999
-LauncherPopup,Tip13,<sprite name=Status_MintCandy><color=#00baff>Mint Candy</color> removes or prevents debuffs,<sprite name=Status_MintCandy><color=#00baff>민트 사탕</color>은 디버프를 제거하거나 방지합니다,-99999
-LauncherPopup,Tip14,<sprite name=Skill_MainWeapon><color=#5c482f>Melee</color> is useful when fighting small groups of enemies,<sprite name=Skill_MainWeapon><color=#5c482f>근접</color>은 소수의 적과 전투할 때 유리합니다,-99999
-LauncherPopup,Tip15,<sprite name=Skill_Teafork><color=#5c482f>Tea Fork</color> is useful when fighting small groups of enemies or large groups of enemies,<sprite name=Skill_Teafork><color=#5c482f>티 포크</color>는 소수의 적<c> 다수의 적을 상대할 때 모두 유용합니다,-99999
-LauncherPopup,Tip16,<sprite name=Skill_Jar><color=#5c482f>Bottle</color> is useful when killing large groups of enemies or debuffing them,<sprite name=Skill_Jar><color=#5c482f>병</color>은 다수의 적을 처치하거나 디버프를 걸 때 유용합니다,-99999
-LauncherPopup,Tip17,<sprite name=Skill_Snack><color=#5c482f>Snack</color> grants various buff effects to yourself,<sprite name=Skill_Snack><color=#5c482f>간식</color>은 자신에게 다양한 버프 효과를 부여합니다,-99999
-LauncherPopup,Tip18,<sprite name=Skill_Passive><color=#5c482f>Passive</color> enhances yourself and your skills in various ways,<sprite name=Skill_Passive><color=#5c482f>패시브</color>를 통해 자신과 스킬을 다양한 형태로 강화합니다,-99999
-LauncherPopup,Tip19,Going to get cooking ingredients...,요리 재료 구하러 가는 중...,-99999
-LauncherPopup,Tip20,Lineing up enemies...,적들을 한 줄로 세우는 중...,-99999
-LauncherPopup,Tip21,Going to get the snacks I left behind...,놓고 온 간식 다시 가지러 가는 중...,-99999
-Equipment,Icon/Equipped,Equipped,장착 중,-99999
-Tutorial,Ingame/SkillEquip,<color=#F4B900>Drag</color> the skill and place it in the skill slot!<br>They are used in order from the left skill slot.,스킬을 <color=#F4B900>드래그</color>해서 스킬 슬롯에 넣어보세요!<br>왼쪽 스킬 슬롯부터 순서대로 사용됩니다.,-99999
-Tutorial,Ingame/PassiveSkill,Hexagon icons are passive skills.<br>Passive skills take effect without being equipped in a slot!,육각형 아이콘은 <sprite name=Skill_Passive><color=#F4B900>패시브 스킬</color>입니다.<br>패시브 스킬은 슬롯에 장착하지 않고 효과를 발휘합니다!,-99999
-Tutorial,Ingame/SkillGrade,There are three skill grades in total.<br><color=#8F7F6B>Common</color> - <color=#00BAFF>Rare</color> - <color=#F4B900>Legendary</color> They get stronger in order!,스킬 등급은 총 3가지가 있습니다.<br><color=#8F7F6B>일반</color> - <color=#00BAFF>희귀</color> - <color=#F4B900>전설</color> 순서대로 점점 더 강해집니다!,-99999
+group,key,English,Korean
+Common,Yes,Yes,예
+Common,No,No,아니오
+Common,OK,OK,확인
+Common,Cancel,Cancel,취소
+Common,Error,Error,오류
+Common,Warning,Warning,경고
+Common,Notice,Notice,알림
+Common,Grade/None,None,없음
+Common,Grade/Common,Common,일반
+Common,Grade/Great,Great,우수
+Common,Grade/Rare,Rare,희귀
+Common,Grade/Epic,Epic,에픽
+Common,Grade/Epic1,Epic +1,에픽 +1
+Common,Grade/Epic2,Epic +2,에픽 +2
+Common,Grade/Legendary,Legendary,전설
+Common,Grade/Legendary1,Legendary +1,전설 +1
+Common,Grade/Legendary2,Legendary +2,전설 +2
+Common,Grade/Legendary3,Legendary +3,전설 +3
+Common,Grade/Mythic,Mythic,신화
+Common,Grade/Mythic1,Mythic +1,신화 +1
+Common,Grade/Mythic2,Mythic +2,신화 +2
+Common,Grade/Mythic3,Mythic +3,신화 +3
+Common,Grade/Mythic4,Mythic +4,신화 +4
+Common,EquipmentType/Weapon,Weapon,무기
+Common,EquipmentType/Armor,Armor,방어구
+Common,EquipmentType/Ring,Ring,반지
+Common,EquipmentType/Accessories,Accessories,장신구
+Common,TapToClose,Tap to close,탭하여 닫기
+Common,Free,Free,무료
+Common,Retry,Retry,다시하기
+Account,LinkFailed,Failed to link account,계정 연동 실패
+Account,AnonymousSignOutWarning,Game data of guest account will be deleted if you sign out.<br> Do you really want to sign out?,게스트 계정에서 로그아웃하면 모든 정보가 삭제됩니다.<br> 정말로 로그아웃하시겠습니까?
+Account,SignOutWarning,Do you really want to sign out?,정말로 로그아웃하시겠습니까?
+Account,WithdrawWarning,When you delete your account<c> all data collected by the game is deleted and cannot be recovered. <br> Any data stored on your device will also be deleted. <br> Are you sure you want to delete your account? <br> <br> <size=70%> All data includes personal information such as email<c> nickname<c> and PID<c> please check our Privacy Policy for details.,계정 삭제시 게임이 수집하는 모든 데이터가 삭제되며 복구가 불가능합니다. <br> 또한<c> 기기에 저장된 데이터도 모두 초기화됩니다. <br> 정말로 계정을 삭제하시겠습니까? <br> <br> <size=70%> 모든 데이터엔 이메일<c> 닉네임<c> PID 등의 개인정보가 포함되며 상세한 항목은 개인정보 처리방침을 확인해주시기 바랍니다.
+Account,AccountChangeWarning,Game data of current account will be deleted if you sign in to the other account.<br> Do you really want to sign in?,다른 계정으로 로그인하면 현재 계정의 모든 데이터가 삭제되며 복구가 불가능합니다.<br> 정말로 다른 계정으로 로그인하시겠습니까?
+Account,RestartGame,Please restart the game.,게임을 다시 시작해주세요.
+TextFilter,BlankSpace,Blank spaces are not allowed.,공백 문자는 사용할 수 없습니다.
+TextFilter,InvalidCharacter,You can't use special characters.,특수 문자는 사용할 수 없습니다.
+TextFilter,BannedWordIncluded,Contains an unavailable word.,사용할 수 없는 단어가 포함되어있습니다.
+TextFilter,InvalidLength,Your nickname must be least 4 characters and no more than 20 characters.,닉네임은 4자 이상 20자 이하여야 합니다.
+SystemUI,ToastMessage/NotEnough,Not enough {[property]},{[property]}이(가) 부족합니다.
+FloatingText,VillagerSpawn,<sprite name={[villagerType]}>+{[value]},<sprite name={[villagerType]}>+{[value]}
+FloatingText,EarnGold,<sprite name=Gold>+{[value]},<sprite name=Gold>+{[value]}
+FloatingText,Damage,<color=#D65E5E>{[value]}</color>,<color=#D65E5E>{[value]}</color>
+ResultPopup,Clear,Clear,성공
+ResultPopup,Fail,Fail,실패
+DeckSelectionPopup,Max,최대 선택 카드량을 초과 하였습니다.,최대 선택 카드량을 초과 하였습니다.
+DeckSelectionPopup,StartGame,Start,시작
+UnitCard,DisableCard,카드 수량을 다 사용하였습니다.,카드 수량을 다 사용하였습니다.
+Card,Unit/P_King/Name,King,왕
+Card,Unit/P_Swordsman/Name,Swordsman,검사
+Card,Unit/P_Archer/Name,Archer,궁수
+Card,Unit/P_Catapult/Name,Catapult,투석기
+Card,Unit/P_SkeletonSoldier/Name,SkeletonSoldier,해골 병사
+Card,Unit/P_Giant/Name,Giant,거인
+Card,Unit/P_FlameWizard/Name,FlameWizard,화염 마법사
+Card,Unit/P_Sniper/Name,Sniper,저격수
+Card,Unit/P_Cavalry/Name,Cavalry,기병
+Card,Unit/P_King/Desc,King,주기적으로 지원군 (검사/궁수/기병 중에서 랜덤) 소환
+Card,Unit/P_Swordsman/Desc,Swordsman,근거리에서 적을 공격하는 병사
+Card,Unit/P_Archer/Desc,Archer,원거리에서 적을 공격하는 병사
+Card,Unit/P_Catapult/Desc,Catapult,강력한 광역 투석 공격. 빠른 적은 잘 못 맞춤
+Card,Unit/P_SkeletonSoldier/Desc,SkeletonSoldier,약하지만 엄청나게 수가 많은 해골
+Card,Unit/P_Giant/Desc,Giant,느리지만 강력한 거인. 건물만 공격
+Card,Unit/P_FlameWizard/Desc,FlameWizard,강력한 광역 화염 공격
+Card,Unit/P_Sniper/Desc,Sniper,매우 긴 거리에서 저격. 공격력이 매우 강하지만 공속이 낮음
+Card,Unit/P_Cavalry/Desc,Cavalry,이동 속력이 빠른 기병. 돌진해서 적을 뚫고 지나감
+Passive,passive_EffectValueUp_P_King/Name,왕의 열정,왕의 열정
+Passive,passive_EffectValueUp_P_Swordsman/Name,검사의 열정,검사의 열정
+Passive,passive_EffectValueUp_P_Archer/Name,궁수의 열정,궁수의 열정
+Passive,passive_EffectValueUp_P_Catapult/Name,투석기의 열정,투석기의 열정
+Passive,passive_EffectValueUp_P_SkeletonSoldier/Name,해골 병사의 열정,해골 병사의 열정
+Passive,passive_EffectValueUp_P_Giant/Name,거인의 열정,거인의 열정
+Passive,passive_EffectValueUp_P_FlameWizard/Name,화염 마법사의 열정,화염 마법사의 열정
+Passive,passive_EffectValueUp_P_Sniper/Name,저격수의 열정,저격수의 열정
+Passive,passive_EffectValueUp_P_Cavalry/Name,기병의 열정,기병의 열정
+Passive,passive_MaxHpUp_P_King/Name,왕의 근성,왕의 근성
+Passive,passive_MaxHpUp_P_Swordsman/Name,검사의 근성,검사의 근성
+Passive,passive_MaxHpUp_P_Archer/Name,궁수의 근성,궁수의 근성
+Passive,passive_MaxHpUp_P_Catapult/Name,투석기의 근성,투석기의 근성
+Passive,passive_MaxHpUp_P_SkeletonSoldier/Name,해골 병사의 근성,해골 병사의 근성
+Passive,passive_MaxHpUp_P_Giant/Name,거인의 근성,거인의 근성
+Passive,passive_MaxHpUp_P_FlameWizard/Name,화염 마법사의 근성,화염 마법사의 근성
+Passive,passive_MaxHpUp_P_Sniper/Name,저격수의 근성,저격수의 근성
+Passive,passive_MaxHpUp_P_Cavalry/Name,기병의 근성,기병의 근성
+Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Name,강력 폭발,강력 폭발
+Passive,passive_EffectRangeUp_P_Swordsman_P_Cavalry/Name,판금 갑옷,판금 갑옷
+Passive,passive_EffectRangeUp_P_Archer_P_Sniper/Name,매의 눈,매의 눈
+Passive,passive_EffectRangeUp_P_SkeletonSoldier_P_Giant/Name,격투 단련,격투 단련
+Passive,passive_EffectRangeUp_P_Swordsman_P_Archer/Name,군사 훈련,군사 훈련
+Passive,passive_EffectRangeUp_P_Catapult_P_Giant/Name,빠른 발걸음,빠른 발걸음
+Passive,passive_EffectActionSpeedUp_P_SkeletonSoldier_P_FlameWizard/Name,마법 가속,마법 가속
+Passive,passive_EffectRangeUp_P_Sniper_P_Cavalry/Name,집중,집중
+Passive,passive_EffectValueUp_P_King/Desc,왕의 공격력 <color=#4df765>+300%</color>,왕의 공격력 <color=#4df765>+300%</color>
+Passive,passive_EffectValueUp_P_Swordsman/Desc,검사의 공격력 <color=#4df765>+50%</color>,검사의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectValueUp_P_Archer/Desc,궁수의 공격력 <color=#4df765>+50%</color>,궁수의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectValueUp_P_Catapult/Desc,투석기의 공격력 <color=#4df765>+50%</color>,투석기의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectValueUp_P_SkeletonSoldier/Desc,해골 병사의 공격력 <color=#4df765>+100%</color>,해골 병사의 공격력 <color=#4df765>+100%</color>
+Passive,passive_EffectValueUp_P_Giant/Desc,거인의 공격력 <color=#4df765>+50%</color>,거인의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectValueUp_P_FlameWizard/Desc,화염 마법사의 공격력 <color=#4df765>+50%</color>,화염 마법사의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectValueUp_P_Sniper/Desc,저격수의 공격력 <color=#4df765>+50%</color>,저격수의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectValueUp_P_Cavalry/Desc,기병의 공격력 <color=#4df765>+50%</color>,기병의 공격력 <color=#4df765>+50%</color>
+Passive,passive_MaxHpUp_P_King/Desc,왕의 체력 <color=#4df765>+300%</color>,왕의 체력 <color=#4df765>+300%</color>
+Passive,passive_MaxHpUp_P_Swordsman/Desc,검사의 체력 <color=#4df765>+50%</color>,검사의 체력 <color=#4df765>+50%</color>
+Passive,passive_MaxHpUp_P_Archer/Desc,궁수의 체력 <color=#4df765>+100%</color>,궁수의 체력 <color=#4df765>+100%</color>
+Passive,passive_MaxHpUp_P_Catapult/Desc,투석기의 체력 <color=#4df765>+100%</color>,투석기의 체력 <color=#4df765>+100%</color>
+Passive,passive_MaxHpUp_P_SkeletonSoldier/Desc,해골 병사의 체력 <color=#4df765>+100%</color>,해골 병사의 체력 <color=#4df765>+100%</color>
+Passive,passive_MaxHpUp_P_Giant/Desc,거인의 체력 <color=#4df765>+50%</color>,거인의 체력 <color=#4df765>+50%</color>
+Passive,passive_MaxHpUp_P_FlameWizard/Desc,화염 마법사의 체력 <color=#4df765>+100%</color>,화염 마법사의 체력 <color=#4df765>+100%</color>
+Passive,passive_MaxHpUp_P_Sniper/Desc,저격수의 체력 <color=#4df765>+100%</color>,저격수의 체력 <color=#4df765>+100%</color>
+Passive,passive_MaxHpUp_P_Cavalry/Desc,기병의 체력 <color=#4df765>+50%</color>,기병의 체력 <color=#4df765>+50%</color>
+Passive,passive_EffectRangeUp_P_FlameWizard_P_Catapult/Desc,화염 마법사<c> 투석기의 피해 범위 <color=#4df765>+50%</color>,화염 마법사<c> 투석기의 피해 범위 <color=#4df765>+50%</color>
+Passive,passive_EffectRangeUp_P_Swordsman_P_Cavalry/Desc,검사<c> 기병의 체력 <color=#4df765>+50%</color>,검사<c> 기병의 체력 <color=#4df765>+50%</color>
+Passive,passive_EffectRangeUp_P_Archer_P_Sniper/Desc,궁수<c> 저격수의 시야<c> 사거리 <color=#4df765>+30%</color>,궁수<c> 저격수의 시야<c> 사거리 <color=#4df765>+30%</color>
+Passive,passive_EffectRangeUp_P_SkeletonSoldier_P_Giant/Desc,해골 병사<c> 거인의 공격력 <color=#4df765>+50%</color>,해골 병사<c> 거인의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectRangeUp_P_Swordsman_P_Archer/Desc,검사<c> 궁수의 공격력 <color=#4df765>+50%</color>,검사<c> 궁수의 공격력 <color=#4df765>+50%</color>
+Passive,passive_EffectRangeUp_P_Catapult_P_Giant/Desc,투석기<c> 거인의 이속 <color=#4df765>+50%</color>,투석기<c> 거인의 이속 <color=#4df765>+50%</color>
+Passive,passive_EffectActionSpeedUp_P_SkeletonSoldier_P_FlameWizard/Desc,해골 병사<c> 화염 마법사의 공속 <color=#4df765>+50%</color>,해골 병사<c> 화염 마법사의 공속 <color=#4df765>+50%</color>
+Passive,passive_EffectRangeUp_P_Sniper_P_Cavalry/Desc,저격수<c> 기병의 공격력 <color=#4df765>+50%</color>,저격수<c> 기병의 공격력 <color=#4df765>+50%</color>
+SystemUI,ToastMessage/NoSpawnableZone,유닛 생성 불가 지역입니다,유닛 생성 불가 지역입니다

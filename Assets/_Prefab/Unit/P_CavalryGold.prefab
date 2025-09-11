@@ -287,7 +287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 424969763631428082, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: id
-      value: P_Cavalry
+      value: P_CavalryGold
       objectReference: {fileID: 0}
     - target: {fileID: 5520597560962139090, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_Name

@@ -29,12 +29,14 @@ public class AttackObject : MonoBehaviour
     [SerializeField]
     private float howitzerHeight;
 
-    [BoxGroup("Normal")] [SerializeField] private AnimationCurve normalCurve;
+    [BoxGroup("Normal")] [SerializeField] protected AnimationCurve normalCurve;
 
     [SerializeField] private Transform mainObject;
-    private RecycleObject _recycleObject;
+    protected RecycleObject _recycleObject;
     private AttackObjectTable _table;
-    private Action _onHit;
+    protected AttackObjectTable Table => _table;
+    protected Vector2 TargetPosition;
+    protected Action _onHit;
     private Sequence _sequence;
     private FireType FireType => _table.fireType;
     private TrailRenderer _trailRenderer;
@@ -42,8 +44,9 @@ public class AttackObject : MonoBehaviour
     private Vector3 _previousPosition;
     bool _isInitialized;
 
-    public void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition)
+    public virtual void Init(Vector2 position, Action onHit, AttackObjectTable table, Vector2 targetPosition, bool autoFire = true)
     {
+        TargetPosition = targetPosition;
         GetComponents();
 
         if (_trailRenderer)
@@ -69,6 +72,7 @@ public class AttackObject : MonoBehaviour
         _table = table;
         mainObject.localScale = Vector3.one * _table.scale;
         _onHit = onHit;
+        if (!autoFire) return;
         if (table.delayRandomMin == 0)
         {
             Fire(targetPosition);
