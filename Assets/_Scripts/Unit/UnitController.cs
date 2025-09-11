@@ -177,9 +177,14 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     }
 
 
-    public void ChangeState(UnitState newState, ITarget target = null)
+    public void ChangeState(UnitState newState, ITarget target = null, bool autoMove = false)
     {
-        if (state == UnitState.Dead) return;
+        if (autoMove)
+        {
+            if (state == UnitState.Dead)
+                return;
+        }
+
         state = newState;
         _statusSystem.ApplyState(target, newState);
     }
