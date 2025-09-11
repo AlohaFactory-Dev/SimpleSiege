@@ -32,6 +32,7 @@ public class AttackObject : MonoBehaviour
     [BoxGroup("Normal")] [SerializeField] protected AnimationCurve normalCurve;
 
     [SerializeField] private Transform mainObject;
+    [SerializeField] private GameObject offObject;
     protected RecycleObject _recycleObject;
     private AttackObjectTable _table;
     protected AttackObjectTable Table => _table;
@@ -68,7 +69,7 @@ public class AttackObject : MonoBehaviour
             transform.position = position;
         }
 
-        mainObject.gameObject.SetActive(true);
+        offObject.SetActive(true);
         mainObject.transform.localPosition = Vector3.zero;
         _table = table;
         mainObject.localScale = Vector3.one * _table.scale;
@@ -80,7 +81,7 @@ public class AttackObject : MonoBehaviour
         }
         else
         {
-            mainObject.gameObject.SetActive(false);
+            offObject.SetActive(false);
             StartCoroutine(FireDelay(Random.Range(table.delayRandomMin, table.delayRandomMax), targetPosition));
         }
     }
@@ -157,7 +158,7 @@ public class AttackObject : MonoBehaviour
 
     protected IEnumerator ReleaseDelay()
     {
-        mainObject.gameObject.SetActive(false);
+        offObject.gameObject.SetActive(false);
         yield return new WaitForSeconds(releaseDelay);
         _recycleObject.Release();
     }
