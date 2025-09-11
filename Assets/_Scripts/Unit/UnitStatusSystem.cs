@@ -14,10 +14,12 @@ public class UnitStatusSystem : MonoBehaviour
     private UnitTargetSystem _targetSystem;
     private Collider2D _collider2D;
     private bool _isInitialized;
+    private bool _isDeloyedUnit;
 
     public void Init(UnitController unitController)
     {
         GetComponents();
+        _isDeloyedUnit = unitController.IsDeployed;
 
         _targetSystem.Init(unitController);
         HpSystem.Init(unitController.MaxHp, unitController.TeamType, unitController.UnitTable.maxHp);
@@ -29,7 +31,7 @@ public class UnitStatusSystem : MonoBehaviour
 
     private void Release()
     {
-        if (_recycleObject)
+        if (!_isDeloyedUnit)
         {
             _recycleObject.Release();
         }
