@@ -39,7 +39,7 @@ public class PenetrationAttackObject : AttackObject
             .OnComplete(() =>
             {
                 _onHit?.Invoke();
-                _recycleObject.Release();
+                StartCoroutine(ReleaseDelay());
             });
         ;
     }
