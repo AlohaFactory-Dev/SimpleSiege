@@ -65,9 +65,11 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     private UnitUpgradeController _unitUpgradeController;
     public bool IsBarrackUnit { get; private set; }
     private bool isNotTargetable;
+    public bool IsDeployed { get; private set; }
 
-    public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove)
+    public void Spawn(Vector3 position, UnitTable unitTable, bool onAutoMove, bool isDeployed = false)
     {
+        IsDeployed = isDeployed;
         IsBarrackUnit = false;
         _isWallUnit = false;
         _unitTable = unitTable;
@@ -177,11 +179,14 @@ public class UnitController : MonoBehaviour, ITarget, ICaster
     }
 
 
-    public void ChangeState(UnitState newState, ITarget target = null, bool isCPI = false)
+    public void ChangeState(UnitState newState, ITarget target = null, bool autoMove = false)
     {
-        if (!isCPI)
+        if (!autoMove)
+        {
             if (state == UnitState.Dead)
                 return;
+        }
+
         state = newState;
         _statusSystem.ApplyState(target, newState);
     }
