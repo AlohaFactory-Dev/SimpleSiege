@@ -16,6 +16,12 @@ public class BuildingAnimationEventHandler : MonoBehaviour
         _block = new MaterialPropertyBlock();
     }
 
+    private void Start()
+    {
+        _renderers = GetComponentsInChildren<SpriteRenderer>();
+        _block = new MaterialPropertyBlock();
+    }
+
     public void OnHitEffectEvent()
     {
         _block.SetColor(_id, hitColor);

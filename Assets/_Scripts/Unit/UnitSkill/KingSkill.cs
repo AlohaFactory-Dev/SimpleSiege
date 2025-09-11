@@ -18,6 +18,7 @@ public class KingSkill : MonoBehaviour
     [SerializeField] private float skillInterval = 10f;
     [SerializeField] private SkillData[] spawnUnits;
     [Inject] private UnitManager _unitManager;
+    [SerializeField] private Animator animator;
     private float _skillTimer = 0f;
     private UnitController _unitController;
     private bool _isInGroup = false;
@@ -47,6 +48,7 @@ public class KingSkill : MonoBehaviour
     public void GroupSpawnSkill(string id)
     {
         var units = _unitManager.SpawnUnit((Vector2)transform.position + Vector2.up, id, 1, false, false);
+        // animator.SetTrigger("Action");
         foreach (var unit in units)
         {
             unit.Collider2D.enabled = true;

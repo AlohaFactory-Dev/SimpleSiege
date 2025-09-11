@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505906620916471845, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: multipleSpeed
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5520597560962139090, guid: 8b03c9b55ce31944f951d73fe32b4e89, type: 3}
       propertyPath: m_Name
@@ -281,6 +281,7 @@ MonoBehaviour:
   - spwanUnitId: P_Cavalry
     amount: 1
     probability: 100
+  animator: {fileID: 7704861394743549667}
 --- !u!114 &693183030095588154
 MonoBehaviour:
   m_ObjectHideFlags: 0

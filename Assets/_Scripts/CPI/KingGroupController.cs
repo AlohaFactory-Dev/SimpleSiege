@@ -12,7 +12,8 @@ public class KingGroupController : MonoBehaviour
     [SerializeField] private float initialDelay = 2f;
     private float _initialDelayTimer = 0f;
     [SerializeField] private AutoSpawn[] autoSpawns;
-    [SerializeField] private ParticleSystem[] particles;
+    [SerializeField] private ParticleSystem[] addParticles;
+    [SerializeField] private ParticleSystem[] upgradeParticles;
     [SerializeField] private string[] spawnUnitIds;
     [SerializeField] private float spawnInterval = 5f;
     [SerializeField] private float spawnInterval2 = 2f;
@@ -43,6 +44,7 @@ public class KingGroupController : MonoBehaviour
 
         foreach (var skill in _kingSkills)
         {
+            upgradeParticles[_kingSkills.IndexOf(skill)].Play();
             skill.GetComponent<KingSkinController>().ChangeSkin(skinId);
         }
     }
@@ -82,7 +84,7 @@ public class KingGroupController : MonoBehaviour
         {
             if (kingPoints.Length > _kingCount)
             {
-                particles[_kingCount].Play();
+                addParticles[_kingCount].Play();
                 var king = _unitManager.SpawnUnit(kingPoints[_kingCount].position, "P_King", 1, false, false)[0];
                 king.transform.parent = transform;
                 king.Collider2D.enabled = false;
