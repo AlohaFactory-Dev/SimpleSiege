@@ -99,7 +99,7 @@ public class AttackObject : MonoBehaviour
     private IEnumerator FireDelay(float delay, Vector2 targetPosition)
     {
         yield return new WaitForSeconds(delay);
-        mainObject.gameObject.SetActive(true);
+        offObject.SetActive(true);
 
         Fire(targetPosition);
     }
@@ -158,7 +158,7 @@ public class AttackObject : MonoBehaviour
 
     protected IEnumerator ReleaseDelay()
     {
-        offObject.gameObject.SetActive(false);
+        offObject.SetActive(false);
         yield return new WaitForSeconds(releaseDelay);
         _recycleObject.Release();
     }
