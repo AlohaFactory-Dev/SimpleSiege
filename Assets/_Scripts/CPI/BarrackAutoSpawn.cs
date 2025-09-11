@@ -4,13 +4,9 @@ using UnityEngine;
 public class BarrackAutoSpawn : MonoBehaviour
 {
     [SerializeField] private float autoSpawnInterval;
+    [SerializeField] private string unitId;
+    [SerializeField] private float spawnCount;
     private float _timer;
-    private BarrackBuilding _barrackBuilding;
-
-    private void Start()
-    {
-        _barrackBuilding = GetComponent<BarrackBuilding>();
-    }
 
     private void Update()
     {
@@ -18,7 +14,11 @@ public class BarrackAutoSpawn : MonoBehaviour
         if (_timer >= autoSpawnInterval)
         {
             _timer = 0f;
-            _barrackBuilding.AutoSpawn();
+            var units = StageConainer.Get<UnitManager>().SpawnUnit(transform.position, unitId, (int)spawnCount, false);
+            foreach (var unit in units)
+            {
+                unit.ChangeState(UnitState.Move, null, true);
+            }
         }
     }
 }
