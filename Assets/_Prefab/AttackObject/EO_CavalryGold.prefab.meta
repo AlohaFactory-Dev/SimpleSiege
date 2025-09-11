@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/_Scripts/UI/Lobby.meta
-guid: 8148404f5d3652c49bd680b9e32a752a
-folderAsset: yes
-DefaultImporter:
-========
-guid: 9d8ce90415ee69e4e8bdc4f7477898b1
+guid: 98dd6d7b229224f4e93e17c54892a375
 PrefabImporter:
->>>>>>>> f4f65cdfb44c2848251d5b96a84e0e258eba0074:Assets/_Prefab/AttackObject/EO_King.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
