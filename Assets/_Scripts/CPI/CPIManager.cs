@@ -34,7 +34,7 @@ public class CPIManager : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitUntil(() => _stageManager.isInit);
-        _stageManager.CameraController.enabled = false;
+        // _stageManager.CameraController.enabled = false;
     }
 
     private void Update()
