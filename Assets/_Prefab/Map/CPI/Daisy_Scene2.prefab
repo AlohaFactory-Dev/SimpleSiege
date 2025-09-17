@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.625
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1003,9 +1003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 5
+  autoSpawnInterval: 2.5
   unitId: E_Catapult
-  spawnCount: 3
+  spawnCount: 4
 --- !u!4 &3581278628060158269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4274304905074811830, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
@@ -5270,7 +5270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.5
+      value: -18.25
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5334,7 +5334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 5
+  autoSpawnInterval: 2.5
   unitId: E_Catapult
   spawnCount: 3
 --- !u!4 &8449960484813905036 stripped
@@ -6032,7 +6032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.625
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6096,9 +6096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 5
+  autoSpawnInterval: 2.5
   unitId: E_Catapult
-  spawnCount: 3
+  spawnCount: 4
 --- !u!4 &9047630422291858270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
@@ -8048,7 +8048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.5
+      value: -18.25
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8112,7 +8112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 5
+  autoSpawnInterval: 2.5
   unitId: E_Catapult
   spawnCount: 3
 --- !u!4 &8404202414364821965 stripped
@@ -12797,7 +12797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.5
+      value: -18.25
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12866,7 +12866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 5
+  autoSpawnInterval: 2.5
   unitId: E_Catapult
   spawnCount: 3
 --- !u!1001 &8600223370351953548
@@ -13493,7 +13493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.625
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: 4670353396365325313, guid: ebeb029c01f8c5049b313db14f32f116, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13562,9 +13562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c0cc6d892143e486b6b5f20a62ee07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpawnInterval: 5
+  autoSpawnInterval: 2.5
   unitId: E_Catapult
-  spawnCount: 3
+  spawnCount: 4
 --- !u!1001 &8926129992099780379
 PrefabInstance:
   m_ObjectHideFlags: 0

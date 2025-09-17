@@ -20,4 +20,4 @@ E_Sniper,Enemy,5,0.400,30,8,0,0,30,140,0.1,0.1,Enemy,Nearest,All,Ranged,EO_Snipe
 E_Cavalry,Enemy,20,1.100,30,0.75,0,0,45,300,0.1,0.1,Enemy,Nearest,All,Melee,-99999,Single,EVFX_MeleeHit,1,[8;0.8;1;1;2.5;30;0.7]
 E_Cavalry_Old,Enemy,5,1.100,30,0.75,0,0,90,500,0.1,0.1,Enemy,Nearest,All,Melee,-99999,Single,EVFX_MeleeHit,1,[3;0.5;1;-99999;-99999;-99999;-99999]
 P_CavalryGold,Player,120,1.300,5,2,0,0,600,50000,0.1,0.1,Enemy,Nearest,All,Ranged,EO_CavalryGold,Single,EVFX_MeleeHit,1,[12;2.5;1;2;10;60;1.8]
-P_KingGold,Player,120,1.500,100,1.5,2.5,0,600,50000,0.1,0.1,Enemy,Nearest,All,Melee,-99999,Circle,EVFX_MeleeHit,1,[-99999;-99999;-99999;-99999;-99999;-99999;-99999]
+P_KingGold,Player,120,2.250,100,0.5,5,0,600,50000,0.1,0.1,Enemy,Nearest,All,Melee,-99999,Circle,EVFX_MeleeHit,1,[-99999;-99999;-99999;-99999;-99999;-99999;-99999]
